@@ -1,25 +1,26 @@
 {
-  "name": "v2",
-  "version": "0.0.0",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "prettier": "latest",
-    "turbo": "latest"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "dependencies": {},
-  "packageManager": "pnpm@7.18.1"
+    "name": "next-starter-tpl",
+    "version": "1.0.0",
+    "author": "lotyp7@gmail.com",
+    "license": "MIT",
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "turbo run build",
+        "dev": "turbo run dev --parallel",
+        "lint": "turbo run lint",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "eslint-config-custom": "workspace:*",
+        "prettier": "latest",
+        "turbo": "latest"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "packageManager": "pnpm@7.18.1"
 }
