@@ -57,6 +57,7 @@ This repository has some additional tools already setup for you:
 * Sitemap support using [next-sitemap](https://www.npmjs.com/package/next-sitemap)
 * [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) — Visualize size of webpack output files with an interactive zoomable treemap
 * Optimized [Lighthouse](https://web.dev/performance-scoring/) performance score
+* End-2-end testing with [cypress](https://www.cypress.io/) and [JestJS](https://jestjs.io/) support for writing unit tests
 
 <br>
 
