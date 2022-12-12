@@ -20,7 +20,7 @@
 
 # NextJS Starter Template
 
-This repository contains [monorepo](https://turbo.build/repo/docs/handbook/what-is-a-monorepo) boilerplate written in [Next.js](https://nextjs.org). Used together with backend API part — [laravel-starter-tpl](https://github.com/wayofdev/laravel-starter-tpl). 
+This repository contains [monorepo](https://turbo.build/repo/docs/handbook/what-is-a-monorepo) boilerplate written in [Next.js](https://nextjs.org). Used together with backend API part — [laravel-starter-tpl](https://github.com/wayofdev/laravel-starter-tpl).
 
 <br>
 
@@ -30,12 +30,12 @@ This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes th
 
 ### → Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-- Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+*   `docs`: a [Next.js](https://nextjs.org/) app
+*   `web`: another [Next.js](https://nextjs.org/) app
+*   `ui`: a stub React component library shared by both `web` and `docs` applications
+*   `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+*   `tsconfig`: `tsconfig.json`s used throughout the monorepo
+*   Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 <br>
 
@@ -43,21 +43,21 @@ This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes th
 
 This repository has some additional tools already setup for you:
 
-* Supporting [NextJS 13.x](https://nextjs.org/blog/next-13)
-* [TypeScript](https://www.typescriptlang.org/) support for static type checking
-* Strict Mode for TypeScript and React 18
-* [ESLint](https://eslint.org/) for code linting and configured presets: NextJS Recommended, NextJS Core Web Vitals and [Airbnb Style Guide](https://www.npmjs.com/package/eslint-config-airbnb)
-* Code formatting with [Prettier](https://prettier.io/)
-* Integrated with [Tailwind CSS](https://tailwindcss.com/)
-* [PostCSS](https://postcss.org/) for processing Tailwind CSS and [CSSNANO](https://cssnano.co/) for CSS optimization on production systems
-* [Husky](https://typicode.github.io/husky/#/) for modern native git hooks
-* [Lint-staged](https://github.com/okonet/lint-staged) for running linters on Git staged files
-* [GitHub Actions](https://github.com/features/actions) support out of the box
-* SEO metadata, JSON-LD and Open Graph tags with [Next SEO](https://github.com/garmeeh/next-seo)
-* Sitemap support using [next-sitemap](https://www.npmjs.com/package/next-sitemap)
-* [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) — Visualize size of webpack output files with an interactive zoomable treemap
-* Optimized [Lighthouse](https://web.dev/performance-scoring/) performance score
-* End-2-end testing with [cypress](https://www.cypress.io/) and [JestJS](https://jestjs.io/) support for writing unit tests
+*   Supporting [NextJS 13.x](https://nextjs.org/blog/next-13)
+*   [TypeScript](https://www.typescriptlang.org/) support for static type checking
+*   Strict Mode for TypeScript and React 18
+*   [ESLint](https://eslint.org/) for code linting and configured presets: NextJS Recommended, NextJS Core Web Vitals and [Airbnb Style Guide](https://www.npmjs.com/package/eslint-config-airbnb)
+*   Code formatting with [Prettier](https://prettier.io/)
+*   Integrated with [Tailwind CSS](https://tailwindcss.com/)
+*   [PostCSS](https://postcss.org/) for processing Tailwind CSS and [CSSNANO](https://cssnano.co/) for CSS optimization on production systems
+*   [Husky](https://typicode.github.io/husky/#/) for modern native git hooks
+*   [Lint-staged](https://github.com/okonet/lint-staged) for running linters on Git staged files
+*   [GitHub Actions](https://github.com/features/actions) support out of the box
+*   SEO metadata, JSON-LD and Open Graph tags with [Next SEO](https://github.com/garmeeh/next-seo)
+*   Sitemap support using [next-sitemap](https://www.npmjs.com/package/next-sitemap)
+*   [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) — Visualize size of webpack output files with an interactive zoomable treemap
+*   Optimized [Lighthouse](https://web.dev/performance-scoring/) performance score
+*   End-2-end testing with [cypress](https://www.cypress.io/) and [JestJS](https://jestjs.io/) support for writing unit tests
 
 <br>
 
@@ -179,26 +179,27 @@ $ make test
 
 ## 🧱 Useful Resources
 
-* Learn more about the power of **Turborepo**:
+*   Learn more about the power of **Turborepo**:
 
-  * [What is Monorepo?](https://turbo.build/repo/docs/handbook/what-is-a-monorepo)
+    *   [What is Monorepo?](https://turbo.build/repo/docs/handbook/what-is-a-monorepo)
 
-  - [Pipelines](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
+    *   [Pipelines](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
 
-  - [Caching](https://turbo.build/repo/docs/core-concepts/caching)
+    *   [Caching](https://turbo.build/repo/docs/core-concepts/caching)
 
-  - [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
+    *   [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
 
-  - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
+    *   [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 
-  - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
+    *   [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 
-  - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+    *   [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 
-* Other templates:
+*   Other templates:
 
-  * [ixartz/next-js-boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
-  * [laravel/breeze-next](https://github.com/laravel/breeze-next)
+    *   [ixartz/next-js-boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
+
+    * [laravel/breeze-next](https://github.com/laravel/breeze-next)
 
 <br>
 
