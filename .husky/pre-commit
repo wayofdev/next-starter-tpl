@@ -6,11 +6,11 @@ echo 'please be patient, this may take a while...'
 
 # Check ESLint Standards
 pnpm lint ||
-(
+  (
     echo '🔨❌ Yoo, you have a problem in your code. Check linter 🔨❌
-          Run pnpm lint, add changes and try commit again.';
-    false;
-)
+          Run pnpm lint, add changes and try commit again.'
+    false
+  )
 
 echo '🎉 No error found: committing this now.... ✨🚀🏄‍♂️🍻'
 

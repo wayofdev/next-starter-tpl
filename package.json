@@ -22,22 +22,39 @@
     "scripts": {
         "build": "turbo run build",
         "dev": "turbo run dev --parallel",
-        "lint": "pnpm lint:secrets",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "lint": "pnpm lint:md && pnpm lint:js && pnpm lint:html && pnpm lint:secrets",
+        "lint:md": "markdownlint --fix **/*.md --ignore '**/node_modules/**' --ignore '**/CHANGELOG.md'",
+        "lint:js": "eslint --fix **/*.{js,ts,tsx}",
+        "lint:css": "stylelint --fix **/*.{css,scss}",
+        "lint:html": "htmlhint --config ./node_modules/@waldronmatt/htmlhint-config/index.json **/*.html",
+        "lint:secrets": "npx secretlint **/*",
+        "test": "jest"
     },
     "dependencies": {
         "eslint": "^8.29.0"
     },
     "devDependencies": {
+        "@wayofdev/htmlhint-config": "^1.0.0",
+        "@wayofdev/lint-staged-config": "^1.0.0",
+        "@wayofdev/markdownlint-config": "^1.0.0",
+        "@wayofdev/secretlint-config": "^1.0.4",
+        "@wayofdev/stylelint-config": "^1.0.0",
         "eslint-config-custom": "workspace:*",
+        "htmlhint": "^1.1.4",
         "husky": "^8.0.2",
         "lint-staged": "^13.1.0",
+        "markdownlint": "^0.26.2",
+        "markdownlint-cli": "^0.32.2",
+        "postcss": "^8.4.20",
         "prettier": "latest",
+        "secretlint": "^5.3.0",
+        "stylelint": "^14.16.0",
         "turbo": "latest"
     },
     "engines": {
         "node": ">=18.0.0"
     },
-    "packageManager": "pnpm@7.18.1"
+    "packageManager": "pnpm@7.18.2"
 }
