@@ -3,18 +3,36 @@
     "version": "1.0.0",
     "author": "lotyp7@gmail.com",
     "license": "MIT",
+    "homepage": "https://wayof.dev",
     "workspaces": [
         "apps/*",
         "packages/*"
     ],
+    "keywords": [
+        "template",
+        "boilerplate",
+        "nextjs",
+        "vercel",
+        "turbo",
+        "turbopack",
+        "wayofdev",
+        "monorepo",
+        "turborepo"
+    ],
     "scripts": {
         "build": "turbo run build",
         "dev": "turbo run dev --parallel",
-        "lint": "turbo run lint",
-        "format": "prettier --write \"**/*.{ts,tsx,md}\""
+        "lint": "pnpm lint:secrets",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "eslint": "^8.29.0"
     },
     "devDependencies": {
         "eslint-config-custom": "workspace:*",
+        "husky": "^8.0.2",
+        "lint-staged": "^13.1.0",
         "prettier": "latest",
         "turbo": "latest"
     },

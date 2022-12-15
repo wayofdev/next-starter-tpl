@@ -15,6 +15,7 @@ services:
     command: '/bin/pnpm run dev'
     environment:
       - TERM=xterm-256color`
+    tty: true
     labels:
       - traefik.enable=true
       - traefik.http.routers.${APP_NAME}.rule=Host(`${APP_NAME}.${PROJECT_SERVICES_NAMESPACE}.docker`)

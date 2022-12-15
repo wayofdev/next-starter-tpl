@@ -107,6 +107,10 @@ build:
 	$(NPM_RUNNER) run build
 .PHONY: build
 
+purge:
+	rm -rf .pnpm-store node_modules pnpm-lock.yaml
+.PHONY: purge
+
 
 # Docker Actions
 # ------------------------------------------------------------------------------------
