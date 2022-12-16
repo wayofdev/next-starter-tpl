@@ -1,0 +1,21 @@
+---
+name: Rebase pull requests
+
+on: # yamllint disable-line rule:truthy
+    push:
+    release:
+        types:
+            - published
+
+jobs:
+    auto-rebase:
+        name: Rebase dependabot PRs
+        runs-on: ubuntu-latest
+        if: github.ref == 'refs/heads/master' || github.event == 'release'
+        timeout-minutes: 5
+
+        steps:
+            - name: Request rebase
+              uses: 'bbeesley/gha-auto-dependabot-rebase@v1.2.0'
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
