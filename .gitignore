@@ -47,3 +47,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# ts
+.eslintcache
