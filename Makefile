@@ -96,7 +96,7 @@ endif
 .PHONY: env
 
 install:
-	$(NPM_RUNNER) install
+	$(NPM_RUNNER) install -r
 .PHONY: install
 
 update:
