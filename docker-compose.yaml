@@ -2,28 +2,28 @@
 version: '3.9'
 
 services:
-  app:
-    image: wayofdev/node:19-alpine-latest
-    container_name: ${APP_NAME}_app
-    restart: on-failure
-    networks:
-      - default
-      - shared
-    volumes:
-      - ./:/app:rw
-    working_dir: /app
-    command: '/bin/pnpm run dev'
-    environment:
-      - TERM=xterm-256color`
-    tty: true
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.${APP_NAME}.rule=Host(`${APP_NAME}.${PROJECT_SERVICES_NAMESPACE}.docker`)
-      - traefik.http.routers.${APP_NAME}.entrypoints=websecure
-      - traefik.http.services.${APP_NAME}.loadbalancer.server.port=3000
-      - traefik.http.routers.${APP_NAME}.tls=true
+    app:
+        image: wayofdev/node:19-alpine-latest
+        container_name: ${APP_NAME}_app
+        restart: on-failure
+        networks:
+            - default
+            - shared
+        volumes:
+            - ./:/app:rw
+        working_dir: /app
+        command: '/bin/pnpm run dev'
+        environment:
+            - TERM=xterm-256color`
+        tty: true
+        labels:
+            - traefik.enable=true
+            - traefik.http.routers.${APP_NAME}.rule=Host(`${APP_NAME}.${PROJECT_SERVICES_NAMESPACE}.docker`)
+            - traefik.http.routers.${APP_NAME}.entrypoints=websecure
+            - traefik.http.services.${APP_NAME}.loadbalancer.server.port=3000
+            - traefik.http.routers.${APP_NAME}.tls=true
 
 networks:
-  shared:
-    external: true
-    name: ${SHARED_SERVICES_NETWORK}
+    shared:
+        external: true
+        name: ${SHARED_SERVICES_NETWORK}
