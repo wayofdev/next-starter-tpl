@@ -11,9 +11,9 @@ module.exports = {
     ...ymlConfig,
     ...jsConfig,
     // lint and fix changed markdown files
-    '*.md': ['prettier --cache --write', 'markdownlint'],
-    // lint and fix changed json files
-    '*.json': ['prettier --cache --write'],
-    // lint and fix changed css and scss files
-    '*.{css,scss}': ['prettier --cache --write', 'stylelint --cache --fix'],
+    // '*.md': ['prettier --cache --write', 'markdownlint'],
+    // // lint and fix changed json files
+    // '*.json': ['prettier --cache --write'],
+    // // lint and fix changed css and scss files
+    // '*.{css,scss}': ['prettier --cache --write', 'stylelint --cache --fix'],
 }
