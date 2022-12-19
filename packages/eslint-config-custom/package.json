@@ -6,7 +6,7 @@
     "dependencies": {
         "@wayofdev/eslint-config": "^1.0.1",
         "eslint": "^8.29.0",
-        "eslint-config-next": "13.0.6",
+        "eslint-config-next": "13.0.7",
         "eslint-config-prettier": "^8.5.0",
         "eslint-config-turbo": "latest",
         "eslint-plugin-react": "^7.31.11",
