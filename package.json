@@ -1,7 +1,7 @@
 {
     "name": "next-starter-tpl",
     "description": "A monorepo boilerplate using pnpm, turborepo and nextjs",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "private": true,
     "author": "lotyp7@gmail.com",
     "license": "MIT",
