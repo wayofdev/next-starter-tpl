@@ -191,9 +191,11 @@ Learn more about the power of **Turborepo**:
 
 Other monorepo templates:
 
--   [ixartz/next-js-boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
+- [waldronmatt/pnpm-turborepo-auto-boilerplate](https://github.com/waldronmatt/pnpm-turborepo-auto-boilerplate) — a monorepo boilerplate using pnpm, turborepo, and auto.
 
 Other projects:
+
+- [ixartz/next-js-boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
 
 -   [laravel/breeze-next](https://github.com/laravel/breeze-next)
 
