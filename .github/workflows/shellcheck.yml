@@ -1,0 +1,26 @@
+---
+name: Differential shell-check
+
+on: # yamllint disable-line rule:truthy
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  shellcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.1.0
+        with:
+          fetch-depth: 0
+
+      - name: Differential shell-check
+        uses: redhat-plumbers-in-action/differential-shellcheck@latest
+        with:
+          severity: warning
+          token: ${{ secrets.GITHUB_TOKEN }}

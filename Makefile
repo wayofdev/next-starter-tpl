@@ -160,7 +160,7 @@ lint-staged:
 .PHONY: lint-staged
 
 commitlint:
-	$(DOCKER_COMPOSE) exec -T app $(NPM_BIN) run --no-install commitlint --edit "${1}"
+	$(DOCKER_COMPOSE) exec -T app npx --no --commitlint --edit $(1)
 .PHONY: commitlint
 
 test: ## Run unit tests

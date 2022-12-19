@@ -179,25 +179,23 @@ make test
 
 ## 🧱 Useful Resources
 
--   Learn more about the power of **Turborepo**:
+Learn more about the power of **Turborepo**:
 
 -   [What is Monorepo?](https://turbo.build/repo/docs/handbook/what-is-a-monorepo)
-
 -   [Pipelines](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-
 -   [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-
 -   [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-
 -   [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-
 -   [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-
 -   [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 
--   Other templates:
+Other monorepo templates:
 
--   [ixartz/next-js-boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
+- [waldronmatt/pnpm-turborepo-auto-boilerplate](https://github.com/waldronmatt/pnpm-turborepo-auto-boilerplate) — a monorepo boilerplate using pnpm, turborepo, and auto.
+
+Other projects:
+
+- [ixartz/next-js-boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
 
 -   [laravel/breeze-next](https://github.com/laravel/breeze-next)
 
