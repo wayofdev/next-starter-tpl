@@ -10,10 +10,10 @@
 <br>
 
 <div align="center">
-<a href="https://actions-badge.atrox.dev/wayofdev/nextjs-starter-tpl/goto"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Fnextjs-starter-tpl%2Fbadge&style=flat-square"/></a>
-<a href="https://github.com/wayofdev/nextjs-starter-tpl/tags"><img src="https://img.shields.io/github/v/tag/wayofdev/nextjs-starter-tpl?sort=semver&style=flat-square" alt="Latest Version"></a>
-<a href="LICENSE.md"><img src="https://img.shields.io/github/license/wayofdev/nextjs-starter-tpl.svg?style=flat-square&color=blue" alt="Software License"/></a>
-<a href="#"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/nextjs-starter-tpl/latest?style=flat-square"></a>
+<a href="https://actions-badge.atrox.dev/wayofdev/next-starter-tpl/goto"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Fnext-starter-tpl%2Fbadge&style=flat-square"/></a>
+<a href="https://github.com/wayofdev/next-starter-tpl/tags"><img src="https://img.shields.io/github/v/tag/wayofdev/next-starter-tpl?sort=semver&style=flat-square" alt="Latest Version"></a>
+<a href="LICENSE.md"><img src="https://img.shields.io/github/license/wayofdev/next-starter-tpl.svg?style=flat-square&color=blue" alt="Software License"/></a>
+<a href="#"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/next-starter-tpl/latest?style=flat-square"></a>
 </div>
 
 <br>
@@ -81,7 +81,7 @@ This repository has some additional tools already setup for you:
 -   After backend is set up done, clone this repository:
 
     ```bash
-    git@github.com:wayofdev/nextjs-starter-tpl.git
+    git@github.com:wayofdev/next-starter-tpl.git
     ```
 
 -   Create `.env` file:
@@ -173,7 +173,7 @@ make test
 
 ## 🤝 License
 
-[![Licence](https://img.shields.io/github/license/wayofdev/nextjs-starter-tpl?style=for-the-badge&color=blue)](./LICENSE)
+[![Licence](https://img.shields.io/github/license/wayofdev/next-starter-tpl?style=for-the-badge&color=blue)](./LICENSE)
 
 <br>
 
