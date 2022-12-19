@@ -2,68 +2,68 @@
 name: CI
 
 on: # yamllint disable-line rule:truthy
-    push:
-        branches:
-            - master
-    pull_request:
-        branches:
-            - master
-            - develop
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+      - develop
 
 jobs:
-    integration:
-        name: Node ${{ matrix.node }} - ${{ matrix.os }}
-        runs-on: ${{ matrix.os }}
-        strategy:
-            fail-fast: true
-            matrix:
-                os: ['ubuntu-22.04']
-                node: ['18']
-                pnpm: ['7']
-        steps:
-            - name: Check out the codebase
-              uses: actions/checkout@v3
-              with:
-                  fetch-depth: 0
+  integration:
+    name: Node ${{ matrix.node }} - ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ 'ubuntu-22.04' ]
+        node: [ '18' ]
+        pnpm: [ '7' ]
+    steps:
+      - name: Check out the codebase
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-            - name: Install pnpm
-              uses: pnpm/action-setup@v2
-              id: pnpm-install
-              with:
-                  version: ${{ matrix.pnpm }}
-                  run_install: false
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: ${{ matrix.pnpm }}
+          run_install: false
 
-            - name: Get pnpm store directory
-              id: pnpm-cache
-              shell: 'bash'
-              run: echo "STORE_PATH=$(pnpm store path)" >> "$GITHUB_OUTPUT"
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: 'bash'
+        run: echo "STORE_PATH=$(pnpm store path)" >> "$GITHUB_OUTPUT"
 
-            - name: Setup node
-              uses: actions/setup-node@v3
-              with:
-                  cache: 'pnpm'
-                  node-version: ${{ matrix.node }}
-                  registry-url: 'https://registry.npmjs.org/'
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          cache: 'pnpm'
+          node-version: ${{ matrix.node }}
+          registry-url: 'https://registry.npmjs.org/'
 
-            - name: Load cached frontend dependencies
-              id: cached-pnpm-dependencies
-              uses: actions/cache@v3
-              with:
-                  path: node_modules
-                  key: pnpm-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-            - name: Install frontend dependencies
-              if: steps.cached-pnpm-dependencies.outputs.cache-hit != 'true'
-              run: pnpm install
+      - name: Install frontend dependencies
+        run: pnpm install
 
-            - name: Mix frontend code
-              run: pnpm build
+      - name: Mix frontend code
+        run: pnpm build
 
-            - if: github.event_name == 'pull_request'
-              name: Validate all commits from PR
-              uses: wagoid/commitlint-github-action@v5
-              env:
-                  NODE_PATH: ${{ github.workspace }}/node_modules
+      - if: github.event_name == 'pull_request'
+        name: Validate all commits from PR
+        uses: wagoid/commitlint-github-action@v5
+        env:
+          NODE_PATH: ${{ github.workspace }}/node_modules
 
-            - name: Linting
-              run: pnpm lint
+      - name: Linting
+        run: pnpm lint

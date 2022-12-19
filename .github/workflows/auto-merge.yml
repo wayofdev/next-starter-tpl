@@ -3,39 +3,39 @@
 name: Dependabot auto-approve and auto-merge
 
 on: # yamllint disable-line rule:truthy
-    pull_request:
+  pull_request:
 
 permissions:
-    pull-requests: write
-    contents: write
+  pull-requests: write
+  contents: write
 
 jobs:
-    dependabot:
-        runs-on: ubuntu-latest
-        if: ${{ github.actor == 'dependabot[bot]' }}
-        steps:
-            - name: Dependabot metadata
-              id: metadata
-              uses: dependabot/fetch-metadata@v1.3.5
-              with:
-                  github-token: '${{ secrets.GITHUB_TOKEN }}'
+  dependabot:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.3.5
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
 
-            - name: Approve a PR
-              run: gh pr review --approve "$PR_URL"
-              env:
-                  PR_URL: ${{github.event.pull_request.html_url}}
-                  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Approve a PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-            - name: Enable auto-merge for Dependabot PRs (for patch and minor updates)
-              if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-minor' || steps.metadata.outputs.update-type == 'version-update:semver-patch' }}
-              run: gh pr merge --auto --merge "$PR_URL"
-              env:
-                  PR_URL: ${{ github.event.pull_request.html_url }}
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Enable auto-merge for Dependabot PRs (for patch and minor updates)
+        if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-minor' || steps.metadata.outputs.update-type == 'version-update:semver-patch' }}
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Request reviews for Dependabot PRs (for all other updates)
-              if: ${{ steps.metadata.outputs.update-type != 'version-update:semver-minor' && steps.metadata.outputs.update-type != 'version-update:semver-patch' }}
-              run: gh pr edit "$PR_URL" --add-reviewer lotyp
-              env:
-                  PR_URL: ${{ github.event.pull_request.html_url }}
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Request reviews for Dependabot PRs (for all other updates)
+        if: ${{ steps.metadata.outputs.update-type != 'version-update:semver-minor' && steps.metadata.outputs.update-type != 'version-update:semver-patch' }}
+        run: gh pr edit "$PR_URL" --add-reviewer lotyp
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

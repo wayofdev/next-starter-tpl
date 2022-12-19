@@ -9,13 +9,13 @@
 name: Add labels
 
 on: # yamllint disable-line rule:truthy
-    pull_request:
+  pull_request:
 
 jobs:
-    label:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Apply labels
-              uses: actions/labeler@v4
-              with:
-                  repo-token: '${{ secrets.GITHUB_TOKEN }}'
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Apply labels
+        uses: actions/labeler@v4
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
