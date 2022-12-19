@@ -91,11 +91,11 @@ importers:
       '@types/react-dom': ^18.0.9
       '@wayofdev/browserslist-config': ^1.0.0
       eslint: ^7.32.0
-      eslint-config-custom: workspace:0.0.0
+      eslint-config-custom: workspace:*
       next: 13.0.0
       react: 18.2.0
       react-dom: 18.2.0
-      tsconfig: workspace:0.0.0
+      tsconfig: workspace:*
       typescript: ^4.9.4
       ui: workspace:0.0.0
     dependencies:
@@ -1193,7 +1193,7 @@ packages:
       '@typescript-eslint/utils': 5.46.1_lzzuuodtsqwxnvqeq4g4likcqa
       debug: 4.3.4
       eslint: 8.30.0
-      ignore: 5.2.2
+      ignore: 5.2.1
       natural-compare-lite: 1.4.0
       regexpp: 3.2.0
       semver: 7.3.8
@@ -3517,7 +3517,6 @@ packages:
   /ignore/5.2.1:
     resolution: {integrity: sha512-d2qQLzTJ9WxQftPAuEQpSPmKqzxePjzVbpAVv62AQ64NTL+wR4JkrVqR/LqFsFEUsHDAiId52mJteHDFuDkElA==}
     engines: {node: '>= 4'}
-    dev: false
 
   /ignore/5.2.2:
     resolution: {integrity: sha512-m1MJSy4Z2NAcyhoYpxQeBsc1ZdNQwYjN0wGbLBlnVArdJ90Gtr8IhNSfZZcCoR0fM/0E0BJ0mf1KnLNDOCJP4w==}
