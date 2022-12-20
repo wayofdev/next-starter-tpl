@@ -14,4 +14,4 @@ docker-compose exec -T app pnpm lint ||
 
 echo '🎉 No error found: committing this now.... ✨🚀🏄‍♂️🍻'
 
-pnpm lint-staged --verbose --concurrent false
+# pnpm lint-staged --verbose --concurrent false

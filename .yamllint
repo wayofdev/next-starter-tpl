@@ -3,9 +3,9 @@
 extends: default
 
 ignore: |
-    pnpm-lock.yaml
-    pnpm-workspace.yaml
-    node_modules/
+  pnpm-lock.yaml
+  pnpm-workspace.yaml
+  node_modules/
 
 # Overwrite above default rules
 rules:

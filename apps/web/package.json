@@ -1,28 +1,28 @@
 {
-    "name": "web",
-    "version": "0.0.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
-    },
-    "dependencies": {
-        "next": "13.0.7",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "ui": "workspace:0.0.0"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.20.5",
-        "@types/node": "^18.11.17",
-        "@types/react": "^18.0.26",
-        "@types/react-dom": "^18.0.9",
-        "@wayofdev/browserslist-config": "^1.0.0",
-        "eslint": "^7.32.0",
-        "eslint-config-custom": "workspace:*",
-        "tsconfig": "workspace:*",
-        "typescript": "^4.9.4"
-    }
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "13.0.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "ui": "workspace:0.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@types/node": "^18.11.17",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@wayofdev/browserslist-config": "^1.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.9.4"
+  }
 }

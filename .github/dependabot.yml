@@ -1,25 +1,25 @@
 ---
 version: 2
 updates:
-    - package-ecosystem: 'github-actions'
-      directory: '/'
-      schedule:
-          interval: 'daily'
-      commit-message:
-          include: 'scope'
-          prefix: 'github-actions'
-      labels:
-          - 'deps'
-      open-pull-requests-limit: 10
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    commit-message:
+      include: 'scope'
+      prefix: 'github-actions'
+    labels:
+      - 'deps'
+    open-pull-requests-limit: 10
 
-    - package-ecosystem: 'npm'
-      directory: '/'
-      schedule:
-          interval: 'weekly'
-      commit-message:
-          include: 'scope'
-          prefix: 'npm'
-      labels:
-          - 'deps'
-      open-pull-requests-limit: 10
-      versioning-strategy: 'increase'
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    commit-message:
+      include: 'scope'
+      prefix: 'npm'
+    labels:
+      - 'deps'
+    open-pull-requests-limit: 10
+    versioning-strategy: 'increase'

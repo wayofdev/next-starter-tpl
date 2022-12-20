@@ -1,3 +1,3 @@
 module.exports = {
-    ...require("@wayofdev/secretlint-config"),
+  ...require("@wayofdev/secretlint-config"),
 };
