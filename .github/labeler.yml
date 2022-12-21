@@ -3,12 +3,12 @@
 # Documentation https://github.com/marketplace/actions/labeler
 
 'type: documentation':
-    - assets/**/*
-    - .github/*
-    - ./*.md
+  - assets/**/*
+  - .github/*
+  - ./*.md
 
 'type: maintenance':
-    - .dependabot/*
-    - .github/**/*
-    - app/tests/**/*
-    - tests/**/*
+  - .dependabot/*
+  - .github/**/*
+  - app/tests/**/*
+  - tests/**/*

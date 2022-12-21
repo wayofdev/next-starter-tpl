@@ -1,3 +1,3 @@
 {
-    "extends": "./node_modules/@wayofdev/markdownlint-config/index.json"
+  "extends": "./node_modules/@wayofdev/markdownlint-config/index.json"
 }

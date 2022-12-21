@@ -1,10 +1,10 @@
 import { Button } from 'ui'
 
-export default function Docs() {
-    return (
-        <div>
-            <h1>Docs</h1>
-            <Button />
-        </div>
-    )
+export default function Documentation() {
+  return (
+    <div>
+      <h1>Documentation</h1>
+      <Button />
+    </div>
+  )
 }
