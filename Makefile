@@ -96,7 +96,7 @@ endif
 .PHONY: env
 
 install:
-	$(NPM_RUNNER) install -r
+	$(NPM_RUNNER) i
 .PHONY: install
 
 update:
@@ -107,8 +107,8 @@ build:
 	$(NPM_RUNNER) run build
 .PHONY: build
 
-purge:
-	rm -rf .pnpm-store node_modules pnpm-lock.yaml
+purge: down
+	rm -rf .pnpm-store node_modules **/node_modules pnpm-lock.yaml
 .PHONY: purge
 
 

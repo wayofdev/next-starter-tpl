@@ -1,10 +1,10 @@
-import {Button} from 'ui'
+import { Button } from 'ui'
 
-export default function Docs() {
+export default function Documentation() {
   return (
     <div>
-      <h1>Docs</h1>
-      <Button/>
+      <h1>Documentation</h1>
+      <Button />
     </div>
   )
 }

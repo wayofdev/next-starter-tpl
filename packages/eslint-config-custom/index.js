@@ -1,8 +1,3 @@
 module.exports = {
-  extends: ["next", "turbo", "prettier"],
-  settings: {
-    react: {
-      version: "detect",
-    },
-  },
-};
+  extends: ['@wayofdev/eslint-config/ts', '@wayofdev/eslint-config/jest'],
+}

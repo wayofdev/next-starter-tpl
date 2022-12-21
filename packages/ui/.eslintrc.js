@@ -15,5 +15,5 @@ module.exports = {
   rules: {
     'import/extensions': 'off',
   },
-  ignorePatterns: ['dist/**', '.next/**'],
+  ignorePatterns: ['dist/**'],
 }
