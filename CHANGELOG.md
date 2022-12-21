@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.1.0](https://github.com/wayofdev/next-starter-tpl/compare/v1.0.0...v1.1.0) (2022-12-21)
+
+
+### Features
+
+* enable lint-staged ([#9](https://github.com/wayofdev/next-starter-tpl/issues/9)) ([95f8193](https://github.com/wayofdev/next-starter-tpl/commit/95f8193c1e06ccf81c5fd80aa408490d67c10315))
+* github workflow ([#4](https://github.com/wayofdev/next-starter-tpl/issues/4)) ([a11b545](https://github.com/wayofdev/next-starter-tpl/commit/a11b545157241573d2e0f3225158446b41f2d785))
+* speed up linting ([#10](https://github.com/wayofdev/next-starter-tpl/issues/10)) ([d221956](https://github.com/wayofdev/next-starter-tpl/commit/d2219566c41130bbd13c16c7b601e619bcdb2486))
+
+
+### Documentation
+
+* fix readme links ([274ec68](https://github.com/wayofdev/next-starter-tpl/commit/274ec68731edec4ef09abd91f15b07a83a75401a))
+
+
+### Code Refactoring
+
+* tsconfig, lint-staged ([#12](https://github.com/wayofdev/next-starter-tpl/issues/12)) ([740cad8](https://github.com/wayofdev/next-starter-tpl/commit/740cad8072ea9de4526c3b60cf7deb6691012f0d))
+
+
+### Dependencies
+
+* update markdownlint config ([0a8fbe8](https://github.com/wayofdev/next-starter-tpl/commit/0a8fbe89c41116ad379e77327e9e50ec0d2e16cc))
+
 ## 1.0.0 (2022-12-19)
 
 
