@@ -8,7 +8,7 @@ importers:
       '@wayofdev/commitlint-config': ^1.1.0
       '@wayofdev/htmlhint-config': ^1.1.0
       '@wayofdev/lint-staged-config': ^1.2.0
-      '@wayofdev/markdownlint-config': ^1.0.0
+      '@wayofdev/markdownlint-config': ^1.1.0
       '@wayofdev/prettier-config': ^1.1.0
       '@wayofdev/secretlint-config': ^1.1.0
       '@wayofdev/stylelint-config': ^1.1.0
