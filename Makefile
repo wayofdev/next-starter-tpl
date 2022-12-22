@@ -108,7 +108,7 @@ build:
 .PHONY: build
 
 purge: down
-	rm -rf .pnpm-store node_modules **/node_modules pnpm-lock.yaml
+	rm -rf .pnpm-store node_modules **/node_modules pnpm-lock.yaml **/.turbo
 .PHONY: purge
 
 
