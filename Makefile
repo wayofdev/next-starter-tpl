@@ -3,6 +3,7 @@
 # BuildKit enables higher performance docker builds and caching possibility
 # to decrease build times and increase productivity for free.
 export DOCKER_BUILDKIT ?= 1
+export COMPOSE_DOCKER_CLI_BUILD ?= 1
 
 export SHARED_SERVICES_NETWORK = $(addsuffix _network,$(subst $e.,_,$(SHARED_SERVICES_NAMESPACE)))
 
