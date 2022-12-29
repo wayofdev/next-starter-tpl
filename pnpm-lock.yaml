@@ -59,7 +59,7 @@ importers:
       '@wayofdev/ui': workspace:*
       eslint: ^8.30.0
       eslint-config-custom: workspace:*
-      next: ^13.1.0
+      next: ^13.1.1
       nextra: ^2.0.1
       nextra-theme-docs: ^2.0.1
       react: ^18.2.0
@@ -183,6 +183,7 @@ importers:
       clsx: ^1.2.1
       eslint: ^8.30.0
       eslint-config-custom: workspace:*
+      rimraf: ^3.0.2
       tsconfig-config: workspace:*
       typescript: ^4.9.4
     dependencies:
@@ -192,6 +193,7 @@ importers:
       '@types/react': 18.0.26
       eslint: 8.30.0
       eslint-config-custom: link:../eslint-config-custom
+      rimraf: 3.0.2
       tsconfig-config: link:../tsconfig-config
       typescript: 4.9.4
 
