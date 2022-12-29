@@ -1,5 +1,14 @@
 {
-  "extends": "tsconfig-config/lib.json",
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "extends": "tsconfig-config/next.json",
+  "exclude": ["dist", "build", "node_modules"],
+  "include": ["./src"],
+  "compilerOptions": {
+    "target": "esnext",
+    "baseUrl": "./src",
+    "outDir": "dist",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "noEmit": false
+  }
 }

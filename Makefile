@@ -116,7 +116,7 @@ purge: down
 # Docker Actions
 # ------------------------------------------------------------------------------------
 up: ## Spin up this project using docker
-	$(DOCKER_COMPOSE) up --remove-orphans -d
+	$(DOCKER_COMPOSE) up --remove-orphans
 	@echo "🚀 Started and available at https://$(APP_NAME).$(PROJECT_SERVICES_NAMESPACE).docker"
 .PHONY: up
 

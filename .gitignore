@@ -21,6 +21,7 @@ cypress/videos/
 out/
 build/
 local/
+dist/
 
 # next-sitemap
 public/robots.txt

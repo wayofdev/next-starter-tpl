@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "extends": "custom",
+  "plugins": ["import"],
+  "rules": {
+    "import/extensions": "off",
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "replacements": {
+          "env": {
+            "environment": false
+          }
+        }
+      }
+    ]
+  },
+  "ignorePatterns": ["dist/**", ".next/**"],
+  "parserOptions": {
+    "project": ["tsconfig.json"]
+  }
+}

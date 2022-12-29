@@ -3,7 +3,7 @@ version: '3.9'
 
 services:
   app:
-    image: wayofdev/node:19-alpine-1.3
+    image: wayofdev/node:19-alpine-1.4
     container_name: ${APP_NAME}_app
     restart: on-failure
     networks:

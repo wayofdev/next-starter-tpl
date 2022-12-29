@@ -1,19 +1,52 @@
 {
-  "name": "ui",
-  "version": "0.1.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
+  "name": "@wayofdev/ui",
+  "version": "1.0.0",
   "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": [
+      "./src/*.ts",
+      "./src/*.tsx",
+      "./src/*/index.ts"
+    ],
+    "./tailwind": {
+      "require": "./src/tailwind.cjs"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*",
+        "src/*/index"
+      ]
+    }
+  },
   "scripts": {
-    "lint": "eslint *.ts*"
+    "lint": "eslint . --ext .ts,.tsx",
+    "build": "pnpm build:swc && pnpm types",
+    "build:swc": "swc src -d dist --copy-files",
+    "clean": "rm -rf ./dist",
+    "types": "tsc --emitDeclarationOnly"
+  },
+  "dependencies": {
+    "@swc/helpers": "^0.4.14",
+    "clsx": "^1.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
     "eslint": "^8.30.0",
     "eslint-config-custom": "workspace:*",
-    "react": "^18.2.0",
     "tsconfig-config": "workspace:*",
     "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "next": "*",
+    "react": "^18.2",
+    "react-dom": "^18.2"
   }
 }
