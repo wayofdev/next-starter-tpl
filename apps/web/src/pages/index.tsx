@@ -12,6 +12,14 @@ export default function Web() {
       <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Boop
       </button>
+      <button
+        type="button"
+        onClick={() => {
+          throw new Error('Sentry Frontend Error')
+        }}
+      >
+        Throw error
+      </button>
     </>
   )
 }
