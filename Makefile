@@ -109,7 +109,7 @@ build:
 .PHONY: build
 
 purge: down
-	rm -rf .pnpm-store node_modules **/node_modules pnpm-lock.yaml **/.turbo
+	rm -rf .pnpm-store node_modules **/node_modules pnpm-lock.yaml **/.turbo **/.next
 .PHONY: purge
 
 
@@ -139,14 +139,17 @@ logs: ## Show all project docker logs
 	$(DOCKER_COMPOSE) logs -f
 .PHONY: logs
 
-ssh:
+ssh: ## Login into running app container
 	$(DOCKER_COMPOSE) run --rm -it app sh
 .PHONY: ssh
 
-recreate:
-	rm -rf .pnpm-store node_modules
+recreate: purge ## Delete dependencies and re-create docker container
 	$(DOCKER_COMPOSE) build app
 .PHONY: recreate
+
+pull: ## Pull latest docker image for app container
+	$(DOCKER_COMPOSE) pull app
+.PHONY: pull
 
 
 # Testing and Code Quality
