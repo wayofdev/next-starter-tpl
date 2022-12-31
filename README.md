@@ -44,7 +44,7 @@ This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes th
 
 This repository has some additional tools already setup for you:
 
-- Supporting [NextJS 13.x](https://nextjs.org/blog/next-13)
+- Supporting [NextJS 13.1.1+](https://nextjs.org/blog/next-13)
 - [TypeScript](https://www.typescriptlang.org/) support for static type checking
 - Strict Mode for TypeScript and React 18
 - [ESLint](https://eslint.org/) for code linting and configured presets: NextJS Recommended, NextJS Core Web Vitals and [Airbnb Style Guide](https://www.npmjs.com/package/eslint-config-airbnb)
@@ -59,12 +59,15 @@ This repository has some additional tools already setup for you:
 - [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) — Visualize size of webpack output files with an interactive zoomable treemap
 - Optimized [Lighthouse](https://web.dev/performance-scoring/) performance score
 - End-2-end testing with [cypress](https://www.cypress.io/) and [JestJS](https://jestjs.io/) support for writing unit tests
+- Package autoupdate in all workspace projects using [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
+- Keep package.json sorted using [sort-package-json](https://www.npmjs.com/package/sort-package-json)
+- Client and server side [error reporting](https://sentry.io/) supported by [@sentry/nextjs](https://www.npmjs.com/package/@sentry/nextjs)
 
 <br>
 
 ## 📑 Requirements
 
-- **macOS** Monterey or **Linux**
+- **macOS** Monterey+ or **Linux**
 - **Docker** 20.10 or newer
   - [How To Install and Use Docker on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
 - **Cloned, configured and running** [docker-shared-services](https://github.com/wayofdev/docker-shared-services), to support system wide DNS, Routing and TLS support via Traefik.

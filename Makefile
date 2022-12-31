@@ -112,6 +112,14 @@ purge: down
 	rm -rf .pnpm-store node_modules **/node_modules pnpm-lock.yaml **/.turbo **/.next
 .PHONY: purge
 
+deps-check:
+	$(NPM_RUNNER) run deps:check
+.PHONY: deps-check
+
+deps-update:
+	$(NPM_RUNNER) run deps:update
+.PHONY: deps-update
+
 
 # Docker Actions
 # ------------------------------------------------------------------------------------

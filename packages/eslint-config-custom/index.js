@@ -1,3 +1,6 @@
 module.exports = {
-  extends: ['@wayofdev/eslint-config/ts', '@wayofdev/eslint-config/jest'],
+  extends: [
+    '@wayofdev/eslint-config/ts',
+    '@wayofdev/eslint-config/jest'
+  ],
 }

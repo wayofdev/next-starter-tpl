@@ -1,29 +1,28 @@
 {
   "name": "docs",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3001",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev --port 3001",
+    "lint": "next lint",
+    "start": "next start"
   },
   "dependencies": {
-    "next": "^13.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@wayofdev/ui": "workspace:*",
-    "nextra": "^2.0.1",
-    "nextra-theme-docs": "^2.0.1"
+    "next": "^13.1.1",
+    "nextra": "^2.0.2",
+    "nextra-theme-docs": "^2.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "@wayofdev/browserslist-config": "^1.1.0",
+    "@wayofdev/eslint-config-custom": "workspace:*",
     "eslint": "^8.30.0",
-    "eslint-config-custom": "workspace:*",
-    "tsconfig-config": "workspace:*",
     "typescript": "^4.9.4"
   }
 }

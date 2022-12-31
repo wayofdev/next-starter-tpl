@@ -10,7 +10,7 @@ node_modules
 .pnpm-store
 
 # testing
-coverage
+coverage/
 
 # cypress
 cypress/screenshots/
@@ -54,4 +54,11 @@ yarn-error.log*
 
 # cache
 .eslintcache
+**/.eslintcache
 .stylelintcache
+.cache/*
+**/tsconfig.tsbuildinfo
+
+# override files
+docker-compose.override.yml
+

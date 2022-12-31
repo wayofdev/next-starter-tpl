@@ -1,8 +1,8 @@
 {
   "name": "@wayofdev/ui",
   "version": "1.0.0",
-  "license": "MIT",
   "private": true,
+  "license": "MIT",
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -16,9 +16,6 @@
       "require": "./src/tailwind.cjs"
     }
   },
-  "files": [
-    "src"
-  ],
   "typesVersions": {
     "*": {
       "*": [
@@ -27,9 +24,12 @@
       ]
     }
   },
+  "files": [
+    "src"
+  ],
   "scripts": {
-    "lint": "eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
-    "clean": "rimraf dist .turbo"
+    "clean": "rimraf dist .turbo",
+    "lint": "eslint \"**/*.{ts,tsx,js,jsx}\" --fix"
   },
   "dependencies": {
     "@swc/helpers": "^0.4.14",
@@ -37,11 +37,10 @@
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
+    "@wayofdev/eslint-config-custom": "workspace:*",
     "eslint": "^8.30.0",
-    "eslint-config-custom": "workspace:*",
-    "tsconfig-config": "workspace:*",
-    "typescript": "^4.9.4",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.4"
   },
   "peerDependencies": {
     "next": "*",

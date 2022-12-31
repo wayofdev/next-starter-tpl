@@ -1,16 +1,16 @@
 {
-  "name": "eslint-config-custom",
-  "version": "0.1.0",
-  "main": "index.js",
+  "name": "@wayofdev/eslint-config-custom",
+  "version": "1.0.0",
   "private": true,
   "license": "MIT",
+  "main": "index.js",
   "dependencies": {
     "@wayofdev/eslint-config": "^1.1.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-tailwindcss": "^3.7.1",
     "eslint": "^8.30.0",
-    "typescript": "^4.9.4",
-    "prettier": "^2.8.1"
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-tailwindcss": "^3.8.0",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4"
   },
   "publishConfig": {
     "access": "public"

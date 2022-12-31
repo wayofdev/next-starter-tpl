@@ -1,20 +1,37 @@
 {
-  "extends": "tsconfig-config/next.json",
-  "exclude": ["node_modules", "dist", "coverage"],
-  "include": ["next-env.d.ts", "**/*.d.ts", "**/*.ts", "**/*.tsx"],
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../tsconfig.base.json",
+  "exclude": ["**/node_modules", "**/.*/"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mts",
+    "**/*.js",
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.jsx",
+    "**/*.json"
+  ],
   "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "target": "esnext",
     "baseUrl": "./src",
-    "allowJs": true,
-    "moduleResolution": "node",
-
-    "noEmit": true,
+    "importHelpers": true,
     "module": "esnext",
-
-    "jsx": "preserve",
     "paths": {
+      "@/test-utils": ["../config/tests/test-utils"],
+      "@/config/*": ["./config/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/components/*": ["./components/*"],
+      "@/features/*": ["./features/*"],
       "@/pages/*": ["./pages/*"],
       "@/public/*": ["../public/*"],
+      "@/themes/*": ["./themes/*"],
       "@wayofdev/ui/*": ["../../../packages/ui/src/*"],
       "@wayofdev/ui": ["../../../packages/ui/src/index"]
     }
