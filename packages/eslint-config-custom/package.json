@@ -2,15 +2,109 @@
   "name": "@wayofdev/eslint-config-custom",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://github.com/wayofdev/next-starter-tpl",
   "license": "MIT",
-  "main": "index.js",
+  "author": {
+    "name": "Andrij Orlenko",
+    "email": "lotyp7@gmail.com",
+    "url": "https://github.com/lotyp"
+  },
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "require": "./src/index.js"
+    },
+    "./patch/modern-module-resolution": {
+      "require": "./src/patch/modern-module-resolution.js"
+    },
+    "./helpers": {
+      "require": "./src/helpers/index.js"
+    },
+    "./jest": {
+      "require": "./src/bases/jest.js"
+    },
+    "./prettier": {
+      "require": "./src/bases/prettier.js"
+    },
+    "./react": {
+      "require": "./src/bases/react.js"
+    },
+    "./rtl": {
+      "require": "./src/bases/rtl.js"
+    },
+    "./regexp": {
+      "require": "./src/bases/regexp.js"
+    },
+    "./sonar": {
+      "require": "./src/bases/sonar.js"
+    },
+    "./tailwind": {
+      "require": "./src/bases/tailwind.js"
+    },
+    "./typescript": {
+      "require": "./src/bases/typescript.js"
+    }
+  },
+  "main": "./src/index.js",
+  "scripts": {
+    "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
+    "lint": "eslint --ext .ts,.js,.cjs,.mjs --cache --cache-location ../../.cache/eslint/eslint-config-custom.eslintcache",
+    "lint:fix": "eslint  --ext .ts,.tsx,.js,.jsx --fix",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
   "dependencies": {
-    "@wayofdev/eslint-config": "^1.1.0",
-    "eslint": "^8.30.0",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.0.4",
+    "eslint-plugin-jest-dom": "^4.0.2",
+    "eslint-plugin-jest-formatting": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-regexp": "^1.11.0",
+    "eslint-plugin-security": "^1.5.0",
+    "eslint-plugin-sonarjs": "^0.17.0",
     "eslint-plugin-tailwindcss": "^3.8.0",
-    "prettier": "^2.8.1",
+    "eslint-plugin-testing-library": "^5.9.1",
+    "eslint-plugin-unicorn": "^45.0.2",
+    "prettier": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.5",
+    "@types/node": "^18.11.18",
+    "@types/prettier": "^2.7.2",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "eslint": "^8.31.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2",
     "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "eslint": "^8.31.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.4"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
   },
   "publishConfig": {
     "access": "public"

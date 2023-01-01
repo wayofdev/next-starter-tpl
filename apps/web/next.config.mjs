@@ -1,7 +1,10 @@
+// @ts-check
+
 // This file sets a custom webpack configuration to use your Next.js app
 // with Sentry.
 // @link https://nextjs.org/docs/api-reference/next.config.js/introduction
 // @link https://docs.sentry.io/platforms/javascript/guides/nextjs/
+// @link https://github.com/vercel/next.js/tree/canary/examples/with-sentry
 
 import { readFileSync } from 'node:fs'
 import withBundleAnalyzer from '@next/bundle-analyzer'
@@ -23,10 +26,7 @@ const isCI = trueEnv.includes(process.env?.CI ?? 'false')
 
 const NEXT_IGNORE_TYPE_CHECK = trueEnv.includes(process.env?.NEXT_IGNORE_TYPE_CHECK ?? 'false')
 const NEXT_IGNORE_ESLINT = trueEnv.includes(process.env?.NEXT_IGNORE_ESLINT ?? 'false')
-
-const NEXT_SENTRY_UPLOAD_DRY_RUN = trueEnv.includes(
-  process.env?.NEXT_SENTRY_UPLOAD_DRY_RUN ?? 'false'
-)
+const NEXT_SENTRY_UPLOAD_DRY_RUN = trueEnv.includes(process.env?.NEXT_SENTRY_UPLOAD_DRY_RUN ?? 'false')
 const NEXT_DISABLE_SENTRY = trueEnv.includes(process.env?.NEXT_DISABLE_SENTRY ?? 'false')
 const NEXT_SENTRY_DEBUG = trueEnv.includes(process.env?.NEXT_SENTRY_DEBUG ?? 'false')
 const NEXT_SENTRY_TRACING = trueEnv.includes(process.env?.NEXT_SENTRY_TRACING ?? 'false')
@@ -168,6 +168,8 @@ const nextConfig = {
 }
 
 let config = nextConfig
+
+console.log({'next_disable_sentry': NEXT_DISABLE_SENTRY});
 
 if (!NEXT_DISABLE_SENTRY) {
   config = withSentryConfig(config, {

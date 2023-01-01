@@ -15,7 +15,7 @@
     "turborepo",
     "pnpm"
   ],
-  "homepage": "https://wayof.dev",
+  "homepage": "https://github.com/wayofdev/next-starter-tpl",
   "license": "MIT",
   "author": {
     "name": "Andrij Orlenko",
@@ -38,7 +38,7 @@
     "test": "turbo run test --parallel",
     "test:watch": "turbo run test:watch",
     "test:prod": "turbo run test:prod --parallel",
-    "lint": "run-p lint:turbo lint:md lint:html lint:secrets",
+    "lint": "run-p lint:turbo lint:md lint:html lint:secrets lint:package-json",
     "lint:turbo": "turbo lint",
     "lint:md": "markdownlint --fix **/*.md --ignore '**/node_modules/**' --ignore '**/CHANGELOG.md'",
     "lint:css": "stylelint --fix **/*.{css,scss}",

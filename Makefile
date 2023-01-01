@@ -96,8 +96,11 @@ else
 endif
 .PHONY: env
 
-install:
+i:
 	$(NPM_RUNNER) i
+.PHONY: i
+
+install: i
 .PHONY: install
 
 update:
@@ -182,6 +185,10 @@ test: ## Run unit tests
 format: ## Run prettier formatting
 	$(DOCKER_COMPOSE) exec -T app $(NPM_BIN) run format
 .PHONY: format
+
+sort: ## Sort package.json across project
+	$(DOCKER_COMPOSE) exec -T app $(NPM_BIN) run lint:package-json
+.PHONY: sort
 
 
 # Yaml Actions

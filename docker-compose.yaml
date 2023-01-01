@@ -11,6 +11,7 @@ services:
       - shared
     volumes:
       - ./:/app:rw
+      - ./.env:/app/apps/web/.env
     working_dir: /app
     command: '/bin/pnpm run dev'
     environment:
