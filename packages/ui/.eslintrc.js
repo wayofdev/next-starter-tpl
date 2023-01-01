@@ -15,33 +15,21 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: 'tsconfig.json',
   },
-  ignorePatterns: [...getDefaultIgnorePatterns(), '.next', '.out'],
+  ignorePatterns: [...getDefaultIgnorePatterns(), '/storybook-static'],
   extends: [
     '@wayofdev/eslint-config-custom/typescript',
-    '@wayofdev/eslint-config-custom/sonar',
     '@wayofdev/eslint-config-custom/regexp',
+    '@wayofdev/eslint-config-custom/sonar',
     '@wayofdev/eslint-config-custom/jest',
-    '@wayofdev/eslint-config-custom/react',
-    '@wayofdev/eslint-config-custom/tailwind',
     '@wayofdev/eslint-config-custom/rtl',
-    // Add specific rules for nextjs
-    'plugin:@next/next/core-web-vitals',
+    '@wayofdev/eslint-config-custom/react',
     // Apply prettier and disable incompatible rules
     '@wayofdev/eslint-config-custom/prettier',
   ],
   rules: {
-    // https://github.com/vercel/next.js/discussions/16832
-    '@next/next/no-img-element': 'off',
-    // For the sake of example
-    // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md
-    'jsx-a11y/anchor-is-valid': 'off',
+    // optional overrides per project
   },
   overrides: [
-    {
-      files: ['src/pages/\\_*.{ts,tsx}'],
-      rules: {
-        'react/display-name': 'off',
-      },
-    },
+    // optional overrides per project file match
   ],
 }

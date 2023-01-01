@@ -4,7 +4,6 @@
   "private": true,
   "license": "MIT",
   "sideEffects": false,
-  "type": "module",
   "exports": {
     ".": "./src/index.ts",
     "./*": [
@@ -29,22 +28,39 @@
   ],
   "scripts": {
     "clean": "rimraf dist .turbo",
-    "lint": "eslint \"**/*.{ts,tsx,js,jsx}\" --fix"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --cache --cache-location ../../.cache/eslint/ui.eslintcache"
   },
   "dependencies": {
     "@swc/helpers": "^0.4.14",
     "clsx": "^1.2.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/jest": "^29.2.5",
+    "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
+    "@types/react-dom": "18.0.9",
     "@wayofdev/eslint-config-custom": "workspace:*",
     "eslint": "^8.30.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
     "next": "*",
     "react": "^18.2",
     "react-dom": "^18.2"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
   }
 }

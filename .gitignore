@@ -1,22 +1,19 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# editors
-.idea
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files
+# and https://github.com/github/gitignore for examples
 
 # dependencies
 node_modules
+.pnp.*
 .pnp
-.pnp.js
 .pnpm-store
 
 # testing
 coverage/
-
-# cypress
 cypress/screenshots/
 cypress/videos/
+.out/
 
-# next.js
+# next.js and build directories
 .next/
 out/
 build/
@@ -38,18 +35,19 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+**/.debug
+logs/
+*.log
+.turbo/
+**/.turbo/
 
 # local env files
 .env
+**/.env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*.local
 
-# turbo
-.turbo
-
-# vercel
+# deployment platforms
 .vercel
 
 # cache
@@ -62,3 +60,16 @@ yarn-error.log*
 # override files
 docker-compose.override.yml
 
+# editors
+.idea
+
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# temp files
+tmp/
+*.tmp

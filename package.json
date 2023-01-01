@@ -13,9 +13,19 @@
     "wayofdev",
     "monorepo",
     "turborepo",
-    "pnpm"
+    "pnpm",
+    "example",
+    "workspace",
+    "eslint-plugin",
+    "docker",
+    "docker-compose",
+    "traefik"
   ],
   "homepage": "https://github.com/wayofdev/next-starter-tpl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wayofdev/next-starter-tpl"
+  },
   "license": "MIT",
   "author": {
     "name": "Andrij Orlenko",
@@ -27,6 +37,7 @@
     "packages/*"
   ],
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "commit": "git-cz",
     "prepare": "is-ci || husky install",
     "clean": "turbo run clean --parallel",
@@ -58,11 +69,10 @@
     "@wayofdev/htmlhint-config": "^1.1.0",
     "@wayofdev/lint-staged-config": "^1.2.0",
     "@wayofdev/markdownlint-config": "^1.1.0",
-    "@wayofdev/prettier-config": "^1.1.0",
     "@wayofdev/secretlint-config": "^1.1.0",
     "@wayofdev/stylelint-config": "^1.1.0",
     "@wayofdev/tsconfig-config": "^1.3.0",
-    "eslint": "^8.30.0",
+    "eslint": "^8.31.0",
     "htmlhint": "^1.1.4",
     "husky": "^8.0.2",
     "is-ci": "^3.0.1",

@@ -1,5 +1,5 @@
-import type { FC, ButtonHTMLAttributes } from 'react'
 import cn from 'clsx'
+import type { FC, ButtonHTMLAttributes } from 'react'
 
 const Button: FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
   children,

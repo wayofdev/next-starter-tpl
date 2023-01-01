@@ -6,7 +6,7 @@
     "analyze": "BUNDLE_ANALYZE=both next build",
     "build": "next build",
     "dev": "next dev",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs,.mdx --cache --cache-location ../../.cache/eslint/nextjs-app.eslintcache",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs,.mdx --cache --cache-location ../../.cache/eslint/web.eslintcache",
     "start": "next start"
   },
   "dependencies": {
