@@ -169,8 +169,6 @@ const nextConfig = {
 
 let config = nextConfig
 
-console.log({'next_disable_sentry': NEXT_DISABLE_SENTRY});
-
 if (!NEXT_DISABLE_SENTRY) {
   config = withSentryConfig(config, {
     // Additional config options for the Sentry Webpack plugin. Keep in mind that

@@ -14,6 +14,10 @@
 <a href="https://github.com/wayofdev/next-starter-tpl/tags"><img src="https://img.shields.io/github/v/tag/wayofdev/next-starter-tpl?sort=semver&style=flat-square" alt="Latest Version"></a>
 <a href="LICENSE.md"><img src="https://img.shields.io/github/license/wayofdev/next-starter-tpl.svg?style=flat-square&color=blue" alt="Software License"/></a>
 <a href="#"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/next-starter-tpl/latest?style=flat-square"></a>
+<a href="#"><img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability/wayofdev/next-starter-tpl?style=flat-square"></a>
+<a href="#"><img alt="Code Climate issues" src="https://img.shields.io/codeclimate/issues/wayofdev/next-starter-tpl?style=flat-square"></a>
+<a href="#"><img alt="Code Climate technical debt" src="https://img.shields.io/codeclimate/tech-debt/wayofdev/next-starter-tpl?style=flat-square"></a>
+  <a href="#"><img alt="Code Climate coverage" src="https://img.shields.io/codeclimate/coverage/wayofdev/next-starter-tpl?style=flat-square"></a>
 </div>
 
 <br>
@@ -181,7 +185,11 @@ make test
 
 <br>
 
-## 🧱 Useful Resources
+## 🧱 Credits and Useful Resources
+
+Based on [nextjs-monorepo-example](https://github.com/belgattitude/nextjs-monorepo-example) template from [belgattitude](https://github.com/belgattitude).
+
+- Check his benchmark on package managers — [belgattitude/compare-package-managers](https://github.com/belgattitude/compare-package-managers)
 
 Learn more about the power of **Turborepo**:
 
@@ -202,7 +210,6 @@ Other monorepo templates:
 Other projects:
 
 - [ixartz/next-js-boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
-- [laravel/breeze-next](https://github.com/laravel/breeze-next)
 
 <br>
 

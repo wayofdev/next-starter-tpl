@@ -1,8 +1,26 @@
-// More, about extending this config:
-// https://github.com/wayofdev/npm-shareable-configs/blob/master/packages/prettier-config/README.md
-module.exports = {
-  ...require('@wayofdev/prettier-config'),
-  semi: false,
-  tabWidth: 2,
-  useTabs: false,
-}
+// @ts-check
+
+const { getPrettierConfig } = require('@wayofdev/eslint-config-custom/helpers');
+
+const { overrides = [], ...prettierConfig } = getPrettierConfig();
+
+/**
+ * @type {import('prettier').Config}
+ */
+const config = {
+  ...prettierConfig,
+  overrides: [
+    ...overrides,
+    ...[
+      {
+        files: '*.md',
+        options: {
+          singleQuote: false,
+          quoteProps: 'preserve',
+        },
+      },
+    ],
+  ],
+};
+
+module.exports = config;
