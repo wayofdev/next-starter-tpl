@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig/base.json",
+  "extends": "@wayofdev/tsconfig-config/base.json",
+  "compilerOptions": {
+    "useUnknownInCatchVariables": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "exclude": ["**/node_modules", "**/.*/"]
+}

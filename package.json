@@ -1,15 +1,8 @@
 {
   "name": "next-starter-tpl",
-  "description": "A monorepo boilerplate using pnpm, turborepo and nextjs",
   "version": "1.1.0",
   "private": true,
-  "author": "lotyp7@gmail.com",
-  "license": "MIT",
-  "homepage": "https://wayof.dev",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "description": "A monorepo boilerplate using pnpm, turborepo and nextjs",
   "keywords": [
     "template",
     "boilerplate",
@@ -22,9 +15,20 @@
     "turborepo",
     "pnpm"
   ],
+  "homepage": "https://github.com/wayofdev/next-starter-tpl",
+  "license": "MIT",
+  "author": {
+    "name": "Andrij Orlenko",
+    "email": "lotyp7@gmail.com",
+    "url": "https://github.com/lotyp"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "commit": "git-cz",
-    "prepare": "husky install",
+    "prepare": "is-ci || husky install",
     "clean": "turbo run clean --parallel",
     "build": "turbo run build --parallel",
     "build:prod": "turbo run build --parallel",
@@ -34,39 +38,50 @@
     "test": "turbo run test --parallel",
     "test:watch": "turbo run test:watch",
     "test:prod": "turbo run test:prod --parallel",
-    "lint": "run-p lint:turbo lint:md lint:html lint:secrets",
+    "lint": "run-p lint:turbo lint:md lint:html lint:secrets lint:package-json",
     "lint:turbo": "turbo lint",
     "lint:md": "markdownlint --fix **/*.md --ignore '**/node_modules/**' --ignore '**/CHANGELOG.md'",
     "lint:css": "stylelint --fix **/*.{css,scss}",
     "lint:html": "htmlhint --config ./node_modules/@wayofdev/htmlhint-config/index.json **/*.html",
-    "lint:secrets": "pnpm secretlint **/*"
+    "lint:secrets": "pnpm secretlint **/*",
+    "lint:package-json": "sort-package-json package.json apps/*/package.json packages/*/package.json",
+    "deps:check": "pnpm dlx npm-check-updates@latest --configFileName .ncurc.yml --deep --mergeConfig",
+    "deps:update": "pnpm dlx npm-check-updates@latest --configFileName .ncurc.yml -u --deep --mergeConfig && pnpm install"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "2.26.0",
     "@commitlint/cli": "^17.3.0",
-    "@wayofdev/commitlint-config": "^1.1.0",
+    "@types/prettier": "^2.7.2",
+    "@wayofdev/commitlint-config": "^1.2.0",
+    "@wayofdev/eslint-config-custom": "workspace:*",
     "@wayofdev/htmlhint-config": "^1.1.0",
     "@wayofdev/lint-staged-config": "^1.2.0",
     "@wayofdev/markdownlint-config": "^1.1.0",
     "@wayofdev/prettier-config": "^1.1.0",
     "@wayofdev/secretlint-config": "^1.1.0",
     "@wayofdev/stylelint-config": "^1.1.0",
+    "@wayofdev/tsconfig-config": "^1.3.0",
+    "eslint": "^8.30.0",
     "htmlhint": "^1.1.4",
     "husky": "^8.0.2",
+    "is-ci": "^3.0.1",
     "lint-staged": "^13.1.0",
-    "markdownlint": "^0.26.2",
+    "markdownlint": "^0.27.0",
     "markdownlint-cli": "^0.32.2",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.20",
     "prettier": "^2.8.1",
-    "prettier-plugin-tailwindcss": "^0.2.1",
+    "rimraf": "^3.0.2",
     "secretlint": "^5.3.0",
-    "stylelint": "^14.16.0",
+    "sort-package-json": "^2.1.0",
+    "stylelint": "^14.16.1",
     "stylelint-a11y": "^1.2.3",
-    "turbo": "latest",
+    "turbo": "^1.6.3",
     "typescript": "^4.9.4"
   },
+  "packageManager": "pnpm@7.21.0",
   "engines": {
     "node": ">=18.0.0"
-  },
-  "packageManager": "pnpm@7.18.2"
+  }
 }

@@ -96,8 +96,11 @@ else
 endif
 .PHONY: env
 
-install:
+i:
 	$(NPM_RUNNER) i
+.PHONY: i
+
+install: i
 .PHONY: install
 
 update:
@@ -109,14 +112,22 @@ build:
 .PHONY: build
 
 purge: down
-	rm -rf .pnpm-store node_modules **/node_modules pnpm-lock.yaml **/.turbo
+	rm -rf .pnpm-store node_modules **/node_modules pnpm-lock.yaml **/.turbo **/.next
 .PHONY: purge
+
+deps-check:
+	$(NPM_RUNNER) run deps:check
+.PHONY: deps-check
+
+deps-update:
+	$(NPM_RUNNER) run deps:update
+.PHONY: deps-update
 
 
 # Docker Actions
 # ------------------------------------------------------------------------------------
 up: ## Spin up this project using docker
-	$(DOCKER_COMPOSE) up --remove-orphans -d
+	$(DOCKER_COMPOSE) up --remove-orphans
 	@echo "🚀 Started and available at https://$(APP_NAME).$(PROJECT_SERVICES_NAMESPACE).docker"
 .PHONY: up
 
@@ -139,14 +150,17 @@ logs: ## Show all project docker logs
 	$(DOCKER_COMPOSE) logs -f
 .PHONY: logs
 
-ssh:
+ssh: ## Login into running app container
 	$(DOCKER_COMPOSE) run --rm -it app sh
 .PHONY: ssh
 
-recreate:
-	rm -rf .pnpm-store node_modules
+recreate: purge ## Delete dependencies and re-create docker container
 	$(DOCKER_COMPOSE) build app
 .PHONY: recreate
+
+pull: ## Pull latest docker image for app container
+	$(DOCKER_COMPOSE) pull app
+.PHONY: pull
 
 
 # Testing and Code Quality
@@ -171,6 +185,10 @@ test: ## Run unit tests
 format: ## Run prettier formatting
 	$(DOCKER_COMPOSE) exec -T app $(NPM_BIN) run format
 .PHONY: format
+
+sort: ## Sort package.json across project
+	$(DOCKER_COMPOSE) exec -T app $(NPM_BIN) run lint:package-json
+.PHONY: sort
 
 
 # Yaml Actions

@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['custom'],
+  extends: ['@wayofdev/custom'],
   plugins: ['import'],
   parserOptions: {
     project: ['tsconfig.json'],

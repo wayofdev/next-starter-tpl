@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@2.2.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    {
+      "repo": "wayofdev/next-starter-tpl"
+    }
+  ],
+  "privatePackages": {
+    "version": true,
+    "tag": true
+  },
+  "commit": true,
+  "linked": [],
+  "access": "restricted",
+  "baseBranch": "master",
+  "updateInternalDependencies": "patch",
+  "ignore": []
+}
