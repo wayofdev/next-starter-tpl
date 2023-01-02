@@ -5,7 +5,10 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --port 3001",
-    "lint": "next lint",
+    "fix-all": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs,.mdx --fix",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs,.mdx --cache --cache-location ../../.cache/eslint/docs.eslintcache",
+    "lint:dist": "es-check -v",
+    "lint:types": "tsc --project ./tsconfig.json --noEmit",
     "start": "next start"
   },
   "dependencies": {
@@ -22,6 +25,7 @@
     "@types/react-dom": "^18.0.10",
     "@wayofdev/browserslist-config": "^1.1.0",
     "@wayofdev/eslint-config-custom": "workspace:*",
+    "es-check": "^7.0.1",
     "eslint": "^8.30.0",
     "typescript": "^4.9.4"
   }

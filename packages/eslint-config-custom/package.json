@@ -48,8 +48,8 @@
   "main": "./src/index.js",
   "scripts": {
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
+    "fix-all": "eslint  --ext .ts,.tsx,.js,.jsx --fix",
     "lint": "eslint --ext .ts,.js,.cjs,.mjs --cache --cache-location ../../.cache/eslint/eslint-config-custom.eslintcache",
-    "lint:fix": "eslint  --ext .ts,.tsx,.js,.jsx --fix",
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {

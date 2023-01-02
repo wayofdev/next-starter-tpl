@@ -1,11 +1,11 @@
 /**
  * NOTE: This requires `@sentry/nextjs` version 7.3.0 or higher.
  *
- * This page is loaded by Nextjs:
+ * This page is loaded by NextJS:
  *  - on the server, when data-fetching methods throw or reject
  *  - on the client, when `getInitialProps` throws or rejects
  *  - on the client, when a React lifecycle method throws or rejects, and it's
- *    caught by the built-in Nextjs error boundary
+ *    caught by the built-in NextJS error boundary
  *
  * See:
  *  - https://nextjs.org/docs/basic-features/data-fetching/overview
@@ -19,10 +19,6 @@ import type { ErrorProps } from 'next/error'
 import NextErrorComponent from 'next/error'
 
 const CustomErrorComponent: NextPage<ErrorProps> = properties => {
-  // If you're using a Nextjs version prior to 12.2.1, uncomment this to
-  // compensate for https://github.com/vercel/next.js/issues/8592
-  // Sentry.captureUnderscoreErrorException(props);
-
   return <NextErrorComponent statusCode={properties.statusCode} />
 }
 

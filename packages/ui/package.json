@@ -28,6 +28,7 @@
   ],
   "scripts": {
     "clean": "rimraf dist .turbo",
+    "fix-all": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --fix",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --cache --cache-location ../../.cache/eslint/ui.eslintcache"
   },
   "dependencies": {

@@ -7,6 +7,9 @@ export COMPOSE_DOCKER_CLI_BUILD ?= 1
 
 export SHARED_SERVICES_NETWORK = $(addsuffix _network,$(subst $e.,_,$(SHARED_SERVICES_NAMESPACE)))
 
+# https://github.com/vercel/turbo/issues/223
+export FORCE_COLOR ?= 1
+
 # Binary to use, when executing docker-compose tasks
 DOCKER_COMPOSE ?= docker-compose
 

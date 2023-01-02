@@ -8,10 +8,11 @@ const enableCssGrid = false
 
 module.exports = {
   plugins: {
+    // https://tailwindcss.com/docs/using-with-preprocessors#nesting
+    'tailwindcss/nesting': {},
     tailwindcss: {},
     ...(isProd
       ? {
-          'tailwindcss/nesting': {},
           'postcss-100vh-fix': {},
           'postcss-flexbugs-fixes': {},
           'postcss-preset-env': {
@@ -20,8 +21,8 @@ module.exports = {
               // https://github.com/postcss/autoprefixer#does-autoprefixer-polyfill-grid-layout-for-ie
               ...(enableCssGrid
                 ? {
-                    grid: 'autoplace',
-                  }
+                  grid: 'autoplace',
+                }
                 : {}),
             },
             stage: 3,
@@ -30,6 +31,6 @@ module.exports = {
             },
           },
         }
-      : {}),
+        : {}),
   },
 }

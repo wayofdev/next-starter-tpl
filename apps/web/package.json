@@ -6,7 +6,11 @@
     "analyze": "BUNDLE_ANALYZE=both next build",
     "build": "next build",
     "dev": "next dev",
+    "fix-all": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs,.mdx --fix",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs,.mdx --cache --cache-location ../../.cache/eslint/web.eslintcache",
+    "lint:dist": "es-check -v",
+    "lint:size": "size-limit --highlight-less",
+    "lint:types": "tsc --project ./tsconfig.json --noEmit",
     "start": "next start"
   },
   "dependencies": {
@@ -20,6 +24,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "13.1.1",
     "@sentry/nextjs": "^7.28.1",
+    "@size-limit/file": "^8.1.0",
     "@types/jest": "^29.2.4",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
@@ -29,6 +34,7 @@
     "@wayofdev/jest-config": "workspace:*",
     "autoprefixer": "^10.4.13",
     "browserslist": "^4.21.4",
+    "es-check": "^7.0.1",
     "eslint": "^8.30.0",
     "eslint-config-next": "^13.1.1",
     "i18next": "^22.4.6",
@@ -44,6 +50,7 @@
     "postcss-reporter": "^7.0.5",
     "react-i18next": "^12.1.1",
     "sanitize.css": "^13.0.0",
+    "size-limit": "^8.1.0",
     "typescript": "^4.9.4"
   }
 }
