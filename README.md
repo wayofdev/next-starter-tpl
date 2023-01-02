@@ -14,10 +14,10 @@
 <a href="https://github.com/wayofdev/next-starter-tpl/tags"><img src="https://img.shields.io/github/v/tag/wayofdev/next-starter-tpl?sort=semver&style=flat-square" alt="Latest Version"></a>
 <a href="LICENSE.md"><img src="https://img.shields.io/github/license/wayofdev/next-starter-tpl.svg?style=flat-square&color=blue" alt="Software License"/></a>
 <a href="#"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/next-starter-tpl/latest?style=flat-square"></a>
-<a href="#"><img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability/wayofdev/next-starter-tpl?style=flat-square"></a>
-<a href="#"><img alt="Code Climate issues" src="https://img.shields.io/codeclimate/issues/wayofdev/next-starter-tpl?style=flat-square"></a>
-<a href="#"><img alt="Code Climate technical debt" src="https://img.shields.io/codeclimate/tech-debt/wayofdev/next-starter-tpl?style=flat-square"></a>
-  <a href="#"><img alt="Code Climate coverage" src="https://img.shields.io/codeclimate/coverage/wayofdev/next-starter-tpl?style=flat-square"></a>
+<a href="https://codeclimate.com/github/wayofdev/next-starter-tpl"><img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability/wayofdev/next-starter-tpl?style=flat-square"></a>
+<a href="https://codeclimate.com/github/wayofdev/next-starter-tpl/issues"><img alt="Code Climate issues" src="https://img.shields.io/codeclimate/issues/wayofdev/next-starter-tpl?style=flat-square"></a>
+<a href="https://codeclimate.com/github/wayofdev/next-starter-tpl"><img alt="Code Climate technical debt" src="https://img.shields.io/codeclimate/tech-debt/wayofdev/next-starter-tpl?style=flat-square"></a>
+  <a href="https://codeclimate.com/github/wayofdev/next-starter-tpl"><img alt="Code Climate coverage" src="https://img.shields.io/codeclimate/coverage/wayofdev/next-starter-tpl?style=flat-square"></a>
 </div>
 
 <br>
@@ -63,7 +63,7 @@ This repository has some additional tools already setup for you:
 - [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) — Visualize size of webpack output files with an interactive zoomable treemap
 - Optimized [Lighthouse](https://web.dev/performance-scoring/) performance score
 - End-2-end testing with [cypress](https://www.cypress.io/) and [JestJS](https://jestjs.io/) support for writing unit tests
-- Package autoupdate in all workspace projects using [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
+- Package auto-update in all workspace projects using [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 - Keep package.json sorted using [sort-package-json](https://www.npmjs.com/package/sort-package-json)
 - Client and server side [error reporting](https://sentry.io/) supported by [@sentry/nextjs](https://www.npmjs.com/package/@sentry/nextjs)
 
