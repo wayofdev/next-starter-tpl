@@ -9,6 +9,8 @@
     "outDir": "dist",
     "allowJs": true,
     "jsx": "react-jsx",
-    "noEmit": false
+    "noEmit": false,
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"]
   }
 }

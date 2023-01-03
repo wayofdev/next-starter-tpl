@@ -170,7 +170,7 @@ pull: ## Pull latest docker image for app container
 # ------------------------------------------------------------------------------------
 lint: ## Run lint task to fix issues
 	# $(NPM_RUNNER) lint
-	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run fix-all
+	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run lint:fix
 .PHONY: lint
 
 lint-staged:

@@ -1,6 +1,6 @@
 {
   "name": "@wayofdev/eslint-config-custom",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "homepage": "https://github.com/wayofdev/next-starter-tpl",
   "license": "MIT",
@@ -43,26 +43,29 @@
     },
     "./typescript": {
       "require": "./src/bases/typescript.js"
+    },
+    "./mdx": {
+      "require": "./src/bases/mdx.js"
     }
   },
   "main": "./src/index.js",
   "scripts": {
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
-    "fix-all": "eslint  --ext .ts,.tsx,.js,.jsx --fix",
     "lint": "eslint --ext .ts,.js,.cjs,.mjs --cache --cache-location ../../.cache/eslint/eslint-config-custom.eslintcache",
+    "lint:fix": "eslint  --ext .ts,.tsx,.js,.jsx --fix",
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@typescript-eslint/eslint-plugin": "^5.47.1",
-    "@typescript-eslint/parser": "^5.47.1",
-    "eslint-config-prettier": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^27.0.4",
-    "eslint-plugin-jest-dom": "^4.0.2",
+    "eslint-plugin-jest": "^27.2.0",
+    "eslint-plugin-jest-dom": "^4.0.3",
     "eslint-plugin-jest-formatting": "^3.1.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-mdx": "^2.0.5",
