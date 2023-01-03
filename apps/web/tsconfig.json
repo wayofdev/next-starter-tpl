@@ -14,11 +14,7 @@
     "**/*.json"
   ],
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "target": "esnext",
     "baseUrl": "./src",
     "importHelpers": true,
@@ -32,6 +28,8 @@
       "@/pages/*": ["./pages/*"],
       "@/public/*": ["../public/*"],
       "@/themes/*": ["./themes/*"],
+      "@wayofdev/common-i18n": ["../../../packages/common-i18n/src/index"],
+      "@wayofdev/common-i18n/locales/*": ["../../../packages/common-i18n/src/locales/*"],
       "@wayofdev/ui/*": ["../../../packages/ui/src/*"],
       "@wayofdev/ui": ["../../../packages/ui/src/index"]
     }
