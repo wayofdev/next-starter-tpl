@@ -6,4 +6,5 @@ module.exports = {
   sonar: require('./sonar'),
   tailwind: require('./tailwind'),
   typescript: require('./typescript'),
+  mdx: require('./mdx'),
 };

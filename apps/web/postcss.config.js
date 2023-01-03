@@ -21,8 +21,8 @@ module.exports = {
               // https://github.com/postcss/autoprefixer#does-autoprefixer-polyfill-grid-layout-for-ie
               ...(enableCssGrid
                 ? {
-                  grid: 'autoplace',
-                }
+                    grid: 'autoplace',
+                  }
                 : {}),
             },
             stage: 3,
@@ -31,6 +31,6 @@ module.exports = {
             },
           },
         }
-        : {}),
+      : {}),
   },
 }

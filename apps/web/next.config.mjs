@@ -26,7 +26,9 @@ const isCI = trueEnv.includes(process.env?.CI ?? 'false')
 
 const NEXT_IGNORE_TYPE_CHECK = trueEnv.includes(process.env?.NEXT_IGNORE_TYPE_CHECK ?? 'false')
 const NEXT_IGNORE_ESLINT = trueEnv.includes(process.env?.NEXT_IGNORE_ESLINT ?? 'false')
-const NEXT_SENTRY_UPLOAD_DRY_RUN = trueEnv.includes(process.env?.NEXT_SENTRY_UPLOAD_DRY_RUN ?? 'false')
+const NEXT_SENTRY_UPLOAD_DRY_RUN = trueEnv.includes(
+  process.env?.NEXT_SENTRY_UPLOAD_DRY_RUN ?? 'false'
+)
 const NEXT_DISABLE_SENTRY = trueEnv.includes(process.env?.NEXT_DISABLE_SENTRY ?? 'false')
 const NEXT_SENTRY_DEBUG = trueEnv.includes(process.env?.NEXT_SENTRY_DEBUG ?? 'false')
 const NEXT_SENTRY_TRACING = trueEnv.includes(process.env?.NEXT_SENTRY_TRACING ?? 'false')

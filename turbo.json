@@ -19,6 +19,9 @@
     "lint": {
       "outputs": []
     },
+    "fix-all": {
+      "outputs": []
+    },
     "dev": {
       "cache": false
     },
