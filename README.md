@@ -36,6 +36,9 @@
   <a aria-label="Top language" href="https://github.com/wayofdev/next-starter-tpl/search?l=typescript">
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wayofdev/next-starter-tpl?style=flat-square&color=blue">
   </a>
+  <a aria-label="Codesee code map" href="https://app.codesee.io/maps/c7202d60-8b51-11ed-812e-afd932fbeb1d">
+    <img alt="Codesee code map" src="https://img.shields.io/badge/codesee-codebase%20map-blue?style=flat-square">
+  </a>
 </p>
 
 <br>
