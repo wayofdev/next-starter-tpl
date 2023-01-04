@@ -115,7 +115,8 @@ build:
 .PHONY: build
 
 purge: down
-	rm -rf .pnpm-store node_modules **/node_modules pnpm-lock.yaml **/.turbo **/.next
+	rm -rf .pnpm-store node_modules; \
+	rm -rf **/node_modules pnpm-lock.yaml **/.turbo **/.next
 .PHONY: purge
 
 deps-check:
