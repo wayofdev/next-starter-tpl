@@ -8,10 +8,11 @@ const enableCssGrid = false
 
 module.exports = {
   plugins: {
+    // https://tailwindcss.com/docs/using-with-preprocessors#nesting
+    'tailwindcss/nesting': {},
     tailwindcss: {},
     ...(isProd
       ? {
-          'tailwindcss/nesting': {},
           'postcss-100vh-fix': {},
           'postcss-flexbugs-fixes': {},
           'postcss-preset-env': {

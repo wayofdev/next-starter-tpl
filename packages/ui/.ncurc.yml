@@ -1,7 +1,8 @@
+---
 # Will override root .ncurc.yml
 # @link https://github.com/raineorshine/npm-check-updates
 
-reject: [ ]
+reject: []
 # Exclude package dependencies (not peer) if you want to keep a lower
 # range when publishing. For example:
 # '@emotion/react',

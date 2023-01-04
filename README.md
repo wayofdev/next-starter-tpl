@@ -9,16 +9,37 @@
 
 <br>
 
-<div align="center">
-<a href="https://actions-badge.atrox.dev/wayofdev/next-starter-tpl/goto"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Fnext-starter-tpl%2Fbadge&style=flat-square"/></a>
-<a href="https://github.com/wayofdev/next-starter-tpl/tags"><img src="https://img.shields.io/github/v/tag/wayofdev/next-starter-tpl?sort=semver&style=flat-square" alt="Latest Version"></a>
-<a href="LICENSE.md"><img src="https://img.shields.io/github/license/wayofdev/next-starter-tpl.svg?style=flat-square&color=blue" alt="Software License"/></a>
-<a href="#"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/next-starter-tpl/latest?style=flat-square"></a>
-<a href="https://codeclimate.com/github/wayofdev/next-starter-tpl"><img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability/wayofdev/next-starter-tpl?style=flat-square"></a>
-<a href="https://codeclimate.com/github/wayofdev/next-starter-tpl/issues"><img alt="Code Climate issues" src="https://img.shields.io/codeclimate/issues/wayofdev/next-starter-tpl?style=flat-square"></a>
-<a href="https://codeclimate.com/github/wayofdev/next-starter-tpl"><img alt="Code Climate technical debt" src="https://img.shields.io/codeclimate/tech-debt/wayofdev/next-starter-tpl?style=flat-square"></a>
-  <a href="https://codeclimate.com/github/wayofdev/next-starter-tpl"><img alt="Code Climate coverage" src="https://img.shields.io/codeclimate/coverage/wayofdev/next-starter-tpl?style=flat-square"></a>
-</div>
+<p align="center">
+  <a href="https://actions-badge.atrox.dev/wayofdev/next-starter-tpl/goto">
+    <img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Fnext-starter-tpl%2Fbadge&style=flat-square"/>
+  </a>
+  <a href="https://github.com/wayofdev/next-starter-tpl/tags">
+    <img alt="Latest Version" src="https://img.shields.io/github/v/tag/wayofdev/next-starter-tpl?sort=semver&style=flat-square">
+  </a>
+  <a href="LICENSE.md">
+    <img alt="Software License" src="https://img.shields.io/github/license/wayofdev/next-starter-tpl.svg?style=flat-square&color=blue"></a>
+  <a href="#">
+    <img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/next-starter-tpl/latest?style=flat-square">
+  </a>
+  <a href="https://codeclimate.com/github/wayofdev/next-starter-tpl">
+    <img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability/wayofdev/next-starter-tpl?style=flat-square">
+  </a>
+  <a href="https://codeclimate.com/github/wayofdev/next-starter-tpl/issues">
+    <img alt="Code Climate issues" src="https://img.shields.io/codeclimate/issues/wayofdev/next-starter-tpl?style=flat-square">
+  </a>
+  <a href="https://codeclimate.com/github/wayofdev/next-starter-tpl">
+    <img alt="Code Climate technical debt" src="https://img.shields.io/codeclimate/tech-debt/wayofdev/next-starter-tpl?style=flat-square">
+  </a>
+  <a href="https://codeclimate.com/github/wayofdev/next-starter-tpl">
+    <img alt="Code Climate coverage" src="https://img.shields.io/codeclimate/coverage/wayofdev/next-starter-tpl?style=flat-square">
+  </a>
+  <a aria-label="Top language" href="https://github.com/wayofdev/next-starter-tpl/search?l=typescript">
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wayofdev/next-starter-tpl?style=flat-square&color=blue">
+  </a>
+  <a aria-label="Codesee code map" href="https://app.codesee.io/maps/c7202d60-8b51-11ed-812e-afd932fbeb1d">
+    <img alt="Codesee code map" src="https://img.shields.io/badge/codesee-codebase%20map-blue?style=flat-square">
+  </a>
+</p>
 
 <br>
 

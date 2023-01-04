@@ -7,6 +7,9 @@ export COMPOSE_DOCKER_CLI_BUILD ?= 1
 
 export SHARED_SERVICES_NETWORK = $(addsuffix _network,$(subst $e.,_,$(SHARED_SERVICES_NAMESPACE)))
 
+# https://github.com/vercel/turbo/issues/223
+export FORCE_COLOR ?= 1
+
 # Binary to use, when executing docker-compose tasks
 DOCKER_COMPOSE ?= docker-compose
 
@@ -112,7 +115,8 @@ build:
 .PHONY: build
 
 purge: down
-	rm -rf .pnpm-store node_modules **/node_modules pnpm-lock.yaml **/.turbo **/.next
+	rm -rf .pnpm-store node_modules; \
+	rm -rf **/node_modules pnpm-lock.yaml **/.turbo **/.next
 .PHONY: purge
 
 deps-check:
@@ -165,17 +169,17 @@ pull: ## Pull latest docker image for app container
 
 # Testing and Code Quality
 # ------------------------------------------------------------------------------------
-lint: ## Run eslint task
+lint: ## Run lint task to fix issues
 	# $(NPM_RUNNER) lint
-	$(DOCKER_COMPOSE) exec -T app $(NPM_BIN) run lint
+	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run lint:fix
 .PHONY: lint
 
 lint-staged:
-	$(DOCKER_COMPOSE) exec -T app $(NPM_BIN) run lint-staged
+	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run lint-staged
 .PHONY: lint-staged
 
 commitlint:
-	$(DOCKER_COMPOSE) exec -T app npx --no --commitlint --edit $(1)
+	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app npx --no --commitlint --edit $(1)
 .PHONY: commitlint
 
 test: ## Run unit tests

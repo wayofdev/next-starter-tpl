@@ -1,14 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../../tsconfig.base.json",
-  "exclude": ["dist", "build", "node_modules"],
+  "exclude": ["**/node_modules", "**/.*/", "dist", "build"],
   "include": ["./src"],
   "compilerOptions": {
-    "target": "esnext",
     "baseUrl": "./src",
+    "target": "esnext",
     "outDir": "dist",
     "allowJs": true,
-    "moduleResolution": "node",
     "jsx": "react-jsx",
     "noEmit": false
   }
