@@ -8,9 +8,12 @@
  *    caught by the built-in NextJS error boundary
  *
  * See:
- *  - https://nextjs.org/docs/basic-features/data-fetching/overview
- *  - https://nextjs.org/docs/api-reference/data-fetching/get-initial-props
- *  - https://reactjs.org/docs/error-boundaries.html
+ *  @link https://nextjs.org/docs/basic-features/data-fetching/overview
+ *  @link https://nextjs.org/docs/api-reference/data-fetching/get-initial-props
+ *  @link https://reactjs.org/docs/error-boundaries.html
+ *
+ *  Typescript class based component for custom-error
+ *  @link https://nextjs.org/docs/advanced-features/custom-error-page
  */
 
 import * as Sentry from '@sentry/nextjs'

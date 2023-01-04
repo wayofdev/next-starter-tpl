@@ -17,9 +17,9 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ 'ubuntu-22.04' ]
-        node: [ '18' ]
-        pnpm: [ '7' ]
+        os: ['ubuntu-22.04']
+        node: ['18']
+        pnpm: ['7']
     steps:
       - name: Check out the codebase
         uses: actions/checkout@v3
@@ -58,6 +58,14 @@ jobs:
 
       - name: Mix frontend code
         run: pnpm build
+        env:
+          NEXT_DISABLE_SENTRY: true
+          NEXT_SENTRY_DEBUG: false
+          NEXT_SENTRY_TRACING: 0
+          NEXT_SENTRY_UPLOAD_DRY_RUN: true
+          SENTRY_URL: 'https://sentry.io/'
+          SENTRY_ORG: wayofdev
+          SENTRY_PROJECT: next-starter-tpl
 
       - if: github.event_name == 'pull_request'
         name: Validate all commits from PR
