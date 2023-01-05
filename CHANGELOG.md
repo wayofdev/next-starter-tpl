@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.2.0](https://github.com/wayofdev/next-starter-tpl/compare/v1.1.0...v1.2.0) (2023-01-05)
+
+
+### Features
+
+* add nextra docs template ([9dc21e5](https://github.com/wayofdev/next-starter-tpl/commit/9dc21e5e02bde07bb830505ac8371d1b1ce5391f))
+* codeclimate, vscode, refactor ignore files ([70039d4](https://github.com/wayofdev/next-starter-tpl/commit/70039d4381f18fb00417af05e1eaff7724277db1))
+* extended nextjs config and sentry ([f0be583](https://github.com/wayofdev/next-starter-tpl/commit/f0be583e16ed44cebc21c7a320a7b8b25b391e62))
+* standardize scripts, color output ([#23](https://github.com/wayofdev/next-starter-tpl/issues/23)) ([ec03ad8](https://github.com/wayofdev/next-starter-tpl/commit/ec03ad8858d5c947f1615a63dc054e0d198ea728))
+* tailwind, configs, sentry ([36bef4c](https://github.com/wayofdev/next-starter-tpl/commit/36bef4cb6fb1c622e9f02d0f98a9119166557481))
+* tsconfig, deps check ([42427ba](https://github.com/wayofdev/next-starter-tpl/commit/42427ba849bbe1d0b99160c1356625fa1f076142))
+
+
+### Bug Fixes
+
+* frozen lockfile ([f261b56](https://github.com/wayofdev/next-starter-tpl/commit/f261b56dcf86fe5c9f6d2c5d68bcb60d95d49eff))
+* frozen lockfile ([12a1189](https://github.com/wayofdev/next-starter-tpl/commit/12a118928c03f1bf4757570f90aaff9060cd50c6))
+
+
+### Continuous Integration
+
+* add template sync action ([19e9505](https://github.com/wayofdev/next-starter-tpl/commit/19e9505b556468e665a90e39d09b66a8b8151b84))
+
+
+### Code Refactoring
+
+* changing eslint-config ([c3db3d5](https://github.com/wayofdev/next-starter-tpl/commit/c3db3d5bc4950226ed720db6259c15f6a799601c))
+
+
+### Documentation
+
+* add codeclimate links ([8899a14](https://github.com/wayofdev/next-starter-tpl/commit/8899a14746f3d8a851e47e576a713fbb6ae0ffb2))
+* readme update ([de04d35](https://github.com/wayofdev/next-starter-tpl/commit/de04d35dd55ff471e253abf7a018c7c6bc3d20f9))
+* readme update ([3446677](https://github.com/wayofdev/next-starter-tpl/commit/3446677cdf337528b1fa7d8401428e2dbb227251))
+
 ## [1.1.0](https://github.com/wayofdev/next-starter-tpl/compare/v1.0.0...v1.1.0) (2022-12-21)
 
 
