@@ -105,7 +105,7 @@ jobs:
       - name: 📉 Check browser bundle size limits
         working-directory: apps/web
         run: |
-          pnpm lint:size
+          pnpm --filter=web lint:size
 
       - name: 🌎 Ecmascript checks for build files
         working-directory: apps/web
