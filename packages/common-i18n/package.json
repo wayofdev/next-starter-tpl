@@ -15,7 +15,8 @@
   "scripts": {
     "clean": "rimraf dist .turbo",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --cache --cache-location ../../.cache/eslint/common-i18n.eslintcache",
-    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --fix"
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --fix",
+    "lint:types": "tsc --project ./tsconfig.json --noEmit"
   },
   "devDependencies": {
     "@types/jest": "^29.2.5",

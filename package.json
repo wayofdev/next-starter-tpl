@@ -60,7 +60,7 @@
     "lint:package-json": "sort-package-json package.json apps/*/package.json packages/*/package.json",
     "lint:dist": "turbo run lint:dist --parallel",
     "lint:size": "turbo run lint:size --parallel",
-    "lint:types": "turbo run typecheck --parallel",
+    "lint:types": "turbo run lint:types --parallel",
     "deps:check": "pnpm dlx npm-check-updates@latest --configFileName .ncurc.yml --deep --mergeConfig",
     "deps:update": "pnpm dlx npm-check-updates@latest --configFileName .ncurc.yml -u --deep --mergeConfig && pnpm install",
     "lint:fix": "turbo run lint:fix && pnpm lint:package-json",

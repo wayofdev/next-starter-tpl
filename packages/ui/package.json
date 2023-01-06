@@ -29,7 +29,8 @@
   "scripts": {
     "clean": "rimraf dist .turbo",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --cache --cache-location ../../.cache/eslint/ui.eslintcache",
-    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --fix"
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --fix",
+    "lint:types": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
     "@swc/helpers": "^0.4.14",

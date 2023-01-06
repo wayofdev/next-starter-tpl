@@ -1,0 +1,58 @@
+---
+name: ReleaseOrVersionPR
+
+on: # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    # Basic security: the release job can only be executed from this repo and from the master branch (not a remote thing)
+    if: ${{ github.repository == 'wayofdev/next-starter-tpl' && contains('refs/heads/master',github.ref)}}
+    name: Release using ${{ matrix.node }} - ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os: ['ubuntu-22.04']
+        node: ['18']
+        pnpm: ['7']
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.2.0
+        with:
+          # To run comparison we need more than the latest commit.
+          # @link https://github.com/actions/checkout#fetch-all-history-for-all-tags-and-branches
+          fetch-depth: 0
+
+      - name: Setup node ${{ matrix.node }}
+        uses: actions/setup-node@v3
+        with:
+          cache: 'pnpm'
+          node-version: ${{ matrix.node }}
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: 📥 Monorepo install
+        uses: ./.github/actions/pnpm-nm-install
+
+      # @link https://github.com/changesets/action
+      - name: Create Release pull request or publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          commit: 'chore: update versions'
+          title: 'chore: update versions'
+          cwd: ${{ github.workspace }}
+          # Optional, might be used in conjunction with GITHUB_TOKEN to
+          # allow running the workflows on a Version package action.
+          # Be aware of security implications.
+          # setupGitUser: true
+          # publish: pnpm cs:release
+          # version: pnpm cs:version
+        env:
+          # See https://github.com/changesets/action/issues/147
+          HOME: ${{ github.workspace }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
