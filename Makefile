@@ -195,11 +195,15 @@ sort: ## Sort package.json across project
 .PHONY: sort
 
 
-# Yaml Actions
+# Release
 # ------------------------------------------------------------------------------------
-ylint: ## Lints yaml files inside project
-	yamllint .
-.PHONY: ylint
+version:
+	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run cs:version
+.PHONY: version
+
+release:
+	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run cs:release
+.PHONY: release
 
 
 # Git Actions
