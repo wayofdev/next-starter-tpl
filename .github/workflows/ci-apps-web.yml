@@ -110,4 +110,4 @@ jobs:
       - name: 🌎 Ecmascript checks for build files
         working-directory: apps/web
         run: |
-          pnpm lint:dist
+          pnpm --filter=web lint:dist
