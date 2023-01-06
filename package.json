@@ -60,7 +60,7 @@
     "lint:package-json": "sort-package-json package.json apps/*/package.json packages/*/package.json",
     "lint:dist": "turbo run lint:dist --parallel",
     "lint:size": "turbo run lint:size --parallel",
-    "lint:types": "turbo run typecheck --parallel",
+    "lint:types": "turbo run lint:types --parallel",
     "deps:check": "pnpm dlx npm-check-updates@latest --configFileName .ncurc.yml --deep --mergeConfig",
     "deps:update": "pnpm dlx npm-check-updates@latest --configFileName .ncurc.yml -u --deep --mergeConfig && pnpm install",
     "lint:fix": "turbo run lint:fix && pnpm lint:package-json",
@@ -71,7 +71,7 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "2.26.0",
-    "@commitlint/cli": "^17.3.0",
+    "@commitlint/cli": "^17.4.0",
     "@types/node": "^18.11.18",
     "@types/prettier": "^2.7.2",
     "@types/shell-quote": "^1.7.1",
