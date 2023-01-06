@@ -45,12 +45,12 @@ jobs:
           commit: 'chore: update versions'
           title: 'chore: update versions'
           cwd: ${{ github.workspace }}
+          publish: pnpm run cs:release
+          version: pnpm run cs:version
           # Optional, might be used in conjunction with GITHUB_TOKEN to
           # allow running the workflows on a Version package action.
           # Be aware of security implications.
           # setupGitUser: true
-          # publish: pnpm cs:release
-          # version: pnpm cs:version
         env:
           # See https://github.com/changesets/action/issues/147
           HOME: ${{ github.workspace }}
