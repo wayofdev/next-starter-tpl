@@ -6,10 +6,6 @@ runs:
   using: 'composite'
 
   steps:
-    - uses: pnpm/action-setup@v2.2.4
-      with:
-        version: 7.22.0
-
     - name: Expose pnpm config(s) through "$GITHUB_OUTPUT"
       id: pnpm-config
       shell: bash

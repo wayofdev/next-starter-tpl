@@ -45,6 +45,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: ${{ matrix.pnpm }}
+          run_install: false
+
       - name: Setup node ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
