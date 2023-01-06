@@ -35,7 +35,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
 
       - name: 📥 Monorepo install
-        uses: ./.github/actions/pnpm-nm-install
+        uses: ./.github/actions/pnpm-install
 
       # @link https://github.com/changesets/action
       - name: Create Release pull request or publish to npm

@@ -58,7 +58,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
 
       - name: 📥 Monorepo install
-        uses: ./.github/actions/pnpm-nm-install
+        uses: ./.github/actions/pnpm-install
 
       - name: Restore packages cache
         uses: actions/cache@v3

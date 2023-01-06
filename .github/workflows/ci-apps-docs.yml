@@ -60,7 +60,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
 
       - name: 📥 Monorepo install
-        uses: ./.github/actions/pnpm-nm-install
+        uses: ./.github/actions/pnpm-install
 
       # see https://github.com/vercel/next.js/pull/27362
       - name: Restore "web" app build from cache
