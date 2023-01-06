@@ -197,12 +197,16 @@ sort: ## Sort package.json across project
 
 # Release
 # ------------------------------------------------------------------------------------
-version:
-	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run cs:version
+cs:
+	npx changeset
+.PHONY: cs
+
+cs-version:
+	npx changeset version
 .PHONY: version
 
-release:
-	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run cs:release
+cs-release:
+	npx changeset publish
 .PHONY: release
 
 
