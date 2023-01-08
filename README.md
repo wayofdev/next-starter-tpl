@@ -11,7 +11,7 @@
 
 <div align="center">
 <a href="https://actions-badge.atrox.dev/wayofdev/next-starter-tpl/goto"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Fnext-starter-tpl%2Fbadge&style=flat-square"/></a>
-<a href="https://github.com/wayofdev/next-starter-tpl/tags"><img src="https://img.shields.io/github/v/tag/wayofdev/next-starter-tpl?sort=semver&style=flat-square" alt="Latest Version"></a>
+<a href="https://github.com/wayofdev/next-starter-tpl/tags"><img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/wayofdev/next-starter-tpl?style=flat-square"></a>
 <a href="LICENSE.md"><img src="https://img.shields.io/github/license/wayofdev/next-starter-tpl.svg?style=flat-square&color=blue" alt="Software License"/></a>
 <a href="#"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/next-starter-tpl/latest?style=flat-square"></a>
 <a href="https://codeclimate.com/github/wayofdev/next-starter-tpl"><img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability/wayofdev/next-starter-tpl?style=flat-square"></a>
@@ -24,7 +24,19 @@
 
 # NextJS Starter Template
 
-This repository contains [monorepo](https://turbo.build/repo/docs/handbook/what-is-a-monorepo) boilerplate written in [Next.js](https://nextjs.org). Used together with backend API part — [laravel-starter-tpl](https://github.com/wayofdev/laravel-starter-tpl).
+## 📄 About
+
+This repository contains a [monorepo](https://turbo.build/repo/docs/handbook/what-is-a-monorepo) boilerplate written in [Next.js](https://nextjs.org/), managed by the [pnpm](https://pnpm.io) package manager.
+
+You can use it with the backend template, written in Laravel — [laravel-starter-tpl](https://github.com/wayofdev/laravel-starter-tpl).
+
+### → Purpose
+
+- Establish a **structure** and present a lifecycle perspective (dx, ci/cd, deployments);
+- Show how to create and consume shared packages, locales, assets, and API types;
+- Ship fully configured repository with integrated **tools & configs**, like tsconfig, eslint, jest, cypress, tailwind, changelogs, versioning, codecov, codeclimate, sentry, and others;
+- Clarify some **advantages** of monorepos (team cohesion, consistency, duplication, refactorings, atomic commits)
+- Created as GitHub template, upstream code sync GitHub action can be used, to allways pull latest changes from this template.
 
 <br>
 
@@ -32,15 +44,27 @@ This repository contains [monorepo](https://turbo.build/repo/docs/handbook/what-
 
 This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
 
-### → Apps and Packages
+### → Apps
 
-- `docs`: a [Nextra](https://nextra.site/) application generated from [Nextra: Docs Starter Kit](https://vercel.com/templates/next.js/documentation-starter-kit)
-- `web`: [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `docs`: a [Nextra](https://nextra.site/) documentation template generated from [Nextra: Docs Starter Kit](https://vercel.com/templates/next.js/documentation-starter-kit)
+
+  - [DEMO docs app](https://next-starter-tpl-docs.vercel.app/)
+
+- `web`: [Next.js](https://nextjs.org/) app with tailwindcss and sentry support
+
+  - [DEMO web app](https://next-starter-tpl-web.vercel.app/)
+
+- `ui`: a stub React component library shared by the `web` application
+
+> **Note:** Apps should not depend on apps, they can depend on packages
+
+### → Packages
+
+- `common-i18n`: locales for multi language support
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig-config`: `tsconfig` configs used throughout the monorepo
 - `jest-config`: [JestJS](https://jestjs.io) configs used across the monorepo
-- Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+
+> **Note:** Apps can depend on packages, packages can depend on each others
 
 <br>
 

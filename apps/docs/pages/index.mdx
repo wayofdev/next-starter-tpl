@@ -1,11 +1,36 @@
-# Introduction
+# NextJS Starter Template
 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+## 📄 About
 
-## What is Nextra?
+This repository contains a [monorepo](https://turbo.build/repo/docs/handbook/what-is-a-monorepo) boilerplate written in [Next.js](https://nextjs.org/), managed by the [pnpm](https://pnpm.io) package manager.
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+You can use it with the backend template, written in Laravel — [laravel-starter-tpl](https://github.com/wayofdev/laravel-starter-tpl).
 
-## Documentation
+### → Purpose
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+- Establish a **structure** and present a lifecycle perspective (dx, ci/cd, deployments);
+- Show how to create and consume shared packages, locales, assets, and API types;
+- Ship fully configured repository with integrated **tools & configs**, like tsconfig, eslint, jest, cypress, tailwind, changelogs, versioning, codecov, codeclimate, sentry, and others;
+- Clarify some **advantages** of monorepo (team cohesion, consistency, duplication, refactorings, atomic commits)
+
+## 🤔 What's inside?
+
+This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
+
+### → Apps
+
+- `docs`: a [Nextra](https://nextra.site/) documentation template generated from [Nextra: Docs Starter Kit](https://vercel.com/templates/next.js/documentation-starter-kit)
+  - [DEMO docs app](https://next-starter-tpl-docs.vercel.app/)
+- `web`: [Next.js](https://nextjs.org/) app with tailwindcss and sentry support
+  - [DEMO web app](https://next-starter-tpl-web.vercel.app/)
+- `ui`: a stub React component library shared by the `web` application
+
+> **Note:** Apps should not depend on apps, they can depend on packages
+
+### → Packages
+
+- `common-i18n`: locales for multi-language support
+- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `jest-config`: [JestJS](https://jestjs.io) configs used across the monorepo
+
+> **Note:** Apps can depend on packages, packages can depend on each others
