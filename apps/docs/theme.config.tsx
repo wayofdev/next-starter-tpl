@@ -2,6 +2,7 @@ import type { DocsThemeConfig } from 'nextra-theme-docs'
 import React from 'react'
 
 const config: DocsThemeConfig = {
+  i18n: [{ locale: 'en-US', text: 'English' }],
   logo: <span>NextJS-Starter-Tpl</span>,
   project: {
     link: 'https://github.com/wayofdev/next-starter-tpl',
