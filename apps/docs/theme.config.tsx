@@ -2,7 +2,7 @@ import type { DocsThemeConfig } from 'nextra-theme-docs'
 import React from 'react'
 
 const config: DocsThemeConfig = {
-  logo: <span>Default Project</span>,
+  logo: <span>NextJS-Starter-Tpl</span>,
   project: {
     link: 'https://github.com/wayofdev/next-starter-tpl',
   },
@@ -11,7 +11,16 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/wayofdev/next-starter-tpl',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'NextJS Starter Tpl',
+  },
+  toc: {
+    extraContent: <img src="#" alt="" />,
+    float: true,
+  },
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – WoD',
+    }
   },
 }
 

@@ -35,8 +35,7 @@ You can use it with the backend template, written in Laravel — [laravel-starte
 - Establish a **structure** and present a lifecycle perspective (dx, ci/cd, deployments);
 - Show how to create and consume shared packages, locales, assets, and API types;
 - Ship fully configured repository with integrated **tools & configs**, like tsconfig, eslint, jest, cypress, tailwind, changelogs, versioning, codecov, codeclimate, sentry, and others;
-- Clarify some **advantages** of monorepos (team cohesion, consistency, duplication, refactorings, atomic commits)
-- Created as GitHub template, upstream code sync GitHub action can be used, to allways pull latest changes from this template.
+- Clarify some **advantages** of monorepo (team cohesion, consistency, duplication, refactorings, atomic commits)
 
 <br>
 
@@ -60,7 +59,7 @@ This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes th
 
 ### → Packages
 
-- `common-i18n`: locales for multi language support
+- `common-i18n`: locales for multi-language support
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `jest-config`: [JestJS](https://jestjs.io) configs used across the monorepo
 
@@ -93,7 +92,7 @@ This repository has some additional tools already setup for you:
 
 <br>
 
-## 📑 Requirements
+## 🚩 Requirements
 
 - **macOS** Monterey+ or **Linux**
 - **Docker** 20.10 or newer
