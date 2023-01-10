@@ -182,8 +182,12 @@ make test
 ## 🤝 License
 
 [![Licence](https://img.shields.io/github/license/wayofdev/next-starter-tpl?style=for-the-badge&color=blue)](./LICENSE)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwayofdev%2Fnext-starter-tpl.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwayofdev%2Fnext-starter-tpl?ref=badge_shield)
 
 <br>
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwayofdev%2Fnext-starter-tpl.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwayofdev%2Fnext-starter-tpl?ref=badge_large)
 
 ## 🧱 Credits and Useful Resources
 
