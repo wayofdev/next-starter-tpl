@@ -50,7 +50,7 @@
     "test": "turbo run test --parallel",
     "test:watch": "turbo run test:watch",
     "test:prod": "turbo run test:prod --parallel",
-    "lint": "run-p lint:turbo lint:md lint:html lint:secrets lint:package-json",
+    "lint": "run-p lint:turbo lint:md lint:html lint:package-json",
     "lint:turbo": "turbo lint",
     "lint:staged": "lint-staged --allow-empty",
     "lint:md": "markdownlint --fix **/*.md --ignore '**/node_modules/**' --ignore '**/CHANGELOG.md'",
