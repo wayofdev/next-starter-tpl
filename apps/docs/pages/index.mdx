@@ -1,11 +1,65 @@
-# Introduction
+import { Callout } from 'nextra-theme-docs'
 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+# NextJS Starter Template
 
-## What is Nextra?
+## 📄 About
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+This repository contains a [monorepo](https://turbo.build/repo/docs/handbook/what-is-a-monorepo) boilerplate written in [Next.js](https://nextjs.org/), managed by the [pnpm](https://pnpm.io) package manager.
 
-## Documentation
+You can use it with the backend template, written in Laravel — [laravel-starter-tpl](https://github.com/wayofdev/laravel-starter-tpl).
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+### → Purpose
+
+- Establish a **structure** and present a lifecycle perspective (dx, ci/cd, deployments);
+- Show how to create and consume shared packages, locales, assets, and API types;
+- Ship fully configured repository with integrated **tools & configs**, like tsconfig, eslint, jest, cypress, tailwind, changelogs, versioning, codecov, codeclimate, sentry, and others;
+- Clarify some **advantages** of monorepo (team cohesion, consistency, duplication, refactorings, atomic commits)
+
+## 🤔 What's inside?
+
+[![Open in Gitpod](https://img.shields.io/badge/Open%20In-Gitpod.io-%231966D2?style=for-the-badge&logo=gitpod)](https://gitpod.io/#https://github.com/wayofdev/next-starter-tpl)
+
+This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
+
+### → Apps
+
+| Name        | URL                                                  | Description                                                                                                                                                     |
+| ----------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `apps/docs` | 🌎 [Demo](https://next-starter-tpl-docs.vercel.app/) | [Nextra](https://nextra.site/) documentation template generated from [Nextra: Docs Starter Kit](https://vercel.com/templates/next.js/documentation-starter-kit) |
+| `apps/web`  | 🌎 [Demo](https://next-starter-tpl-web.vercel.app/)  | [Next.js](https://nextjs.org/) app with tailwindcss and sentry support.                                                                                         |
+
+<Callout type="note">Apps should not depend on apps, they can depend on packages.</Callout>
+
+### → Packages
+
+| Name                            | Description                                                                          |
+| ------------------------------- | ------------------------------------------------------------------------------------ |
+| `packages/ui`                   | a stub React component library shared by the `web` application                       |
+| `packages/common-i18n`          | locales for multi-language support                                                   |
+| `packages/eslint-config-custom` | `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`) |
+| `packages/jest-config`          | [JestJS](https://jestjs.io) configs used across the monorepo                         |
+
+<Callout type="note">Apps can depend on packages, packages can depend on each others.</Callout>
+
+### → Utilities and Features
+
+This repository has some additional tools already setup for you:
+
+- Supporting [NextJS 13.1.1+](https://nextjs.org/blog/next-13)
+- [TypeScript](https://www.typescriptlang.org/) support for static type checking
+- Strict Mode for TypeScript and React 18
+- [ESLint](https://eslint.org/) for code linting and configured presets: NextJS Recommended, NextJS Core Web Vitals and [Airbnb Style Guide](https://www.npmjs.com/package/eslint-config-airbnb)
+- Code formatting with [Prettier](https://prettier.io/)
+- Integrated with [Tailwind CSS](https://tailwindcss.com/)
+- [PostCSS](https://postcss.org/) for processing Tailwind CSS and [CSSNANO](https://cssnano.co/) for CSS optimization on production systems
+- [Husky](https://typicode.github.io/husky/#/) for modern native git hooks
+- [Lint-staged](https://github.com/okonet/lint-staged) for running linters on Git staged files
+- [GitHub Actions](https://github.com/features/actions) support out of the box
+- SEO metadata, JSON-LD and Open Graph tags with [Next SEO](https://github.com/garmeeh/next-seo)
+- Sitemap support using [next-sitemap](https://www.npmjs.com/package/next-sitemap)
+- [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) — Visualize size of webpack output files with an interactive zoomable treemap
+- Optimized [Lighthouse](https://web.dev/performance-scoring/) performance score
+- End-2-end testing with [cypress](https://www.cypress.io/) and [JestJS](https://jestjs.io/) support for writing unit tests
+- Package auto-update in all workspace projects using [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
+- Keep package.json sorted using [sort-package-json](https://www.npmjs.com/package/sort-package-json)
+- Client and server side [error reporting](https://sentry.io/) supported by [@sentry/nextjs](https://www.npmjs.com/package/@sentry/nextjs)

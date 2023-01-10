@@ -5,7 +5,7 @@
 
 const regexpPatterns = {
   files: ['*.{js,jsx,jsx,tsx}'],
-};
+}
 
 module.exports = {
   // @see https://github.com/ota-meshi/eslint-plugin-regexp
@@ -20,4 +20,4 @@ module.exports = {
       },
     },
   ],
-};
+}
