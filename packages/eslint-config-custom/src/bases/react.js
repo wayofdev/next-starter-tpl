@@ -5,7 +5,7 @@
 
 const reactPatterns = {
   files: ['*.{jsx,tsx}'],
-};
+}
 
 module.exports = {
   env: {
@@ -57,4 +57,4 @@ module.exports = {
       },
     },
   ],
-};
+}

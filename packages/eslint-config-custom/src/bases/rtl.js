@@ -5,7 +5,7 @@
 
 const rtlPatterns = {
   files: ['**/?(*.)+(test).{js,jsx,ts,tsx}'],
-};
+}
 
 module.exports = {
   env: {
@@ -27,4 +27,4 @@ module.exports = {
       },
     },
   ],
-};
+}

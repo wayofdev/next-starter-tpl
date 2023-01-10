@@ -5,7 +5,7 @@
 
 const reactPatterns = {
   files: ['*.{jsx,tsx}'],
-};
+}
 
 /**
  * Fine-tune naming convention react typescript jsx (function components)
@@ -30,4 +30,4 @@ module.exports = {
       },
     },
   ],
-};
+}

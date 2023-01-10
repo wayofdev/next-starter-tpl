@@ -140,18 +140,12 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.mjs', '*.mdx'],
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-      },
+      files: ['*.mjs'],
       rules: {
-        'import/order': 'off',
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/consistent-type-exports': 'off',
         '@typescript-eslint/consistent-type-imports': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
       },
     },
     {
