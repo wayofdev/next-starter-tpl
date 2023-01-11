@@ -109,4 +109,27 @@ $ make env \
 
 Change generated `.env` file to match your needs, if needed.
 
+### → Install Dependencies
+
+This command will install all dependencies, through docker container, for this mono-repo and all dependencies.
+
+```bash
+# default action - runs `make install` and setups git hooks
+$ make
+
+# or, run each step separately
+$ make install
+$ make hooks
+```
+
+### → Run docker container in dev mode
+
+This command will start docker container in dev mode, with hot reloading enabled.
+
+```bash
+make up
+```
+
+Project can be accessed at [tpl.docker](https://tpl.docker)
+
 </div>

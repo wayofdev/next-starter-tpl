@@ -4,10 +4,13 @@
 <img width="456" src="https://raw.githubusercontent.com/wayofdev/next-starter-tpl/master/assets/logo.gh-light-mode-only.png#gh-light-mode-only">
 <img width="456" src="https://raw.githubusercontent.com/wayofdev/next-starter-tpl/master/assets/logo.gh-dark-mode-only.png#gh-dark-mode-only">
 </div>
-
 <br>
 
 <br>
+
+<div align="center">
+<a href="https://next-starter-tpl-docs.wayof.dev"><b>View Documentation / Demo</b></a>
+</div>
 
 <div align="center">
 <a href="https://actions-badge.atrox.dev/wayofdev/next-starter-tpl/goto"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Fnext-starter-tpl%2Fbadge&style=flat-square"/></a>
@@ -19,7 +22,6 @@
 <a href="https://codeclimate.com/github/wayofdev/next-starter-tpl"><img alt="Code Climate technical debt" src="https://img.shields.io/codeclimate/tech-debt/wayofdev/next-starter-tpl?style=flat-square"></a>
   <a href="https://codeclimate.com/github/wayofdev/next-starter-tpl"><img alt="Code Climate coverage" src="https://img.shields.io/codeclimate/coverage/wayofdev/next-starter-tpl?style=flat-square"></a>
 </div>
-
 <br>
 
 # NextJS Starter Template
@@ -43,12 +45,24 @@ You can use it with the backend template, written in Laravel — [laravel-starte
 
 This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
 
+### → Structure
+
+```bash
+.
+├── apps
+│   ├── web    (nextjs app - i18n, ssr, api, jest, cypress)
+│   └── docs   (nextra app)
+└── packages
+    ├── common-i18n          (locales...)
+    ├── jest-config          (shared jest configs)
+    ├── eslint-config-custom (shared eslint configs)
+    └── ui                   (react stub components)
+```
+
 ### → Apps
 
 - `docs`: a [Nextra](https://nextra.site/) documentation template generated from [Nextra: Docs Starter Kit](https://vercel.com/templates/next.js/documentation-starter-kit)
-
   - [DEMO docs app](https://next-starter-tpl-docs.vercel.app/)
-
 - `web`: [Next.js](https://nextjs.org/) app with tailwindcss and sentry support
 
   - [DEMO web app](https://next-starter-tpl-web.vercel.app/)
@@ -101,116 +115,21 @@ This repository has some additional tools already setup for you:
 
 <br>
 
-## 💿 Installation
+## 💿 Installation and Usage
 
 > Warning: Repository with [docker-shared-services](https://github.com/wayofdev/docker-shared-services) should be configured, up and running, to ensure system wide TLS and DNS support.
 
-### → Instructions
-
-- First, setup, for this repository, compatible backend by following instructions in [laravel-starter-tpl](https://github.com/wayofdev/laravel-starter-tpl)
-
-- After backend is set up done, clone this repository:
-
-  ```bash
-  git@github.com:wayofdev/next-starter-tpl.git
-  ```
-
-- Create `.env` file:
-
-  ```bash
-  $ make env \
-   APP_NAME=tpl \
-   SYSTEM_SERVICES_NAMESPACE=ss \
-   PROJECT_SERVICES_NAMESPACE=wod
-  ```
-
-- Build, install and run application:
-
-  ```bash
-  make
-  ```
-
-- Now, project is running, and, if default settings were used, available at [https://tpl.wod.docker](https://tpl.wod.docker)
-
-<br>
-
-## 💻 Usage
-
-### → Build
-
-To build all apps and packages, run the following command:
-
-```bash
-# with makefile, through Docker
-$ make build
-
-# or, directly, without docker, using system binaries
-$ pnpm run build
-```
-
-<br>
-
-### → Develop
-
-To develop all apps and packages, run the following command:
-
-```bash
-# with makefile, through Docker
-$ make up
-
-# or, directly, without docker, using system binaries
-$ pnpm run dev
-```
-
-<br>
-
-### → Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```bash
-# with makefile
-$ make turbo-login
-
-# directly
-$ pnpm dlx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```bash
-# with makefile
-$ make turbo-link
-
-# directly
-$ pnpm dlx turbo link
-```
-
-<br>
-
-## 🧪 Testing
-
-You can check `Makefile` or `package.json` to get full list of commands for local testing. For testing, you can use these commands to test:
-
-```bash
-make test
-```
+**[Follow getting-started guide in documentation](https://next-starter-tpl-docs.wayof.dev/guide/getting-started)** 🔗
 
 <br>
 
 ## 🤝 License
 
 [![Licence](https://img.shields.io/github/license/wayofdev/next-starter-tpl?style=for-the-badge&color=blue)](./LICENSE)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwayofdev%2Fnext-starter-tpl.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwayofdev%2Fnext-starter-tpl?ref=badge_shield)
-
-<br>
-
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwayofdev%2Fnext-starter-tpl.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwayofdev%2Fnext-starter-tpl?ref=badge_large)
+
+<br>
 
 ## 🧱 Credits and Useful Resources
 
@@ -257,3 +176,42 @@ This repository was created in **2022** by [lotyp / wayofdev](https://github.com
 </a>
 
 <br>
+
+## 🤑 Sponsors
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top">
+        <a href="https://prisma.io" target="_blank">
+          <img width="128px" src="https://avatars.githubusercontent.com/u/110109081?s=200&v=4" alt="Reproto Logo" /></a><br />
+        <div>Reproto</div><br />
+        <sub>🎖️ Financial Support</sub>
+      </td>
+      <td align="center" valign="top">
+        <a href="https://vercel.com" target="_blank">
+          <img width="128px" src="https://avatars.githubusercontent.com/u/14985020?s=200&v=4" alt="Vercel Logo" /></a><br />
+        <div>Vercel</div><br />
+        <sub>☁️ Infrastructure Support</sub>
+      </td>
+      <td align="center" valign="top">
+        <a href="https://sentry.io" target="_blank">
+          <img width="128px" src="https://avatars.githubusercontent.com/u/1396951?s=200&v=4" alt="Sentry Logo" /></a><br />
+        <div>Sentry</div><br />
+        <sub>☁️ Infrastructure Support</sub>
+      </td>
+			<td align="center" valign="top">
+        <a href="https://zenhub.com" target="_blank">
+          <img width="128px" src="https://avatars.githubusercontent.com/ml/9?s=200&v=4" alt="ZenHub Logo" /></a><br />
+        <div>ZenHub</div><br />
+        <sub>☁️ Infrastructure Support</sub>
+      </td>
+      <td align="center" valign="top">
+        <a href="https://workos.com" target="_blank">
+          <img width="128px" src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Blank Logo" /></a><br />
+        <div>—</div><br />
+        <sub>—</sub>
+      </td>
+    </tr><tr></tr>
+  </tbody>
+</table>
