@@ -1,8 +1,9 @@
 import type { DocsThemeConfig } from 'nextra-theme-docs'
-import React from 'react'
+import { Fragment } from 'react'
 
 const config: DocsThemeConfig = {
-  logo: <span>Default Project</span>,
+  i18n: [{ locale: 'en-US', text: 'English' }],
+  logo: <span>NextJS-Starter-Tpl</span>,
   project: {
     link: 'https://github.com/wayofdev/next-starter-tpl',
   },
@@ -11,7 +12,15 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/wayofdev/next-starter-tpl',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'NextJS Starter Tpl',
+  },
+  toc: {
+    extraContent: <Fragment />,
+  },
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – WoD',
+    }
   },
 }
 

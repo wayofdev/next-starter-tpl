@@ -37,12 +37,4 @@ module.exports = {
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md
     'jsx-a11y/anchor-is-valid': 'off',
   },
-  overrides: [
-    {
-      files: ['src/pages/\\_*.{ts,tsx}'],
-      rules: {
-        'react/display-name': 'off',
-      },
-    },
-  ],
 }

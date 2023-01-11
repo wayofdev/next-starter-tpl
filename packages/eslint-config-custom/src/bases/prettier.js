@@ -3,8 +3,8 @@
  * @see https://github.com/wayofdev/next-starter-tpl/tree/master/packages/eslint-config-custom
  */
 
-const { getPrettierConfig } = require('../helpers');
-const { ...prettierConfig } = getPrettierConfig();
+const { getPrettierConfig } = require('../helpers')
+const { ...prettierConfig } = getPrettierConfig()
 
 module.exports = {
   extends: ['prettier'],
@@ -14,4 +14,4 @@ module.exports = {
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
   },
-};
+}

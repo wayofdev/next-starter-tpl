@@ -5,11 +5,8 @@
 
 const sonarPatterns = {
   files: ['*.{js,jsx,ts,tsx}'],
-  excludedFiles: [
-    '**/?(*.)+(test).{js,jsx,ts,tsx}',
-    '*.stories.{js,ts,jsx,tsx}',
-  ],
-};
+  excludedFiles: ['**/?(*.)+(test).{js,jsx,ts,tsx}', '*.stories.{js,ts,jsx,tsx}'],
+}
 
 module.exports = {
   env: {
@@ -48,4 +45,4 @@ module.exports = {
       },
     },
   ],
-};
+}

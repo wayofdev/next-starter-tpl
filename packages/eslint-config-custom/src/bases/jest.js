@@ -5,7 +5,7 @@
 
 const jestPatterns = {
   files: ['**/?(*.)+(test).{js,jsx,ts,tsx}'],
-};
+}
 
 module.exports = {
   env: {
@@ -34,4 +34,4 @@ module.exports = {
       },
     },
   ],
-};
+}

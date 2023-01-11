@@ -1,0 +1,135 @@
+import { Callout } from 'nextra-theme-docs'
+
+## 🚩 Requirements
+
+- **macOS** Monterey+ or **Linux**
+- **Docker** 20.10 or newer
+- [How To Install and Use Docker on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
+- **Cloned, configured and running** [docker-shared-services](https://github.com/wayofdev/docker-shared-services), to support system-wide DNS, Routing and TLS support via Traefik.
+
+## 💨 Quick Start from Template
+
+### → Fork and Deploy to Vercel
+
+You can start by creating your monorepo with web and docs applications by deploying to Vercel by clicking the link:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwayofdev%2Fnext-starter-tpl%2Ftree%2Fmaster)
+
+### → Manual Setup
+
+You can use GitHub built-in functionality, to generate your repository from this template. Generated repository can always be synced using [manual GitHub workflow](https://github.com/wayofdev/next-starter-tpl/blob/master/.github/workflows/sync-from-tpl.yml).
+
+- Open this repository template in GitHub - [wayofdev/next-starter-tpl](https://github.com/wayofdev/next-starter-tpl)
+- Click on the [Use this template](https://github.com/wayofdev/next-starter-tpl/generate) button
+- Enter repository name, select repository visibility
+- Click on the **Create repository from template** button
+- To periodically sync your repository from upstream, use [manual GitHub workflow](https://github.com/wayofdev/next-starter-tpl/actions/workflows/sync-from-tpl.yml). `.templatesyncignore` file can be used to ignore files from syncing. More info about syncing can be found in [AndreasAugustin/actions-template-sync](https://github.com/AndreasAugustin/actions-template-sync)
+
+### → Using Terraform
+
+At WoD we use Terraform to automate the process of creating new repositories from templates. [mineiros-io/terraform-github-repository](https://github.com/mineiros-io/terraform-github-repositor) repository can be used, to manage your GitHub organization state, all repositories and their templates.
+
+Example configuration for creating new repository from template:
+
+```hcl filename="repos-frontend.tf"
+module "repository_next_frontend_[project-name]" {
+  source  = "mineiros-io/repository/github"
+  version = "~> 0.18.0"
+
+  name         = "next-frontend-[project-name]"
+  description  = "NextJS based frontend application for [project-name]"
+  visibility   = "private"
+  homepage_url = "https://[project-name].io"
+  push_teams   = [module.team_vb.id]
+  admin_teams  = [module.team_infra.id]
+
+  template = {
+    include_all_branches = true
+    owner                = "wayofdev"
+    repository           = "next-starter-tpl"
+  }
+
+  branches = [
+    {
+      name          = "develop"
+      source_branch = "master"
+    },
+  ]
+
+  default_branch = "develop"
+
+  branch_protections_v4 = [
+    {
+      pattern = "master"
+    },
+    {
+      pattern                         = "develop"
+      require_conversation_resolution = true
+
+      required_pull_request_reviews = {
+        require_code_owner_reviews      = false
+        required_approving_review_count = 0
+      }
+    }
+  ]
+
+  issue_labels                          = tolist(local.default_issue_labels)
+  issue_labels_merge_with_github_labels = false
+}
+```
+
+## 💻 Setup
+
+<Callout type="warning">
+  Repository with [docker-shared-services](https://github.com/wayofdev/docker-shared-services)
+  should be configured, up and running, to ensure `*.docker` domain support system-wide.
+</Callout>
+
+<div className="steps-container">
+
+### → Clone Repository
+
+After forking or creating generating repository from template, you can clone it to your local machine. In this example we will use `next-starter-tpl` repository as starting point.
+
+```bash
+$ git clone git@github.com:wayofdev/next-starter-tpl.git
+```
+
+### → Generate `.env` file
+
+Generate .env file from .env.example file.
+
+```bash
+# add FORCE=true to overwrite existing .env file
+$ make env \
+  APP_NAME=tpl \
+  SHARED_SERVICES_NAMESPACE=ss \
+  PROJECT_SERVICES_NAMESPACE=wod
+```
+
+Change generated `.env` file to match your needs, if needed.
+
+### → Install Dependencies
+
+This command will install all dependencies, through docker container, for this mono-repo and all dependencies.
+
+```bash
+# default action - runs `make install` and setups git hooks
+$ make
+
+# or, run each step separately
+$ make install
+$ make hooks
+```
+
+### → Run docker container in dev mode
+
+This command will start docker container in dev mode, with hot reloading enabled.
+
+```bash
+make up
+```
+
+Project can be accessed at [tpl.docker](https://tpl.docker)
+
+</div>

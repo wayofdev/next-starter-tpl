@@ -1,11 +1,6 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+  "guide": "Guide",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
