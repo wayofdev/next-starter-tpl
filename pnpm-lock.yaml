@@ -233,7 +233,7 @@ importers:
       eslint-plugin-react-hooks: ^4.6.0
       eslint-plugin-regexp: ^1.11.0
       eslint-plugin-security: ^1.5.0
-      eslint-plugin-sonarjs: ^0.17.0
+      eslint-plugin-sonarjs: ^0.18.0
       eslint-plugin-tailwindcss: ^3.8.0
       eslint-plugin-testing-library: ^5.9.1
       eslint-plugin-unicorn: ^45.0.2
@@ -262,7 +262,7 @@ importers:
       eslint-plugin-react-hooks: 4.6.0_eslint@8.31.0
       eslint-plugin-regexp: 1.12.0_eslint@8.31.0
       eslint-plugin-security: 1.5.0
-      eslint-plugin-sonarjs: 0.17.0_eslint@8.31.0
+      eslint-plugin-sonarjs: 0.18.0_eslint@8.31.0
       eslint-plugin-tailwindcss: 3.8.0
       eslint-plugin-testing-library: 5.9.1_iukboom6ndih5an6iafl45j2fe
       eslint-plugin-unicorn: 45.0.2_eslint@8.31.0
@@ -4431,8 +4431,8 @@ packages:
       safe-regex: 2.1.1
     dev: false
 
-  /eslint-plugin-sonarjs/0.17.0_eslint@8.31.0:
-    resolution: {integrity: sha512-jtGtxI49UbJJeJj7CVRLI3+LLH+y+hkR3GOOwM7vBbci9DEFIRGCWvEd2BJScrzltZ6D6iubukTAfc9cyG7sdw==}
+  /eslint-plugin-sonarjs/0.18.0_eslint@8.31.0:
+    resolution: {integrity: sha512-DJ3osLnt6KFdT5e9ZuIDOjT5A6wUGSLeiJJT03lPgpdD+7CVWlYAw9Goe3bt7SmbFO3Xh89NOCZAuB9XA7bAUQ==}
     engines: {node: '>=14'}
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
