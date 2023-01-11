@@ -1,5 +1,5 @@
 import type { DocsThemeConfig } from 'nextra-theme-docs'
-import React from 'react'
+import { Fragment } from 'react'
 
 const config: DocsThemeConfig = {
   i18n: [{ locale: 'en-US', text: 'English' }],
@@ -15,8 +15,7 @@ const config: DocsThemeConfig = {
     text: 'NextJS Starter Tpl',
   },
   toc: {
-    extraContent: <img src="#" alt="" />,
-    float: true,
+    extraContent: <Fragment />,
   },
   useNextSeoProps() {
     return {

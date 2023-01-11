@@ -80,7 +80,7 @@ help: ## Show this menu
 # Default action
 # Defines default command when `make` is executed without additional parameters
 # ------------------------------------------------------------------------------------
-all: install hooks up
+all: install hooks
 .PHONY: all
 
 
