@@ -157,7 +157,7 @@ Other monorepo templates:
 Other projects:
 
 - [ixartz/next-js-boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
-- [Lots of latest examples](https://github.com/vercel/next.js/tree/canary/examples) for NextJS from Vercel
+- [Lots of the latest examples](https://github.com/vercel/next.js/tree/canary/examples) for NextJS from Vercel
 
 <br>
 
@@ -171,7 +171,7 @@ This repository was created in **2022** by [lotyp / wayofdev](https://github.com
 
 <img align="left" src="https://img.shields.io/github/contributors-anon/wayofdev/next-starter-tpl?style=for-the-badge" alt="Contributors"/>
 
-<a href="https://github.com/wayofdev/docker-nginx/graphs/contributors">
+<a href="https://github.com/wayofdev/next-starter-tpl/graphs/contributors">
   <img src="https://opencollective.com/wod/contributors.svg?width=890&button=false" alt="Contributors">
 </a>
 
@@ -186,6 +186,12 @@ This repository was created in **2022** by [lotyp / wayofdev](https://github.com
         <a href="https://prisma.io" target="_blank">
           <img width="128px" src="https://avatars.githubusercontent.com/u/110109081?s=200&v=4" alt="Reproto Logo" /></a><br />
         <div>Reproto</div><br />
+        <sub>🎖️ Financial Support</sub>
+      </td>
+      <td align="center" valign="top">
+        <a href="https://varsitybase.com" target="_blank">
+          <img width="128px" src="https://raw.githubusercontent.com/wayofdev/next-starter-tpl/master/assets/vb-logo.png" alt="VarsityBase Logo" /></a><br />
+        <div>VarsityBase</div><br />
         <sub>🎖️ Financial Support</sub>
       </td>
       <td align="center" valign="top">
@@ -205,12 +211,6 @@ This repository was created in **2022** by [lotyp / wayofdev](https://github.com
           <img width="128px" src="https://avatars.githubusercontent.com/ml/9?s=200&v=4" alt="ZenHub Logo" /></a><br />
         <div>ZenHub</div><br />
         <sub>☁️ Infrastructure Support</sub>
-      </td>
-      <td align="center" valign="top">
-        <a href="https://workos.com" target="_blank">
-          <img width="128px" src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Blank Logo" /></a><br />
-        <div>—</div><br />
-        <sub>—</sub>
       </td>
     </tr><tr></tr>
   </tbody>

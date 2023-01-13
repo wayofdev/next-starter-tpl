@@ -162,7 +162,7 @@ recreate: purge ## Delete dependencies and re-create docker container
 	$(DOCKER_COMPOSE) build app
 .PHONY: recreate
 
-pull: ## Pull latest docker image for app container
+pull: ## Pull latest docker image from docker hub for app container
 	$(DOCKER_COMPOSE) pull app
 .PHONY: pull
 
