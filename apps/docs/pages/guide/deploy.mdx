@@ -1,0 +1,46 @@
+import { Callout } from 'nextra-theme-docs'
+
+## 🤖 Vercel, as hosting provider
+
+Vercel supports it natively, so there's nothing to do. Just add your project to Vercel, and it will automatically detect the monorepo structure and deploy all the projects.
+
+<Callout type="warning">
+  Github repository should be already generated from our
+  [next-starter-tpl](https://github.com/wayofdev/next-starter-tpl) template, before proceeding.
+  Follow
+  [getting-started](https://tpl-docs.wod.docker/guide/getting-started#-quick-start-from-template)
+  guide to create a new project from the template.
+</Callout>
+
+<div className="steps-container">
+
+### → Add New Project
+
+From your vercel dashboard, click on "Add New..." and select the type — `Project`
+
+### → Import Git Repository
+
+Select your organization, or username, and then select the repository you want to deploy.
+If you selected to create your project from github template:
+
+![](../../public/images/deployments/vercel-repo-import.png)
+
+### → Add `web` and `docs` applications separately:
+
+**Docs App:**
+
+- Project Name: **next-starter-tpl-docs**
+- Framework Preset: **Next.js**
+- Root Directory: **apps/docs**
+- Include source files outside of the Root Directory in the Build Step: **true**
+
+**Web App:**
+
+- Project Name: **next-starter-tpl-web**
+- Framework Preset: **Next.js**
+- Root Directory: **apps/web**
+- Include source files outside of the Root Directory in the Build Step: **true**
+
+![](../../public/images/deployments/vercel-repo-deploy.png)
+
+</div>
