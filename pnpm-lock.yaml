@@ -28,7 +28,7 @@ importers:
       npm-run-all: ^4.1.5
       postcss: ^8.4.21
       prettier: ^2.8.2
-      rimraf: ^3.0.2
+      rimraf: ^4.0.0
       secretlint: ^6.0.2
       shell-quote: ^1.7.4
       sort-package-json: ^2.1.0
@@ -61,7 +61,7 @@ importers:
       npm-run-all: 4.1.5
       postcss: 8.4.21
       prettier: 2.8.2
-      rimraf: 3.0.2
+      rimraf: 4.0.0
       secretlint: 6.0.2
       shell-quote: 1.7.4
       sort-package-json: 2.1.0
@@ -195,7 +195,7 @@ importers:
       '@wayofdev/eslint-config-custom': workspace:^
       eslint: ^8.31.0
       prettier: ^2.8.1
-      rimraf: ^3.0.2
+      rimraf: ^4.0.0
       typescript: ^4.9.4
     devDependencies:
       '@types/jest': 29.2.5
@@ -203,7 +203,7 @@ importers:
       '@wayofdev/eslint-config-custom': link:../eslint-config-custom
       eslint: 8.31.0
       prettier: 2.8.2
-      rimraf: 3.0.2
+      rimraf: 4.0.0
       typescript: 4.9.4
 
   packages/eslint-config-custom:
@@ -240,7 +240,7 @@ importers:
       prettier: ^2.8.1
       react: ^18.2.0
       react-dom: ^18.2.0
-      rimraf: ^3.0.2
+      rimraf: ^4.0.0
       typescript: ^4.9.4
     dependencies:
       '@rushstack/eslint-patch': 1.2.0
@@ -276,7 +276,7 @@ importers:
       eslint: 8.31.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      rimraf: 3.0.2
+      rimraf: 4.0.0
       typescript: 4.9.4
 
   packages/jest-config:
@@ -303,7 +303,7 @@ importers:
       eslint: ^8.31.0
       react: ^18.2.0
       react-dom: ^18.2.0
-      rimraf: ^3.0.2
+      rimraf: ^4.0.0
       typescript: ^4.9.4
     dependencies:
       '@swc/helpers': 0.4.14
@@ -319,7 +319,7 @@ importers:
       eslint: 8.31.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      rimraf: 3.0.2
+      rimraf: 4.0.0
       typescript: 4.9.4
 
 packages:
@@ -9170,6 +9170,12 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+
+  /rimraf/4.0.0:
+    resolution: {integrity: sha512-1jUYEffrxKEAYJLJvqYLvKQW5oExH8QhBVYKUO1YXPrKTpobYuZ89KbgmpGbeTj+6kUXqGrIT1w+3BI4T6hR1w==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /rollup/2.78.0:
     resolution: {integrity: sha512-4+YfbQC9QEVvKTanHhIAFVUFSRsezvQF8vFOJwtGfb9Bb+r014S+qryr9PSmw8x6sMnPkmFBGAvIFVQxvJxjtg==}
