@@ -1,6 +1,6 @@
 {
   "getting-started": "Getting Started",
-  "versioning": "Versioning",
   "linting": "Linting",
+  "versioning": "Versioning",
   "deploy": "Deploy"
 }
