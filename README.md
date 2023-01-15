@@ -42,6 +42,10 @@ You can use it with the backend template, written in Laravel — [laravel-starte
 
 <br>
 
+🙏 If you **like/use** this repository, please consider **starring** it. Thanks!
+
+<br>
+
 ## 🤔 What's inside?
 
 This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:

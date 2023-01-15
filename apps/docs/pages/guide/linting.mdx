@@ -6,10 +6,14 @@ Linting is the process of running a program that will analyse code for potential
 it’s incredibly useful for spotting little things that you might otherwise miss, such as using a variable before it’s been defined,
 using an out-of-scope variable, and passing the wrong number of arguments to a function.
 
+## 🛠️ Linters and Code Quality Tools
+
 ### → lint-staged
 
 [Lint-staged](https://github.com/okonet/lint-staged) is a tool that allows you to run linters on Git staged files. This means that only the files you’ve changed will be linted.
 Used together with [Husky](https://github.com/typicode/husky), it can prevent bad code from being committed and pushed.
+
+**Example:**
 
 **Config Structure:**
 
@@ -22,6 +26,7 @@ Used together with [Husky](https://github.com/typicode/husky), it can prevent ba
 │   └── web
 │       ├── .eslintrc.js
 │       └── lint-staged.config.js   # overwrite global lint-staged.config.js, custom eslint
+│
 ├── packages
 │   └── ui
 │       ├── .eslintrc.js
@@ -52,6 +57,86 @@ We are using our own, shared config, installed as npm dependency - [@wayofdev/co
 
 ### → stylelint
 
+[Stylelint](https://stylelint.io) is linter that helps you avoid errors and enforce conventions in your styles. It’s especially useful when you’re using a preprocessor, like Sass or Less, and want to ensure that your compiled CSS follows a certain standard. Configuration is shared from our [@wayofdev/stylelint-config](https://www.npmjs.com/package/@wayofdev/stylelint-config) package.
+
+**Config Structure:**
+
+```bash
+.
+└── .stylelintrc.js  # config extends @wayofdev/stylelint-config
+```
+
+### → secretlint
+
+[Secretlint](https://github.com/secretlint/secretlint) is a linter that helps you avoid committing secrets and credentials into git repositories. Configuration is shared from our [@wayofdev/secretlint-config](https://www.npmjs.com/package/@wayofdev/secretlint-config) package.
+
+**Config Structure:**
+
+```bash
+.
+├── apps
+│   ├── docs
+│   │   └── .secretlintignore
+│   └── web
+│       └── .secretlintignore
+│
+└── .secretlintrc.js  # config extends @wayofdev/secretlint-config
+```
+
 ### → eslint
 
+[Eslint](https://eslint.org) is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. In many ways, it is similar to JSLint and JSHint with a few exceptions.
+
+**Config Structure:**
+
+```bash
+.
+├── apps
+│   ├── docs
+│   │   └── .eslintrc.js  # extends base, enables mdx support
+│   └── web
+│       └── .eslintrc.js
+│
+└── packages
+    ├── common-i18n
+    │   └── .eslintrc.js
+    ├── eslint-config-custom  # eslint config bases, shared across all workspaces
+    │   └── .eslintrc.js
+    └── ui
+        └── .eslintrc.js
+```
+
 ### → prettier
+
+[Prettier](https://prettier.io) is used to format code. It’s an opinionated code formatter that enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
+
+Enabled by default in `packages/eslint-config-custom` and is shared across all workspaces.
+
+### → sort-package-json
+
+[Sort-package-json](https://github.com/keithamus/sort-package-json) is used to sort package.json file. It’s a package.json formatter that enforces a consistent style by parsing your package.json and re-printing it with its own rules based on the well-known package.json keys order.
+
+### → htmlhint
+
+[Htmlhint](https://github.com/htmlhint/HTMLHint) is used to lint html files. It’s a static code analysis tool for identifying problematic patterns found in HTML code.
+
+**Config Structure:**
+
+`lint:html` command uses config, located in `./node_modules/@wayofdev/htmlhint-config/index.json` and is shared across all workspaces.
+
+Npm package with config is hosted on [npmjs.com](https://www.npmjs.com/package/@wayofdev/htmlhint-config) as `@wayofdev/htmlhint-config`.
+
+### → es-check
+
+[Es-check](https://github.com/yowainwright/es-check) checks the version of ES in JavaScript files with simple shell commands.
+
+**Config Structure:**
+
+```bash
+.
+└── apps
+    ├── docs
+    │   └── .escheckrc
+    └── web
+        └── .escheckrc
+```
