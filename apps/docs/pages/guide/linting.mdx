@@ -1,0 +1,57 @@
+# Linting Code
+
+## 📄 About
+
+Linting is the process of running a program that will analyse code for potential errors. In the case of JavaScript,
+it’s incredibly useful for spotting little things that you might otherwise miss, such as using a variable before it’s been defined,
+using an out-of-scope variable, and passing the wrong number of arguments to a function.
+
+### → lint-staged
+
+[Lint-staged](https://github.com/okonet/lint-staged) is a tool that allows you to run linters on Git staged files. This means that only the files you’ve changed will be linted.
+Used together with [Husky](https://github.com/typicode/husky), it can prevent bad code from being committed and pushed.
+
+**Config Structure:**
+
+```bash
+.
+├── apps
+│   ├── docs
+│   │   ├── .eslintrc.js
+│   │   └── lint-staged.config.js   # overwrite global lint-staged.config.js, custom eslint
+│   └── web
+│       ├── .eslintrc.js
+│       └── lint-staged.config.js   # overwrite global lint-staged.config.js, custom eslint
+├── packages
+│   └── ui
+│       ├── .eslintrc.js
+│       └── lint-staged.config.js   # overwrite global lint-staged.config.js, custom eslint
+│
+├── lint-staged.common.js  # few common utils
+└── lint-staged.config.js  # base config to overwrite per apps/packages
+```
+
+### → commitlint
+
+[Commitlint](https://commitlint.js.org/#/) is a tool that checks if your commit messages meet the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0) format. It’s used in conjunction with [Husky](https://github.com/typicode/husky) to ensure that your commit messages are in the correct format before you push them.
+
+We also use conventional commit to [generate changelog]() automatically. Check [Contributing]() section for more details.
+
+**Example:**
+
+![](https://github.com/conventional-changelog/commitlint/raw/master/docs/assets/commitlint.svg)
+
+We are using our own, shared config, installed as npm dependency - [@wayofdev/commitlint-config](https://www.npmjs.com/package/@wayofdev/commitlint-config)
+
+**Config Structure:**
+
+```bash
+.
+└── commitlint.config.js  # config extends @wayofdev/commitlint-config
+```
+
+### → stylelint
+
+### → eslint
+
+### → prettier

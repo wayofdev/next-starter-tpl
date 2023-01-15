@@ -1,5 +1,17 @@
 import { Callout } from 'nextra-theme-docs'
 
+## 🐳 Docker
+
+We use our underlying [docker-node](https://github.com/wayofdev/docker-node) image as a base for our Dockerfile. This image is based on the official [node](https://hub.docker.com/_/node) image and adds some extra tools, like **turbo** and **pnpm**, to make it easier to work with our Docker images.
+
+Commands, that are executed through [Makefile](https://github.com/wayofdev/next-starter-tpl/blob/master/Makefile) use the [docker-compose.yaml](https://github.com/wayofdev/next-starter-tpl/blob/master/docker-compose.yaml) to run the commands inside the container. This way we can make sure that the commands are executed in the same environment, no matter if you are on Windows, Mac or Linux.
+
+Check out help command for more information:
+
+```bash
+$ make help
+```
+
 ## 🤖 Vercel, as hosting provider
 
 Vercel supports it natively, so there's nothing to do. Just add your project to Vercel, and it will automatically detect the monorepo structure and deploy all the projects.

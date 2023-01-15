@@ -11,6 +11,7 @@
 <div align="center">
 <a href="https://next-starter-tpl-docs.wayof.dev"><b>View Documentation / Demo</b></a>
 </div>
+<br>
 
 <div align="center">
 <a href="https://actions-badge.atrox.dev/wayofdev/next-starter-tpl/goto"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Fnext-starter-tpl%2Fbadge&style=flat-square"/></a>
