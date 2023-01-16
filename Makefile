@@ -31,6 +31,7 @@ ENVSUBST ?= $(BUILDER) envsubst
 APP_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps app
 NPM_BIN ?= /bin/pnpm
 NPM_RUNNER ?= $(APP_RUNNER) $(NPM_BIN)
+NPM_COMPOSE_RUNNER ?= $(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run
 
 
 # Self documenting Makefile code
@@ -171,28 +172,44 @@ pull: ## Pull latest docker image from docker hub for app container
 # ------------------------------------------------------------------------------------
 lint: ## Run lint task to fix issues
 	# $(NPM_RUNNER) lint
-	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run lint:fix
+	$(NPM_COMPOSE_RUNNER) lint:fix
 .PHONY: lint
 
 lint-staged:
-	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run lint-staged
+	$(NPM_COMPOSE_RUNNER) lint-staged
 .PHONY: lint-staged
 
 commitlint:
 	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app npx --no --commitlint --edit $(1)
 .PHONY: commitlint
 
+lint-md:
+	$(NPM_COMPOSE_RUNNER) lint:md
+.PHONY: lint-md
+
+lint-dist:
+	$(NPM_COMPOSE_RUNNER) lint:dist
+.PHONY: lint-dist
+
+lint-html:
+	$(NPM_COMPOSE_RUNNER) lint:html
+.PHONY: lint-html
+
 test: ## Run unit tests
-	$(DOCKER_COMPOSE) exec -T app $(NPM_BIN) run test
+	$(NPM_COMPOSE_RUNNER) test
 .PHONY: test
 
 format: ## Run prettier formatting
-	$(DOCKER_COMPOSE) exec -T app $(NPM_BIN) run format
+	$(NPM_COMPOSE_RUNNER) format
 .PHONY: format
 
 sort: ## Sort package.json across project
-	$(DOCKER_COMPOSE) exec -T app $(NPM_BIN) run lint:package-json
+	$(NPM_COMPOSE_RUNNER) lint:package-json
 .PHONY: sort
+
+analyze:
+	$(NPM_RUNNER) analyze
+.PHONY: analyze
 
 
 # Release
