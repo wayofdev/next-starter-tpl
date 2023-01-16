@@ -9,6 +9,9 @@
       "dependsOn": ["^build"],
       "outputs": []
     },
+    "analyze": {
+      "outputs": []
+    },
     "lint": {
       "outputs": []
     },

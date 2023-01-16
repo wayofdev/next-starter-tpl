@@ -8,16 +8,26 @@ using an out-of-scope variable, and passing the wrong number of arguments to a f
 
 ## 🛠️ Linters and Code Quality Tools
 
-### → lint-staged
+### → Lint-staged
 
 [Lint-staged](https://github.com/okonet/lint-staged) is a tool that allows you to run linters on Git staged files. This means that only the files you’ve changed will be linted.
 Used together with [Husky](https://github.com/typicode/husky), it can prevent bad code from being committed and pushed.
 
-**Example:**
+#### how it works
 
 ![](../../public/examples/lint-staged.svg)
 
-**Config Structure:**
+#### running
+
+```bash
+# just do git commit and it will run the linter
+$ git commit -am "fix: something"
+
+# or you can run it manually
+$ pnpm lint:staged
+```
+
+#### config structure
 
 ```bash
 .
@@ -38,41 +48,47 @@ Used together with [Husky](https://github.com/typicode/husky), it can prevent ba
 └── lint-staged.config.js  # base config to overwrite per apps/packages
 ```
 
-### → commitlint
+### → Commitlint
 
 [Commitlint](https://commitlint.js.org/#/) is a tool that checks if your commit messages meet the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0) format. It’s used in conjunction with [Husky](https://github.com/typicode/husky) to ensure that your commit messages are in the correct format before you push them.
 
 We also use conventional commit to [generate changelog]() automatically. Check [Contributing]() section for more details.
 
-**Example:**
+#### how it works
 
 ![](https://github.com/conventional-changelog/commitlint/raw/master/docs/assets/commitlint.svg)
 
 We are using our own, shared config, installed as npm dependency - [@wayofdev/commitlint-config](https://www.npmjs.com/package/@wayofdev/commitlint-config)
 
-**Config Structure:**
+#### config structure
 
 ```bash
 .
 └── commitlint.config.js  # config extends @wayofdev/commitlint-config
 ```
 
-### → stylelint
+### → Stylelint
 
 [Stylelint](https://stylelint.io) is linter that helps you avoid errors and enforce conventions in your styles. It’s especially useful when you’re using a preprocessor, like Sass or Less, and want to ensure that your compiled CSS follows a certain standard. Configuration is shared from our [@wayofdev/stylelint-config](https://www.npmjs.com/package/@wayofdev/stylelint-config) package.
 
-**Config Structure:**
+#### config structure
 
 ```bash
 .
 └── .stylelintrc.js  # config extends @wayofdev/stylelint-config
 ```
 
-### → secretlint
+### → Secretlint
 
 [Secretlint](https://github.com/secretlint/secretlint) is a linter that helps you avoid committing secrets and credentials into git repositories. Configuration is shared from our [@wayofdev/secretlint-config](https://www.npmjs.com/package/@wayofdev/secretlint-config) package.
 
-**Config Structure:**
+#### running
+
+```bash
+
+```
+
+#### config structure
 
 ```bash
 .
@@ -85,11 +101,24 @@ We are using our own, shared config, installed as npm dependency - [@wayofdev/co
 └── .secretlintrc.js  # config extends @wayofdev/secretlint-config
 ```
 
-### → eslint
+### → Eslint
 
 [Eslint](https://eslint.org) is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. In many ways, it is similar to JSLint and JSHint with a few exceptions.
 
-**Config Structure:**
+#### running
+
+```bash
+# through docker, with --fix option enabled
+$ make lint
+
+# or directly
+$ pnpm lint:turbo
+
+# with --fix option enabled
+$ pnpm lint:turbo -- --fix
+```
+
+#### config structure
 
 ```bash
 .
@@ -108,31 +137,61 @@ We are using our own, shared config, installed as npm dependency - [@wayofdev/co
         └── .eslintrc.js
 ```
 
-### → prettier
+### → Prettier
 
 [Prettier](https://prettier.io) is used to format code. It’s an opinionated code formatter that enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
 
 Enabled by default in `packages/eslint-config-custom` and is shared across all workspaces.
 
-### → sort-package-json
+### → Sort-package-json
 
 [Sort-package-json](https://github.com/keithamus/sort-package-json) is used to sort package.json file. It’s a package.json formatter that enforces a consistent style by parsing your package.json and re-printing it with its own rules based on the well-known package.json keys order.
 
-### → htmlhint
+### running
+
+```bash
+# through docker
+$ make sort
+
+# or directly
+$ pnpm lint:package-json
+```
+
+### → Htmlhint
 
 [Htmlhint](https://github.com/htmlhint/HTMLHint) is used to lint html files. It’s a static code analysis tool for identifying problematic patterns found in HTML code.
 
-**Config Structure:**
+#### running
+
+```bash
+# through docker
+$ make lint-html
+
+# or directly
+$ pnpm lint:html
+```
+
+#### config structure
 
 `lint:html` command uses config, located in `./node_modules/@wayofdev/htmlhint-config/index.json` and is shared across all workspaces.
 
 Npm package with config is hosted on [npmjs.com](https://www.npmjs.com/package/@wayofdev/htmlhint-config) as `@wayofdev/htmlhint-config`.
 
-### → es-check
+### → Es-check
 
 [Es-check](https://github.com/yowainwright/es-check) checks the version of ES in JavaScript files with simple shell commands.
 
-**Config Structure:**
+#### running
+
+```bash
+# through docker
+$ make lint-dist
+
+# or directly
+$ pnpm lint:dist
+```
+
+#### config structure
 
 ```bash
 .
@@ -141,4 +200,39 @@ Npm package with config is hosted on [npmjs.com](https://www.npmjs.com/package/@
     │   └── .escheckrc
     └── web
         └── .escheckrc
+```
+
+### → Markdownlint
+
+[Markdownlint](https://github.com/DavidAnson/markdownlint) is used to lint markdown files. It’s a Node.js style checker and lint tool for Markdown/CommonMark files. We are using our own, shared config, installed as npm dependency - [@wayofdev/markdownlint-config](https://www.npmjs.com/package/@wayofdev/markdownlint-config) and root config extends it.
+
+#### running
+
+```bash
+# through docker
+$ make lint-md
+
+# or directly
+$ pnpm lint:md
+```
+
+#### config structure
+
+```bash
+.
+└── .markdownlint.json  # config extends @wayofdev/markdownlint-config
+```
+
+### → Bundle-analyzer
+
+[Bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) is used to analyze bundle size. It’s a tool that represents the size of your webpack bundle as a convenient interactive zoomable treemap.
+
+#### running
+
+```bash
+# through docker
+$ make analyze
+
+# or directly
+$ pnpm analyze
 ```

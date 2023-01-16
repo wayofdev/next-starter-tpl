@@ -64,6 +64,7 @@
     "deps:check": "pnpm dlx npm-check-updates@latest --configFileName .ncurc.yml --deep --mergeConfig",
     "deps:update": "pnpm dlx npm-check-updates@latest --configFileName .ncurc.yml -u --deep --mergeConfig && pnpm install",
     "lint:fix": "turbo run lint:fix && pnpm lint:package-json",
+    "analyze": "BUNDLE_ANALYZE=both ANALYZE=true NEXT_IGNORE_TYPE_CHECK=true NEXT_IGNORE_ESLINT=true NEXT_SENTRY_UPLOAD_DRY_RUN=true turbo run analyze --parallel",
     "cs": "changeset",
     "cs:version": "changeset version",
     "cs:release": "changeset publish"
@@ -99,7 +100,7 @@
     "sort-package-json": "^2.1.0",
     "stylelint": "^14.16.1",
     "stylelint-a11y": "^1.2.3",
-    "turbo": "^1.6.3",
+    "turbo": "^1.7.0",
     "typescript": "^4.9.4"
   },
   "packageManager": "pnpm@7.22.0",

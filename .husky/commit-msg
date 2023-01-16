@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-docker-compose exec -T app npx --no --commitlint --edit "${1}"
+# run directly, without docker support
+# pnpm commitlint --edit "${1}"
+
+# through docker-compose
+docker-compose exec -T -e FORCE_COLOR=1 app pnpm commitlint --edit "${1}"
