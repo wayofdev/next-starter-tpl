@@ -7,6 +7,7 @@ importers:
       '@changesets/changelog-github': ^0.4.8
       '@changesets/cli': 2.26.0
       '@commitlint/cli': ^17.4.0
+      '@commitlint/config-conventional': ^17.4.2
       '@types/node': ^18.11.18
       '@types/prettier': ^2.7.2
       '@types/shell-quote': ^1.7.1
@@ -40,6 +41,7 @@ importers:
       '@changesets/changelog-github': 0.4.8
       '@changesets/cli': 2.26.0
       '@commitlint/cli': 17.4.0_@types+node@18.11.18
+      '@commitlint/config-conventional': 17.4.2
       '@types/node': 18.11.18
       '@types/prettier': 2.7.2
       '@types/shell-quote': 1.7.1
@@ -885,8 +887,8 @@ packages:
       - '@types/node'
     dev: true
 
-  /@commitlint/config-conventional/17.4.0:
-    resolution: {integrity: sha512-G4XBf45J4ZMspO4NwBFzY3g/1Kb+B42BcIxeikF8wucQxcyxcmhRdjeQpRpS1XEcBq5pdtEEQFipuB9IuiNFhw==}
+  /@commitlint/config-conventional/17.4.2:
+    resolution: {integrity: sha512-JVo1moSj5eDMoql159q8zKCU8lkOhQ+b23Vl3LVVrS6PXDLQIELnJ34ChQmFVbBdSSRNAbbXnRDhosFU+wnuHw==}
     engines: {node: '>=v14'}
     dependencies:
       conventional-changelog-conventionalcommits: 5.0.0
@@ -2697,7 +2699,7 @@ packages:
       '@commitlint/cli': '>= 17'
     dependencies:
       '@commitlint/cli': 17.4.0_@types+node@18.11.18
-      '@commitlint/config-conventional': 17.4.0
+      '@commitlint/config-conventional': 17.4.2
     dev: true
 
   /@wayofdev/htmlhint-config/1.1.0_htmlhint@1.1.4:
