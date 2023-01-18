@@ -172,6 +172,20 @@ This repository was created in **2022** by [lotyp / wayofdev](https://github.com
 
 <br>
 
+## 🙌 Want to Contribute?
+
+Thank you for considering contributing to the wayofdev community!
+We are open to all kinds of contributions. If you want to:
+
+🤔 Suggest a feature
+🐛 Report an issue
+📖 Improve documentation
+👨‍💻 Contribute to the code
+
+You are more than welcome. Before contributing, kindly check our [guidelines](https://next-starter-tpl-docs.wayof.dev/contribution).
+
+<br>
+
 ## 🫡 Contributors
 
 <img align="left" src="https://img.shields.io/github/contributors-anon/wayofdev/next-starter-tpl?style=for-the-badge" alt="Contributors"/>
