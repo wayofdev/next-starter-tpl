@@ -100,31 +100,31 @@ else
 endif
 .PHONY: env
 
-i:
+i: ## Install dependencies
 	$(NPM_RUNNER) i
 .PHONY: i
 
-install: i
+install: i ## Same as `make i`
 .PHONY: install
 
-update:
+update: ## Run pnpm to packages to their latest version based on the specified range
 	$(NPM_RUNNER) update
 .PHONY: update
 
-build:
+build: ## Build all apps inside monorepo
 	$(NPM_RUNNER) run build
 .PHONY: build
 
-purge: down
+purge: down ## Stops container and deletes node modules and temporary files
 	rm -rf .pnpm-store node_modules && \
 	rm -rf **/node_modules pnpm-lock.yaml **/.turbo **/.next
 .PHONY: purge
 
-deps-check:
+deps-check: ## Check for outdated dependencies
 	$(NPM_RUNNER) run deps:check
 .PHONY: deps-check
 
-deps-update:
+deps-update: ## Check for outdated dependencies and automatically update them using pnpm
 	$(NPM_RUNNER) run deps:update
 .PHONY: deps-update
 
@@ -143,7 +143,7 @@ down: ## Stops and removes all project containers
 restart: down up ## Removes containers and stops, then starts new instances
 .PHONY: restart
 
-clean:
+clean: ## Stops and removes docker containers, specified int docker-compose.yml
 	$(DOCKER_COMPOSE) rm --force --stop
 .PHONY: clean
 
@@ -175,15 +175,15 @@ lint: ## Run lint task to fix issues
 	$(NPM_COMPOSE_RUNNER) lint:fix
 .PHONY: lint
 
-lint-staged:
+lint-staged: ## Lint staged files
 	$(NPM_COMPOSE_RUNNER) lint-staged
 .PHONY: lint-staged
 
-commitlint:
+commitlint: ## Run commitlint to check commit message
 	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app npx --no --commitlint --edit $(1)
 .PHONY: commitlint
 
-lint-md:
+lint-md: ## Lint markdown files
 	$(NPM_COMPOSE_RUNNER) lint:md
 .PHONY: lint-md
 
@@ -191,9 +191,17 @@ lint-dist:
 	$(NPM_COMPOSE_RUNNER) lint:dist
 .PHONY: lint-dist
 
-lint-html:
+lint-html: ## Lint html files
 	$(NPM_COMPOSE_RUNNER) lint:html
 .PHONY: lint-html
+
+lint-css: ## Lint css files
+	$(NPM_COMPOSE_RUNNER) lint:css
+.PHONY: lint-css
+
+lint-secrets: ## Check if there are any missed secret credentials in code
+	$(NPM_COMPOSE_RUNNER) lint:secrets
+.PHONY: lint-secrets
 
 test: ## Run unit tests
 	$(NPM_COMPOSE_RUNNER) test
@@ -207,14 +215,14 @@ sort: ## Sort package.json across project
 	$(NPM_COMPOSE_RUNNER) lint:package-json
 .PHONY: sort
 
-analyze:
+analyze: ## Run bundle-analyzer
 	$(NPM_RUNNER) analyze
 .PHONY: analyze
 
 
 # Release
 # ------------------------------------------------------------------------------------
-cs:
+cs: ## Run changeset to generate changelog
 	npx changeset
 .PHONY: cs
 
@@ -222,7 +230,7 @@ cs-version:
 	npx changeset version
 .PHONY: version
 
-cs-release:
+cs-release: ## Publish new version to npm
 	npx changeset publish
 .PHONY: release
 

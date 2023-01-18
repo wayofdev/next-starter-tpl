@@ -1,0 +1,71 @@
+import { Callout } from 'nextra-theme-docs'
+
+# Contributing
+
+The latest changes are always in `master` branch, so please make your Pull Request against that branch.
+
+## 💻 Workflow
+
+<Callout type="note">
+  Please feature/fix/update... into individual PRs (not one changing everything)
+</Callout>
+
+- Create a github fork.
+- On your fork, create a branch make the changes, commit and push.
+- Create a pull-request.
+
+## 🧾 Checklist
+
+### → If Applicable
+
+- tests should be included as a part of your PR
+  - `make test` or `pnpm test` to run them.
+- a changeset should be provided
+  - `make cs` or `pnpm cs` to run changeset to request a version bump.
+- documentation should be updated, please provide the corresponding documentation as well and make it part of the Pull Request
+
+## ✉️ Git Message Format
+
+This repo adheres to the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
+Commit messages are enforced through [commitlint](https://github.com/conventional-changelog/commitlint) and a [husky](https://github.com/typicode/husky) [commit-msg hook](https://github.com/wayofdev/next-starter-tpl/blob/master/.husky/commit-msg).
+
+This leads to more readable messages that are easy to follow when looking through the project history and also allows to generate changelogs automatically.
+
+Check out more information about the commitlint and other linters in the [linting section](/guide/linting).
+
+### → Allowed prefixes
+
+- **feat** — A new feature
+- **fix** — A bug fix
+- **perf** — A code change that improves performance
+- **docs** — Documentation only changes
+- **style** — Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons)
+- **deps** — Changes to the package.json or package-lock.json
+- **refactor** — A code change that neither fixes a bug nor adds a feature
+- **ci** — Changes to our CI configuration files and scripts
+- **test** — Adding missing tests or correcting existing tests
+- **revert** — Reverting a previous commit
+- **build** — Changes that affect the build system or external dependencies (example scopes: pnpm, renovate, github actions)
+- **chore** — Other changes that don't modify src or test files
+- **translation** — Changes to the translation files
+- **security** — A code change that fixes a security issue
+
+<Callout type="note">
+  Up-to-date configuration can be found in shared
+  [@wayofdev/commitlint-config](https://www.npmjs.com/package/@wayofdev/commitlint-config) package,
+  in the
+  [commitlint.config.js](https://github.com/wayofdev/npm-shareable-configs/blob/master/packages/commitlint-config/index.js)
+  file.
+</Callout>
+
+## 📋 Coding Rules
+
+Each repository has its own set of coding rules and formatters to automatically enforce them when running tests or committing changes. Check out [linting section](/guide/linting) for more information.
+
+## 🔓 Security Vulnerabilities
+
+If you discover a security vulnerability within this package, please send an e-mail to WayOfDev via the@wayof.dev. All security vulnerabilities will be promptly addressed.
+
+## 🤝 Code of Conduct
+
+We are using the [Contributor Covenant](https://www.contributor-covenant.org/) as our Code of Conduct, to keep discussion open and inclusive. Please, take a moment to read and follow our [Code of Conduct](https://github.com/wayofdev/next-starter-tpl/blob/master/CODE_OF_CONDUCT.md).

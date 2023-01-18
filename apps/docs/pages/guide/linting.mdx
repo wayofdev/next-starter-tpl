@@ -1,10 +1,24 @@
-# Linting Code
+import { Tab, Tabs } from 'nextra-theme-docs'
+
+# Linting and Formatting Code
 
 ## 📄 About
 
 Linting is the process of running a program that will analyse code for potential errors. In the case of JavaScript,
 it’s incredibly useful for spotting little things that you might otherwise miss, such as using a variable before it’s been defined,
 using an out-of-scope variable, and passing the wrong number of arguments to a function.
+
+#### running
+
+```bash
+# run all linters, through docker
+$ make lint
+
+# run all linters, locally
+$ pnpm lint
+```
+
+For more information, see the `Makefile` and `package.json` in root directory of the repository.
 
 ## 🛠️ Linters and Code Quality Tools
 
@@ -58,6 +72,10 @@ We also use conventional commit to [generate changelog]() automatically. Check [
 
 ![](https://github.com/conventional-changelog/commitlint/raw/master/docs/assets/commitlint.svg)
 
+#### running
+
+Commitlint will run automatically when you commit your code, no actions required.
+
 We are using our own, shared config, installed as npm dependency - [@wayofdev/commitlint-config](https://www.npmjs.com/package/@wayofdev/commitlint-config)
 
 #### config structure
@@ -70,6 +88,27 @@ We are using our own, shared config, installed as npm dependency - [@wayofdev/co
 ### → Stylelint
 
 [Stylelint](https://stylelint.io) is linter that helps you avoid errors and enforce conventions in your styles. It’s especially useful when you’re using a preprocessor, like Sass or Less, and want to ensure that your compiled CSS follows a certain standard. Configuration is shared from our [@wayofdev/stylelint-config](https://www.npmjs.com/package/@wayofdev/stylelint-config) package.
+
+#### running
+
+<Tabs items={['docker', 'pnpm']}>
+  <Tab>
+    through docker
+
+    ```bash
+    $ make lint-css
+    ```
+
+  </Tab>
+  <Tab>
+    directly, using system's pnpm binary
+
+    ```bash
+    $ pnpm lint:css
+    ```
+
+  </Tab>
+</Tabs>
 
 #### config structure
 
@@ -84,9 +123,24 @@ We are using our own, shared config, installed as npm dependency - [@wayofdev/co
 
 #### running
 
-```bash
+<Tabs items={['docker', 'pnpm']}>
+  <Tab>
+    through docker
 
-```
+    ```bash
+    $ make lint-secrets
+    ```
+
+  </Tab>
+  <Tab>
+    directly, using system's pnpm binary
+
+    ```bash
+    $ pnpm lint:secrets
+    ```
+
+  </Tab>
+</Tabs>
 
 #### config structure
 
@@ -107,16 +161,30 @@ We are using our own, shared config, installed as npm dependency - [@wayofdev/co
 
 #### running
 
-```bash
-# through docker, with --fix option enabled
-$ make lint
+<Tabs items={['docker', 'pnpm']}>
+  <Tab>
+    through docker, with `--fix` option enabled
 
-# or directly
-$ pnpm lint:turbo
+    ```bash
+    $ make lint
+    ```
 
-# with --fix option enabled
-$ pnpm lint:turbo -- --fix
-```
+  </Tab>
+  <Tab>
+    or directly
+
+    ```bash
+    $ pnpm lint:turbo
+    ```
+
+    with `--fix` option enabled
+
+    ```bash
+    $ pnpm lint:turbo -- --fix
+    ```
+
+  </Tab>
+</Tabs>
 
 #### config structure
 
@@ -149,13 +217,24 @@ Enabled by default in `packages/eslint-config-custom` and is shared across all w
 
 ### running
 
-```bash
-# through docker
-$ make sort
+<Tabs items={['docker', 'pnpm']}>
+  <Tab>
+    through docker
 
-# or directly
-$ pnpm lint:package-json
-```
+    ```bash
+    $ make sort
+    ```
+
+  </Tab>
+  <Tab>
+    or directly
+
+    ```bash
+    $ pnpm lint:package-json
+    ```
+
+  </Tab>
+</Tabs>
 
 ### → Htmlhint
 
@@ -163,13 +242,24 @@ $ pnpm lint:package-json
 
 #### running
 
-```bash
-# through docker
-$ make lint-html
+<Tabs items={['docker', 'pnpm']}>
+  <Tab>
+    through docker
 
-# or directly
-$ pnpm lint:html
-```
+    ```bash
+    $ make lint-html
+    ```
+
+  </Tab>
+  <Tab>
+    or directly
+
+    ```bash
+    $ pnpm lint:html
+    ```
+
+  </Tab>
+</Tabs>
 
 #### config structure
 
@@ -183,13 +273,24 @@ Npm package with config is hosted on [npmjs.com](https://www.npmjs.com/package/@
 
 #### running
 
-```bash
-# through docker
-$ make lint-dist
+<Tabs items={['docker', 'pnpm']}>
+  <Tab>
+    through docker
 
-# or directly
-$ pnpm lint:dist
-```
+    ```bash
+    $ make lint-dist
+    ```
+
+  </Tab>
+  <Tab>
+    or directly
+
+    ```bash
+    $ pnpm lint:dist
+    ```
+
+  </Tab>
+</Tabs>
 
 #### config structure
 
@@ -208,13 +309,24 @@ $ pnpm lint:dist
 
 #### running
 
-```bash
-# through docker
-$ make lint-md
+<Tabs items={['docker', 'pnpm']}>
+  <Tab>
+    through docker
 
-# or directly
-$ pnpm lint:md
-```
+    ```bash
+    $ make lint-md
+    ```
+
+  </Tab>
+  <Tab>
+    or directly
+
+    ```bash
+    $ pnpm lint:md
+    ```
+
+  </Tab>
+</Tabs>
 
 #### config structure
 
@@ -229,10 +341,62 @@ $ pnpm lint:md
 
 #### running
 
-```bash
-# through docker
-$ make analyze
+<Tabs items={['docker', 'pnpm']}>
+  <Tab>
+    through docker
 
-# or directly
-$ pnpm analyze
-```
+    ```bash
+    $ make analyze
+    ```
+
+  </Tab>
+  <Tab>
+    or directly
+
+    ```bash
+    $ pnpm analyze
+    ```
+
+  </Tab>
+</Tabs>
+
+### → Npm-check-updates
+
+[Npm-check-updates](https://github.com/raineorshine/npm-check-updates) is used to check for outdated dependencies. It’s a tool that allows you to upgrade your `package.json` dependencies to the latest versions, regardless of existing version constraints.
+
+#### how it works
+
+[![asciicast](https://asciinema.org/a/Fs0w1jrNWfYUZJhvMPd4Qx0Mg.svg)](https://asciinema.org/a/Fs0w1jrNWfYUZJhvMPd4Qx0Mg)
+
+#### running
+
+<Tabs items={['docker', 'pnpm']}>
+  <Tab>
+    through docker — only check updates
+
+    ```bash
+    $ make deps-check
+    ```
+
+    check and run auto update
+
+    ```bash
+    $ make deps-update
+    ```
+
+  </Tab>
+  <Tab>
+    or directly, via system's pnpm — only check updates
+
+    ```bash
+    $ pnpm deps:check
+    ```
+
+    check and run auto update
+
+    ```bash
+    $ pnpm deps:update
+    ```
+
+  </Tab>
+</Tabs>

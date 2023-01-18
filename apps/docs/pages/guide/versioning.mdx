@@ -1,0 +1,51 @@
+import { Tab, Tabs } from 'nextra-theme-docs'
+
+# Versioning
+
+In mono-repos, it is common to have multiple versions of the same package. For example, you might have a `@wayofdev/components` package that is used by both `@wayofdev/web` and `@wayofdev/mobile`. In this case, you might want to have a different version of `@wayofdev/components` for `@wayofdev/web` and `@wayofdev/mobile`. This is where the `package.json` `version` field comes in. The `version` field is used to specify the version of the package. The version is a string that must follow the [semver](https://semver.org/) format. For example, `1.0.0` is a valid version, but `1.0` is not.
+
+For versioning automation we use [changesets](https://github.com/changesets/changesets). It is a tool that helps you manage your versions and changelogs with a focus on multi-package repositories. It is designed to work well with a continuous integration system and can be used with any workflow you like. It is also designed to work with any package manager, but in mono-repos we are using [pnpm](https://pnpm.io).
+
+[A Detailed Explanation of Changesets](https://github.com/changesets/changesets/blob/main/docs/detailed-explanation.md) 🔗
+
+## 🛠️ Setup and Usage
+
+<div className="steps-container">
+### → Install changesets bot
+
+To connect changesets-bot to your repository, you need to install it as GitHub app — [https://github.com/apps/changeset-bot](https://github.com/apps/changeset-bot)
+
+### → Use changesets CLI to generate changesets
+
+  <Tabs items={['docker', 'pnpm']}>
+    <Tab>
+      through docker
+
+      ```bash
+      $ make cs
+      ```
+
+    </Tab>
+    <Tab>
+      directly, using system's pnpm binary
+
+      ```bash
+      $ pnpm cs
+      ```
+
+    </Tab>
+
+  </Tabs>
+
+### → Commit changesets with your latest changes
+
+Generated changesets are stored in `.changeset` directory. You can commit them with your latest changes.
+
+```bash
+$ git add .
+$ git commit -am 'feat: add new feature'
+```
+
+More info with images: [https://github.com/apps/changeset-bot](https://github.com/apps/changeset-bot)
+
+</div>
