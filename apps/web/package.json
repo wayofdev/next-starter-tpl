@@ -12,7 +12,7 @@
     "lint:size": "size-limit --highlight-less",
     "lint:types": "tsc --project ./tsconfig.json --noEmit",
     "start": "next start",
-    "test": "jest --config ./jest.config.js --verbose --collect-coverage=false",
+    "test": "jest --config ./jest.config.js --verbose --coverage --collect-coverage=true",
     "test:watch": "jest --config ./jest.config.js --watch"
   },
   "dependencies": {
