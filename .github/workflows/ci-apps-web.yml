@@ -84,6 +84,11 @@ jobs:
         run: |
           pnpm lint
 
+      - name: Unit tests
+        working-directory: apps/web
+        run: |
+          pnpm test
+
       - name: Build web-app
         working-directory: apps/web
         run: |
@@ -111,3 +116,10 @@ jobs:
         working-directory: apps/web
         run: |
           pnpm --filter=web lint:dist
+
+      - name: Upload coverage report to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          files: ./apps/web/coverage/coverage-final.json
+          flags: web

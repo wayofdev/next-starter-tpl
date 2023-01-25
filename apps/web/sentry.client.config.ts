@@ -2,13 +2,15 @@
 // The config you add here will be used whenever a page is visited.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
-import { init as sentryInit } from '@sentry/nextjs'
+import { init as sentryInit, Replay } from '@sentry/nextjs'
 
 sentryInit({
   dsn: process.env.SENTRY_DSN || process.env.NEXT_SENTRY_DSN,
 
   // Adjust this value in production, or use tracesSampler for greater control
   // @see https://develop.sentry.dev/sdk/performance/
+  // To turn it off, remove the line
+  // @see https://github.com/getsentry/sentry-javascript/discussions/4503#discussioncomment-2143116
   tracesSampleRate: ['false', '0'].includes(process.env.NEXT_SENTRY_TRACING ?? '') ? undefined : 1,
 
   // ...
@@ -29,4 +31,16 @@ sentryInit({
      */
     'ResizeObserver loop limit exceeded',
   ],
+
+  // Note: The Replay integration only needs to be added to your sentry.client.config.js file.
+  // It will not run if it is added into sentry.server.config.js.
+  //
+  // This sets the sample rate to be 10%. You may want this to be 100% while
+  // in development and sample at a lower rate in production
+  replaysSessionSampleRate: 0.1,
+  // If the entire session is not sampled, use the below sample rate to sample
+  // sessions when an error occurs.
+  replaysOnErrorSampleRate: 1.0,
+
+  integrations: [new Replay()],
 })

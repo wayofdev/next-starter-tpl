@@ -14,15 +14,15 @@
   "dependencies": {
     "@vercel/analytics": "latest",
     "@wayofdev/ui": "workspace:*",
-    "next": "^13.1.2",
-    "nextra": "^2.2.4",
-    "nextra-theme-docs": "^2.2.4",
+    "next": "^13.1.5",
+    "nextra": "^2.2.13",
+    "nextra-theme-docs": "^2.2.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "@types/react": "^18.0.26",
+    "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@wayofdev/browserslist-config": "^1.1.0",
     "@wayofdev/eslint-config-custom": "workspace:*",
