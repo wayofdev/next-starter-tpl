@@ -12,7 +12,8 @@
     "lint:size": "size-limit --highlight-less",
     "lint:types": "tsc --project ./tsconfig.json --noEmit",
     "start": "next start",
-    "test:unit": "jest --config ./jest.config.js --coverage --verbose"
+    "test": "jest --config ./jest.config.js --verbose --collect-coverage=false",
+    "test:watch": "jest --config ./jest.config.js --watch"
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.15",
@@ -50,7 +51,6 @@
     "@wayofdev/browserslist-config": "^1.1.0",
     "@wayofdev/common-i18n": "workspace:*",
     "@wayofdev/eslint-config-custom": "workspace:*",
-    "@wayofdev/jest-config": "workspace:*",
     "autoprefixer": "^10.4.13",
     "browserslist": "^4.21.4",
     "es-check": "^7.0.1",
