@@ -1,15 +1,15 @@
 import { HttpBadRequest } from '@httpx/exception'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
-import { homeConfig } from '@/features/home/home.config'
-import { HomePage } from '@/features/home/pages'
+import { authConfig } from '@/features/auth/auth.config'
+import { LoginPage } from '@/features/auth/pages/LoginPage'
 import { getServerTranslations } from '@/lib/i18n'
 
 type Props = {
-  /** Add HomeRoute props here */
+  /** Add props here */
 }
 
-export default function DemoRoute(_props: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <HomePage />
+export default function LoginRoute(_props: InferGetStaticPropsType<typeof getStaticProps>) {
+  return <LoginPage />
 }
 
 export const getStaticProps: GetStaticProps<Props> = async context => {
@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps<Props> = async context => {
   if (locale === undefined) {
     throw new HttpBadRequest('locale is missing')
   }
-  const { i18nNamespaces } = homeConfig
+  const { i18nNamespaces } = authConfig
   return {
     props: {
       ...(await getServerTranslations(locale, i18nNamespaces)),

@@ -97,6 +97,7 @@ This repository has some additional tools already setup for you:
 - Code formatting with [Prettier](https://prettier.io/)
 - Integrated with [Tailwind CSS](https://tailwindcss.com/)
 - [PostCSS](https://postcss.org/) for processing Tailwind CSS and [CSSNANO](https://cssnano.co/) for CSS optimization on production systems
+- Support for [HeroIcons](https://heroicons.com) out of the box
 - [Husky](https://typicode.github.io/husky/#/) for modern native git hooks
 - [Lint-staged](https://github.com/okonet/lint-staged) for running linters on Git staged files
 - [GitHub Actions](https://github.com/features/actions) support out of the box

@@ -19,12 +19,12 @@
     "lint:types": "tsc --project ./tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@types/jest": "^29.2.5",
+    "@types/jest": "^29.4.0",
     "@types/node": "^18.11.18",
     "@wayofdev/eslint-config-custom": "workspace:^",
     "eslint": "^8.32.0",
     "prettier": "^2.8.3",
-    "rimraf": "^4.1.0",
+    "rimraf": "^4.1.2",
     "typescript": "^4.9.4"
   }
 }
