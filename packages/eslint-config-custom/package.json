@@ -38,6 +38,9 @@
     "./sonar": {
       "require": "./src/bases/sonar.js"
     },
+    "./storybook": {
+      "require": "./src/bases/storybook.js"
+    },
     "./tailwind": {
       "require": "./src/bases/tailwind.js"
     },
@@ -79,7 +82,8 @@
     "eslint-plugin-tailwindcss": "^3.8.2",
     "eslint-plugin-testing-library": "^5.10.0",
     "eslint-plugin-unicorn": "^45.0.2",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.3",
+    "eslint-plugin-storybook": "^0.6.10"
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
