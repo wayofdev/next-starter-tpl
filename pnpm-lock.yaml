@@ -111,7 +111,7 @@ importers:
       '@heroicons/react': ^2.0.13
       '@hookform/resolvers': ^2.9.10
       '@httpx/exception': ^1.7.1
-      '@next/bundle-analyzer': 13.1.5
+      '@next/bundle-analyzer': 13.1.6
       '@sentry/nextjs': ^7.33.0
       '@size-limit/file': ^8.1.2
       '@tailwindcss/aspect-ratio': ^0.4.2
@@ -183,7 +183,7 @@ importers:
       type-fest: 3.5.3
       zod: 3.20.2
     devDependencies:
-      '@next/bundle-analyzer': 13.1.5
+      '@next/bundle-analyzer': 13.1.6
       '@sentry/nextjs': 7.33.0_next@13.1.5+react@18.2.0
       '@size-limit/file': 8.1.2_size-limit@8.1.2
       '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.4
@@ -1916,8 +1916,8 @@ packages:
       '@napi-rs/simple-git-win32-x64-msvc': 0.1.8
     dev: false
 
-  /@next/bundle-analyzer/13.1.5:
-    resolution: {integrity: sha512-Z+1gyS0Hy+Lpt2k/067YIxmYoKQt0RtHy3EMyR3SMZyZGmx3muZPUBS0Aj+tdfdReVNOK2nQdT8ghSZG9Lwmbw==}
+  /@next/bundle-analyzer/13.1.6:
+    resolution: {integrity: sha512-rJS9CtLoGT58mL+v2ISKANosFFWP/0YKYByHQ3vTaZrbQP8b1rYRxd2QVMJmnSXaFkiP9URt1XJ6OdGyVq5b6g==}
     dependencies:
       webpack-bundle-analyzer: 4.7.0
     transitivePeerDependencies:

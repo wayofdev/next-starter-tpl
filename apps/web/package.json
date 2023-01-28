@@ -36,7 +36,7 @@
     "zod": "^3.20.2"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "13.1.5",
+    "@next/bundle-analyzer": "13.1.6",
     "@sentry/nextjs": "^7.33.0",
     "@size-limit/file": "^8.1.2",
     "@tailwindcss/aspect-ratio": "^0.4.2",
