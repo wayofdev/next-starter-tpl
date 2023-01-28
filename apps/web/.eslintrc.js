@@ -25,6 +25,7 @@ module.exports = {
     '@wayofdev/eslint-config-custom/storybook',
     '@wayofdev/eslint-config-custom/react',
     '@wayofdev/eslint-config-custom/tailwind',
+    '@wayofdev/eslint-config-custom/mdx',
     // Add specific rules for nextjs
     'plugin:@next/next/core-web-vitals',
     // Apply prettier and disable incompatible rules
