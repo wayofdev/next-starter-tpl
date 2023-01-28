@@ -43,7 +43,6 @@
     "clean": "clean:global-cache && turbo run clean --parallel",
     "clean:global-cache": "rimraf --no-glob ./.cache",
     "build": "turbo run build --parallel",
-    "build:prod": "turbo run build --parallel",
     "dev": "turbo run dev --parallel",
     "start": "turbo run start",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",

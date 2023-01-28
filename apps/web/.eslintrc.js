@@ -15,15 +15,16 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: 'tsconfig.json',
   },
-  ignorePatterns: [...getDefaultIgnorePatterns(), '.next', '.out'],
+  ignorePatterns: [...getDefaultIgnorePatterns(), '.next', '.out', '/storybook-static'],
   extends: [
     '@wayofdev/eslint-config-custom/typescript',
-    '@wayofdev/eslint-config-custom/sonar',
     '@wayofdev/eslint-config-custom/regexp',
+    '@wayofdev/eslint-config-custom/sonar',
     '@wayofdev/eslint-config-custom/jest',
+    '@wayofdev/eslint-config-custom/rtl',
+    '@wayofdev/eslint-config-custom/storybook',
     '@wayofdev/eslint-config-custom/react',
     '@wayofdev/eslint-config-custom/tailwind',
-    '@wayofdev/eslint-config-custom/rtl',
     // Add specific rules for nextjs
     'plugin:@next/next/core-web-vitals',
     // Apply prettier and disable incompatible rules
@@ -35,12 +36,19 @@ module.exports = {
     // For the sake of example
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md
     'jsx-a11y/anchor-is-valid': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
   },
   overrides: [
     {
       files: ['src/pages/\\_*.{ts,tsx}'],
       rules: {
         'react/display-name': 'off',
+      },
+    },
+    {
+      files: ['src/stories/*.ts'],
+      rules: {
+        '@typescript-eslint/naming-convention': 'off',
       },
     },
   ],

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from 'next/link'
 import { Menu } from '@headlessui/react'
 
 const DropdownLink = ({ children, ...props }) => (

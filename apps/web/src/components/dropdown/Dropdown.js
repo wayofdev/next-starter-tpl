@@ -9,12 +9,7 @@ const Dropdown = ({
   children,
 }) => {
   let alignmentClasses
-
-  switch (width) {
-    case 48:
-      width = 'w-48'
-      break
-  }
+  width = 'w-48'
 
   switch (align) {
     case 'left':

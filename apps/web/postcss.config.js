@@ -30,6 +30,7 @@ module.exports = {
               'custom-properties': supportsIE11,
             },
           },
+          cssnano: {},
         }
       : {}),
   },
