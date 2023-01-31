@@ -17,7 +17,6 @@ jobs:
       matrix:
         os: ['ubuntu-22.04']
         node: ['18']
-        pnpm: ['7']
 
     steps:
       - name: Checkout
@@ -26,13 +25,6 @@ jobs:
           # To run comparison we need more than the latest commit.
           # @link https://github.com/actions/checkout#fetch-all-history-for-all-tags-and-branches
           fetch-depth: 0
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        id: pnpm-install
-        with:
-          version: ${{ matrix.pnpm }}
-          run_install: false
 
       - name: Setup node ${{ matrix.node }}
         uses: actions/setup-node@v3
