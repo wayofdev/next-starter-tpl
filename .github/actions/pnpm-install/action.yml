@@ -6,6 +6,12 @@ runs:
   using: 'composite'
 
   steps:
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      id: pnpm-install
+      with:
+        run_install: false
+
     - name: Expose pnpm config(s) through "$GITHUB_OUTPUT"
       id: pnpm-config
       shell: bash
@@ -16,7 +22,6 @@ runs:
       id: cache-rotation
       shell: bash
       run: |
-        echo "YEAR_MONTH=$(/bin/date -u "+%Y%m")" >> $GITHUB_OUTPUT
         echo "YEAR_WEEK=$(/bin/date -u "+%Y%W")" >> $GITHUB_OUTPUT
 
     - uses: actions/cache@v3
