@@ -1,5 +1,5 @@
 import type { FC } from 'react'
 
 export const MainFooter: FC = () => {
-  return <footer className=""></footer>
+  return <footer className="container relative mx-auto p-6"></footer>
 }

@@ -18,12 +18,12 @@ module.exports = {
   ignorePatterns: [...getDefaultIgnorePatterns(), '.next', '.out'],
   extends: [
     '@wayofdev/eslint-config-custom/typescript',
-    '@wayofdev/eslint-config-custom/sonar',
     '@wayofdev/eslint-config-custom/regexp',
+    '@wayofdev/eslint-config-custom/sonar',
     '@wayofdev/eslint-config-custom/jest',
+    '@wayofdev/eslint-config-custom/rtl',
     '@wayofdev/eslint-config-custom/react',
     '@wayofdev/eslint-config-custom/tailwind',
-    '@wayofdev/eslint-config-custom/rtl',
     '@wayofdev/eslint-config-custom/mdx',
     // Add specific rules for nextjs
     'plugin:@next/next/core-web-vitals',

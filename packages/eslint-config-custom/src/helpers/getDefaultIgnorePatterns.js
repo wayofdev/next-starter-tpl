@@ -5,10 +5,12 @@ const getDefaultIgnorePatterns = () => {
     '.cache',
     '**/.cache',
     '**/build',
-    '**/dist'
-  ];
-};
+    '**/dist',
+    '**/.storybook',
+    '**/storybook-static',
+  ]
+}
 
 module.exports = {
   getDefaultIgnorePatterns,
-};
+}

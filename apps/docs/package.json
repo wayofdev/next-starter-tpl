@@ -14,9 +14,9 @@
   "dependencies": {
     "@vercel/analytics": "latest",
     "@wayofdev/ui": "workspace:*",
-    "next": "^13.1.5",
-    "nextra": "^2.2.13",
-    "nextra-theme-docs": "^2.2.13",
+    "next": "^13.1.6",
+    "nextra": "^2.2.14",
+    "nextra-theme-docs": "^2.2.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -26,8 +26,9 @@
     "@types/react-dom": "^18.0.10",
     "@wayofdev/browserslist-config": "^1.1.0",
     "@wayofdev/eslint-config-custom": "workspace:*",
-    "es-check": "^7.0.1",
+    "es-check": "^7.1.0",
     "eslint": "^8.32.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "sharp": "^0.31.3"
   }
 }

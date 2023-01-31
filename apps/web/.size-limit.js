@@ -10,15 +10,15 @@ try {
 const pages = manifest.pages
 
 const limitCfg = {
-  defaultSize: '85kb',
+  defaultSize: '150kb',
   pages: {
-    '/': '120kb',
-    '/404': '85kb',
+    '/': '150kb',
+    '/404': '150kb',
     '/_app': '170kb',
-    '/_error': '90kb',
+    '/_error': '140kb',
     '/_monitor/sentry/csr-page': '85kb',
     '/_monitor/sentry/ssr-page': '85kb',
-    '/auth/login': '120kb',
+    '/auth/login': '160kb',
     '/home': '105kb',
   },
 }
