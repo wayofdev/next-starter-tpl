@@ -48,7 +48,6 @@ jobs:
       - name: Setup node ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
-          cache: 'pnpm'
           node-version: ${{ matrix.node }}
           registry-url: 'https://registry.npmjs.org/'
 
