@@ -30,3 +30,8 @@ yarn-error.log*
 .env
 .env.local
 .env.*.local
+
+# next-sitemap
+public/robots.txt
+public/sitemap.xml
+public/sitemap-*.xml

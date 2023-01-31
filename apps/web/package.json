@@ -15,7 +15,8 @@
     "start": "next start",
     "storybook": "storybook dev -p 6006",
     "test": "jest --config ./jest.config.js --verbose --coverage --collect-coverage=true",
-    "test:watch": "jest --config ./jest.config.js --watch"
+    "test:watch": "jest --config ./jest.config.js --watch",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.15",
@@ -31,6 +32,7 @@
     "next-auth": "^4.19.0",
     "next-i18next": "^13.0.3",
     "next-seo": "^5.15.0",
+    "next-sitemap": "^3.1.48",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.0",
