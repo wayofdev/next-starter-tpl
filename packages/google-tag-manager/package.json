@@ -1,0 +1,29 @@
+{
+  "name": "@wayofdev/google-tag-manager",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://github.com/wayofdev/next-starter-tpl",
+  "license": "MIT",
+  "author": {
+    "name": "Andrij Orlenko",
+    "email": "lotyp7@gmail.com",
+    "url": "https://github.com/lotyp"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --cache --cache-location ../../.cache/eslint/google-tag-manager.eslintcache",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --fix",
+    "lint:types": "tsc --project tsconfig.json --noEmit"
+  },
+  "peerDependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/gapi.client.tagmanager": "^2.0.3",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10"
+  }
+}
