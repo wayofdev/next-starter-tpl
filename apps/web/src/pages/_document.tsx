@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react'
+import { GoogleTagManagerNoScript } from '@wayofdev/google-tag-manager/src'
 import type { DocumentContext, DocumentInitialProps } from 'next/document'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { i18n } from '../../next-i18next.config'
@@ -45,6 +46,7 @@ class MyDocument extends Document {
           <NextScript />
         </body>
         <Analytics />
+        <GoogleTagManagerNoScript />
       </Html>
     )
   }
