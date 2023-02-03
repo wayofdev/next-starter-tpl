@@ -1,6 +1,6 @@
 {
-  "name": "@wayofdev/google-tag-manager",
-  "version": "1.0.1",
+  "name": "@wayofdev/facebook-pixel",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://github.com/wayofdev/next-starter-tpl",
   "license": "MIT",
@@ -12,12 +12,12 @@
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf dist .turbo",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --cache --cache-location ../../.cache/eslint/google-tag-manager.eslintcache",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --cache --cache-location ../../.cache/eslint/facebook-pixel.eslintcache",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --fix",
     "lint:types": "tsc --project tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@types/gapi.client.tagmanager": "^2.0.3",
+    "@types/facebook-pixel": "^0.0.24",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10"
   },
