@@ -130,6 +130,7 @@ importers:
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': ^13.4.0
       '@testing-library/user-event': ^14.4.3
+      '@types/facebook-pixel': ^0.0.24
       '@types/hoist-non-react-statics': ^3.3.1
       '@types/jest': 29.4.0
       '@types/node': ^18.11.18
@@ -226,6 +227,7 @@ importers:
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
       '@testing-library/user-event': 14.4.3_yxlyej73nftwmh2fiao7paxmlm
+      '@types/facebook-pixel': 0.0.24
       '@types/hoist-non-react-statics': 3.3.1
       '@types/jest': 29.4.0
       '@types/node': 18.11.18

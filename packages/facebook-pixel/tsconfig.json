@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../../tsconfig.base.json",
   "exclude": ["**/node_modules", "**/.*/", "dist", "build"],
-  "include": ["./src"],
+  "include": ["./src/**/*"],
   "compilerOptions": {
     "baseUrl": "./src",
     "target": "esnext",
