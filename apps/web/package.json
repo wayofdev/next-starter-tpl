@@ -67,7 +67,7 @@
     "@types/react-dom": "^18.0.10",
     "@types/react-test-renderer": "^18.0.0",
     "@types/testing-library__jest-dom": "^5.14.5",
-    "@wayofdev/browserslist-config": "^1.1.0",
+    "@wayofdev/browserslist-config": "^2.0.0",
     "@wayofdev/common-i18n": "workspace:*",
     "@wayofdev/eslint-config-custom": "workspace:*",
     "autoprefixer": "^10.4.13",

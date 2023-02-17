@@ -24,7 +24,7 @@
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
-    "@wayofdev/browserslist-config": "^1.1.0",
+    "@wayofdev/browserslist-config": "^2.0.0",
     "@wayofdev/eslint-config-custom": "workspace:*",
     "es-check": "^7.1.0",
     "eslint": "^8.33.0",
