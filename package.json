@@ -76,7 +76,7 @@
     "@types/shell-quote": "^1.7.1",
     "@wayofdev/commitlint-config": "^1.2.0",
     "@wayofdev/eslint-config-custom": "workspace:*",
-    "@wayofdev/htmlhint-config": "^1.1.0",
+    "@wayofdev/htmlhint-config": "^2.0.0",
     "@wayofdev/lint-staged-config": "^1.2.0",
     "@wayofdev/markdownlint-config": "^1.1.0",
     "@wayofdev/secretlint-config": "^1.1.0",
