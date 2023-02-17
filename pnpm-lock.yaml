@@ -10,7 +10,7 @@ importers:
       '@types/node': ^18.11.18
       '@types/prettier': ^2.7.2
       '@types/shell-quote': ^1.7.1
-      '@wayofdev/commitlint-config': ^1.2.0
+      '@wayofdev/commitlint-config': ^2.0.0
       '@wayofdev/eslint-config-custom': workspace:*
       '@wayofdev/htmlhint-config': ^1.1.0
       '@wayofdev/lint-staged-config': ^1.2.0
@@ -43,7 +43,7 @@ importers:
       '@types/node': 18.11.18
       '@types/prettier': 2.7.2
       '@types/shell-quote': 1.7.1
-      '@wayofdev/commitlint-config': 1.2.0_@commitlint+cli@17.4.2
+      '@wayofdev/commitlint-config': 2.0.0_@commitlint+cli@17.4.2
       '@wayofdev/eslint-config-custom': link:packages/eslint-config-custom
       '@wayofdev/htmlhint-config': 1.1.0_htmlhint@1.1.4
       '@wayofdev/lint-staged-config': 1.2.0_lint-staged@13.1.0
@@ -89,7 +89,7 @@ importers:
       sharp: ^0.31.3
       typescript: ^4.9.5
     dependencies:
-      '@vercel/analytics': 0.1.8_react@18.2.0
+      '@vercel/analytics': 0.1.10_react@18.2.0
       '@wayofdev/ui': link:../../packages/ui
       next: 13.1.6_biqbaboplfbrettd7655fr4n2y
       nextra: 2.2.14_3vryta7zmbcsw4rrqf4axjqggm
@@ -193,7 +193,7 @@ importers:
       '@heroicons/react': 2.0.14_react@18.2.0
       '@hookform/resolvers': 2.9.10_react-hook-form@7.43.0
       '@httpx/exception': 1.7.1
-      '@vercel/analytics': 0.1.8_react@18.2.0
+      '@vercel/analytics': 0.1.10_react@18.2.0
       '@wayofdev/facebook-pixel': link:../../packages/facebook-pixel
       '@wayofdev/google-tag-manager': link:../../packages/google-tag-manager
       '@wayofdev/ui': link:../../packages/ui
@@ -3032,8 +3032,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.8
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2/0.0.20230202:
-    resolution: {integrity: sha512-mcFA7LkqRAyzaEoO2xFRt1+m+BabxN1UGTjf+kXxPFN+H0jj8WdsTt/rOmBJdYYfwnW1lXd+OCY4DPnGejFcNA==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2/0.0.20230215:
+    resolution: {integrity: sha512-BITr16revVmSVu5/OM7pGPDgtxp2LM8LKOInXbtpUE+dnu1jGt2RUMUbS/b3YsO7fKyK+YKlM6kK3Y7e+E/n/w==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.8
@@ -4116,7 +4116,7 @@ packages:
     dependencies:
       '@storybook/client-logger': 7.0.0-beta.38
       '@storybook/core-events': 7.0.0-beta.38
-      '@storybook/csf': 0.0.2-next.8
+      '@storybook/csf': 0.0.2-next.10
       '@storybook/global': 5.0.0
       '@storybook/manager-api': 7.0.0-beta.38_biqbaboplfbrettd7655fr4n2y
       '@storybook/preview-api': 7.0.0-beta.38
@@ -4311,7 +4311,7 @@ packages:
       '@storybook/client-logger': 7.0.0-beta.38
       '@storybook/components': 7.0.0-beta.38_biqbaboplfbrettd7655fr4n2y
       '@storybook/core-events': 7.0.0-beta.38
-      '@storybook/csf': 0.0.2-next.8
+      '@storybook/csf': 0.0.2-next.10
       '@storybook/docs-tools': 7.0.0-beta.38
       '@storybook/global': 5.0.0
       '@storybook/manager-api': 7.0.0-beta.38_biqbaboplfbrettd7655fr4n2y
@@ -4530,7 +4530,7 @@ packages:
       '@babel/core': 7.20.12
       '@babel/preset-env': 7.20.2_@babel+core@7.20.12
       '@babel/types': 7.20.7
-      '@storybook/csf': 0.0.2-next.8
+      '@storybook/csf': 0.0.2-next.10
       '@storybook/csf-tools': 7.0.0-beta.38
       '@storybook/node-logger': 7.0.0-beta.38
       '@storybook/types': 7.0.0-beta.38
@@ -4552,7 +4552,7 @@ packages:
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@storybook/client-logger': 7.0.0-beta.38
-      '@storybook/csf': 0.0.2-next.8
+      '@storybook/csf': 0.0.2-next.10
       '@storybook/global': 5.0.0
       '@storybook/theming': 7.0.0-beta.38_biqbaboplfbrettd7655fr4n2y
       '@storybook/types': 7.0.0-beta.38
@@ -4621,7 +4621,7 @@ packages:
       '@storybook/builder-manager': 7.0.0-beta.38
       '@storybook/core-common': 7.0.0-beta.38
       '@storybook/core-events': 7.0.0-beta.38
-      '@storybook/csf': 0.0.2-next.8
+      '@storybook/csf': 0.0.2-next.10
       '@storybook/csf-tools': 7.0.0-beta.38
       '@storybook/docs-mdx': 0.0.1-next.6
       '@storybook/global': 5.0.0
@@ -4690,7 +4690,7 @@ packages:
     resolution: {integrity: sha512-qx1RIcfx8ofshqadJTGd2SgM12F08NJhNJeNLW4WTU5+rv2rmZ/OfagUJDNBoeS9OOfveoxJSWAcCbE4ks1fOA==}
     dependencies:
       '@babel/types': 7.20.7
-      '@storybook/csf': 0.0.2-next.8
+      '@storybook/csf': 0.0.2-next.10
       '@storybook/types': 7.0.0-beta.38
       fs-extra: 11.1.0
       recast: 0.23.1
@@ -4711,11 +4711,9 @@ packages:
       lodash: 4.17.21
     dev: true
 
-  /@storybook/csf/0.0.2-next.8:
-    resolution: {integrity: sha512-3T6rflW7D9q1iXOR+bidwoNbd9rVUTyjYH/sqsnYjbXhb/aOXsQzGKwNeq9QqZIFVpKfg5BoOF5i7DCMtoGknQ==}
+  /@storybook/csf/0.0.2-next.10:
+    resolution: {integrity: sha512-m2PFgBP/xRIF85VrDhvesn9ktaD2pN3VUjvMqkAL/cINp/3qXsCyI81uw7N5VEOkQAbWrY2FcydnvEPDEdE8fA==}
     dependencies:
-      expect-type: 0.14.2
-      lodash: 4.17.21
       type-fest: 2.19.0
     dev: true
 
@@ -4775,7 +4773,7 @@ packages:
       '@storybook/channels': 7.0.0-beta.38
       '@storybook/client-logger': 7.0.0-beta.38
       '@storybook/core-events': 7.0.0-beta.38
-      '@storybook/csf': 0.0.2-next.8
+      '@storybook/csf': 0.0.2-next.10
       '@storybook/global': 5.0.0
       '@storybook/router': 7.0.0-beta.38_biqbaboplfbrettd7655fr4n2y
       '@storybook/theming': 7.0.0-beta.38_biqbaboplfbrettd7655fr4n2y
@@ -4931,7 +4929,7 @@ packages:
       '@storybook/channels': 7.0.0-beta.38
       '@storybook/client-logger': 7.0.0-beta.38
       '@storybook/core-events': 7.0.0-beta.38
-      '@storybook/csf': 0.0.2-next.8
+      '@storybook/csf': 0.0.2-next.10
       '@storybook/global': 5.0.0
       '@storybook/types': 7.0.0-beta.38
       '@types/qs': 6.9.7
@@ -5412,7 +5410,7 @@ packages:
   /@types/gapi.client.tagmanager/2.0.3:
     resolution: {integrity: sha512-mntQv1cDnXiMFevSqHS8QR+DeBW3I8uft2L5QU0DVhjmKmcEcbi9v6eOraJOQi1CxewoSBo2dt5xUNMX2EJN6Q==}
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230202
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230215
     dev: true
 
   /@types/gapi.client/1.0.5:
@@ -5847,8 +5845,8 @@ packages:
       '@typescript-eslint/types': 5.50.0
       eslint-visitor-keys: 3.3.0
 
-  /@vercel/analytics/0.1.8_react@18.2.0:
-    resolution: {integrity: sha512-PQrOI8BJ9qUiVJuQfnKiJd15eDjDJH9TBKsNeMrtelT4NAk7d9mBVz1CoZkvoFnHQ0OW7Xnqmr1F2nScfAnznQ==}
+  /@vercel/analytics/0.1.10_react@18.2.0:
+    resolution: {integrity: sha512-jjJ8GzcPnQp0cMxpfYoUycMRBtDiaIeyVjZPiEPe99Dj1PdjMzAFYEASiV/hpNsXHkpcNYCveDFh6jnmh0YSDQ==}
     peerDependencies:
       react: ^16.8||^17||^18
     dependencies:
@@ -5861,8 +5859,8 @@ packages:
       browserslist: 4.21.4
     dev: true
 
-  /@wayofdev/commitlint-config/1.2.0_@commitlint+cli@17.4.2:
-    resolution: {integrity: sha512-8vAmBU9P8JyR8Bw9GlsfT1rtc2R89kx+XPH10OStC5jzVZoHOEIeaWISMd+yTb93YBEu9uc8NyOJadrt5x+HOA==}
+  /@wayofdev/commitlint-config/2.0.0_@commitlint+cli@17.4.2:
+    resolution: {integrity: sha512-T2XYfB8bBBt4lQ+IQ0RY7V8e8EtBjRWirbZpbkjSBzQajGysUE8/+SgDw/F7LdHOMce0G8nNqnRXUYbPb1JsWA==}
     peerDependencies:
       '@commitlint/cli': '>= 17'
     dependencies:
@@ -9201,10 +9199,6 @@ packages:
   /expand-template/2.0.3:
     resolution: {integrity: sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==}
     engines: {node: '>=6'}
-    dev: true
-
-  /expect-type/0.14.2:
-    resolution: {integrity: sha512-ed3+tr5ujbIYXZ8Pl/VgIphwJQ0q5tBLGGdn7Zvwt1WyPBRX83xjT5pT77P/GkuQbctx0K2ZNSSan7eruJqTCQ==}
     dev: true
 
   /expect/29.4.1:
