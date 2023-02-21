@@ -7,18 +7,18 @@
  * It's possible too.
  */
 // @ts-check
-'use strict';
+'use strict'
 
-const { resolve } = require('path');
+const { resolve } = require('path')
 
-const globalCachePath = resolve(`${__dirname}/.cache`);
+const globalCachePath = resolve(`${__dirname}/.cache`)
 
 /**
  * @param {string} packageName
  * @returns string
  */
 function sanitize(packageName) {
-  return packageName.replace('/', '.').replace(/[^a-z0-9.@_-]+/gi, '-');
+  return packageName.replace('/', '.').replace(/[^a-z0-9.@_-]+/gi, '-')
 }
 
 /**
@@ -26,7 +26,7 @@ function sanitize(packageName) {
  * @returns string
  */
 function getEslintCachePath(packageName) {
-  return `${globalCachePath}/${sanitize(packageName)}/eslint`;
+  return `${globalCachePath}/${sanitize(packageName)}/eslint`
 }
 
 /**
@@ -34,10 +34,10 @@ function getEslintCachePath(packageName) {
  * @returns string
  */
 function getJestCachePath(packageName) {
-  return `${globalCachePath}/${sanitize(packageName)}/jest`;
+  return `${globalCachePath}/${sanitize(packageName)}/jest`
 }
 
 module.exports = {
   getJestCachePath,
   getEslintCachePath,
-};
+}

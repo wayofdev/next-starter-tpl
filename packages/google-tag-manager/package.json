@@ -6,7 +6,6 @@
   "license": "MIT",
   "author": {
     "name": "Andrij Orlenko",
-    "email": "lotyp7@gmail.com",
     "url": "https://github.com/lotyp"
   },
   "sideEffects": false,
@@ -17,9 +16,10 @@
     "lint:types": "tsc --project tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@types/gapi.client.tagmanager": "^2.0.3",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10"
+    "@types/gapi.client.tagmanager": "^2.0.4",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@wayofdev/eslint-config-bases": "^2.0.2"
   },
   "peerDependencies": {
     "next": "^13.1.6",

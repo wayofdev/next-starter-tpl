@@ -1,8 +1,8 @@
 // @ts-check
 
-const { getPrettierConfig } = require('@wayofdev/eslint-config-custom/helpers');
+const { getPrettierConfig } = require('@wayofdev/eslint-config-bases/helpers')
 
-const { overrides = [], ...prettierConfig } = getPrettierConfig();
+const { overrides = [], ...prettierConfig } = getPrettierConfig()
 
 /**
  * @type {import('prettier').Config}
@@ -21,6 +21,6 @@ const config = {
       },
     ],
   ],
-};
+}
 
-module.exports = config;
+module.exports = config

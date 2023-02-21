@@ -5,9 +5,9 @@
  */
 
 // Workaround for https://github.com/eslint/eslint/issues/3458 (re-export of @rushstack/eslint-patch)
-require('@wayofdev/eslint-config-custom/patch/modern-module-resolution')
+require('@wayofdev/eslint-config-bases/patch/modern-module-resolution')
 
-const { getDefaultIgnorePatterns } = require('@wayofdev/eslint-config-custom/helpers')
+const { getDefaultIgnorePatterns } = require('@wayofdev/eslint-config-bases/helpers')
 
 module.exports = {
   root: true,
@@ -17,14 +17,14 @@ module.exports = {
   },
   ignorePatterns: [...getDefaultIgnorePatterns()],
   extends: [
-    '@wayofdev/eslint-config-custom/typescript',
-    '@wayofdev/eslint-config-custom/regexp',
-    '@wayofdev/eslint-config-custom/sonar',
-    '@wayofdev/eslint-config-custom/jest',
-    '@wayofdev/eslint-config-custom/rtl',
-    '@wayofdev/eslint-config-custom/react',
+    '@wayofdev/eslint-config-bases/typescript',
+    '@wayofdev/eslint-config-bases/regexp',
+    '@wayofdev/eslint-config-bases/sonar',
+    '@wayofdev/eslint-config-bases/jest',
+    '@wayofdev/eslint-config-bases/rtl',
+    '@wayofdev/eslint-config-bases/react',
     // Apply prettier and disable incompatible rules
-    '@wayofdev/eslint-config-custom/prettier',
+    '@wayofdev/eslint-config-bases/prettier-plugin',
   ],
   rules: {
     // optional overrides per project
