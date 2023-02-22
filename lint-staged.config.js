@@ -8,6 +8,8 @@ const {
   yamlRules,
 } = require('@wayofdev/lint-staged-config')
 
+console.log(...yamlRules);
+
 const rules = {
   ...jsonRules,
   ...yamlRules,
