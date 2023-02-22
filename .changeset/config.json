@@ -10,7 +10,8 @@
     "version": true,
     "tag": true
   },
-  "commit": true,
+  "commit": false,
+  "fixed": [],
   "linked": [],
   "access": "restricted",
   "baseBranch": "master",

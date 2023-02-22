@@ -54,8 +54,9 @@ const config = {
     '<rootDir>/**/*.{ts,tsx,js,jsx}',
     '!**/*.test.{js,ts}',
     '!**/__mock__/*',
-    '!**/stories/*',
+    '!**/stories/*.tsx',
   ],
+  transformIgnorePatterns: ['/node_modules/(?!@vercel/analytics)/'],
 }
 
 module.exports = config

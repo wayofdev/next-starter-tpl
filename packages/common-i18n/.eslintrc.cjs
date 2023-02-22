@@ -3,7 +3,7 @@
  * @see https://github.com/wayofdev/next-starter-tpl/blob/master/docs/about-linters.md
  */
 
-const { getDefaultIgnorePatterns } = require('@wayofdev/eslint-config-custom/helpers')
+const { getDefaultIgnorePatterns } = require('@wayofdev/eslint-config-bases/helpers')
 
 module.exports = {
   root: true,
@@ -13,9 +13,9 @@ module.exports = {
   },
   ignorePatterns: [...getDefaultIgnorePatterns()],
   extends: [
-    '@wayofdev/eslint-config-custom/typescript',
+    '@wayofdev/eslint-config-bases/typescript',
     // Apply prettier and disable incompatible rules
-    '@wayofdev/eslint-config-custom/prettier',
+    '@wayofdev/eslint-config-bases/prettier-plugin',
   ],
   rules: {
     // optional overrides per project

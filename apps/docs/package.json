@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "@wayofdev/docs",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@vercel/analytics": "latest",
+    "@vercel/analytics": "^0.1.10",
     "@wayofdev/ui": "workspace:*",
     "next": "^13.1.6",
     "nextra": "^2.2.14",
@@ -21,13 +21,12 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@wayofdev/browserslist-config": "^1.1.0",
-    "@wayofdev/eslint-config-custom": "workspace:*",
+    "@types/node": "^18.14.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@wayofdev/eslint-config-bases": "^2.0.2",
     "es-check": "^7.1.0",
-    "eslint": "^8.33.0",
+    "eslint": "^8.34.0",
     "sharp": "^0.31.3",
     "typescript": "^4.9.5"
   }

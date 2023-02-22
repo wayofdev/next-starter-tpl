@@ -111,13 +111,15 @@ update: ## Run pnpm to packages to their latest version based on the specified r
 	$(NPM_RUNNER) update
 .PHONY: update
 
-build: ## Build all apps inside monorepo
+build: ## Build all apps and packages inside monorepo
 	$(NPM_RUNNER) run build
 .PHONY: build
 
 purge: down ## Stops container and deletes node modules and temporary files
-	rm -rf .pnpm-store node_modules && \
-	rm -rf **/node_modules pnpm-lock.yaml **/.turbo **/.next
+	find . | grep /node_modules$ | grep -v /node_modules/ | xargs rm -fR
+	find . | grep /.turbo$ | grep -v /.turbo/ | xargs rm -fR
+	find . | grep /.next$ | grep -v /.next/ | xargs rm -fR
+	rm -rf .pnpm-store pnpm-lock.yaml
 .PHONY: purge
 
 deps-check: ## Check for outdated dependencies
@@ -176,12 +178,12 @@ lint: ## Run lint task to fix issues
 .PHONY: lint
 
 lint-staged: ## Lint staged files
-	$(NPM_COMPOSE_RUNNER) lint-staged
+	$(NPM_COMPOSE_RUNNER) lint:staged
 .PHONY: lint-staged
 
-commitlint: ## Run commitlint to check commit message
+lint-commits: ## Run commitlint to check commit message
 	$(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app npx --no --commitlint --edit $(1)
-.PHONY: commitlint
+.PHONY: lint-commits
 
 lint-md: ## Lint markdown files
 	$(NPM_COMPOSE_RUNNER) lint:md
@@ -203,8 +205,20 @@ lint-secrets: ## Check if there are any missed secret credentials in code
 	$(NPM_COMPOSE_RUNNER) lint:secrets
 .PHONY: lint-secrets
 
+lint-browsers: ## Check if there are any missed secret credentials in code
+	$(NPM_COMPOSE_RUNNER) lint:browsers
+.PHONY: lint-browsers
+
+lint-yaml: ## Lints yaml files inside project
+	yamllint .
+.PHONY: lint-yaml
+
+lint-actions: ## Lint github actions using actionlint
+	$(BUILDER) actionlint -color
+.PHONY: lint-actions
+
 test: ## Run unit tests
-	$(NPM_COMPOSE_RUNNER) test
+	$(NPM_COMPOSE_RUNNER) test:unit
 .PHONY: test
 
 format: ## Run prettier formatting
@@ -231,6 +245,10 @@ cs-version:
 .PHONY: version
 
 cs-release: ## Publish new version to npm
+	npx changeset release
+.PHONY: release
+
+cs-publish: ## Run build, lint tasks and then publish new version to npm
 	npx changeset publish
 .PHONY: release
 
