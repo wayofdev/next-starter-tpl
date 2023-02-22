@@ -2,7 +2,17 @@
   "name": "@wayofdev/common-i18n",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://github.com/wayofdev/next-starter-tpl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wayofdev/next-starter-tpl",
+    "directory": "packages/common-i18n"
+  },
   "license": "MIT",
+  "author": {
+    "name": "Andrij Orlenko",
+    "url": "https://github.com/lotyp"
+  },
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -11,16 +21,6 @@
       "import": "./src/locales/*.json"
     },
     "./package.json": "./package.json"
-  },
-  "author": {
-    "name": "Andrij Orlenko",
-    "url": "https://github.com/lotyp"
-  },
-  "homepage": "https://github.com/wayofdev/next-starter-tpl",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wayofdev/next-starter-tpl",
-    "directory": "packages/common-i18n"
   },
   "scripts": {
     "clean": "rimraf ./dist ./.turbo ./coverage ./tsconfig.tsbuildinfo",
