@@ -2,13 +2,12 @@
 
 const { concatFilesForPrettier } = require('@wayofdev/lint-staged-config')
 
-
 const { jsonRules } = require('@wayofdev/lint-staged-config/json')
 const { secretsRules } = require('@wayofdev/lint-staged-config/secrets')
 const { mdRules } = require('@wayofdev/lint-staged-config/md')
 const { yamlRules } = require('@wayofdev/lint-staged-config/yaml')
 
-console.log(...yamlRules);
+console.log(mdRules)
 
 const rules = {
   ...jsonRules,
