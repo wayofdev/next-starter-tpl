@@ -1,12 +1,12 @@
 // @ts-check
 
-const {
-  concatFilesForPrettier,
-  jsonRules,
-  secretsRules,
-  mdRules,
-  yamlRules,
-} = require('@wayofdev/lint-staged-config')
+const { concatFilesForPrettier } = require('@wayofdev/lint-staged-config')
+
+
+jsonRules = require('@wayofdev/lint-staged-config/json')
+secretsRules = require('@wayofdev/lint-staged-config/secrets')
+mdRules = require('@wayofdev/lint-staged-config/md')
+yamlRules = require('@wayofdev/lint-staged-config/yaml')
 
 console.log(...yamlRules);
 
