@@ -13,7 +13,7 @@ services:
       - ./:/app:rw
       - ./.env:/app/apps/web/.env
     working_dir: /app
-    command: '/bin/pnpm run dev'
+    command: '/bin/pnpm dev'
     environment:
       - TERM=xterm-256color`
     tty: true
@@ -31,28 +31,11 @@ services:
       - traefik.http.routers.${APP_NAME}_docs.service=${APP_NAME}_docs
       - traefik.http.services.${APP_NAME}_docs.loadbalancer.server.port=3001
 
-  #  storybook:
-  #    image: wayofdev/node:18-alpine-latest
-  #    container_name: ${APP_NAME}_storybook
-  #    restart: on-failure
-  #    networks:
-  #      - default
-  #      - shared
-  #    volumes:
-  #      - ./:/app:rw
-  #      - ./.env:/app/apps/web/.env
-  #    working_dir: /app
-  #    command: '/bin/pnpm --filter=web run storybook'
-  #    environment:
-  #      - TERM=xterm-256color`
-  #    tty: true
-  #    labels:
-  #      - traefik.enable=true
-  #      - traefik.http.routers.${APP_NAME}_storybook.rule=Host(`${APP_NAME}-storybook.${PROJECT_SERVICES_NAMESPACE}.docker`)
-  #      - traefik.http.routers.${APP_NAME}_storybook.entrypoints=websecure
-  #      - traefik.http.routers.${APP_NAME}_storybook.tls=true
-  #      - traefik.http.routers.${APP_NAME}_storybook.service=${APP_NAME}_storybook
-  #      - traefik.http.services.${APP_NAME}_storybook.loadbalancer.server.port=6006
+      - traefik.http.routers.${APP_NAME}_storybook.rule=Host(`${APP_NAME}-storybook.${PROJECT_SERVICES_NAMESPACE}.docker`)
+      - traefik.http.routers.${APP_NAME}_storybook.entrypoints=websecure
+      - traefik.http.routers.${APP_NAME}_storybook.tls=true
+      - traefik.http.routers.${APP_NAME}_storybook.service=${APP_NAME}_storybook
+      - traefik.http.services.${APP_NAME}_storybook.loadbalancer.server.port=6006
 
 networks:
   shared:

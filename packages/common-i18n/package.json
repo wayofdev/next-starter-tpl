@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
-    "@types/node": "^18.14.0",
-    "@wayofdev/eslint-config-bases": "^2.0.2",
+    "@types/node": "^18.14.1",
+    "@wayofdev/eslint-config-bases": "^2.0.4",
     "eslint": "^8.34.0",
     "prettier": "^2.8.4",
     "rimraf": "^4.1.2",

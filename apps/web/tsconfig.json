@@ -1,13 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../../tsconfig.base.json",
-  "exclude": [
-    "**/node_modules",
-    "**/.*/",
-    "**/*.stories.tsx",
-    "**/*.stories.mdx",
-    ".storybook/**"
-  ],
+  "exclude": ["**/node_modules", "**/.*/", "**/*.stories.tsx", "**/*.stories.mdx"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -20,52 +14,24 @@
     "**/*.json"
   ],
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "target": "esnext",
     "baseUrl": "./src",
     "importHelpers": true,
     "module": "esnext",
     "paths": {
-      "@/test-utils": [
-        "../config/tests/test-utils"
-      ],
-      "@/config/*": [
-        "./config/*"
-      ],
-      "@/lib/*": [
-        "./lib/*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/features/*": [
-        "./features/*"
-      ],
-      "@/pages/*": [
-        "./pages/*"
-      ],
-      "@/public/*": [
-        "../public/*"
-      ],
-      "@/themes/*": [
-        "./themes/*"
-      ],
-      "@wayofdev/common-i18n": [
-        "../../../packages/common-i18n/src/index"
-      ],
-      "@wayofdev/common-i18n/locales/*": [
-        "../../../packages/common-i18n/src/locales/*"
-      ],
-      "@wayofdev/ui/*": [
-        "../../../packages/ui/src/*"
-      ],
-      "@wayofdev/ui": [
-        "../../../packages/ui/src/index"
-      ]
+      "@/test-utils": ["../config/tests/test-utils"],
+      "@/config/*": ["./config/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/components/*": ["./components/*"],
+      "@/features/*": ["./features/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/public/*": ["../public/*"],
+      "@/themes/*": ["./themes/*"],
+      "@wayofdev/common-i18n": ["../../../packages/common-i18n/src/index"],
+      "@wayofdev/common-i18n/locales/*": ["../../../packages/common-i18n/src/locales/*"],
+      "@wayofdev/ui/*": ["../../../packages/ui/src/*"],
+      "@wayofdev/ui": ["../../../packages/ui/src/index"]
     }
   }
 }

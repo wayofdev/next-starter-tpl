@@ -22,6 +22,7 @@ module.exports = {
     '@wayofdev/eslint-config-bases/sonar',
     '@wayofdev/eslint-config-bases/jest',
     '@wayofdev/eslint-config-bases/rtl',
+    '@wayofdev/eslint-config-bases/storybook',
     '@wayofdev/eslint-config-bases/react',
     '@wayofdev/eslint-config-bases/react-query',
     '@wayofdev/eslint-config-bases/tailwind',
