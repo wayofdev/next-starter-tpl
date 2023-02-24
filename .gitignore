@@ -20,6 +20,7 @@ build/
 local/
 dist/
 dist-ssr/
+storybook-static/
 
 # next-sitemap
 public/robots.txt
