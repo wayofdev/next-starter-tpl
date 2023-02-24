@@ -24,7 +24,6 @@
 <a href="https://codeclimate.com/github/wayofdev/next-starter-tpl">
 <img alt="Codecov" src="https://img.shields.io/codecov/c/github/wayofdev/next-starter-tpl?flag=web&style=flat-square"></a>
 </div>
-
 <br>
 
 # NextJS Starter Template
@@ -37,56 +36,10 @@ You can use it with the backend template, written in Laravel — [laravel-starte
 
 ### → Purpose
 
-- Establish a **structure** and present a lifecycle perspective (dx, ci/cd, deployments);
-- Show how to create and consume shared packages, locales, assets, and API types;
-- Ship fully configured repository with integrated **tools & configs**, like tsconfig, eslint, jest, cypress, tailwind, changelogs, versioning, codecov, codeclimate, sentry, and others;
-- Clarify some **advantages** of monorepo (team cohesion, consistency, duplication, refactorings, atomic commits)
-
-<br>
-
-🙏 If you **like/use** this repository, please consider **starring** it. Thanks!
-
-<br>
-
-## 🤔 What's inside?
-
-This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
-
-### → Structure
-
-```bash
-.
-├── apps
-│   ├── web    (nextjs app - i18n, ssr, api, jest, cypress)
-│   └── docs   (nextra app)
-└── packages
-    ├── common-i18n          (locales...)
-    ├── jest-config          (shared jest configs)
-    ├── eslint-config-custom (shared eslint configs)
-    └── ui                   (react stub components)
-```
-
-### → Apps
-
-- `docs`: a [Nextra](https://nextra.site/) documentation template generated from [Nextra: Docs Starter Kit](https://vercel.com/templates/next.js/documentation-starter-kit)
-  - [DEMO docs app](https://next-starter-tpl-docs.vercel.app/)
-- `web`: [Next.js](https://nextjs.org/) app with tailwindcss and sentry support
-
-  - [DEMO web app](https://next-starter-tpl-web.vercel.app/)
-
-- `ui`: a stub React component library shared by the `web` application
-
-> **Note:** Apps should not depend on apps, they can depend on packages
-
-### → Packages
-
-- `common-i18n`: locales for multi-language support
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `jest-config`: [JestJS](https://jestjs.io) configs used across the monorepo
-
-> **Note:** Apps can depend on packages, packages can depend on each others
-
-<br>
+- Establish a clear structure and present a lifecycle perspective (developer experience, continuous integration/continuous deployment, and deployments);
+- Demonstrate how to create and consume shared packages, locales, assets, and API types;
+- Provide a fully configured repository with integrated tools and configs, such as tsconfig, eslint, jest, cypress, tailwind, changelogs, versioning, codecov, codeclimate, sentry, and others;
+- Clarify advantages of using a monorepo, such as team cohesion, consistency, duplication, refactorings, and atomic commits.
 
 ### → Utilities and Features
 
@@ -114,18 +67,68 @@ This repository has some additional tools already setup for you:
 
 <br>
 
+🙏 If you find this repository useful, please consider giving it a ⭐️. Thank you!
+
+<br>
+
+## 🤔 What's inside?
+
+[![Open in Gitpod](https://img.shields.io/badge/Open%20In-Gitpod.io-%231966D2?style=for-the-badge&logo=gitpod)](https://gitpod.io/#https://github.com/wayofdev/next-starter-tpl)
+
+This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
+
+### → Structure
+
+```bash
+.
+├── apps
+│   ├── web                  # Next.js app - i18n, SSR, API, Jest, Cypress
+│   └── docs                 # Nextra app
+└── packages
+    ├── common-i18n          # Locales...
+    ├── facebook-pixel       # Facebook Pixel tracking functionality
+    ├── google-tag-manager   # Google Tag Manager functionality
+    └── ui                   # React stub components
+```
+
+### → Apps
+
+| Application | URL                                                       | Description                                                  |
+| ----------- | --------------------------------------------------------- | ------------------------------------------------------------ |
+| `docs`      | **[Demo](https://next-starter-tpl-docs.vercel.app/)**     | [Nextra](https://nextra.site/) documentation template generated from [Nextra: Docs Starter Kit](https://vercel.com/templates/next.js/documentation-starter-kit) |
+| `web`       | **[Demo](https://next-starter-tpl-web.vercel.app/)**      | [Next.js](https://nextjs.org/) app with TailwindCSS, Facebook Pixel and Google Tag Manager tracking, and Sentry support |
+| `storybook` | **[Demo](https://next-starter-tpl-storybook.vercel.app)** | [Storybook](https://storybook.js.org) — UI component explorer for React components |
+
+> **Note:** Apps should not depend on apps, they can depend on packages
+
+### → Packages
+
+| Package              | Docs                                                         | Description                           |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------- |
+| `common-i18n`        | [README.md](https://github.com/wayofdev/next-starter-tpl/blob/master/packages/common-i18n/README.md) | Locales for multi-language support    |
+| `facebook-pixel`     | [README.md](https://github.com/wayofdev/next-starter-tpl/blob/master/packages/facebook-pixel/README.md) | Facebook Pixel tracking functionality |
+| `google-tag-manager` | [README.md](https://github.com/wayofdev/next-starter-tpl/blob/master/packages/google-tag-manager/README.md) | Google Tag Manager functionality      |
+| `ui`                 | [README.md](https://github.com/wayofdev/next-starter-tpl/blob/master/packages/ui/README.md) | Shared react stub components          |
+
+> **Note:** Apps can depend on packages, packages can depend on each others
+
+<br>
+
 ## 🚩 Requirements
+
+To use this repository, you need to meet the following requirements:
 
 - **macOS** Monterey+ or **Linux**
 - **Docker** 20.10 or newer
   - [How To Install and Use Docker on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
-- **Cloned, configured and running** [docker-shared-services](https://github.com/wayofdev/docker-shared-services), to support system wide DNS, Routing and TLS support via Traefik.
+- Installed **dnsmasq** service, running in the system. You can use [ansible-role-dnsmasq](https://github.com/wayofdev/ansible-role-dnsmasq) to install and configure this service.
+- **Cloned, configured and running** [docker-shared-services](https://github.com/wayofdev/docker-shared-services) to support system-wide DNS, routing, and TLS support via Traefik.
 
 <br>
 
 ## 💿 Installation and Usage
 
-> Warning: Repository with [docker-shared-services](https://github.com/wayofdev/docker-shared-services) should be configured, up and running, to ensure system wide TLS and DNS support.
+> Warning: You should configure, set up, and run the [docker-shared-services](https://github.com/wayofdev/docker-shared-services) repository to ensure system-wide TLS and DNS support.
 
 **[Follow getting-started guide in documentation](https://next-starter-tpl-docs.wayof.dev/guide/getting-started)** 🔗
 
@@ -141,7 +144,7 @@ This repository has some additional tools already setup for you:
 
 ## 🧱 Credits and Useful Resources
 
-Based on [nextjs-monorepo-example](https://github.com/belgattitude/nextjs-monorepo-example) template from [belgattitude](https://github.com/belgattitude).
+This repository is based on the [nextjs-monorepo-example](https://github.com/belgattitude/nextjs-monorepo-example) template from [belgattitude](https://github.com/belgattitude).
 
 - Check his benchmark on package managers — [belgattitude/compare-package-managers](https://github.com/belgattitude/compare-package-managers)
 
@@ -155,7 +158,7 @@ Learn more about the power of **Turborepo**:
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 
-Other monorepo templates:
+Here are some other monorepo templates you may find useful:
 
 - [waldronmatt/pnpm-turborepo-auto-boilerplate](https://github.com/waldronmatt/pnpm-turborepo-auto-boilerplate) — a monorepo boilerplate using pnpm, turborepo, and auto.
 - [mkosir/turborepo-boilerplate](https://github.com/mkosir/turborepo-boilerplate) — frontend turborepo boilerplate
@@ -164,7 +167,6 @@ Other monorepo templates:
 
 Other projects:
 
-- [ixartz/next-js-boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
 - [Lots of the latest examples](https://github.com/vercel/next.js/tree/canary/examples) for NextJS from Vercel
 
 <br>

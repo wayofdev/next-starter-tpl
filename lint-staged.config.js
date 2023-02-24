@@ -1,18 +1,17 @@
 // @ts-check
 
-const {
-  concatFilesForPrettier,
-  jsonRules,
-  secretsRules,
-  mdRules,
-  yamlRules,
-} = require('@wayofdev/lint-staged-config')
+const { concatFilesForPrettier } = require('@wayofdev/lint-staged-config')
+
+const json = require('@wayofdev/lint-staged-config/json')
+const yaml = require('@wayofdev/lint-staged-config/yaml')
+const secrets = require('@wayofdev/lint-staged-config/secrets')
+const md = require('@wayofdev/lint-staged-config/md')
 
 const rules = {
-  ...jsonRules,
-  ...yamlRules,
-  ...secretsRules,
-  ...mdRules,
+  ...json,
+  ...yaml,
+  ...secrets,
+  ...md,
   '**/*.{js,jsx,cjs,mjs,ts,tsx,mts,cts}': filenames => {
     return [`prettier --write ${concatFilesForPrettier(filenames)}`]
   },

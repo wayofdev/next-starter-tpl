@@ -1,6 +1,4 @@
-// Customized postcss
-// @link https://nextjs.org/docs/advanced-features/customizing-postcss-config
-// @link https://tailwindcss.com/docs/using-with-preprocessors
+const postcssReporterFormatter = require('postcss-reporter/lib/formatter')
 
 const isProd = process.env.NODE_ENV === 'production'
 const supportsIE11 = false
@@ -8,7 +6,7 @@ const enableCssGrid = false
 
 module.exports = {
   plugins: {
-    // https://tailwindcss.com/docs/using-with-preprocessors#nesting
+    'postcss-import': {},
     'tailwindcss/nesting': {},
     tailwindcss: {},
     ...(isProd
@@ -33,5 +31,8 @@ module.exports = {
           cssnano: {},
         }
       : {}),
+    'postcss-reporter': {
+      formatter: postcssReporterFormatter(),
+    },
   },
 }

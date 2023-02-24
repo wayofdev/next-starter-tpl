@@ -10,36 +10,10 @@ You can use it with the backend template, written in Laravel — [laravel-starte
 
 ### → Purpose
 
-- Establish a **structure** and present a lifecycle perspective (dx, ci/cd, deployments);
-- Show how to create and consume shared packages, locales, assets, and API types;
-- Ship fully configured repository with integrated **tools & configs**, like tsconfig, eslint, jest, cypress, tailwind, changelogs, versioning, codecov, codeclimate, sentry, and others;
-- Clarify some **advantages** of monorepo (team cohesion, consistency, duplication, refactorings, atomic commits)
-
-## 🤔 What's inside?
-
-[![Open in Gitpod](https://img.shields.io/badge/Open%20In-Gitpod.io-%231966D2?style=for-the-badge&logo=gitpod)](https://gitpod.io/#https://github.com/wayofdev/next-starter-tpl)
-
-This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
-
-### → Apps
-
-| Name        | URL                                                  | Description                                                                                                                                                     |
-| ----------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `apps/docs` | 🌎 [Demo](https://next-starter-tpl-docs.vercel.app/) | [Nextra](https://nextra.site/) documentation template generated from [Nextra: Docs Starter Kit](https://vercel.com/templates/next.js/documentation-starter-kit) |
-| `apps/web`  | 🌎 [Demo](https://next-starter-tpl-web.vercel.app/)  | [Next.js](https://nextjs.org/) app with tailwindcss and sentry support.                                                                                         |
-
-<Callout type="note">Apps should not depend on apps, they can depend on packages.</Callout>
-
-### → Packages
-
-| Name                            | Description                                                                          |
-| ------------------------------- | ------------------------------------------------------------------------------------ |
-| `packages/ui`                   | a stub React component library shared by the `web` application                       |
-| `packages/common-i18n`          | locales for multi-language support                                                   |
-| `packages/eslint-config-custom` | `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`) |
-| `packages/jest-config`          | [JestJS](https://jestjs.io) configs used across the monorepo                         |
-
-<Callout type="note">Apps can depend on packages, packages can depend on each others.</Callout>
+- Establish a clear structure and present a lifecycle perspective (developer experience, continuous integration/continuous deployment, and deployments);
+- Demonstrate how to create and consume shared packages, locales, assets, and API types;
+- Provide a fully configured repository with integrated tools and configs, such as tsconfig, eslint, jest, cypress, tailwind, changelogs, versioning, codecov, codeclimate, sentry, and others;
+- Clarify advantages of using a monorepo, such as team cohesion, consistency, duplication, refactorings, and atomic commits.
 
 ### → Utilities and Features
 
@@ -52,6 +26,7 @@ This repository has some additional tools already setup for you:
 - Code formatting with [Prettier](https://prettier.io/)
 - Integrated with [Tailwind CSS](https://tailwindcss.com/)
 - [PostCSS](https://postcss.org/) for processing Tailwind CSS and [CSSNANO](https://cssnano.co/) for CSS optimization on production systems
+- Support for [HeroIcons](https://heroicons.com) out of the box
 - [Husky](https://typicode.github.io/husky/#/) for modern native git hooks
 - [Lint-staged](https://github.com/okonet/lint-staged) for running linters on Git staged files
 - [GitHub Actions](https://github.com/features/actions) support out of the box
@@ -64,6 +39,47 @@ This repository has some additional tools already setup for you:
 - Keep package.json sorted using [sort-package-json](https://www.npmjs.com/package/sort-package-json)
 - Client and server side [error reporting](https://sentry.io/) supported by [@sentry/nextjs](https://www.npmjs.com/package/@sentry/nextjs)
 
+## 🤔 What's inside?
+
+[![Open in Gitpod](https://img.shields.io/badge/Open%20In-Gitpod.io-%231966D2?style=for-the-badge&logo=gitpod)](https://gitpod.io/#https://github.com/wayofdev/next-starter-tpl)
+
+This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
+
+### → Structure
+
+```bash
+.
+├── apps
+│   ├── web                  # Next.js app - i18n, SSR, API, Jest, Cypress
+│   └── docs                 # Nextra app
+└── packages
+    ├── common-i18n          # Locales...
+    ├── facebook-pixel       # Facebook Pixel tracking functionality
+    ├── google-tag-manager   # Google Tag Manager functionality
+    └── ui                   # React stub components
+```
+
+### → Apps
+
+| Application | URL                                                       | Description                                                                                                                                                     |
+| ----------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `docs`      | **[Demo](https://next-starter-tpl-docs.vercel.app/)**     | [Nextra](https://nextra.site/) documentation template generated from [Nextra: Docs Starter Kit](https://vercel.com/templates/next.js/documentation-starter-kit) |
+| `web`       | **[Demo](https://next-starter-tpl-web.vercel.app/)**      | [Next.js](https://nextjs.org/) app with TailwindCSS, Facebook Pixel and Google Tag Manager tracking, and Sentry support                                         |
+| `storybook` | **[Demo](https://next-starter-tpl-storybook.vercel.app)** | [Storybook](https://storybook.js.org) — UI component explorer for React components                                                                              |
+
+<Callout type="note">Apps should not depend on apps, they can depend on packages.</Callout>
+
+### → Packages
+
+| Package              | Docs                                                                                                        | Description                           |
+| -------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| `common-i18n`        | [README.md](https://github.com/wayofdev/next-starter-tpl/blob/master/packages/common-i18n/README.md)        | Locales for multi-language support    |
+| `facebook-pixel`     | [README.md](https://github.com/wayofdev/next-starter-tpl/blob/master/packages/facebook-pixel/README.md)     | Facebook Pixel tracking functionality |
+| `google-tag-manager` | [README.md](https://github.com/wayofdev/next-starter-tpl/blob/master/packages/google-tag-manager/README.md) | Google Tag Manager functionality      |
+| `ui`                 | [README.md](https://github.com/wayofdev/next-starter-tpl/blob/master/packages/ui/README.md)                 | Shared react stub components          |
+
+<Callout type="note">Apps can depend on packages, packages can depend on each others.</Callout>
+
 ## 🤝 License
 
 [![Licence](https://img.shields.io/github/license/wayofdev/next-starter-tpl?style=for-the-badge&color=blue)](./LICENSE)
@@ -72,7 +88,7 @@ This repository has some additional tools already setup for you:
 
 ## 🧱 Credits and Useful Resources
 
-Based on [nextjs-monorepo-example](https://github.com/belgattitude/nextjs-monorepo-example) template from [belgattitude](https://github.com/belgattitude).
+This repository is based on the [nextjs-monorepo-example](https://github.com/belgattitude/nextjs-monorepo-example) template from [belgattitude](https://github.com/belgattitude).
 
 - Check his benchmark on package managers — [belgattitude/compare-package-managers](https://github.com/belgattitude/compare-package-managers)
 
@@ -86,7 +102,7 @@ Learn more about the power of **Turborepo**:
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 
-Other monorepo templates:
+Here are some other monorepo templates you may find useful:
 
 - [waldronmatt/pnpm-turborepo-auto-boilerplate](https://github.com/waldronmatt/pnpm-turborepo-auto-boilerplate) — a monorepo boilerplate using pnpm, turborepo, and auto.
 - [mkosir/turborepo-boilerplate](https://github.com/mkosir/turborepo-boilerplate) — frontend turborepo boilerplate
@@ -95,9 +111,20 @@ Other monorepo templates:
 
 Other projects:
 
-- [ixartz/next-js-boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
 - [Lots of the latest examples](https://github.com/vercel/next.js/tree/canary/examples) for NextJS from Vercel
 
 ## 🙆🏼‍♂️ Author Information
 
 This repository was created in **2022** by [lotyp / wayofdev](https://github.com/wayofdev).
+
+## 🙌 Want to Contribute?
+
+Thank you for considering contributing to the wayofdev community!
+We are open to all kinds of contributions. If you want to:
+
+- 🤔 Suggest a feature
+- 🐛 Report an issue
+- 📖 Improve documentation
+- 👨‍💻 Contribute to the code
+
+You are more than welcome. Before contributing, kindly check our [guidelines](https://next-starter-tpl-docs.wayof.dev/contribution).
