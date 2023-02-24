@@ -43,7 +43,7 @@
     "zod": "^3.20.6"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "13.2.0",
+    "@next/bundle-analyzer": "13.2.1",
     "@sentry/nextjs": "^7.38.0",
     "@size-limit/file": "^8.2.4",
     "@storybook/addon-essentials": "^7.0.0-beta.52",

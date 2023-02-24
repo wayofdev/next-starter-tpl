@@ -104,7 +104,7 @@ importers:
       '@heroicons/react': ^2.0.16
       '@hookform/resolvers': ^2.9.11
       '@httpx/exception': ^1.7.1
-      '@next/bundle-analyzer': 13.2.0
+      '@next/bundle-analyzer': 13.2.1
       '@sentry/nextjs': ^7.38.0
       '@size-limit/file': ^8.2.4
       '@storybook/addon-essentials': ^7.0.0-beta.52
@@ -199,7 +199,7 @@ importers:
       type-fest: 3.6.0
       zod: 3.20.6
     devDependencies:
-      '@next/bundle-analyzer': 13.2.0
+      '@next/bundle-analyzer': 13.2.1
       '@sentry/nextjs': 7.38.0_3hasew56yhfsk6ei4nos45iqie
       '@size-limit/file': 8.2.4_size-limit@8.2.4
       '@storybook/addon-essentials': 7.0.0-beta.52_biqbaboplfbrettd7655fr4n2y
@@ -3116,8 +3116,8 @@ packages:
       '@napi-rs/simple-git-win32-x64-msvc': 0.1.8
     dev: false
 
-  /@next/bundle-analyzer/13.2.0:
-    resolution: {integrity: sha512-ygZLD/hEMQ1ea0/Crp66AZ6PDHCBffgkO410X5d165c+Nlgnn6hf2M+gOML6GndDm+Gh0yWR7LLL/VIVpF/oyg==}
+  /@next/bundle-analyzer/13.2.1:
+    resolution: {integrity: sha512-ex5CyyqWfBaDE0eguyhWlWZAsg2n9zN1c/YK4FNui7C/cKnjib5FcZeVNeKU9PfSYXDDT9onIhWkhsMNQwIGVg==}
     dependencies:
       webpack-bundle-analyzer: 4.7.0
     transitivePeerDependencies:
