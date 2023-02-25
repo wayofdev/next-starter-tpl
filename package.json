@@ -110,7 +110,7 @@
     "turbo": "^1.8.2",
     "typescript": "^4.9.5"
   },
-  "packageManager": "pnpm@7.27.1",
+  "packageManager": "pnpm@7.28.0",
   "engines": {
     "node": ">=18.0.0"
   }
