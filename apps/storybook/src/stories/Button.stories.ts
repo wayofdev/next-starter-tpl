@@ -34,6 +34,8 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
+    mode: Mode.Secondary,
+    size: Size.Base,
     label: 'Button',
   },
 }
