@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "incremental": false // dts with tsup requires rootDir if incremental (which does not work well aliases)
+  }
+}

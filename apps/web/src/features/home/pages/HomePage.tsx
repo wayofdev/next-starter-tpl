@@ -1,5 +1,5 @@
 import { event } from '@wayofdev/facebook-pixel/src/lib/fpixel'
-import { Button } from '@wayofdev/ui'
+import { Button } from '@wayofdev/ui/src/base/button/Button'
 import { useTranslation } from 'next-i18next'
 import { NextSeo } from 'next-seo'
 import type { FC } from 'react'
@@ -23,7 +23,9 @@ export const HomePage: FC = () => {
       <MainLayout>
         <Banner />
         <MainNav />
-        <Button onClick={handleClick}>Buy 10$</Button>
+        <Button onClick={handleClick} label="Buy 10$">
+          Buy 10$
+        </Button>
       </MainLayout>
     </>
   )

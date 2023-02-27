@@ -4,29 +4,13 @@
   "private": true,
   "license": "MIT",
   "sideEffects": false,
-  "exports": {
-    ".": "./src/index.ts",
-    "./*": [
-      "./src/*.ts",
-      "./src/*.tsx",
-      "./src/*/index.ts"
-    ],
-    "./tailwind": {
-      "require": "./src/tailwind.cjs"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "src/*",
-        "src/*/index"
-      ]
-    }
-  },
-  "files": [
-    "src"
-  ],
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
   "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
     "clean": "rimraf dist .turbo",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --cache --cache-location ../../.cache/eslint/ui.eslintcache",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --fix",
@@ -37,26 +21,34 @@
     "clsx": "^1.2.1"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
-    "@types/jest": "^29.4.0",
-    "@types/node": "^18.14.1",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@wayofdev/eslint-config-bases": "^2.0.4",
-    "eslint": "^8.34.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rimraf": "^4.1.2",
-    "tailwindcss": "^3.2.7",
-    "typescript": "^4.9.5"
+    "@tailwindcss/aspect-ratio": "0.4.2",
+    "@tailwindcss/forms": "0.5.3",
+    "@tailwindcss/line-clamp": "0.4.2",
+    "@tailwindcss/typography": "0.5.9",
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "14.0.0",
+    "@types/jest": "29.4.0",
+    "@types/node": "18.14.1",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "@wayofdev/eslint-config-bases": "2.0.4",
+    "@wayofdev/postcss-config": "2.0.2",
+    "eslint": "8.35.0",
+    "postcss": "8.4.21",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rimraf": "4.1.2",
+    "sanitize.css": "13.0.0",
+    "tailwindcss": "3.2.7",
+    "typescript": "4.9.5",
+    "tsup": "6.6.3"
   },
   "peerDependencies": {
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.10",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.10",
     "next": "*",
-    "react": "^18.2",
-    "react-dom": "^18.2"
+    "react": "18.2",
+    "react-dom": "18.2"
   },
   "peerDependenciesMeta": {
     "@types/react": {
