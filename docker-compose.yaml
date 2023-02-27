@@ -25,28 +25,28 @@ services:
       - traefik.http.routers.${APP_NAME}_web.service=${APP_NAME}_web
       - traefik.http.services.${APP_NAME}_web.loadbalancer.server.port=3000
 
-  #  docs:
-  #    image: wayofdev/node:lts-alpine-latest
-  #    container_name: ${APP_NAME}_docs
-  #    restart: on-failure
-  #    networks:
-  #      - default
-  #      - shared
-  #    volumes:
-  #      - ./:/app:rw
-  #      - ./.env:/app/apps/docs/.env
-  #    working_dir: /app
-  #    command: '/bin/pnpm dev:docs'
-  #    environment:
-  #      - TERM=xterm-256color`
-  #    tty: true
-  #    labels:
-  #      - traefik.enable=true
-  #      - traefik.http.routers.${APP_NAME}_docs.rule=Host(`${APP_NAME}-docs.${PROJECT_SERVICES_NAMESPACE}.docker`)
-  #      - traefik.http.routers.${APP_NAME}_docs.entrypoints=websecure
-  #      - traefik.http.routers.${APP_NAME}_docs.tls=true
-  #      - traefik.http.routers.${APP_NAME}_docs.service=${APP_NAME}_docs
-  #      - traefik.http.services.${APP_NAME}_docs.loadbalancer.server.port=3001
+  docs:
+    image: wayofdev/node:lts-alpine-latest
+    container_name: ${APP_NAME}_docs
+    restart: on-failure
+    networks:
+      - default
+      - shared
+    volumes:
+      - ./:/app:rw
+      - ./.env:/app/apps/docs/.env
+    working_dir: /app
+    command: '/bin/pnpm dev:docs'
+    environment:
+      - TERM=xterm-256color`
+    tty: true
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.${APP_NAME}_docs.rule=Host(`${APP_NAME}-docs.${PROJECT_SERVICES_NAMESPACE}.docker`)
+      - traefik.http.routers.${APP_NAME}_docs.entrypoints=websecure
+      - traefik.http.routers.${APP_NAME}_docs.tls=true
+      - traefik.http.routers.${APP_NAME}_docs.service=${APP_NAME}_docs
+      - traefik.http.services.${APP_NAME}_docs.loadbalancer.server.port=3001
 
   storybook:
     image: wayofdev/node:lts-alpine-latest

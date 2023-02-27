@@ -5,7 +5,7 @@
   "scripts": {
     "build": "storybook build",
     "clean": "rm -rf .turbo && rm -rf node_modules",
-    "dev": "storybook dev -p 443",
+    "dev": "storybook dev -p 443 --disable-telemetry",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs,.mdx --cache --cache-location ../../.cache/eslint/storybook.eslintcache",
     "lint:dist": "es-check -v",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs,.mdx --fix --cache-location ../../.cache/eslint/storybook.eslintcache",

@@ -28,7 +28,7 @@ BUILDER ?= $(BUILDER_PARAMS) $(SUPPORT_IMAGE)
 # Shorthand envsubst command, executed through build-deps
 ENVSUBST ?= $(BUILDER) envsubst
 
-APP_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps storybook
+APP_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps app
 NPM_BIN ?= /bin/pnpm
 NPM_RUNNER ?= $(APP_RUNNER) $(NPM_BIN)
 NPM_COMPOSE_RUNNER ?= $(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run
@@ -154,7 +154,7 @@ logs: ## Show all project docker logs
 .PHONY: logs
 
 ssh: ## Login into running app container
-	$(DOCKER_COMPOSE) run --rm -it storybook sh
+	$(DOCKER_COMPOSE) run --rm -it app sh
 .PHONY: ssh
 
 recreate: purge ## Delete dependencies and re-create docker container
