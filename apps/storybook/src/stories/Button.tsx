@@ -1,11 +1,23 @@
-import React from 'react'
-import './button.css'
+import type { ButtonHTMLAttributes, FC } from 'react'
 
-interface ButtonProps {
+export enum Size {
+  XSmall = 'rounded px-2.5 py-1.5 text-xs',
+  Small = 'rounded-md px-3 py-2 text-sm',
+  Base = 'rounded-md px-4 py-2 text-sm',
+  Large = 'rounded-md px-4 py-2 text-base',
+  XLarge = 'rounded-md px-6 py-3 text-base',
+}
+
+export enum Mode {
+  Primary = 'border-transparent bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2',
+  Secondary = 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2',
+}
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean
+  mode?: Mode
   /**
    * What background color to use
    */
@@ -13,35 +25,24 @@ interface ButtonProps {
   /**
    * How large should the button be?
    */
-  size?: 'small' | 'medium' | 'large'
+  size?: Size
   /**
    * Button contents
    */
   label: string
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void
 }
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({
-  primary = false,
-  size = 'medium',
+export const Button: FC<ButtonProps> = ({
+  mode = Mode.Primary,
+  size = Size.Base,
   backgroundColor,
   label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary'
+  ...properties
+}) => {
+  const baseClasses = 'inline-flex items-center border focus:outline-none font-medium shadow-sm'
+
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
+    <button className={[size, mode, baseClasses].join(' ')} {...properties}>
       {label}
     </button>
   )
