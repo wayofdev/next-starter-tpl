@@ -70,7 +70,7 @@ services:
       - traefik.http.routers.${APP_NAME}_storybook.entrypoints=websecure
       - traefik.http.routers.${APP_NAME}_storybook.tls=true
       - traefik.http.routers.${APP_NAME}_storybook.service=${APP_NAME}_storybook
-      - traefik.http.services.${APP_NAME}_storybook.loadbalancer.server.port=6006
+      - traefik.http.services.${APP_NAME}_storybook.loadbalancer.server.port=443
 
 networks:
   shared:

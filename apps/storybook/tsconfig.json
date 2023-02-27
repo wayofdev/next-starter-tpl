@@ -10,7 +10,7 @@
     "module": "esnext",
     "jsx": "react-jsx"
   },
-  "include": ["src"],
+  "include": ["src", "*.ts"],
   "exclude": ["node_modules", "dist", "coverage", "storybook-static"],
   "references": [
     {
