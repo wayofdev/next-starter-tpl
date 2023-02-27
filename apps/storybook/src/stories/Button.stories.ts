@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-// import { Button } from './Button'
-
+// import { Button, Size, Mode } from '../../../../packages/ui/src/base/button/Button'
 import { Button, Size, Mode } from '@wayofdev/ui/src/base/button/Button'
 // import { Button, Size, Mode } from './Button'
 
