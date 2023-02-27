@@ -22,10 +22,7 @@ const tailwindV3Colors = Object.entries(Object.getOwnPropertyDescriptors(tailwin
 const path = require('path')
 
 module.exports = {
-  content: [
-    path.join(__dirname, './src/**/*.(js|jsx|ts|tsx)'),
-    path.join(__dirname, './../../packages/ui/src/**/*.(js|jsx|ts|tsx)'),
-  ],
+  content: ['./src/**/*.(js|jsx|ts|tsx)'],
   theme: {
     screens: {
       ...defaultTheme.screens,
