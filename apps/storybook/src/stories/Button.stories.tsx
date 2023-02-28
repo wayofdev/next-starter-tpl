@@ -1,17 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
-
-// import { Button, Size, Mode } from '../../../../packages/ui/src/base/button/Button'
 import { Button, Size, Mode } from '@wayofdev/ui/src/base/button/Button'
-// import { Button, Size, Mode } from './Button'
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta = {
   title: 'Example/Button',
   component: Button,
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
   args: {
     label: 'Button',
     mode: Mode.Primary,
@@ -39,9 +33,9 @@ export const Secondary: Story = {
   },
 }
 
-export const Large: Story = {
+export const XSmall: Story = {
   args: {
-    size: Size.Large,
+    size: Size.XSmall,
     label: 'Button',
   },
 }
@@ -49,6 +43,27 @@ export const Large: Story = {
 export const Small: Story = {
   args: {
     size: Size.Small,
+    label: 'Button',
+  },
+}
+
+export const Base: Story = {
+  args: {
+    size: Size.Base,
+    label: 'Button',
+  },
+}
+
+export const Large: Story = {
+  args: {
+    size: Size.Large,
+    label: 'Button',
+  },
+}
+
+export const XLarge: Story = {
+  args: {
+    size: Size.XLarge,
     label: 'Button',
   },
 }
