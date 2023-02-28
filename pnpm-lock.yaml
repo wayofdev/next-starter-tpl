@@ -357,7 +357,7 @@ importers:
 
   packages/ui:
     specifiers:
-      '@swc/helpers': ^0.4.14
+      '@swc/helpers': 0.4.14
       '@tailwindcss/aspect-ratio': 0.4.2
       '@tailwindcss/forms': 0.5.3
       '@tailwindcss/line-clamp': 0.4.2
@@ -368,23 +368,30 @@ importers:
       '@types/node': 18.14.1
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
+      '@types/react-test-renderer': 18.0.0
       '@wayofdev/eslint-config-bases': 2.0.4
+      '@wayofdev/lint-staged-config': 2.0.2
       '@wayofdev/postcss-config': 2.0.2
-      clsx: ^1.2.1
+      clsx: 1.2.1
       eslint: 8.35.0
+      jest: 29.4.3
+      jest-environment-jsdom: 29.4.3
       next: '*'
       postcss: 8.4.21
       react: 18.2.0
       react-dom: 18.2.0
+      react-test-renderer: 18.2.0
       rimraf: 4.1.2
       sanitize.css: 13.0.0
       tailwindcss: 3.2.7
+      ts-jest: 29.0.5
       tsup: 6.6.3
       typescript: 4.9.5
     dependencies:
       '@swc/helpers': 0.4.14
+      '@wayofdev/lint-staged-config': 2.0.2_lint-staged@13.1.2
       clsx: 1.2.1
-      next: 13.2.1_biqbaboplfbrettd7655fr4n2y
+      next: 13.2.1_6m24vuloj5ihw4zc5lbsktc4fu
     devDependencies:
       '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.7
       '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.7
@@ -396,15 +403,20 @@ importers:
       '@types/node': 18.14.1
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
-      '@wayofdev/eslint-config-bases': 2.0.4_s55b3ejbum5piuln2ld3web6ge
+      '@types/react-test-renderer': 18.0.0
+      '@wayofdev/eslint-config-bases': 2.0.4_2wf4nh4ilxffn7pn56ucqzwur4
       '@wayofdev/postcss-config': 2.0.2_gma5s6v4nrupt2xrlksmhyse2a
       eslint: 8.35.0
+      jest: 29.4.3_@types+node@18.14.1
+      jest-environment-jsdom: 29.4.3
       postcss: 8.4.21
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      react-test-renderer: 18.2.0_react@18.2.0
       rimraf: 4.1.2
       sanitize.css: 13.0.0
       tailwindcss: 3.2.7_postcss@8.4.21
+      ts-jest: 29.0.5_5z7tsswyfvtwgq2vvhtohlbbqa
       tsup: 6.6.3_uujdqti2krmttzhqvubwnsmcci
       typescript: 4.9.5
 
@@ -4372,6 +4384,17 @@ packages:
       telejson: 7.0.4
     dev: true
 
+  /@storybook/channel-postmessage/7.0.0-beta.56:
+    resolution: {integrity: sha512-7klCpylZTuU7ymwOOuGnvhYHjHLD5kNVBkEr95meqAmiB7FMhCrYSsFvs8d+r37/K4FQ64JrOzitgrDpSDDHBQ==}
+    dependencies:
+      '@storybook/channels': 7.0.0-beta.56
+      '@storybook/client-logger': 7.0.0-beta.56
+      '@storybook/core-events': 7.0.0-beta.56
+      '@storybook/global': 5.0.0
+      qs: 6.11.0
+      telejson: 7.0.4
+    dev: true
+
   /@storybook/channel-websocket/7.0.0-beta.55:
     resolution: {integrity: sha512-+a36HSApJfSu4gEt22B74d9ofIcMbP7vOqpTchSKw/hc5p4OZWAZZmLU8FQ2IO1z0GkemKtO8EVm8F7deVOY7Q==}
     dependencies:
@@ -4383,6 +4406,10 @@ packages:
 
   /@storybook/channels/7.0.0-beta.55:
     resolution: {integrity: sha512-Cdr3m2Ud27ERRzZCJqfBTWDH+RP74vkzW6UjRv+QTYfiwqCPZORoSGJiFSC2ExGGiJJ0kw0lDDeAixMJ+qpY2g==}
+    dev: true
+
+  /@storybook/channels/7.0.0-beta.56:
+    resolution: {integrity: sha512-AYnUehsL2Y8kKeF45g/fvmBXGBXsK/BpymaJOjas3/JqC16xUNUTbRBYcD57NAEx3YJbhUArjcWYCpq0+u7YYQ==}
     dev: true
 
   /@storybook/cli/7.0.0-beta.55:
@@ -4436,6 +4463,12 @@ packages:
 
   /@storybook/client-logger/7.0.0-beta.55:
     resolution: {integrity: sha512-Nj8fieakoY1pKLLYoNa3D6efPOPxQe0u9hglL8hMclumabeTnvTI+KwdPM7ReFJH6fW6Ydvnt1dRUfM/LDCaCA==}
+    dependencies:
+      '@storybook/global': 5.0.0
+    dev: true
+
+  /@storybook/client-logger/7.0.0-beta.56:
+    resolution: {integrity: sha512-KaNVGK7ee8GQPzg7YdtAHSsDYQhOEzzuOnDdOK4d5WnBX3UphHIVEkhvjWAFY9gGlTZv3P/3ToGAYXkguqzfPQ==}
     dependencies:
       '@storybook/global': 5.0.0
     dev: true
@@ -4515,6 +4548,10 @@ packages:
 
   /@storybook/core-events/7.0.0-beta.55:
     resolution: {integrity: sha512-9LLasREVYpfhmVmsPDNx4BTTYHD6Pf11vvWtRQSUi5yWF9nhitr3d8hJrJL/i9Y1oBD1hu5tJZq2CZoj9fN2Lw==}
+    dev: true
+
+  /@storybook/core-events/7.0.0-beta.56:
+    resolution: {integrity: sha512-x1hJwdF4PkClpfov7oPgewb4n4P18mc8PzXdNKyf3UCd6iKkKuVdmLPXSrCcWlLjOi5UAard9RWzA86qPRKMiQ==}
     dev: true
 
   /@storybook/core-server/7.0.0-beta.55:
@@ -4632,6 +4669,16 @@ packages:
       '@storybook/preview-api': 7.0.0-beta.55
     dev: true
 
+  /@storybook/instrumenter/7.0.0-beta.56:
+    resolution: {integrity: sha512-tmOA8uZcnnX7ocJqr2bGlYQP0yL78yFqoKnD78dD8AWn33dHieDVXcDCzMElO3TLQ1Rl/40LDytC1lAD3cynqA==}
+    dependencies:
+      '@storybook/channels': 7.0.0-beta.56
+      '@storybook/client-logger': 7.0.0-beta.56
+      '@storybook/core-events': 7.0.0-beta.56
+      '@storybook/global': 5.0.0
+      '@storybook/preview-api': 7.0.0-beta.56
+    dev: true
+
   /@storybook/manager-api/7.0.0-beta.55_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-axjBUyfjvvDOBJ6LFOpI7+nbDfibcYssGfeGOou/JAW+TkFgYn/yLB1XnbsHnNxBWHZJUFn0T8jKbi+fSxEgqA==}
     peerDependencies:
@@ -4698,6 +4745,27 @@ packages:
       '@storybook/csf': 0.0.2-next.10
       '@storybook/global': 5.0.0
       '@storybook/types': 7.0.0-beta.55
+      '@types/qs': 6.9.7
+      dequal: 2.0.3
+      lodash: 4.17.21
+      memoizerific: 1.11.3
+      qs: 6.11.0
+      slash: 3.0.0
+      synchronous-promise: 2.0.17
+      ts-dedent: 2.2.0
+      util-deprecate: 1.0.2
+    dev: true
+
+  /@storybook/preview-api/7.0.0-beta.56:
+    resolution: {integrity: sha512-HEmlJ0/hTJ/KJWJp+usBLVjkWU0EqPdnpF1+Kcw9wDuo5ZcB4cjLWvCgZc0frsOYZWsLCsO07MO8EHl7ICItUA==}
+    dependencies:
+      '@storybook/channel-postmessage': 7.0.0-beta.56
+      '@storybook/channels': 7.0.0-beta.56
+      '@storybook/client-logger': 7.0.0-beta.56
+      '@storybook/core-events': 7.0.0-beta.56
+      '@storybook/csf': 0.0.2-next.10
+      '@storybook/global': 5.0.0
+      '@storybook/types': 7.0.0-beta.56
       '@types/qs': 6.9.7
       dequal: 2.0.3
       lodash: 4.17.21
@@ -4822,8 +4890,8 @@ packages:
   /@storybook/testing-library/0.0.14-next.1:
     resolution: {integrity: sha512-1CAl40IKIhcPaCC4pYCG0b9IiYNymktfV/jTrX7ctquRY3akaN7f4A1SippVHosksft0M+rQTFE0ccfWW581fw==}
     dependencies:
-      '@storybook/client-logger': 7.0.0-beta.55
-      '@storybook/instrumenter': 7.0.0-beta.55
+      '@storybook/client-logger': 7.0.0-beta.56
+      '@storybook/instrumenter': 7.0.0-beta.56
       '@testing-library/dom': 8.20.0
       '@testing-library/user-event': 13.5.0_yxlyej73nftwmh2fiao7paxmlm
       ts-dedent: 2.2.0
@@ -4847,6 +4915,15 @@ packages:
     resolution: {integrity: sha512-eJbqJTRUTkSzEg+SwWQGtOOYsx6OV6yk4i0PDmHIFeYaPgC0aJ6jldSZ105ar5APBfx2c7YFrFeStHOU8wXEeA==}
     dependencies:
       '@storybook/channels': 7.0.0-beta.55
+      '@types/babel__core': 7.20.0
+      '@types/express': 4.17.17
+      file-system-cache: 2.0.2
+    dev: true
+
+  /@storybook/types/7.0.0-beta.56:
+    resolution: {integrity: sha512-xpgQHdouTaoOAxJv+1TY5mj+Kt57VmkPXF8Kf0b4rXevvvgYnJ8gELOXYaYZZeW8eEvLhUGMzI++OQKiGdO1KQ==}
+    dependencies:
+      '@storybook/channels': 7.0.0-beta.56
       '@types/babel__core': 7.20.0
       '@types/express': 4.17.17
       file-system-cache: 2.0.2
@@ -8367,7 +8444,7 @@ packages:
       debug: 4.3.4
       enhanced-resolve: 5.12.0
       eslint: 8.35.0
-      eslint-plugin-import: 2.27.5_z4t62rwba3aha3c5ltpvvca4q4
+      eslint-plugin-import: 2.27.5_nhka4er4oejxhxq3ecgtwxvdji
       get-tsconfig: 4.4.0
       globby: 13.1.3
       is-core-module: 2.11.0
@@ -8431,36 +8508,6 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-module-utils/2.7.4_wptzf6m7n4mzoakxgrlp7sjl2e:
-    resolution: {integrity: sha512-j4GT+rqzCoRKHwURX7pddtIPGySnX9Si/cgMI5ztrcqOPtk5dDEeZ34CQVPphnqkJytlc97Vuk05Um2mJ3gEQA==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: '*'
-      eslint-import-resolver-node: '*'
-      eslint-import-resolver-typescript: '*'
-      eslint-import-resolver-webpack: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-      eslint:
-        optional: true
-      eslint-import-resolver-node:
-        optional: true
-      eslint-import-resolver-typescript:
-        optional: true
-      eslint-import-resolver-webpack:
-        optional: true
-    dependencies:
-      '@typescript-eslint/parser': 5.53.0_ycpbpc6yetojsgtrx3mwntkhsu
-      debug: 3.2.7
-      eslint: 8.35.0
-      eslint-import-resolver-node: 0.3.7
-      eslint-import-resolver-typescript: 3.5.3_yckic57kx266ph64dhq6ozvb54
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /eslint-plugin-import/2.27.5_nhka4er4oejxhxq3ecgtwxvdji:
     resolution: {integrity: sha512-LmEt3GVofgiGuiE+ORpnvP+kAm3h6MLZJ4Q5HCyHADofsb4VzXFsRiWj3c0OFiV+3DWFh0qg3v9gcPlfc3zRow==}
     engines: {node: '>=4'}
@@ -8512,7 +8559,7 @@ packages:
       doctrine: 2.1.0
       eslint: 8.35.0
       eslint-import-resolver-node: 0.3.7
-      eslint-module-utils: 2.7.4_wptzf6m7n4mzoakxgrlp7sjl2e
+      eslint-module-utils: 2.7.4_bchzgevzrq32s4jgdbchl2wqu4
       has: 1.0.3
       is-core-module: 2.11.0
       is-glob: 4.0.3
@@ -13862,7 +13909,7 @@ packages:
       klona: 2.0.6
       postcss: 8.4.21
       semver: 7.3.8
-      webpack: 5.75.0
+      webpack: 5.75.0_esbuild@0.16.17
     dev: true
 
   /postcss-logical/6.1.0_postcss@8.4.21:
@@ -16534,6 +16581,41 @@ packages:
 
   /ts-interface-checker/0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
+    dev: true
+
+  /ts-jest/29.0.5_5z7tsswyfvtwgq2vvhtohlbbqa:
+    resolution: {integrity: sha512-PL3UciSgIpQ7f6XjVOmbi96vmDHUqAyqDr8YxzopDqX3kfgYtX1cuNeBjP+L9sFXi6nzsGGA6R3fP3DDDJyrxA==}
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+    hasBin: true
+    peerDependencies:
+      '@babel/core': '>=7.0.0-beta.0 <8'
+      '@jest/types': ^29.0.0
+      babel-jest: ^29.0.0
+      esbuild: '*'
+      jest: ^29.0.0
+      typescript: '>=4.3'
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      '@jest/types':
+        optional: true
+      babel-jest:
+        optional: true
+      esbuild:
+        optional: true
+    dependencies:
+      '@babel/core': 7.21.0
+      bs-logger: 0.2.6
+      esbuild: 0.17.10
+      fast-json-stable-stringify: 2.1.0
+      jest: 29.4.3_@types+node@18.14.1
+      jest-util: 29.4.3
+      json5: 2.2.3
+      lodash.memoize: 4.1.2
+      make-error: 1.3.6
+      semver: 7.3.8
+      typescript: 4.9.5
+      yargs-parser: 21.1.1
     dev: true
 
   /ts-jest/29.0.5_kv2fdk7yz6jlbcjfldgcwh5vp4:

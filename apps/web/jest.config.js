@@ -1,7 +1,7 @@
 // @ts-check
+const { pathsToModuleNameMapper } = require('ts-jest')
 
 const { getTsconfig } = require('get-tsconfig')
-const { pathsToModuleNameMapper } = require('ts-jest')
 const { getJestCachePath } = require('../../cache.config')
 
 const packageJson = require('./package.json')
@@ -50,12 +50,7 @@ const config = {
   // false by default, overrides in cli, ie: yarn test:unit --collect-coverage=true
   collectCoverage: false,
   coverageDirectory: '<rootDir>/coverage',
-  collectCoverageFrom: [
-    '<rootDir>/**/*.{ts,tsx,js,jsx}',
-    '!**/*.test.{js,ts}',
-    '!**/__mock__/*',
-    '!**/stories/*.tsx',
-  ],
+  collectCoverageFrom: ['<rootDir>/**/*.{ts,tsx,js,jsx}', '!**/*.test.{js,ts}', '!**/__mock__/*'],
   transformIgnorePatterns: ['/node_modules/(?!@vercel/analytics)/'],
 }
 
