@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Header } from './Header'
+import { Header, type HeaderProps } from './Header'
 
 const meta = {
   title: 'Example/Header',
@@ -10,7 +10,7 @@ const meta = {
     // More on how to position stories at: https://storybook.js.org/docs/7.0/react/configure/story-layout
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof Header>
+} satisfies Meta<HeaderProps>
 
 export default meta
 type Story = StoryObj<typeof meta>

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": false,
+    "declaration": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  }
+}

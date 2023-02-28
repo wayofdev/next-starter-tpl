@@ -111,10 +111,6 @@ update: ## Run pnpm to packages to their latest version based on the specified r
 	$(NPM_RUNNER) update
 .PHONY: update
 
-build: ## Build all apps and packages inside monorepo
-	$(NPM_RUNNER) run build
-.PHONY: build
-
 purge: down ## Stops container and deletes node modules and temporary files
 	find . | grep /node_modules$ | grep -v /node_modules/ | xargs rm -fR
 	find . | grep /.turbo$ | grep -v /.turbo/ | xargs rm -fR
@@ -232,6 +228,29 @@ sort: ## Sort package.json across project
 analyze: ## Run bundle-analyzer
 	$(NPM_RUNNER) analyze
 .PHONY: analyze
+
+
+# Building components
+# ------------------------------------------------------------------------------------
+build: ## Build all apps and packages inside monorepo
+	$(NPM_RUNNER) build
+.PHONY: build
+
+build-web:
+	$(NPM_RUNNER) build:web
+.PHONY: build-web
+
+build-docs:
+	$(NPM_RUNNER) build:docs
+.PHONY: build-docs
+
+build-storybook:
+	$(NPM_RUNNER) build:storybook
+.PHONY: build-storybook
+
+build-ui:
+	$(NPM_RUNNER) build:ui
+.PHONY: build-ui
 
 
 # Release

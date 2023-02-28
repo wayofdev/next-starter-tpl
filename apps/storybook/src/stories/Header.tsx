@@ -1,13 +1,14 @@
-import React from 'react'
-
-import { Button } from './Button'
+import { Button, Size, Mode } from '@wayofdev/ui/src/base/button/Button'
 import './header.css'
 
 type User = {
   name: string
 }
 
-interface HeaderProps {
+export interface HeaderProps {
+  /**
+   * Authenticated user object
+   */
   user?: User
   onLogin: () => void
   onLogout: () => void
@@ -15,7 +16,7 @@ interface HeaderProps {
 }
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
-  <header>
+  <header className="bg-orange-200">
     <div className="wrapper">
       <div>
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -42,12 +43,17 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
             <span className="welcome">
               Welcome, <b>{user.name}</b>!
             </span>
-            <Button size="small" onClick={onLogout} label="Log out" />
+            <Button size={Size.XSmall} onClick={onLogout} label="Log out" />
           </>
         ) : (
           <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+            <Button size={Size.XSmall} onClick={onLogin} label="Log in" />
+            <Button
+              mode={Mode.Primary}
+              size={Size.XSmall}
+              onClick={onCreateAccount}
+              label="Sign up"
+            />
           </>
         )}
       </div>

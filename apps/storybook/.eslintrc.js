@@ -15,7 +15,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: 'tsconfig.json',
   },
-  ignorePatterns: [...getDefaultIgnorePatterns(), '.next', '.out'],
+  ignorePatterns: [...getDefaultIgnorePatterns(), '/storybook-static'],
   extends: [
     '@wayofdev/eslint-config-bases/typescript',
     '@wayofdev/eslint-config-bases/regexp',
@@ -24,7 +24,6 @@ module.exports = {
     '@wayofdev/eslint-config-bases/rtl',
     '@wayofdev/eslint-config-bases/storybook',
     '@wayofdev/eslint-config-bases/react',
-    '@wayofdev/eslint-config-bases/react-query',
     '@wayofdev/eslint-config-bases/tailwind',
     '@wayofdev/eslint-config-bases/mdx',
     // Add specific rules for nextjs
@@ -35,18 +34,9 @@ module.exports = {
   rules: {
     // https://github.com/vercel/next.js/discussions/16832
     '@next/next/no-img-element': 'off',
-    // For the sake of example
-    // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md
-    'jsx-a11y/anchor-is-valid': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
   },
   overrides: [
-    {
-      files: ['src/pages/\\_*.{ts,tsx}'],
-      rules: {
-        'react/display-name': 'off',
-      },
-    },
     {
       files: ['src/stories/*.ts'],
       rules: {
