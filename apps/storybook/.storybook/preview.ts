@@ -1,4 +1,5 @@
 import 'tailwindcss/tailwind.css'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 export const parameters = {
   backgrounds: {
@@ -10,5 +11,8 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
   },
 }
