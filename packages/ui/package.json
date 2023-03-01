@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "@swc/helpers": "0.4.14",
-    "clsx": "1.2.1"
+    "clsx": "1.2.1",
+    "@heroicons/react": "2.0.16"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "0.4.2",
@@ -55,7 +56,8 @@
     "next": "*",
     "react": "18.2",
     "react-dom": "18.2",
-    "@wayofdev/lint-staged-config": "2.0.2"
+    "@wayofdev/lint-staged-config": "2.0.2",
+    "@heroicons/react": "2.0.16"
   },
   "peerDependenciesMeta": {
     "@types/react": {
