@@ -1,5 +1,11 @@
 # @wayofdev/ui
 
+## 1.2.1
+
+### Patch Changes
+
+- [`5cb61a4`](https://github.com/wayofdev/next-starter-tpl/commit/5cb61a4a1575e79cf76f7128818f57862a8648cc) Thanks [@lotyp](https://github.com/lotyp)! - feat: adding tests for Button component
+
 ## 1.2.0
 
 ### Minor Changes

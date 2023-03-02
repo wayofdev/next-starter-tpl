@@ -11,6 +11,9 @@
     "test:watch": {
       "outputs": []
     },
+    "test:e2e": {
+      "outputs": []
+    },
     "analyze": {
       "outputs": []
     },

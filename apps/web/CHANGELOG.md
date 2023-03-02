@@ -1,5 +1,12 @@
 # web
 
+## 1.2.1
+
+### Patch Changes
+
+- Updated dependencies [[`5cb61a4`](https://github.com/wayofdev/next-starter-tpl/commit/5cb61a4a1575e79cf76f7128818f57862a8648cc)]:
+  - @wayofdev/ui@1.2.1
+
 ## 1.2.0
 
 ### Minor Changes

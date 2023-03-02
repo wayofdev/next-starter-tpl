@@ -253,6 +253,11 @@ test: ## Run unit tests
 	$(NPM_RUNNER) test:unit
 .PHONY: test
 
+test-e2e: ## Run e2e tests
+	npx playwright install
+	pnpm --filter=web test:e2e
+.PHONY: test-e2e
+
 format: ## Run prettier formatting
 	$(NPM_RUNNER) format
 .PHONY: format
@@ -262,7 +267,7 @@ sort: ## Sort package.json across project
 .PHONY: sort
 
 analyze: ## Run bundle-analyzer
-	$(NPM_RUNNER) analyze
+	pnpm --filter=web analyze
 .PHONY: analyze
 
 
