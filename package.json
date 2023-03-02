@@ -73,12 +73,14 @@
     "lint:dist": "turbo run lint:dist --parallel",
     "prepare": "is-ci || husky install",
     "test:unit": "turbo run test --concurrency=1",
+    "test:e2e:install": "playwright install",
+    "test:e2e": "turbo run test:e2e --concurrency=1",
     "lint:css": "turbo run lint:css --parallel",
     "lint:html": "turbo run lint:html --parallel",
     "start": "turbo run start",
     "lint:browsers": "browserslist",
     "lint:size": "turbo run lint:size --parallel",
-    "analyze": "BUNDLE_ANALYZE=both ANALYZE=true NEXT_IGNORE_TYPE_CHECK=true NEXT_IGNORE_ESLINT=true NEXT_SENTRY_UPLOAD_DRY_RUN=true turbo run analyze --parallel",
+    "analyze": "turbo run analyze --parallel",
     "lint:staged": "lint-staged --allow-empty"
   },
   "devDependencies": {
