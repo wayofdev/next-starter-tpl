@@ -165,6 +165,42 @@ pull: ## Pull latest docker image from docker hub for app container
 	$(DOCKER_COMPOSE) pull app
 .PHONY: pull
 
+docs-up: ## Spin up docs container
+	$(DOCKER_COMPOSE) up -d docs
+.PHONY: docs-up
+
+docs-down: ## Stop and remove docs container
+	$(DOCKER_COMPOSE) down docs
+.PHONY: docs-down
+
+docs-restart: ## Restart docs container
+	$(DOCKER_COMPOSE) restart docs
+.PHONY: docs-restart
+
+web-up: ## Spin up app container
+	$(DOCKER_COMPOSE) up -d app
+.PHONY: web-up
+
+web-down: ## Stop and remove app container
+	$(DOCKER_COMPOSE) down app
+.PHONY: web-down
+
+web-restart: ## Restart app container
+	$(DOCKER_COMPOSE) restart app
+.PHONY: web-restart
+
+storybook-up: ## Spin up storybook container
+	$(DOCKER_COMPOSE) up -d storybook
+.PHONY: storybook-up
+
+storybook-down: ## Stop and remove storybook container
+	$(DOCKER_COMPOSE) down storybook
+.PHONY: storybook-down
+
+storybook-restart: ## Restart storybook container
+	$(DOCKER_COMPOSE) restart storybook
+.PHONE: storybook-restart
+
 
 # Testing and Code Quality
 # ------------------------------------------------------------------------------------
@@ -201,7 +237,7 @@ lint-secrets: ## Check if there are any missed secret credentials in code
 	$(NPM_COMPOSE_RUNNER) lint:secrets
 .PHONY: lint-secrets
 
-lint-browsers: ## Check if there are any missed secret credentials in code
+lint-browsers: ## Lint browserslist
 	$(NPM_COMPOSE_RUNNER) lint:browsers
 .PHONY: lint-browsers
 
@@ -236,19 +272,19 @@ build: ## Build all apps and packages inside monorepo
 	$(NPM_RUNNER) build
 .PHONY: build
 
-build-web:
+build-web: ## Build web app
 	$(NPM_RUNNER) build:web
 .PHONY: build-web
 
-build-docs:
+build-docs: ## Build docs app
 	$(NPM_RUNNER) build:docs
 .PHONY: build-docs
 
-build-storybook:
+build-storybook: ## Build storybook app
 	$(NPM_RUNNER) build:storybook
 .PHONY: build-storybook
 
-build-ui:
+build-ui: ## Build ui package
 	$(NPM_RUNNER) build:ui
 .PHONY: build-ui
 
@@ -259,7 +295,7 @@ cs: ## Run changeset to generate changelog
 	npx changeset
 .PHONY: cs
 
-cs-version:
+cs-version: ## Bump version of packages
 	npx changeset version
 .PHONY: version
 
