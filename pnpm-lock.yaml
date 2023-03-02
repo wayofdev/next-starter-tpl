@@ -14584,7 +14584,7 @@ packages:
       klona: 2.0.6
       postcss: 8.4.21
       semver: 7.3.8
-      webpack: 5.75.0
+      webpack: 5.75.0_esbuild@0.16.17
     dev: true
 
   /postcss-logical/6.1.0_postcss@8.4.21:

@@ -1,5 +1,3 @@
-// @ts-check
-
 /**
  * This files overrides the base lint-staged.config.js present in the root directory.
  * It allows to run eslint based the package specific requirements.
