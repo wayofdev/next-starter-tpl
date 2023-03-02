@@ -28,7 +28,7 @@ BUILDER ?= $(BUILDER_PARAMS) $(SUPPORT_IMAGE)
 # Shorthand envsubst command, executed through build-deps
 ENVSUBST ?= $(BUILDER) envsubst
 
-APP_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps app
+APP_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps -e FORCE_COLOR=1 app
 NPM_BIN ?= /bin/pnpm
 NPM_RUNNER ?= $(APP_RUNNER) $(NPM_BIN)
 NPM_COMPOSE_RUNNER ?= $(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run
@@ -206,11 +206,11 @@ storybook-restart: ## Restart storybook container
 # ------------------------------------------------------------------------------------
 lint: ## Run lint task to fix issues
 	# $(NPM_RUNNER) lint
-	$(NPM_COMPOSE_RUNNER) lint:fix
+	$(NPM_RUNNER) lint:fix
 .PHONY: lint
 
 lint-staged: ## Lint staged files
-	$(NPM_COMPOSE_RUNNER) lint:staged
+	$(NPM_RUNNER) lint:staged
 .PHONY: lint-staged
 
 lint-commits: ## Run commitlint to check commit message
@@ -218,27 +218,27 @@ lint-commits: ## Run commitlint to check commit message
 .PHONY: lint-commits
 
 lint-md: ## Lint markdown files
-	$(NPM_COMPOSE_RUNNER) lint:md
+	$(NPM_RUNNER) lint:md
 .PHONY: lint-md
 
 lint-dist:
-	$(NPM_COMPOSE_RUNNER) lint:dist
+	$(NPM_RUNNER) lint:dist
 .PHONY: lint-dist
 
 lint-html: ## Lint html files
-	$(NPM_COMPOSE_RUNNER) lint:html
+	$(NPM_RUNNER) lint:html
 .PHONY: lint-html
 
 lint-css: ## Lint css files
-	$(NPM_COMPOSE_RUNNER) lint:css
+	$(NPM_RUNNER) lint:css
 .PHONY: lint-css
 
 lint-secrets: ## Check if there are any missed secret credentials in code
-	$(NPM_COMPOSE_RUNNER) lint:secrets
+	$(NPM_RUNNER) lint:secrets
 .PHONY: lint-secrets
 
 lint-browsers: ## Lint browserslist
-	$(NPM_COMPOSE_RUNNER) lint:browsers
+	$(NPM_RUNNER) lint:browsers
 .PHONY: lint-browsers
 
 lint-yaml: ## Lints yaml files inside project
@@ -250,15 +250,15 @@ lint-actions: ## Lint github actions using actionlint
 .PHONY: lint-actions
 
 test: ## Run unit tests
-	$(NPM_COMPOSE_RUNNER) test:unit
+	$(NPM_RUNNER) test:unit
 .PHONY: test
 
 format: ## Run prettier formatting
-	$(NPM_COMPOSE_RUNNER) format
+	$(NPM_RUNNER) format
 .PHONY: format
 
 sort: ## Sort package.json across project
-	$(NPM_COMPOSE_RUNNER) lint:package-json
+	$(NPM_RUNNER) lint:package-json
 .PHONY: sort
 
 analyze: ## Run bundle-analyzer
