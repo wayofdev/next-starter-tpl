@@ -2,14 +2,8 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "dist/**",
-        ".next/**",
-        "storybook-static/**"
-      ]
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "storybook-static/**"]
     },
     "test": {
       "outputs": []
@@ -33,6 +27,9 @@
       "outputs": []
     },
     "lint:html": {
+      "outputs": []
+    },
+    "lint:types": {
       "outputs": []
     },
     "dev": {

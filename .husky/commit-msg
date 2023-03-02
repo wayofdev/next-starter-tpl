@@ -4,5 +4,8 @@
 # run directly, without docker support
 # pnpm commitlint --edit "${1}"
 
-# through docker-compose
-docker-compose exec -T -e FORCE_COLOR=1 app pnpm commitlint --edit "${1}"
+# through docker container
+# docker-compose exec -T -e FORCE_COLOR=1 app pnpm commitlint --edit "${1}"
+
+# with npx
+npx commitlint --edit "${1}"

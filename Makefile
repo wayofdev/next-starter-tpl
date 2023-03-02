@@ -28,7 +28,7 @@ BUILDER ?= $(BUILDER_PARAMS) $(SUPPORT_IMAGE)
 # Shorthand envsubst command, executed through build-deps
 ENVSUBST ?= $(BUILDER) envsubst
 
-APP_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps app
+APP_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps -e FORCE_COLOR=1 app
 NPM_BIN ?= /bin/pnpm
 NPM_RUNNER ?= $(APP_RUNNER) $(NPM_BIN)
 NPM_COMPOSE_RUNNER ?= $(DOCKER_COMPOSE) exec -T -e FORCE_COLOR=1 app $(NPM_BIN) run
@@ -165,16 +165,52 @@ pull: ## Pull latest docker image from docker hub for app container
 	$(DOCKER_COMPOSE) pull app
 .PHONY: pull
 
+docs-up: ## Spin up docs container
+	$(DOCKER_COMPOSE) up -d docs
+.PHONY: docs-up
+
+docs-down: ## Stop and remove docs container
+	$(DOCKER_COMPOSE) down docs
+.PHONY: docs-down
+
+docs-restart: ## Restart docs container
+	$(DOCKER_COMPOSE) restart docs
+.PHONY: docs-restart
+
+web-up: ## Spin up app container
+	$(DOCKER_COMPOSE) up -d app
+.PHONY: web-up
+
+web-down: ## Stop and remove app container
+	$(DOCKER_COMPOSE) down app
+.PHONY: web-down
+
+web-restart: ## Restart app container
+	$(DOCKER_COMPOSE) restart app
+.PHONY: web-restart
+
+storybook-up: ## Spin up storybook container
+	$(DOCKER_COMPOSE) up -d storybook
+.PHONY: storybook-up
+
+storybook-down: ## Stop and remove storybook container
+	$(DOCKER_COMPOSE) down storybook
+.PHONY: storybook-down
+
+storybook-restart: ## Restart storybook container
+	$(DOCKER_COMPOSE) restart storybook
+.PHONE: storybook-restart
+
 
 # Testing and Code Quality
 # ------------------------------------------------------------------------------------
 lint: ## Run lint task to fix issues
 	# $(NPM_RUNNER) lint
-	$(NPM_COMPOSE_RUNNER) lint:fix
+	$(NPM_RUNNER) lint:fix
 .PHONY: lint
 
 lint-staged: ## Lint staged files
-	$(NPM_COMPOSE_RUNNER) lint:staged
+	$(NPM_RUNNER) lint:staged
 .PHONY: lint-staged
 
 lint-commits: ## Run commitlint to check commit message
@@ -182,27 +218,27 @@ lint-commits: ## Run commitlint to check commit message
 .PHONY: lint-commits
 
 lint-md: ## Lint markdown files
-	$(NPM_COMPOSE_RUNNER) lint:md
+	$(NPM_RUNNER) lint:md
 .PHONY: lint-md
 
 lint-dist:
-	$(NPM_COMPOSE_RUNNER) lint:dist
+	$(NPM_RUNNER) lint:dist
 .PHONY: lint-dist
 
 lint-html: ## Lint html files
-	$(NPM_COMPOSE_RUNNER) lint:html
+	$(NPM_RUNNER) lint:html
 .PHONY: lint-html
 
 lint-css: ## Lint css files
-	$(NPM_COMPOSE_RUNNER) lint:css
+	$(NPM_RUNNER) lint:css
 .PHONY: lint-css
 
 lint-secrets: ## Check if there are any missed secret credentials in code
-	$(NPM_COMPOSE_RUNNER) lint:secrets
+	$(NPM_RUNNER) lint:secrets
 .PHONY: lint-secrets
 
-lint-browsers: ## Check if there are any missed secret credentials in code
-	$(NPM_COMPOSE_RUNNER) lint:browsers
+lint-browsers: ## Lint browserslist
+	$(NPM_RUNNER) lint:browsers
 .PHONY: lint-browsers
 
 lint-yaml: ## Lints yaml files inside project
@@ -214,15 +250,15 @@ lint-actions: ## Lint github actions using actionlint
 .PHONY: lint-actions
 
 test: ## Run unit tests
-	$(NPM_COMPOSE_RUNNER) test:unit
+	$(NPM_RUNNER) test:unit
 .PHONY: test
 
 format: ## Run prettier formatting
-	$(NPM_COMPOSE_RUNNER) format
+	$(NPM_RUNNER) format
 .PHONY: format
 
 sort: ## Sort package.json across project
-	$(NPM_COMPOSE_RUNNER) lint:package-json
+	$(NPM_RUNNER) lint:package-json
 .PHONY: sort
 
 analyze: ## Run bundle-analyzer
@@ -236,19 +272,19 @@ build: ## Build all apps and packages inside monorepo
 	$(NPM_RUNNER) build
 .PHONY: build
 
-build-web:
+build-web: ## Build web app
 	$(NPM_RUNNER) build:web
 .PHONY: build-web
 
-build-docs:
+build-docs: ## Build docs app
 	$(NPM_RUNNER) build:docs
 .PHONY: build-docs
 
-build-storybook:
+build-storybook: ## Build storybook app
 	$(NPM_RUNNER) build:storybook
 .PHONY: build-storybook
 
-build-ui:
+build-ui: ## Build ui package
 	$(NPM_RUNNER) build:ui
 .PHONY: build-ui
 
@@ -259,7 +295,7 @@ cs: ## Run changeset to generate changelog
 	npx changeset
 .PHONY: cs
 
-cs-version:
+cs-version: ## Bump version of packages
 	npx changeset version
 .PHONY: version
 
