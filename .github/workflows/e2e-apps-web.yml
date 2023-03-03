@@ -97,8 +97,6 @@ jobs:
         # run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm --filter=web test:e2e
         env:
           CI: 1
-          NEXT_DISABLE_SENTRY: true
-          NEXT_SENTRY_UPLOAD_DRY_RUN: true
 
       - name: 📤 Upload testing artifacts
         uses: actions/upload-artifact@v3

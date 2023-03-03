@@ -11,6 +11,7 @@ const port = process.env.PORT || 3000
 
 // Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
 const baseURL = `http://localhost:${port}`
+const nextAuthSecret = process.env?.NEXAUTH_SECRET ?? 'secret-auth-token'
 
 // Reference: https://playwright.dev/docs/test-configuration
 const config: PlaywrightTestConfig = {
@@ -51,6 +52,10 @@ const config: PlaywrightTestConfig = {
     url: baseURL,
     timeout: 60 * 1000,
     reuseExistingServer: !isCI,
+    env: {
+      NEXT_DISABLE_SENTRY: 'true',
+      NEXTAUTH_SECRET: nextAuthSecret,
+    },
   },
 
   use: {
