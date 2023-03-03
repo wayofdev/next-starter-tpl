@@ -82,7 +82,7 @@ jobs:
           # Don't send telemetry for ci
           NEXT_TELEMETRY_DISABLED: true
           # To allow checking size-limits
-          NEXT_DISABLE_SENTRY: true
+          NEXT_DISABLE_SENTRY: false
           # Fully disable sentry upload
           NEXT_SENTRY_UPLOAD_DRY_RUN: true
 
