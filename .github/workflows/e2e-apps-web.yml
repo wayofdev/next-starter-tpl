@@ -39,7 +39,7 @@ jobs:
         node:
           - '18'
         include:
-          - os: ubuntu-latest
+          - os: 'ubuntu-22.04'
             playwright_binary_path: ~/.cache/ms-playwright
 
     steps:
@@ -93,7 +93,8 @@ jobs:
 
       - name: 🧪 Run E2E playwright tests on web app
         working-directory: apps/web
-        run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm --filter=web test:e2e
+        run: pnpm --filter=web test:e2e
+        # run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm --filter=web test:e2e
         env:
           CI: 1
 
