@@ -83,6 +83,8 @@ jobs:
           NEXT_TELEMETRY_DISABLED: true
           # To allow checking size-limits
           NEXT_DISABLE_SENTRY: false
+          # Enable debug logs
+          SENTRY_LOG_LEVEL: debug
           # Fully disable sentry upload
           NEXT_SENTRY_UPLOAD_DRY_RUN: true
 

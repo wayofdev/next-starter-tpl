@@ -49,6 +49,11 @@ runs:
         echo "Cache key: ${{ steps.playwright-cache-config.outputs.CACHE_KEY }}"
         echo "Cache hit: ${{ steps.playwright-cache.outputs.cache-hit == 'true' }}"
 
+    - name: 📦 Install playwright dependencies
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
+      shell: bash
+      run: npx playwright install --with-deps
+
     - name: 📦 Install playwright browsers
       if: steps.playwright-cache.outputs.cache-hit != 'true'
       shell: bash
