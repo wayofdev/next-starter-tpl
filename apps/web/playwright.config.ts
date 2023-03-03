@@ -1,8 +1,6 @@
 import path from 'path'
-import { loadEnvConfig } from '@next/env'
 import type { PlaywrightTestConfig } from '@playwright/test'
 import { devices } from '@playwright/test'
-import pc from 'picocolors'
 
 const isCI = ['true', '1'].includes(process.env?.CI ?? '')
 const openBrowserReport = process.env?.PLAYWRIGHT_OPEN_BROWSER_REPORT ?? 'never'
@@ -13,18 +11,6 @@ const port = process.env.PORT || 3000
 
 // Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
 const baseURL = `http://localhost:${port}`
-
-function getNextJsEnv(): Record<string, string> {
-  const { combinedEnv, loadedEnvFiles } = loadEnvConfig(__dirname)
-  loadedEnvFiles.forEach(file => {
-    console.log(`${pc.green('notice')}- Loaded nextjs environment file: './${file.path}'`)
-  })
-  return Object.keys(combinedEnv).reduce<Record<string, string>>((acc, key) => {
-    const v = combinedEnv[key]
-    if (v !== undefined) acc[key] = v
-    return acc
-  }, {})
-}
 
 // Reference: https://playwright.dev/docs/test-configuration
 const config: PlaywrightTestConfig = {
@@ -65,7 +51,6 @@ const config: PlaywrightTestConfig = {
     url: baseURL,
     timeout: 60 * 1000,
     reuseExistingServer: !isCI,
-    env: getNextJsEnv(),
   },
 
   use: {
