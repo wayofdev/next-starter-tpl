@@ -87,10 +87,14 @@ const config: PlaywrightTestConfig = {
         ...devices['Pixel 5'],
       },
     },
-    {
-      name: 'Mobile Safari',
-      use: devices['iPhone 12'],
-    },
+    ...(isCI
+      ? []
+      : [
+          {
+            name: 'Mobile Safari',
+            use: devices['iPhone 12'],
+          },
+        ]),
   ],
 }
 export default config
