@@ -63,7 +63,7 @@ const config: PlaywrightTestConfig = {
   webServer: {
     command: 'pnpm run dev',
     url: baseURL,
-    timeout: 120 * 1000,
+    timeout: 60 * 1000,
     reuseExistingServer: !isCI,
     env: getNextJsEnv(),
   },
