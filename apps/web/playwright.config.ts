@@ -55,6 +55,7 @@ const config: PlaywrightTestConfig = {
     env: {
       NEXT_DISABLE_SENTRY: 'true',
       NEXTAUTH_SECRET: nextAuthSecret,
+      NEXTAUTH_URL: baseURL,
     },
   },
 
