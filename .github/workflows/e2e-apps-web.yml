@@ -82,7 +82,7 @@ jobs:
           # Don't send telemetry for ci
           NEXT_TELEMETRY_DISABLED: true
           # To allow checking size-limits
-          NEXT_DISABLE_SENTRY: false
+          NEXT_DISABLE_SENTRY: true
           # Enable debug logs
           SENTRY_LOG_LEVEL: debug
           # Fully disable sentry upload
@@ -97,6 +97,8 @@ jobs:
         # run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm --filter=web test:e2e
         env:
           CI: 1
+          NEXT_DISABLE_SENTRY: true
+          NEXT_SENTRY_UPLOAD_DRY_RUN: true
 
       - name: 📤 Upload testing artifacts
         uses: actions/upload-artifact@v3
