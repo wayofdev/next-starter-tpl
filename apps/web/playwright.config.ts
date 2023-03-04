@@ -49,7 +49,8 @@ const config: PlaywrightTestConfig = {
   // https://playwright.dev/docs/test-advanced#launching-a-development-web-server-during-the-tests
   webServer: {
     command: 'NEXT_IGNORE_TYPE_CHECKS=1 pnpm --filter=web build && pnpm --filter=web start',
-    url: baseURL,
+    port: 3000,
+    // url: baseURL,
     timeout: 60 * 1000,
     reuseExistingServer: !isCI,
     env: {
@@ -62,7 +63,7 @@ const config: PlaywrightTestConfig = {
   use: {
     // Use baseURL so to make navigations relative.
     // More information: https://playwright.dev/docs/api/class-testoptions#test-options-base-url
-    baseURL,
+    // baseURL,
 
     // Retry a test if it's failing with enabled tracing. This allows you to analyse the DOM, console logs, network traffic etc.
     // More information: https://playwright.dev/docs/trace-viewer
