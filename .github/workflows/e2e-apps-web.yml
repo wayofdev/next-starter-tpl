@@ -79,8 +79,12 @@ jobs:
           NEXT_TELEMETRY_DISABLED: true
           NEXT_DISABLE_SENTRY: false
           SENTRY_LOG_LEVEL: debug
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          SENTRY_URL: ${{ secrets.SENTRY_URL }}
           NEXT_SENTRY_UPLOAD_DRY_RUN: true
-          NEXTAUTH_SECRET: 'secret-auth-token'
+          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
           NEXTAUTH_URL: 'http://localhost:3000'
 
       - name: 📥 Install playwright
