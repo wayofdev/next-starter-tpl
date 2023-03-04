@@ -79,19 +79,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-web-${{ hashFiles('pnpm*.yaml') }}-
 
-      - name: 🛠️ Set environment variables
-        run: |
-          echo "NEXT_DISABLE_SENTRY=${NEXT_DISABLE_SENTRY}" \
-               "SENTRY_LOG_LEVEL=${SENTRY_LOG_LEVEL}" \
-               "SENTRY_AUTH_TOKEN=${SENTRY_AUTH_TOKEN}" \
-               "SENTRY_ORG=${SENTRY_ORG}" \
-               "SENTRY_PROJECT=${SENTRY_PROJECT}" \
-               "SENTRY_URL=${SENTRY_URL}" \
-               "NEXT_SENTRY_UPLOAD_DRY_RUN=${NEXT_SENTRY_UPLOAD_DRY_RUN}" \
-               "NEXTAUTH_SECRET=${NEXTAUTH_SECRET}" \
-               "NEXTAUTH_URL=${NEXTAUTH_URL}" \
-               >> "${GITHUB_ENV}"
-
       - name: 🏗 Build web-app
         working-directory: apps/web
         run: |
