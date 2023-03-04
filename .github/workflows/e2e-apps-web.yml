@@ -37,7 +37,6 @@ env:
   NEXT_SENTRY_UPLOAD_DRY_RUN: true
   NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
   NEXTAUTH_URL: 'http://localhost:3000'
-  NODE_ENV: production
 
 jobs:
   e2e:
@@ -91,7 +90,6 @@ jobs:
                "NEXT_SENTRY_UPLOAD_DRY_RUN=${NEXT_SENTRY_UPLOAD_DRY_RUN}" \
                "NEXTAUTH_SECRET=${NEXTAUTH_SECRET}" \
                "NEXTAUTH_URL=${NEXTAUTH_URL}" \
-               "NODE_ENV=${NODE_ENV}" \
                >> "${GITHUB_ENV}"
 
       - name: 🏗 Build web-app
