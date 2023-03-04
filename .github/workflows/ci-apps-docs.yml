@@ -1,5 +1,5 @@
 ---
-name: CI for Docs App
+name: CI for docs app
 
 on: # yamllint disable-line rule:truthy
   push:
@@ -40,12 +40,12 @@ jobs:
         node: ['18']
 
     steps:
-      - name: Check out the codebase
+      - name: 📦 Check out the codebase
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Setup node ${{ matrix.node }}
+      - name: ⚙️ Setup node ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -55,7 +55,7 @@ jobs:
         uses: ./.github/actions/pnpm-install
 
       # see https://github.com/vercel/next.js/pull/27362
-      - name: Restore "web" app build from cache
+      - name: ♻️ Restore "docs" app build from cache
         uses: actions/cache@v3
         with:
           path: |
@@ -66,17 +66,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-web-${{ hashFiles('pnpm*.yaml') }}-
 
-      - name: Typecheck
+      - name: 📝 Typecheck
         working-directory: apps/web
         run: |
           pnpm lint:types
 
-      - name: Linter
+      - name: 🚨 Linter
         working-directory: apps/web
         run: |
           pnpm lint
 
-      - name: Build docs-app
+      - name: 🏗 Build docs-app
         working-directory: apps/web
         run: |
           pnpm --filter=docs build

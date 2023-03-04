@@ -1,5 +1,5 @@
 ---
-name: 'Monorepo install (pnpm)'
+name: Monorepo install (pnpm)
 description: 'Run pnpm install'
 
 runs:

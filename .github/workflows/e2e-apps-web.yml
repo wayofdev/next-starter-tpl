@@ -1,5 +1,5 @@
 ---
-name: CI for web app
+name: E2E CI for web app
 
 on: # yamllint disable-line rule:truthy
   push:
@@ -13,7 +13,6 @@ on: # yamllint disable-line rule:truthy
       - 'package.json'
       - 'pnpm*'
       - '.github/**'
-      - 'tsconfig.base.json'
 
   pull_request:
     types:
@@ -27,17 +26,32 @@ on: # yamllint disable-line rule:truthy
       - 'package.json'
       - 'pnpm*'
       - '.github/**'
-      - 'tsconfig.base.json'
+
+env:
+  NEXT_DISABLE_SENTRY: false
+  SENTRY_LOG_LEVEL: debug
+  SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+  SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+  SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+  SENTRY_URL: ${{ secrets.SENTRY_URL }}
+  NEXT_SENTRY_UPLOAD_DRY_RUN: true
+  NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+  NEXTAUTH_URL: 'http://localhost:3000'
 
 jobs:
-  integration:
-    name: Node ${{ matrix.node }} - ${{ matrix.os }}
+  e2e:
+    timeout-minutes: 10
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: true
       matrix:
-        os: ['ubuntu-22.04']
-        node: ['18']
+        os:
+          - 'ubuntu-22.04'
+        node:
+          - '18'
+        include:
+          - os: 'ubuntu-22.04'
+            playwright_binary_path: ~/.cache/ms-playwright
 
     steps:
       - name: 📦 Check out the codebase
@@ -49,7 +63,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-          registry-url: 'https://registry.npmjs.org/'
 
       - name: 📥 Monorepo install
         uses: ./.github/actions/pnpm-install
@@ -66,52 +79,28 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-web-${{ hashFiles('pnpm*.yaml') }}-
 
-      - name: 📝 Typecheck
-        working-directory: apps/web
-        run: |
-          pnpm lint:types
-
-      - name: 🚨 Linter
-        working-directory: apps/web
-        run: |
-          pnpm lint
-
-      - name: 🧪 Unit tests
-        working-directory: apps/web
-        run: |
-          pnpm test
-
       - name: 🏗 Build web-app
         working-directory: apps/web
         run: |
           pnpm --filter=web build
         env:
-          # Speed up build: they are linted in a previous step
           NEXT_IGNORE_ESLINT: true
-          # Speed up build: they are type-checked in a previous step
           NEXT_IGNORE_TYPE_CHECK: true
-          # Speed up build: don't run if not needed, enable if it becomes needed
           NEXT_DISABLE_SOURCEMAPS: true
-          # Don't send telemetry for ci
           NEXT_TELEMETRY_DISABLED: true
-          # To allow checking size-limits
-          NEXT_DISABLE_SENTRY: false
-          # Fully disable sentry upload
-          NEXT_SENTRY_UPLOAD_DRY_RUN: true
 
-      - name: 📉 Check browser bundle size limits
+      - name: 📥 Install playwright
+        uses: ./.github/actions/playwright-install
+
+      - name: 🧪 Run E2E playwright tests on web app
         working-directory: apps/web
-        run: |
-          pnpm --filter=web lint:size
+        run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm test:e2e
+        env:
+          CI: 1
 
-      - name: 🌎 Ecmascript checks for build files
-        working-directory: apps/web
-        run: |
-          pnpm --filter=web lint:dist
-
-      - name: 📤 Upload coverage report to Codecov
-        uses: codecov/codecov-action@v3
+      - name: 📤 Upload testing artifacts
+        uses: actions/upload-artifact@v3
+        if: always()
         with:
-          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          files: ./apps/web/coverage/coverage-final.json
-          flags: web
+          name: web-app-playwright-test-results-${{ runner.os }}
+          path: apps/web/e2e/.out

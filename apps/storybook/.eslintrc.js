@@ -26,8 +26,6 @@ module.exports = {
     '@wayofdev/eslint-config-bases/react',
     '@wayofdev/eslint-config-bases/tailwind',
     '@wayofdev/eslint-config-bases/mdx',
-    // Add specific rules for nextjs
-    'plugin:@next/next/core-web-vitals',
     // Apply prettier and disable incompatible rules
     '@wayofdev/eslint-config-bases/prettier-plugin',
   ],
