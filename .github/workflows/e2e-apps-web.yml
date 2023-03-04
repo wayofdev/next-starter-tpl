@@ -27,6 +27,18 @@ on: # yamllint disable-line rule:truthy
       - 'pnpm*'
       - '.github/**'
 
+env:
+  NEXT_DISABLE_SENTRY: false
+  SENTRY_LOG_LEVEL: debug
+  SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+  SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+  SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+  SENTRY_URL: ${{ secrets.SENTRY_URL }}
+  NEXT_SENTRY_UPLOAD_DRY_RUN: true
+  NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+  NEXTAUTH_URL: 'http://localhost:3000'
+  NODE_ENV: production
+
 jobs:
   e2e:
     timeout-minutes: 10
@@ -69,17 +81,6 @@ jobs:
             ${{ runner.os }}-web-${{ hashFiles('pnpm*.yaml') }}-
 
       - name: 🛠️ Set environment variables
-        env:
-          NEXT_DISABLE_SENTRY: false
-          SENTRY_LOG_LEVEL: debug
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
-          SENTRY_URL: ${{ secrets.SENTRY_URL }}
-          NEXT_SENTRY_UPLOAD_DRY_RUN: true
-          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
-          NEXTAUTH_URL: 'http://localhost:3000'
-          NODE_ENV: production
         run: |
           echo "NEXT_DISABLE_SENTRY=${NEXT_DISABLE_SENTRY}" \
                "SENTRY_LOG_LEVEL=${SENTRY_LOG_LEVEL}" \
