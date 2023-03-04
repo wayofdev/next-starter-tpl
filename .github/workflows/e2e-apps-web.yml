@@ -68,15 +68,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-web-${{ hashFiles('pnpm*.yaml') }}-
 
-      - name: 🏗 Build web-app
-        working-directory: apps/web
-        run: |
-          pnpm --filter=web build
+      - name: 🛠️ Set environment variables
         env:
-          NEXT_IGNORE_ESLINT: true
-          NEXT_IGNORE_TYPE_CHECK: true
-          NEXT_DISABLE_SOURCEMAPS: true
-          NEXT_TELEMETRY_DISABLED: true
           NEXT_DISABLE_SENTRY: false
           SENTRY_LOG_LEVEL: debug
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
@@ -86,6 +79,29 @@ jobs:
           NEXT_SENTRY_UPLOAD_DRY_RUN: true
           NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
           NEXTAUTH_URL: 'http://localhost:3000'
+          NODE_ENV: production
+        run: |
+          echo "NEXT_DISABLE_SENTRY=${NEXT_DISABLE_SENTRY}" \
+               "SENTRY_LOG_LEVEL=${SENTRY_LOG_LEVEL}" \
+               "SENTRY_AUTH_TOKEN=${SENTRY_AUTH_TOKEN}" \
+               "SENTRY_ORG=${SENTRY_ORG}" \
+               "SENTRY_PROJECT=${SENTRY_PROJECT}" \
+               "SENTRY_URL=${SENTRY_URL}" \
+               "NEXT_SENTRY_UPLOAD_DRY_RUN=${NEXT_SENTRY_UPLOAD_DRY_RUN}" \
+               "NEXTAUTH_SECRET=${NEXTAUTH_SECRET}" \
+               "NEXTAUTH_URL=${NEXTAUTH_URL}" \
+               "NODE_ENV=${NODE_ENV}" \
+               >> "${GITHUB_ENV}"
+
+      - name: 🏗 Build web-app
+        working-directory: apps/web
+        run: |
+          pnpm --filter=web build
+        env:
+          NEXT_IGNORE_ESLINT: true
+          NEXT_IGNORE_TYPE_CHECK: true
+          NEXT_DISABLE_SOURCEMAPS: true
+          NEXT_TELEMETRY_DISABLED: true
 
       - name: 📥 Install playwright
         uses: ./.github/actions/playwright-install
