@@ -1,6 +1,8 @@
 import path from 'path'
+import { loadEnvConfig } from '@next/env'
 import type { PlaywrightTestConfig } from '@playwright/test'
 import { devices } from '@playwright/test'
+import pc from 'picocolors'
 
 const isCI = ['true', '1'].includes(process.env?.CI ?? '')
 const openBrowserReport = process.env?.PLAYWRIGHT_OPEN_BROWSER_REPORT ?? 'never'
@@ -11,7 +13,18 @@ const port = process.env.PORT || 3000
 
 // Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
 const baseURL = `http://localhost:${port}`
-const nextAuthSecret = process.env?.NEXAUTH_SECRET ?? 'secret-auth-token'
+
+function getNextJsEnv(): Record<string, string> {
+  const { combinedEnv, loadedEnvFiles } = loadEnvConfig(__dirname)
+  loadedEnvFiles.forEach(file => {
+    console.log(`${pc.green('notice')}- Loaded nextjs environment file: './${file.path}'`)
+  })
+  return Object.keys(combinedEnv).reduce<Record<string, string>>((acc, key) => {
+    const v = combinedEnv[key]
+    if (v !== undefined) acc[key] = v
+    return acc
+  }, {})
+}
 
 // Reference: https://playwright.dev/docs/test-configuration
 const config: PlaywrightTestConfig = {
@@ -49,21 +62,16 @@ const config: PlaywrightTestConfig = {
   // https://playwright.dev/docs/test-advanced#launching-a-development-web-server-during-the-tests
   webServer: {
     command: 'NEXT_IGNORE_TYPE_CHECKS=1 pnpm --filter=web build && pnpm --filter=web start',
-    port: 3000,
-    // url: baseURL,
+    url: baseURL,
     timeout: 60 * 1000,
     reuseExistingServer: !isCI,
-    env: {
-      NEXT_DISABLE_SENTRY: 'true',
-      NEXTAUTH_SECRET: nextAuthSecret,
-      NEXTAUTH_URL: baseURL,
-    },
+    env: getNextJsEnv(),
   },
 
   use: {
     // Use baseURL so to make navigations relative.
     // More information: https://playwright.dev/docs/api/class-testoptions#test-options-base-url
-    // baseURL,
+    baseURL,
 
     // Retry a test if it's failing with enabled tracing. This allows you to analyse the DOM, console logs, network traffic etc.
     // More information: https://playwright.dev/docs/trace-viewer
