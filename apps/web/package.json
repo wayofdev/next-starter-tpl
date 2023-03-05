@@ -3,7 +3,7 @@
   "version": "1.2.1",
   "private": true,
   "scripts": {
-    "analyze": "next build",
+    "analyze": "ANALYZE=true NEXT_IGNORE_TYPE_CHECK=true NEXT_IGNORE_ESLINT=true NEXT_SENTRY_UPLOAD_DRY_RUN=true next build",
     "build": "next build",
     "postbuild": "next-sitemap",
     "dev": "next dev",
@@ -14,6 +14,7 @@
     "lint:types": "tsc --project ./tsconfig.json --noEmit",
     "start": "next start",
     "test": "jest --config ./jest.config.js --verbose --coverage --collect-coverage=true",
+    "test:e2e": "playwright test --config ./playwright.config.ts",
     "test:watch": "jest --config ./jest.config.js --watch"
   },
   "dependencies": {
@@ -33,7 +34,7 @@
     "next-auth": "^4.20.0",
     "next-i18next": "^13.2.1",
     "next-seo": "^5.15.0",
-    "next-sitemap": "^3.1.55",
+    "next-sitemap": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.3",
@@ -43,6 +44,8 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "13.2.3",
+    "@next/env": "13.2.3",
+    "@playwright/test": "^1.31.2",
     "@sentry/nextjs": "^7.40.0",
     "@size-limit/file": "^8.2.4",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -74,6 +77,11 @@
     "jest-environment-jsdom": "^29.4.3",
     "picocolors": "1.0.0",
     "postcss": "^8.4.21",
+    "postcss-100vh-fix": "1.0.2",
+    "postcss-flexbugs-fixes": "5.0.2",
+    "postcss-import": "15.1.0",
+    "postcss-preset-env": "8.0.1",
+    "postcss-reporter": "7.0.5",
     "react-test-renderer": "^18.2.0",
     "sanitize.css": "^13.0.0",
     "size-limit": "^8.2.4",

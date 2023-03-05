@@ -4,7 +4,7 @@ const { tailwindV3Colors } = require('./src/themes/shared/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.(js|jsx|ts|tsx)'],
+  content: ['./src/**/*.(js|jsx|ts|tsx)', './node_modules/@wayofdev/ui/src/**/*.(js|jsx|ts|tsx)'],
   theme: {
     screens: {
       ...defaultTheme.screens,

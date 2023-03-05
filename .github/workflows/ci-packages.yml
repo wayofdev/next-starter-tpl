@@ -1,5 +1,5 @@
 ---
-name: CI for Packages
+name: CI for packages
 
 on: # yamllint disable-line rule:truthy
   push:
@@ -38,12 +38,12 @@ jobs:
         node: ['18']
 
     steps:
-      - name: Check out the codebase
+      - name: 📦 Check out the codebase
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Setup node ${{ matrix.node }}
+      - name: ⚙️ Setup node ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -52,7 +52,7 @@ jobs:
       - name: 📥 Monorepo install
         uses: ./.github/actions/pnpm-install
 
-      - name: Restore packages cache
+      - name: ♻️ Restore packages cache
         uses: actions/cache@v3
         with:
           path: |
@@ -65,11 +65,11 @@ jobs:
 
       # Typecheck packages that have changed + packages and apps that depends on them (--from & --since)
       # That allows to see if we're introducing "surface" regressions (just the types)
-      - name: Typecheck
+      - name: 📝 Typecheck
         run: |
           pnpm --filter "...[origin/master]" --changed-files-ignore-pattern="apps/*" run lint:types
 
       # Lint packages that have changed (--include & --since)
-      - name: Linter
+      - name: 🚨 Linter
         run: |
           pnpm --filter "...[origin/master]" --changed-files-ignore-pattern="apps/*" run lint
