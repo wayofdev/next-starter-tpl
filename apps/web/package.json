@@ -3,7 +3,7 @@
   "version": "1.2.1",
   "private": true,
   "scripts": {
-    "analyze": "ANALYZE=true NEXT_IGNORE_TYPE_CHECK=true NEXT_IGNORE_ESLINT=true NEXT_SENTRY_UPLOAD_DRY_RUN=true next build",
+    "analyze": "ANALYZE=true NEXT_IGNORE_TYPE_CHECK=true NEXT_IGNORE_ESLINT=true SENTRY_UPLOAD_DRY_RUN=true next build",
     "build": "next build",
     "postbuild": "next-sitemap",
     "dev": "next dev",
