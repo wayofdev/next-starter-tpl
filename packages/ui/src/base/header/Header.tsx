@@ -1,14 +1,31 @@
 import { Dialog } from '@headlessui/react'
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
+import Link from 'next/link'
 import { useState } from 'react'
 import type { FC, ReactNode, MouseEventHandler } from 'react'
+import { Button, Mode, Size } from '../button/Button'
+
+const linkClasses = {
+  main: 'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 focus:outline-none transition duration-150 ease-in-out',
+  active: 'border-indigo-400 text-gray-900 focus:border-indigo-700',
+  inactive:
+    'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:text-gray-700 focus:border-gray-300',
+}
+
+const linkClassesResponsive = {
+  main: 'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 focus:outline-none transition duration-150 ease-in-out',
+  active: 'border-indigo-400 text-gray-900 focus:border-indigo-700',
+  inactive:
+    'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:text-gray-700 focus:border-gray-300',
+}
 
 type NavigationItemType = { title: string; href: string }
-type AuthBtnType = NavigationItemType & { onClick?: MouseEventHandler<HTMLAnchorElement> }
+type AuthBtnType = { label: string; onClick?: MouseEventHandler<HTMLButtonElement> }
 
 type Props = {
   className?: string
+  activePath?: string
   logo: ReactNode
   navigation?: NavigationItemType[]
   userNavigation: NavigationItemType[]
@@ -21,6 +38,7 @@ type Props = {
 export const Header: FC<Props> = props => {
   const {
     className,
+    activePath,
     logo,
     navigation,
     userNavigation,
@@ -32,26 +50,43 @@ export const Header: FC<Props> = props => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const navLinkRenderer = (params: NavigationItemType, isResponsive = false) => {
+    const classes = isResponsive ? linkClassesResponsive : linkClasses
+    const classNames = clsx(
+      classes.main,
+      { [classes.active]: params.href === activePath },
+      { [classes.inactive]: params.href !== activePath }
+    )
+
+    return (
+      <Link key={params.title} href={params.href} className={classNames}>
+        {params.title}
+      </Link>
+    )
+  }
+
   const unAuthBlock = () =>
     !!signInConfig || !!signUpConfig ? (
       <div className="flex flex-1 items-center justify-end gap-x-6">
         {!!signInConfig && (
-          <a
-            href={signInConfig.href}
-            className="block text-sm font-semibold leading-6 text-gray-900"
+          <Button
+            size={Size.XSmall}
+            mode={Mode.Primary}
+            label={signInConfig.label}
             onClick={signInConfig.onClick}
           >
-            {signInConfig.title}
-          </a>
+            {signInConfig.label}
+          </Button>
         )}
         {!!signUpConfig && (
-          <a
-            href={signUpConfig.href}
-            className="rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          <Button
+            size={Size.XSmall}
+            mode={Mode.Primary}
+            label={signUpConfig.label}
             onClick={signUpConfig.onClick}
           >
-            {signUpConfig.title}
-          </a>
+            {signUpConfig.label}
+          </Button>
         )}
       </div>
     ) : null
@@ -66,15 +101,7 @@ export const Header: FC<Props> = props => {
 
         {navigation && (
           <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map(item => (
-              <a
-                key={item.title}
-                href={item.href}
-                className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              >
-                {item.title}
-              </a>
-            ))}
+            {navigation.map(item => navLinkRenderer(item))}
           </div>
         )}
 
@@ -114,40 +141,22 @@ export const Header: FC<Props> = props => {
             <div className="-my-6 divide-y divide-gray-500/10">
               {navigation && (
                 <div className="space-y-2 py-6">
-                  {navigation.map(item => (
-                    <a
-                      key={item.title}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      {item.title}
-                    </a>
-                  ))}
+                  {navigation.map(item => navLinkRenderer(item, true))}
                 </div>
               )}
 
               <div className="py-6">
                 {!authBlock && userNavigation && (
                   <div className="space-y-2 py-6">
-                    {userNavigation.map(item => (
-                      <a
-                        key={item.title}
-                        href={item.href}
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.title}
-                      </a>
-                    ))}
+                    {userNavigation.map(item => navLinkRenderer(item, true))}
 
                     {!!logoutConfig && (
-                      <a
-                        key={logoutConfig.title}
-                        href={logoutConfig.href}
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      <button
+                        className="block w-full pl-3 pr-4 py-2 border-l-4 text-left text-base font-medium leading-5 focus:outline-none transition duration-150 ease-in-out border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
                         onClick={logoutConfig.onClick}
                       >
-                        {logoutConfig.title}
-                      </a>
+                        {logoutConfig.label}
+                      </button>
                     )}
                   </div>
                 )}
