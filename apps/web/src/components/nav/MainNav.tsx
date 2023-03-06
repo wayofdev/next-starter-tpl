@@ -1,5 +1,7 @@
+import { Button, Size, Mode } from '@wayofdev/ui/src/base/button/Button'
 import { useRouter } from 'next/compat/router'
 import Link from 'next/link'
+import { signIn, signOut, useSession } from 'next-auth/react'
 import type { FC } from 'react'
 import { useState } from 'react'
 import AppLogo from '@/components/app-logo/AppLogo'
@@ -12,6 +14,8 @@ export const MainNav: FC = () => {
   const router = useRouter()
   const [open, setOpen] = useState(false)
   const dropdownWidth = 48
+
+  const { data: session } = useSession()
 
   return (
     <nav className="border-b border-gray-100 bg-white">
@@ -39,31 +43,53 @@ export const MainNav: FC = () => {
 
           {/* Settings Dropdown */}
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <Dropdown
-              align="right"
-              width={dropdownWidth}
-              trigger={
-                <button className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none">
-                  <div>John Doe</div>
+            {!session && (
+              <>
+                <Button
+                  label="Sign In"
+                  size={Size.XSmall}
+                  mode={Mode.Primary}
+                  onClick={e => {
+                    e.preventDefault()
+                    signIn()
+                  }}
+                />
+              </>
+            )}
+            {session?.user && (
+              <Dropdown
+                align="right"
+                width={dropdownWidth}
+                trigger={
+                  <button className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none">
+                    <div>{session.user.email ?? session.user.name}</div>
 
-                  <div className="ml-1">
-                    <svg
-                      className="h-4 w-4 fill-current"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              }
-            >
-              <DropdownButton onClick="">Logout</DropdownButton>
-            </Dropdown>
+                    <div className="ml-1">
+                      <svg
+                        className="h-4 w-4 fill-current"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                }
+              >
+                <DropdownButton
+                  onClick={(e: { preventDefault: () => void }) => {
+                    e.preventDefault()
+                    signOut()
+                  }}
+                >
+                  Logout
+                </DropdownButton>
+              </Dropdown>
+            )}
           </div>
 
           {/* Hamburger */}

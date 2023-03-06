@@ -95,9 +95,9 @@ jobs:
           # Don't send telemetry for ci
           NEXT_TELEMETRY_DISABLED: true
           # To allow checking size-limits
-          NEXT_DISABLE_SENTRY: false
+          DISABLE_SENTRY: false
           # Fully disable sentry upload
-          NEXT_SENTRY_UPLOAD_DRY_RUN: true
+          SENTRY_UPLOAD_DRY_RUN: true
 
       - name: 📉 Check browser bundle size limits
         working-directory: apps/web

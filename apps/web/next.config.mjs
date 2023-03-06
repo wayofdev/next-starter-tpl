@@ -27,12 +27,10 @@ const isCI = trueEnv.includes(process.env?.CI ?? 'false')
 
 const NEXT_IGNORE_TYPE_CHECK = trueEnv.includes(process.env?.NEXT_IGNORE_TYPE_CHECK ?? 'false')
 const NEXT_IGNORE_ESLINT = trueEnv.includes(process.env?.NEXT_IGNORE_ESLINT ?? 'false')
-const NEXT_SENTRY_UPLOAD_DRY_RUN = trueEnv.includes(
-  process.env?.NEXT_SENTRY_UPLOAD_DRY_RUN ?? 'false'
-)
-const NEXT_DISABLE_SENTRY = trueEnv.includes(process.env?.NEXT_DISABLE_SENTRY ?? 'false')
-const NEXT_SENTRY_DEBUG = trueEnv.includes(process.env?.NEXT_SENTRY_DEBUG ?? 'false')
-const NEXT_SENTRY_TRACING = trueEnv.includes(process.env?.NEXT_SENTRY_TRACING ?? 'false')
+const SENTRY_UPLOAD_DRY_RUN = trueEnv.includes(process.env?.SENTRY_UPLOAD_DRY_RUN ?? 'false')
+const DISABLE_SENTRY = trueEnv.includes(process.env?.DISABLE_SENTRY ?? 'false')
+const SENTRY_DEBUG = trueEnv.includes(process.env?.SENTRY_DEBUG ?? 'false')
+const SENTRY_TRACING = trueEnv.includes(process.env?.SENTRY_TRACING ?? 'false')
 
 /**
  * A way to allow CI optimization when the build done there is not used
@@ -134,8 +132,8 @@ const nextConfig = {
     // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/tree-shaking/
     config.plugins.push(
       new webpack.DefinePlugin({
-        __SENTRY_DEBUG__: NEXT_SENTRY_DEBUG,
-        __SENTRY_TRACING__: NEXT_SENTRY_TRACING,
+        __SENTRY_DEBUG__: SENTRY_DEBUG,
+        __SENTRY_TRACING__: SENTRY_TRACING,
       })
     )
 
@@ -173,7 +171,7 @@ const nextConfig = {
 
 let config = nextConfig
 
-if (!NEXT_DISABLE_SENTRY) {
+if (!DISABLE_SENTRY) {
   config = withSentryConfig(config, {
     // Additional config options for the Sentry Webpack plugin. Keep in mind that
     // the following options are set automatically, and overriding them is not
@@ -186,7 +184,7 @@ if (!NEXT_DISABLE_SENTRY) {
     // Attempts a dry run (useful for dev environments).
     // Defaults to false, but may be automatically set to true in development environments
     // by some framework integrations (Next.JS, possibly others).
-    dryRun: NEXT_SENTRY_UPLOAD_DRY_RUN,
+    dryRun: SENTRY_UPLOAD_DRY_RUN,
 
     // Suppresses all logs (useful for --json option). Defaults to false.
     silent: isProd,

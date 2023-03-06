@@ -11,7 +11,7 @@ sentryInit({
   // @see https://develop.sentry.dev/sdk/performance/
   // To turn it off, remove the line
   // @see https://github.com/getsentry/sentry-javascript/discussions/4503#discussioncomment-2143116
-  tracesSampleRate: ['false', '0'].includes(process.env.NEXT_SENTRY_TRACING ?? '') ? undefined : 1,
+  tracesSampleRate: ['false', '0'].includes(process.env.SENTRY_TRACING ?? '') ? undefined : 1,
 
   // ...
   // Note: if you want to override the automatic release value, do not set a
