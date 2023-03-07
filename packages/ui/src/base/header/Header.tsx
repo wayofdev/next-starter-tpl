@@ -35,7 +35,7 @@ type Props = {
   logoutConfig?: AuthBtnType
 }
 
-export const Header: FC<Props> = props => {
+const Header: FC<Props> = props => {
   const {
     className,
     activePath,
@@ -106,7 +106,7 @@ export const Header: FC<Props> = props => {
         )}
 
         <div className="flex flex-1 items-center justify-end gap-x-6">
-          {!authBlock ? unAuthBlock() : <>{authBlock}</>}
+          <>{!authBlock ? unAuthBlock() : authBlock}</>
         </div>
 
         <div className="flex lg:hidden">
@@ -168,3 +168,5 @@ export const Header: FC<Props> = props => {
     </header>
   )
 }
+
+export default Header
