@@ -73,8 +73,8 @@ importers:
       es-check: 7.1.0
       eslint: 8.35.0
       next: 13.2.3
-      nextra: 2.2.17
-      nextra-theme-docs: 2.2.17
+      nextra: 2.2.18
+      nextra-theme-docs: 2.2.18
       react: 18.2.0
       react-dom: 18.2.0
       sharp: 0.31.3
@@ -83,8 +83,8 @@ importers:
       '@vercel/analytics': 0.1.11_react@18.2.0
       '@wayofdev/ui': link:../../packages/ui
       next: 13.2.3_biqbaboplfbrettd7655fr4n2y
-      nextra: 2.2.17_nvzgbose6yf6w7ijjprgspqefi
-      nextra-theme-docs: 2.2.17_sk5zsfkxizvi3trle4mkuwucem
+      nextra: 2.2.18_nvzgbose6yf6w7ijjprgspqefi
+      nextra-theme-docs: 2.2.18_eabglq5mx25htemwufj5jyllhe
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
@@ -3429,8 +3429,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2/0.0.20230301:
-    resolution: {integrity: sha512-Z8YaAQ24EXSBN21B2T1ntNLbQhWdpIPCyUqHQd5mNkyX5M6CJzhxOEm32NFGSMmZhVeS5M9dCdkSUVsBzY78hQ==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2/0.0.20230304:
+    resolution: {integrity: sha512-UKZGR/ibOewFLnGXbSKMsxKnrfMWbJgbYFcNEgJtg5P//oq9udQfjmvTPvCyXtBFleehYACo80v4aebn0kZ45Q==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.9
@@ -5875,7 +5875,7 @@ packages:
   /@types/gapi.client.tagmanager/2.0.4:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230301
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230304
     dev: true
 
   /@types/gapi.client/1.0.5:
@@ -13629,11 +13629,11 @@ packages:
       - babel-plugin-macros
     dev: false
 
-  /nextra-theme-docs/2.2.17_sk5zsfkxizvi3trle4mkuwucem:
-    resolution: {integrity: sha512-GTTie4YtTjiBdh3PqSYX5xtOQaCcLWoHWrubR2ikmBMq0GYxM2AX26J6O3gZ/xzzJje+vWmZGOilop/bG2RCog==}
+  /nextra-theme-docs/2.2.18_eabglq5mx25htemwufj5jyllhe:
+    resolution: {integrity: sha512-gW9P2fOuV0w414vmHyJY9k1XSoPsFLOXIDWyW177v8xPJcNF3DrYCOIaVgZt7UwxlBNmZlBDg+glPPogXw1qHQ==}
     peerDependencies:
       next: '>=9.5.3'
-      nextra: 2.2.17
+      nextra: 2.2.18
       react: '>=16.13.1'
       react-dom: '>=16.13.1'
     dependencies:
@@ -13648,15 +13648,15 @@ packages:
       next: 13.2.3_biqbaboplfbrettd7655fr4n2y
       next-seo: 5.15.0_nvzgbose6yf6w7ijjprgspqefi
       next-themes: 0.2.1_nvzgbose6yf6w7ijjprgspqefi
-      nextra: 2.2.17_nvzgbose6yf6w7ijjprgspqefi
+      nextra: 2.2.18_nvzgbose6yf6w7ijjprgspqefi
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       scroll-into-view-if-needed: 3.0.6
       zod: 3.21.2
     dev: false
 
-  /nextra/2.2.17_nvzgbose6yf6w7ijjprgspqefi:
-    resolution: {integrity: sha512-IRfvDfUut6YgbivBVP8cG2DkxEBvODWQFiv7rqHD1tR9lBjiDKugyCi64zl1CiOlW5awc8xmbPDrzYak9l+A/w==}
+  /nextra/2.2.18_nvzgbose6yf6w7ijjprgspqefi:
+    resolution: {integrity: sha512-45fXVzSOOhjMs+bTcq/jsW4BT8bOeTZjceHEubDTFEdelqTv5rUtwVsHqt0iwzmj/braNdZWTITygY25rE65tA==}
     peerDependencies:
       next: '>=9.5.3'
       react: '>=16.13.1'
