@@ -401,7 +401,7 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0
       react-test-renderer: 18.2.0
-      rimraf: 4.3.1
+      rimraf: 4.4.0
       tailwindcss: 3.2.7
       ts-jest: 29.0.5
       tsup: 6.6.3
@@ -438,7 +438,7 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-test-renderer: 18.2.0_react@18.2.0
-      rimraf: 4.3.1
+      rimraf: 4.4.0
       tailwindcss: 3.2.7_postcss@8.4.21
       ts-jest: 29.0.5_es6vmdfccdkiltrmyv7vtxcfg4
       tsup: 6.6.3_uujdqti2krmttzhqvubwnsmcci
@@ -16121,8 +16121,8 @@ packages:
       glob: 9.2.1
     dev: true
 
-  /rimraf/4.3.1:
-    resolution: {integrity: sha512-GfHJHBzFQra23IxDzIdBqhOWfbtdgS1/dCHrDy+yvhpoJY5TdwdT28oWaHWfRpKFDLd3GZnGTx6Mlt4+anbsxQ==}
+  /rimraf/4.4.0:
+    resolution: {integrity: sha512-X36S+qpCUR0HjXlkDe4NAOhS//aHH0Z+h8Ckf2auGJk3PTnx5rLmrHkwNdbVQuCSUhOyFrlRvFEllZOYE+yZGQ==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
