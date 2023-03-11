@@ -23,5 +23,9 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  async viteFinal(config) {
+    config.resolve.alias['next/link'] = require.resolve('./NextLink.tsx')
+    return config
+  },
 }
 export default config

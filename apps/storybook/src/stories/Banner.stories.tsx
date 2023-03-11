@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import type { BannerProps } from '@wayofdev/ui/src'
-import Banner from '@wayofdev/ui/src/base/banner/Banner'
+import { Banner } from '@wayofdev/ui/src'
 
 const meta = {
   title: 'Example/Banner',

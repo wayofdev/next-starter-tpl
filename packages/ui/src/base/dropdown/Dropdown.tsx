@@ -1,4 +1,5 @@
 import { Menu, Transition } from '@headlessui/react'
+import { Bars3Icon } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 import type { LinkProps } from 'next/link'
 import Link from 'next/link'
@@ -32,7 +33,7 @@ type Props = {
   align?: DropdownAlign
   width?: number
   contentClasses?: string
-  trigger: ReactNode
+  trigger?: ReactNode
   items: DropdownItemType[]
 }
 
@@ -71,7 +72,13 @@ const Dropdown: FC<Props> = ({
     <Menu as="div" className="relative">
       {({ open }) => (
         <>
-          <Menu.Button as={React.Fragment}>{trigger}</Menu.Button>
+          <Menu.Button as={React.Fragment}>
+            {trigger || (
+              <button className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none">
+                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            )}
+          </Menu.Button>
           <Transition
             show={open}
             enter="transition ease-out duration-200"

@@ -77,9 +77,9 @@ const Header: FC<HeaderProps> = props => {
       >
         {!!logo && <div className="flex lg:flex-1">{logo}</div>}
 
-        {navigation && (
+        {!!navigation && (
           <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map(item => navLinkRenderer(item))}
+            {navigation?.map(item => navLinkRenderer(item))}
           </div>
         )}
 
@@ -125,16 +125,16 @@ const Header: FC<HeaderProps> = props => {
             <div className="-my-6 divide-y divide-gray-500/10">
               {navigation && (
                 <div className="space-y-2 py-6">
-                  {navigation.map(item => navLinkRenderer(item, true))}
+                  {navigation?.map(item => navLinkRenderer(item, true))}
                 </div>
               )}
 
               <div className="py-6">
-                {isAuth && userNavigation && (
+                {isAuth && !!userNavigation && (
                   <>
                     {userBlock}
                     <div className="space-y-2 py-6">
-                      {userNavigation.map(item => navLinkRenderer(item, true))}
+                      {userNavigation?.map(item => navLinkRenderer(item, true))}
 
                       {!!logoutConfig && (
                         <button
