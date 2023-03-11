@@ -1,4 +1,4 @@
-import type { NavigationItemType, AuthBtnType, DropdownItemType } from '@wayofdev/ui'
+import type { NavigationItemType, LogoutBtnType, DropdownItemType } from '@wayofdev/ui'
 import { Header, Button, Size, Mode, Dropdown, DropdownVariant } from '@wayofdev/ui'
 import { useRouter } from 'next/compat/router'
 import Link from 'next/link'
@@ -21,7 +21,7 @@ export const MainNav: FC = () => {
     { title: 'My Orders', href: '/my-orders' },
   ]
 
-  const logoutConfig: AuthBtnType = { label: 'Logout', onClick: () => signOut() }
+  const logoutConfig: LogoutBtnType = { label: 'Logout', onClick: () => signOut() }
 
   const logoBlock = (
     <Link href="/">

@@ -21,23 +21,23 @@ const linkClassesResponsive = {
 }
 
 export type NavigationItemType = { title: string; href: string }
-export type AuthBtnType = { label: string; onClick?: MouseEventHandler<HTMLButtonElement> }
+export type LogoutBtnType = { label: string; onClick?: MouseEventHandler<HTMLButtonElement> }
 
-type Props = {
+export type HeaderProps = {
   className?: string
   activePath?: string
   isAuth?: boolean
   navigation?: NavigationItemType[]
   userNavigation?: NavigationItemType[]
-  logoutConfig?: AuthBtnType
-  logo: ReactNode
-  userBlock: ReactNode
-  triggerContent: ReactNode
-  authBlock: ReactNode
-  unAuthBlock: ReactNode
+  logoutConfig?: LogoutBtnType
+  logo?: ReactNode
+  userBlock?: ReactNode
+  triggerContent?: ReactNode
+  authBlock?: ReactNode
+  unAuthBlock?: ReactNode
 }
 
-const Header: FC<Props> = props => {
+const Header: FC<HeaderProps> = props => {
   const {
     className,
     activePath,

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Header, type HeaderProps } from './Header'
+import type { HeaderProps } from '@wayofdev/ui/src'
+import { Header } from '@wayofdev/ui/src'
 
 const meta = {
   title: 'Example/Header',
@@ -15,12 +16,11 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const LoggedIn: Story = {
-  args: {
-    user: {
-      name: 'Jane Doe',
-    },
-  },
+export const Default: Story = {
+  args: {},
 }
 
 export const LoggedOut: Story = {}
+
+// More on interaction testing: https://storybook.js.org/docs/7.0/react/writing-tests/interaction-testing
+export const LoggedIn: Story = {}
