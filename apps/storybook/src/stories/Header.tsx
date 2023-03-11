@@ -1,4 +1,4 @@
-import { Button, Size, Mode } from '@wayofdev/ui/src/base/button/Button'
+import { Button, Size, Mode } from '@wayofdev/ui/src'
 import './header.css'
 
 type User = {

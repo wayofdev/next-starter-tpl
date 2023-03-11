@@ -1,5 +1,5 @@
 import renderer from 'react-test-renderer'
-import { Button, Size, Mode } from '../Button'
+import Button, { Size, Mode } from '../Button'
 
 describe('Button', () => {
   const sizes = Object.values(Size)

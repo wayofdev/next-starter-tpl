@@ -5,20 +5,31 @@ import Link from 'next/link'
 import type { FC, ReactNode, ButtonHTMLAttributes } from 'react'
 import React from 'react'
 
-const alignmentClasses = {
-  left: 'origin-top-left left-0',
-  top: 'origin-top',
-  right: 'origin-top-right right-0',
+export enum DropdownAlign {
+  Left = 'left',
+  Top = 'top',
+  Right = 'right',
 }
 
-type DropdownItemType = {
-  variant: 'button' | 'link'
-  children: ReactNode
+const alignmentClasses: Record<DropdownAlign, string> = {
+  [DropdownAlign.Left]: 'origin-top-left left-0',
+  [DropdownAlign.Top]: 'origin-top',
+  [DropdownAlign.Right]: 'origin-top-right right-0',
+}
+
+export enum DropdownVariant {
+  Button = 'button',
+  Link = 'link',
+}
+
+export type DropdownItemType = {
+  variant?: DropdownVariant
+  element?: ReactNode
   props?: LinkProps | ButtonHTMLAttributes<HTMLButtonElement>
 }
 
 type Props = {
-  align?: 'left' | 'top' | 'right'
+  align?: DropdownAlign
   width?: number
   contentClasses?: string
   trigger: ReactNode
@@ -26,13 +37,17 @@ type Props = {
 }
 
 const Dropdown: FC<Props> = ({
-  align = 'right',
+  align = DropdownAlign.Right,
   width = 48,
   contentClasses = 'py-1 bg-white',
   trigger,
   items,
 }) => {
   const dropdownItemRenderer = (params: DropdownItemType, isActive = false) => {
+    if (!params.variant) {
+      return <>{params.element}</>
+    }
+
     const classNames = clsx(
       'w-full text-left block px-4 py-2 text-sm leading-5 text-gray-700 focus:outline-none transition duration-150 ease-in-out',
       { 'bg-gray-100': isActive }
@@ -41,13 +56,13 @@ const Dropdown: FC<Props> = ({
     const linkProps = (params.props || { href: '#' }) as LinkProps
     const btnProps = (params.props || {}) as ButtonHTMLAttributes<HTMLButtonElement>
 
-    return params.variant === 'link' ? (
+    return params.variant === DropdownVariant.Link ? (
       <Link {...linkProps} className={classNames}>
-        {params.children}
+        {params.element}
       </Link>
     ) : (
       <button {...btnProps} className={classNames}>
-        {params.children}
+        {params.element}
       </button>
     )
   }
@@ -74,7 +89,7 @@ const Dropdown: FC<Props> = ({
                 static
               >
                 {items?.map((item, i) => (
-                  <Menu.Item key={item.variant + i}>
+                  <Menu.Item key={i}>
                     {({ active }) => dropdownItemRenderer(item, active)}
                   </Menu.Item>
                 ))}

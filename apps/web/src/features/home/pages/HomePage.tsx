@@ -1,6 +1,5 @@
 import { event } from '@wayofdev/facebook-pixel/src/lib/fpixel'
-import { Banner } from '@wayofdev/ui/src/base/banner/Banner'
-import { Button } from '@wayofdev/ui/src/base/button/Button'
+import { Banner, Button } from '@wayofdev/ui'
 import { useTranslation } from 'next-i18next'
 import { NextSeo } from 'next-seo'
 import type { FC } from 'react'
