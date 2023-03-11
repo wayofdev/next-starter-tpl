@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import type { HeaderProps } from '@wayofdev/ui/src'
-import { Header } from '@wayofdev/ui/src'
+import Header from '@wayofdev/ui/src/base/header/Header'
 
 const meta = {
   title: 'Example/Header',
