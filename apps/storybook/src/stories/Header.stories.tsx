@@ -106,6 +106,12 @@ export const CustomTriggerMenu: Story = {
   },
 }
 
+export const CustomHeaderClass: Story = {
+  args: {
+    className: 'bg-green-200',
+  },
+}
+
 export const MobileMenuUserInfo: Story = {
   args: {
     isAuth: true,

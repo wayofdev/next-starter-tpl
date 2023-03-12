@@ -39,7 +39,7 @@ export type HeaderProps = {
 
 const Header: FC<HeaderProps> = props => {
   const {
-    className,
+    className = 'bg-white',
     activePath,
     logo,
     navigation,
@@ -70,7 +70,7 @@ const Header: FC<HeaderProps> = props => {
   }
 
   return (
-    <header className={clsx('bg-white', className)}>
+    <header className={className}>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"
         aria-label="Global"

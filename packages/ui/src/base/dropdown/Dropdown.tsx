@@ -29,17 +29,17 @@ export type DropdownItemType = {
   props?: LinkProps | ButtonHTMLAttributes<HTMLButtonElement>
 }
 
-type Props = {
+export type DropdownProps = {
   align?: DropdownAlign
-  width?: number
+  widthClass?: string
   contentClasses?: string
   trigger?: ReactNode
   items: DropdownItemType[]
 }
 
-const Dropdown: FC<Props> = ({
+const Dropdown: FC<DropdownProps> = ({
   align = DropdownAlign.Right,
-  width = 48,
+  widthClass = 'w-48',
   contentClasses = 'py-1 bg-white',
   trigger,
   items,
@@ -89,7 +89,7 @@ const Dropdown: FC<Props> = ({
             leaveTo="transform opacity-0 scale-95"
           >
             <div
-              className={`absolute z-50 mt-2 w-${width} rounded-md shadow-lg ${alignmentClasses[align]}`}
+              className={`absolute z-50 mt-2 ${widthClass} rounded-md shadow-lg ${alignmentClasses[align]}`}
             >
               <Menu.Items
                 className={`rounded-md focus:outline-none ring-1 ring-black ring-opacity-5 ${contentClasses}`}

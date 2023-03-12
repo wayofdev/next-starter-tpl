@@ -8,6 +8,7 @@ export {
 } from './header/Header'
 export {
   default as Dropdown,
+  type DropdownProps,
   type DropdownItemType,
   DropdownVariant,
   DropdownAlign,
