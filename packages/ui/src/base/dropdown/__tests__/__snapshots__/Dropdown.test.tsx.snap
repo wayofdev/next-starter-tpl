@@ -1,0 +1,326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown renders correctly with align=left, dropdown item variant=button 1`] = `
+<div
+  className="relative"
+  data-headlessui-state=""
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="menu"
+    className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
+    data-headlessui-state=""
+    id="headlessui-menu-button-:r1:"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+  >
+    <svg
+      aria-hidden="true"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Dropdown renders correctly with align=left, dropdown item variant=custom 1`] = `
+<div
+  className="relative"
+  data-headlessui-state=""
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="menu"
+    className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
+    data-headlessui-state=""
+    id="headlessui-menu-button-:r2:"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+  >
+    <svg
+      aria-hidden="true"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Dropdown renders correctly with align=left, dropdown item variant=link 1`] = `
+<div
+  className="relative"
+  data-headlessui-state=""
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="menu"
+    className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
+    data-headlessui-state=""
+    id="headlessui-menu-button-:r0:"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+  >
+    <svg
+      aria-hidden="true"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Dropdown renders correctly with align=right, dropdown item variant=button 1`] = `
+<div
+  className="relative"
+  data-headlessui-state=""
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="menu"
+    className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
+    data-headlessui-state=""
+    id="headlessui-menu-button-:r7:"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+  >
+    <svg
+      aria-hidden="true"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Dropdown renders correctly with align=right, dropdown item variant=custom 1`] = `
+<div
+  className="relative"
+  data-headlessui-state=""
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="menu"
+    className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
+    data-headlessui-state=""
+    id="headlessui-menu-button-:r8:"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+  >
+    <svg
+      aria-hidden="true"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Dropdown renders correctly with align=right, dropdown item variant=link 1`] = `
+<div
+  className="relative"
+  data-headlessui-state=""
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="menu"
+    className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
+    data-headlessui-state=""
+    id="headlessui-menu-button-:r6:"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+  >
+    <svg
+      aria-hidden="true"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Dropdown renders correctly with align=top, dropdown item variant=button 1`] = `
+<div
+  className="relative"
+  data-headlessui-state=""
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="menu"
+    className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
+    data-headlessui-state=""
+    id="headlessui-menu-button-:r4:"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+  >
+    <svg
+      aria-hidden="true"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Dropdown renders correctly with align=top, dropdown item variant=custom 1`] = `
+<div
+  className="relative"
+  data-headlessui-state=""
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="menu"
+    className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
+    data-headlessui-state=""
+    id="headlessui-menu-button-:r5:"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+  >
+    <svg
+      aria-hidden="true"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Dropdown renders correctly with align=top, dropdown item variant=link 1`] = `
+<div
+  className="relative"
+  data-headlessui-state=""
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="menu"
+    className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
+    data-headlessui-state=""
+    id="headlessui-menu-button-:r3:"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+  >
+    <svg
+      aria-hidden="true"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Dropdown renders correctly with custom trigger 1`] = `
+<div
+  className="relative"
+  data-headlessui-state=""
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="menu"
+    data-headlessui-state=""
+    id="headlessui-menu-button-:r9:"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+  >
+    Custom Trigger
+  </button>
+</div>
+`;
