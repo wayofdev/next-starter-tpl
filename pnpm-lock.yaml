@@ -131,7 +131,7 @@ importers:
       storybook: 7.0.0-rc.3
       tailwindcss: 3.2.7
       typescript: 4.9.5
-      vite: 4.1.4
+      vite: 4.2.0
     dependencies:
       '@wayofdev/ui': link:../../packages/ui
       react: 18.2.0
@@ -145,13 +145,13 @@ importers:
       '@storybook/blocks': 7.0.0-rc.3_biqbaboplfbrettd7655fr4n2y
       '@storybook/cli': 7.0.0-beta.61
       '@storybook/react': 7.0.0-rc.3_ygqkwb4gg3aean7xjfdauovyqq
-      '@storybook/react-vite': 7.0.0-rc.3_ndsstb2ob2rgr4m75wxvpqsrpi
+      '@storybook/react-vite': 7.0.0-rc.3_ownv4rveqm3havfj2jynunisl4
       '@storybook/testing-library': 0.0.14-next.1
       '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.7
       '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.7
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
-      '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
+      '@vitejs/plugin-react-swc': 3.2.0_vite@4.2.0
       '@wayofdev/eslint-config-bases': 2.0.4_kemc6sgeum5vmixp3eofrodj2i
       '@wayofdev/postcss-config': 2.0.3_ipr3wxh25lyjtclobbvohtvwjy
       autoprefixer: 10.4.13_postcss@8.4.21
@@ -166,7 +166,7 @@ importers:
       storybook: 7.0.0-rc.3
       tailwindcss: 3.2.7_postcss@8.4.21
       typescript: 4.9.5
-      vite: 4.1.4
+      vite: 4.2.0
 
   apps/web:
     specifiers:
@@ -3342,7 +3342,7 @@ packages:
       chalk: 4.1.2
     dev: true
 
-  /@joshwooding/vite-plugin-react-docgen-typescript/0.2.1_vwvfc4ezh6jlf6pa67auy3eulu:
+  /@joshwooding/vite-plugin-react-docgen-typescript/0.2.1_x534c44v6qaxnnsdb2qkizduie:
     resolution: {integrity: sha512-ou4ZJSXMMWHqGS4g8uNRbC5TiTWxAgQZiVucoUrOCWuPrTbkpJbmVyIi9jU72SBry7gQtuMEDp4YR8EEXAg7VQ==}
     peerDependencies:
       typescript: '>= 4.3.x'
@@ -3356,7 +3356,7 @@ packages:
       magic-string: 0.27.0
       react-docgen-typescript: 2.2.2_typescript@4.9.5
       typescript: 4.9.5
-      vite: 4.1.4
+      vite: 4.2.0
     dev: true
 
   /@jridgewell/gen-mapping/0.1.1:
@@ -4589,7 +4589,7 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/builder-vite/7.0.0-rc.3_vwvfc4ezh6jlf6pa67auy3eulu:
+  /@storybook/builder-vite/7.0.0-rc.3_x534c44v6qaxnnsdb2qkizduie:
     resolution: {integrity: sha512-v2d04PWfcITD7zI68d7XbCbOd+5vl3gIMEX5Xdsmuw3WcaqYxvDSE8GhL6zsBhrUyygV/8xhSaaxyfv8ImM0+w==}
     peerDependencies:
       '@preact/preset-vite': '*'
@@ -4627,7 +4627,7 @@ packages:
       rollup: 3.18.0
       slash: 3.0.0
       typescript: 4.9.5
-      vite: 4.1.4
+      vite: 4.2.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5267,7 +5267,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: true
 
-  /@storybook/react-vite/7.0.0-rc.3_ndsstb2ob2rgr4m75wxvpqsrpi:
+  /@storybook/react-vite/7.0.0-rc.3_ownv4rveqm3havfj2jynunisl4:
     resolution: {integrity: sha512-/m4N+FkcLuEZ9fvsvm0FMDumAzgk8T+akK36n5wxl8gob37qJzY7F7EeyXLDVHNQQ59wTxEETE9oqv7khV9ivw==}
     engines: {node: '>=16'}
     peerDependencies:
@@ -5275,17 +5275,17 @@ packages:
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
       vite: ^3.0.0 || ^4.0.0
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.2.1_vwvfc4ezh6jlf6pa67auy3eulu
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.2.1_x534c44v6qaxnnsdb2qkizduie
       '@rollup/pluginutils': 4.2.1
-      '@storybook/builder-vite': 7.0.0-rc.3_vwvfc4ezh6jlf6pa67auy3eulu
+      '@storybook/builder-vite': 7.0.0-rc.3_x534c44v6qaxnnsdb2qkizduie
       '@storybook/react': 7.0.0-rc.3_ygqkwb4gg3aean7xjfdauovyqq
-      '@vitejs/plugin-react': 3.1.0_vite@4.1.4
+      '@vitejs/plugin-react': 3.1.0_vite@4.2.0
       ast-types: 0.14.2
       magic-string: 0.27.0
       react: 18.2.0
       react-docgen: 6.0.0-alpha.3
       react-dom: 18.2.0_react@18.2.0
-      vite: 4.1.4
+      vite: 4.2.0
     transitivePeerDependencies:
       - '@preact/preset-vite'
       - '@storybook/mdx1-csf'
@@ -5875,6 +5875,7 @@ packages:
 
   /@types/gapi.client.discovery/1.0.9:
     resolution: {integrity: sha512-51fXpt7DM7+zPG5pgwnNr3KaRXmyszznu66VPpV7+FAu0LGtpTohvdfvkRCnCn2Z6EgNTq/baFAtCa/9ylHOug==}
+    deprecated: use @types/gapi.client.discovery-v1 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
       '@maxim_mazurok/gapi.client.discovery-v1': 0.0.20200806
     dev: true
@@ -6369,16 +6370,16 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@vitejs/plugin-react-swc/3.2.0_vite@4.1.4:
+  /@vitejs/plugin-react-swc/3.2.0_vite@4.2.0:
     resolution: {integrity: sha512-IcBoXL/mcH7JdQr/nfDlDwTdIaH8Rg7LpfQDF4nAht+juHWIuv6WhpKPCSfY4+zztAaB07qdBoFz1XCZsgo3pQ==}
     peerDependencies:
       vite: ^4
     dependencies:
       '@swc/core': 1.3.38
-      vite: 4.1.4
+      vite: 4.2.0
     dev: true
 
-  /@vitejs/plugin-react/3.1.0_vite@4.1.4:
+  /@vitejs/plugin-react/3.1.0_vite@4.2.0:
     resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -6389,7 +6390,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.19.6_@babel+core@7.21.0
       magic-string: 0.27.0
       react-refresh: 0.14.0
-      vite: 4.1.4
+      vite: 4.2.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -18675,8 +18676,8 @@ packages:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  /vite/4.1.4:
-    resolution: {integrity: sha512-3knk/HsbSTKEin43zHu7jTwYWv81f8kgAL99G5NWBcA1LKvtvcVAC4JjBH1arBunO9kQka+1oGbrMKOjk4ZrBg==}
+  /vite/4.2.0:
+    resolution: {integrity: sha512-AbDTyzzwuKoRtMIRLGNxhLRuv1FpRgdIw+1y6AQG73Q5+vtecmvzKo/yk8X/vrHDpETRTx01ABijqUHIzBXi0g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -18700,7 +18701,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      esbuild: 0.16.17
+      esbuild: 0.17.11
       postcss: 8.4.21
       resolve: 1.22.1
       rollup: 3.18.0
