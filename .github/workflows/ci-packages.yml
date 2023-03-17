@@ -1,6 +1,4 @@
 ---
-name: CI for packages
-
 on: # yamllint disable-line rule:truthy
   push:
     branches:
@@ -26,6 +24,8 @@ on: # yamllint disable-line rule:truthy
       - 'pnpm*'
       - '.github/**'
       - 'tsconfig.base.json'
+
+name: 🔍 Continuous integration for packages
 
 jobs:
   integration:

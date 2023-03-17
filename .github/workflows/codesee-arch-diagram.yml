@@ -9,7 +9,7 @@ on: # yamllint disable-line rule:truthy
   pull_request_target:
     types: [opened, synchronize, reopened]
 
-name: CodeSee
+name: 🤖 CodeSee
 
 permissions: read-all
 
@@ -17,7 +17,7 @@ jobs:
   codesee:
     runs-on: ubuntu-latest
     continue-on-error: true
-    name: Analyze the repo with CodeSee
+    name: 💻 Analyze the repo with CodeSee
     steps:
       - uses: Codesee-io/codesee-action@v2
         with:
