@@ -1,6 +1,4 @@
 ---
-name: E2E CI for web app
-
 on: # yamllint disable-line rule:truthy
   push:
     branches:
@@ -26,6 +24,8 @@ on: # yamllint disable-line rule:truthy
       - 'package.json'
       - 'pnpm*'
       - '.github/**'
+
+name: 🧪 E2E testing for web app
 
 env:
   DISABLE_SENTRY: false

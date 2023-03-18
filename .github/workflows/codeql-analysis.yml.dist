@@ -1,5 +1,4 @@
 ---
-name: CodeQL
 
 on: # yamllint disable-line rule:truthy
   push:
@@ -10,6 +9,8 @@ on: # yamllint disable-line rule:truthy
       - master
   schedule:
     - cron: '22 6 * * 0'
+
+name: CodeQL
 
 jobs:
   analyze:
