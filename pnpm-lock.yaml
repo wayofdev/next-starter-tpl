@@ -115,7 +115,7 @@ importers:
       '@types/react-dom': 18.0.11
       '@vitejs/plugin-react-swc': 3.2.0
       '@wayofdev/eslint-config-bases': 2.0.4
-      '@wayofdev/postcss-config': 2.0.3
+      '@wayofdev/postcss-config': 2.0.4
       '@wayofdev/ui': workspace:*
       autoprefixer: ^10.4.13
       eslint: 8.36.0
@@ -153,7 +153,7 @@ importers:
       '@types/react-dom': 18.0.11
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.2.0
       '@wayofdev/eslint-config-bases': 2.0.4_kemc6sgeum5vmixp3eofrodj2i
-      '@wayofdev/postcss-config': 2.0.3_ipr3wxh25lyjtclobbvohtvwjy
+      '@wayofdev/postcss-config': 2.0.4_ipr3wxh25lyjtclobbvohtvwjy
       autoprefixer: 10.4.13_postcss@8.4.21
       eslint: 8.36.0
       postcss: 8.4.21
@@ -386,7 +386,7 @@ importers:
       '@types/react-test-renderer': 18.0.0
       '@wayofdev/eslint-config-bases': 2.0.4
       '@wayofdev/lint-staged-config': 2.0.2
-      '@wayofdev/postcss-config': 2.0.3
+      '@wayofdev/postcss-config': 2.0.4
       clsx: 1.2.1
       eslint: 8.36.0
       jest: 29.5.0
@@ -425,7 +425,7 @@ importers:
       '@types/react-dom': 18.0.11
       '@types/react-test-renderer': 18.0.0
       '@wayofdev/eslint-config-bases': 2.0.4_tipyqecy7hi7lho6cglrz7j26q
-      '@wayofdev/postcss-config': 2.0.3_ipr3wxh25lyjtclobbvohtvwjy
+      '@wayofdev/postcss-config': 2.0.4_ipr3wxh25lyjtclobbvohtvwjy
       eslint: 8.36.0
       jest: 29.5.0_@types+node@18.15.3
       jest-environment-jsdom: 29.5.0
@@ -6722,14 +6722,14 @@ packages:
       - webpack
     dev: true
 
-  /@wayofdev/postcss-config/2.0.3_ipr3wxh25lyjtclobbvohtvwjy:
-    resolution: {integrity: sha512-5go74TZiguV2QGFZrPzIre64+R6iZSZT2fxSB92Jp5l2rfiWSidxxwo1cp2Ivz9lAO/hb344MJV3llAgnHkw/A==}
+  /@wayofdev/postcss-config/2.0.4_ipr3wxh25lyjtclobbvohtvwjy:
+    resolution: {integrity: sha512-4gq5lmzJ9k26mJ0mXIcH6z+XGLkwWth28GBhiDaHlMoIHWLrZv4ShfuNTjNn5s3CPDzNkS6hX8MymRrXgN8mfQ==}
     peerDependencies:
       postcss: '>= 8'
       sanitize.css: '>= 13'
       tailwindcss: '>= 3'
     dependencies:
-      autoprefixer: 10.4.13_postcss@8.4.21
+      autoprefixer: 10.4.14_postcss@8.4.21
       postcss: 8.4.21
       postcss-100vh-fix: 1.0.2_postcss@8.4.21
       postcss-cli: 10.1.0_postcss@8.4.21
@@ -7246,7 +7246,23 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.5
-      caniuse-lite: 1.0.30001460
+      caniuse-lite: 1.0.30001467
+      fraction.js: 4.2.0
+      normalize-range: 0.1.2
+      picocolors: 1.0.0
+      postcss: 8.4.21
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /autoprefixer/10.4.14_postcss@8.4.21:
+    resolution: {integrity: sha512-FQzyfOsTlwVzjHxKEqRIAdJx9niO6VCBCoEwax/VLSoQF29ggECcPuBqUMZ+u8jCZOPSy8b8/8KnuFbp0SaFZQ==}
+    engines: {node: ^10 || ^12 || >=14}
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.1.0
+    dependencies:
+      browserslist: 4.21.5
+      caniuse-lite: 1.0.30001467
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -7654,13 +7670,17 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.21.5
-      caniuse-lite: 1.0.30001460
+      caniuse-lite: 1.0.30001467
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
   /caniuse-lite/1.0.30001460:
     resolution: {integrity: sha512-Bud7abqjvEjipUkpLs4D7gR0l8hBYBHoa+tGtKJHvT2AYzLp1z7EmVkUT4ERpVUfca8S2HGIVs883D8pUH1ZzQ==}
+
+  /caniuse-lite/1.0.30001467:
+    resolution: {integrity: sha512-cEdN/5e+RPikvl9AHm4uuLXxeCNq8rFsQ+lPHTfe/OtypP3WwnVVbjn+6uBV7PaFL6xUFzTh+sSCOz1rKhcO+Q==}
+    dev: true
 
   /ccount/2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
