@@ -1,5 +1,6 @@
 ---
 on: # yamllint disable-line rule:truthy
+  merge_group:
   push:
     branches:
       - master

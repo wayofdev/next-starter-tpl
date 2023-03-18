@@ -16,14 +16,15 @@
     "lint:types": "tsc --project tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@types/gapi.client.tagmanager": "^2.0.4",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@wayofdev/eslint-config-bases": "^2.0.4"
+    "@types/gapi.client.tagmanager-v2": "0.0.1",
+    "@types/gapi.client.discovery-v1": "0.0.1",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "@wayofdev/eslint-config-bases": "2.0.6"
   },
   "peerDependencies": {
-    "next": "^13.1.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }

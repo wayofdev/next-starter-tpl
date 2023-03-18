@@ -32,9 +32,9 @@
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "@vitejs/plugin-react-swc": "3.2.0",
-    "@wayofdev/eslint-config-bases": "2.0.4",
-    "@wayofdev/postcss-config": "2.0.3",
-    "autoprefixer": "^10.4.13",
+    "@wayofdev/eslint-config-bases": "2.0.6",
+    "@wayofdev/postcss-config": "2.0.4",
+    "autoprefixer": "^10.4.14",
     "eslint": "8.36.0",
     "postcss": "8.4.21",
     "postcss-100vh-fix": "1.0.2",
@@ -45,7 +45,7 @@
     "postcss-reporter": "7.0.5",
     "storybook": "7.0.0-rc.4",
     "tailwindcss": "3.2.7",
-    "typescript": "4.9.5",
+    "typescript": "5.0.2",
     "vite": "4.2.0"
   }
 }
