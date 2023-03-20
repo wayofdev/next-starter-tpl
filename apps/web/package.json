@@ -21,7 +21,7 @@
     "@fontsource/inter": "^4.5.15",
     "@headlessui/react": "^1.7.12",
     "@heroicons/react": "^2.0.16",
-    "@hookform/resolvers": "^2.9.11",
+    "@hookform/resolvers": "^3.0.0",
     "@httpx/exception": "^1.7.1",
     "@vercel/analytics": "^0.1.11",
     "@wayofdev/facebook-pixel": "workspace:*",
