@@ -173,7 +173,7 @@ importers:
       '@fontsource/inter': ^4.5.15
       '@headlessui/react': ^1.7.12
       '@heroicons/react': ^2.0.16
-      '@hookform/resolvers': ^2.9.11
+      '@hookform/resolvers': ^3.0.0
       '@httpx/exception': ^1.7.1
       '@next/bundle-analyzer': 13.2.3
       '@next/env': 13.2.3
@@ -244,7 +244,7 @@ importers:
       '@fontsource/inter': 4.5.15
       '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
       '@heroicons/react': 2.0.16_react@18.2.0
-      '@hookform/resolvers': 2.9.11_react-hook-form@7.43.5
+      '@hookform/resolvers': 3.0.0_react-hook-form@7.43.5
       '@httpx/exception': 1.7.1
       '@vercel/analytics': 0.1.11_react@18.2.0
       '@wayofdev/facebook-pixel': link:../../packages/facebook-pixel
@@ -2922,8 +2922,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@hookform/resolvers/2.9.11_react-hook-form@7.43.5:
-    resolution: {integrity: sha512-bA3aZ79UgcHj7tFV7RlgThzwSSHZgvfbt2wprldRkYBcMopdMvHyO17Wwp/twcJasNFischFfS7oz8Katz8DdQ==}
+  /@hookform/resolvers/3.0.0_react-hook-form@7.43.5:
+    resolution: {integrity: sha512-SQPefakODpyq25b/phHXDKCdRrEfPcCXV7B4nAa139wE1DxufYbbNAjeo0T04ZXBokRxZ+wD8iA1kkVMa3QwjQ==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
