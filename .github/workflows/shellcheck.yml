@@ -1,10 +1,8 @@
 ---
-name: Differential shell-check
-
 on: # yamllint disable-line rule:truthy
   pull_request:
-    branches:
-      - master
+
+name: 🐞 Differential shell-check
 
 permissions:
   contents: read
@@ -12,15 +10,29 @@ permissions:
 jobs:
   shellcheck:
     runs-on: ubuntu-latest
+    permissions:
+      # required for all workflows
+      security-events: write
+      # only required for workflows in private repositories
+      actions: read
+      contents: read
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3.3.0
+      - name: 📦 Check out the codebase
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Differential shell-check
-        uses: redhat-plumbers-in-action/differential-shellcheck@v4.0.2
+      - name: 🐞 Differential shell-check
+        id: shellcheck
+        uses: redhat-plumbers-in-action/differential-shellcheck@v4
         with:
           severity: warning
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - if: ${{ always() }}
+        name: 📤 Upload artifact with shell-check defects in SARIF format
+        uses: actions/upload-artifact@v3
+        with:
+          name: Differential shell-check SARIF
+          path: ${{ steps.shellcheck.outputs.sarif }}

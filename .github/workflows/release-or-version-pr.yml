@@ -1,16 +1,15 @@
 ---
-name: ReleaseOrVersionPR
-
 on: # yamllint disable-line rule:truthy
   push:
     branches:
       - master
 
+name: 🦋 Create release or publish to pnpm
+
 jobs:
   release:
     # Basic security: the release job can only be executed from this repo and from the master branch (not a remote thing)
     if: ${{ github.repository == 'wayofdev/next-starter-tpl' && contains('refs/heads/master',github.ref)}}
-    name: Release using ${{ matrix.node }} - ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: true
@@ -19,14 +18,14 @@ jobs:
         node: ['18']
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3.3.0
+      - name: 📦 Check out the codebase
+        uses: actions/checkout@v3
         with:
           # To run comparison we need more than the latest commit.
           # @link https://github.com/actions/checkout#fetch-all-history-for-all-tags-and-branches
           fetch-depth: 0
 
-      - name: Setup node ${{ matrix.node }}
+      - name: ⚙️ Setup node ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -36,7 +35,7 @@ jobs:
         uses: ./.github/actions/pnpm-install
 
       # @link https://github.com/changesets/action
-      - name: Create Release pull request or publish to npm
+      - name: 🦋 Create Release pull request or publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
@@ -52,5 +51,5 @@ jobs:
         env:
           # See https://github.com/changesets/action/issues/147
           HOME: ${{ github.workspace }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

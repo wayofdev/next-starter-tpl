@@ -1,7 +1,6 @@
 ---
-name: CI for web app
-
 on: # yamllint disable-line rule:truthy
+  merge_group:
   push:
     branches:
       - master
@@ -29,9 +28,10 @@ on: # yamllint disable-line rule:truthy
       - '.github/**'
       - 'tsconfig.base.json'
 
+name: 🔍 Continuous integration for web app
+
 jobs:
   integration:
-    name: Node ${{ matrix.node }} - ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: true
