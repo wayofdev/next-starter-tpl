@@ -16,7 +16,11 @@ DOCKER_COMPOSE ?= docker-compose
 # Support image with all needed binaries, like envsubst, mkcert, wait4x
 SUPPORT_IMAGE ?= wayofdev/build-deps:alpine-latest
 
-BUILDER_PARAMS ?= docker run --rm -i \
+BUILDER_PARAMS ?= docker run \
+ 	--rm \
+ 	-i \
+ 	-v $(PWD):/app \
+ 	--workdir /app \
 	--env-file ./.env \
 	--env APP_NAME=$(APP_NAME) \
 	--env SYSTEM_SERVICES_NAMESPACE=$(SYSTEM_SERVICES_NAMESPACE) \

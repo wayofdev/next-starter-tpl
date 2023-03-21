@@ -1,6 +1,6 @@
 ---
 
-on: # yamllint disable-line rule:truthy
+on:  # yamllint disable-line rule:truthy
   push:
     branches:
       - master
@@ -10,11 +10,10 @@ on: # yamllint disable-line rule:truthy
   schedule:
     - cron: '22 6 * * 0'
 
-name: CodeQL
+name: 🐞 CodeQL
 
 jobs:
   analyze:
-    name: Analyze
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -28,18 +27,18 @@ jobs:
           - javascript
 
     steps:
-      - name: Checkout repository
+      - name: 📦 Check out the codebase
         uses: actions/checkout@v3
 
-      - name: Initialize CodeQL
+      - name: 🤖 Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
           languages: ${{ matrix.language }}
 
-      - name: Autobuild
+      - name: 🛠️ Autobuild
         uses: github/codeql-action/autobuild@v2
 
-      - name: Perform CodeQL Analysis
+      - name: 🚨 Perform CodeQL analysis
         uses: github/codeql-action/analyze@v2
 
 ...
