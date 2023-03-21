@@ -29,7 +29,6 @@ name: 🔍 Continuous integration for packages
 
 jobs:
   integration:
-    name: Node ${{ matrix.node }} - ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: true
