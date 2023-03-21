@@ -6,8 +6,12 @@ on: # yamllint disable-line rule:truthy
   push:
     branches:
       - master
+      - develop
   pull_request_target:
-    types: [opened, synchronize, reopened]
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 name: 🤖 CodeSee
 
