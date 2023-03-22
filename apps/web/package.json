@@ -1,6 +1,6 @@
 {
   "name": "@wayofdev/web",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "private": true,
   "scripts": {
     "analyze": "ANALYZE=true NEXT_IGNORE_TYPE_CHECK=true NEXT_IGNORE_ESLINT=true SENTRY_UPLOAD_DRY_RUN=true next build",
