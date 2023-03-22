@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import type { DropdownProps } from '@wayofdev/ui/src'
-import { Dropdown, DropdownAlign, DropdownVariant } from '@wayofdev/ui/src'
+import { Dropdown, DropdownAlign, DropdownItemVariant } from '@wayofdev/ui/src'
 
 const meta = {
   title: 'Example/Dropdown',
@@ -13,10 +13,10 @@ const meta = {
   },
   args: {
     items: [
-      { variant: DropdownVariant.Link, element: 'Profile', props: { href: '/#Profile' } },
-      { variant: DropdownVariant.Link, element: 'Settings', props: { href: '/#Settings' } },
-      { variant: DropdownVariant.Link, element: 'My Orders', props: { href: '/#MyOrders' } },
-      { variant: DropdownVariant.Button, element: 'Logout' },
+      { variant: DropdownItemVariant.Link, element: 'Profile', props: { href: '/#Profile' } },
+      { variant: DropdownItemVariant.Link, element: 'Settings', props: { href: '/#Settings' } },
+      { variant: DropdownItemVariant.Link, element: 'My Orders', props: { href: '/#MyOrders' } },
+      { variant: DropdownItemVariant.Button, element: 'Logout' },
     ],
     align: DropdownAlign.Left,
   },
@@ -38,9 +38,9 @@ export const DropdownAlignRight: Story = {
 export const DropdownLinkElement: Story = {
   args: {
     items: [
-      { variant: DropdownVariant.Link, element: 'Profile', props: { href: '/#Profile' } },
-      { variant: DropdownVariant.Link, element: 'Settings', props: { href: '/#Settings' } },
-      { variant: DropdownVariant.Link, element: 'My Orders', props: { href: '/#MyOrders' } },
+      { variant: DropdownItemVariant.Link, element: 'Profile', props: { href: '/#Profile' } },
+      { variant: DropdownItemVariant.Link, element: 'Settings', props: { href: '/#Settings' } },
+      { variant: DropdownItemVariant.Link, element: 'My Orders', props: { href: '/#MyOrders' } },
     ],
   },
 }
@@ -48,8 +48,8 @@ export const DropdownLinkElement: Story = {
 export const DropdownButtonElement: Story = {
   args: {
     items: [
-      { variant: DropdownVariant.Button, element: 'Make Action' },
-      { variant: DropdownVariant.Button, element: 'Logout' },
+      { variant: DropdownItemVariant.Button, element: 'Make Action' },
+      { variant: DropdownItemVariant.Button, element: 'Logout' },
     ],
   },
 }
