@@ -1,10 +1,8 @@
 import { Menu, Transition } from '@headlessui/react'
 import { Bars3Icon } from '@heroicons/react/24/outline'
-import clsx from 'clsx'
-import type { LinkProps } from 'next/link'
-import Link from 'next/link'
-import type { FC, ReactNode, ButtonHTMLAttributes } from 'react'
-import React from 'react'
+import { Fragment } from 'react'
+import type { FC, ReactNode } from 'react'
+import DropdownItem, { type DropdownItemType } from './DropdownItem'
 
 export enum DropdownAlign {
   Left = 'left',
@@ -16,17 +14,6 @@ const alignmentClasses: Record<DropdownAlign, string> = {
   [DropdownAlign.Left]: 'origin-top-left left-0',
   [DropdownAlign.Top]: 'origin-top',
   [DropdownAlign.Right]: 'origin-top-right right-0',
-}
-
-export enum DropdownVariant {
-  Button = 'button',
-  Link = 'link',
-}
-
-export type DropdownItemType = {
-  variant?: DropdownVariant
-  element?: ReactNode
-  props?: LinkProps | ButtonHTMLAttributes<HTMLButtonElement>
 }
 
 export type DropdownProps = {
@@ -44,35 +31,11 @@ const Dropdown: FC<DropdownProps> = ({
   trigger,
   items,
 }) => {
-  const dropdownItemRenderer = (params: DropdownItemType, isActive = false) => {
-    if (!params.variant) {
-      return <>{params.element}</>
-    }
-
-    const classNames = clsx(
-      'w-full text-left block px-4 py-2 text-sm leading-5 text-gray-700 focus:outline-none transition duration-150 ease-in-out',
-      { 'bg-gray-100': isActive }
-    )
-
-    const linkProps = (params.props || { href: '#' }) as LinkProps
-    const btnProps = (params.props || {}) as ButtonHTMLAttributes<HTMLButtonElement>
-
-    return params.variant === DropdownVariant.Link ? (
-      <Link {...linkProps} className={classNames}>
-        {params.element}
-      </Link>
-    ) : (
-      <button {...btnProps} className={classNames}>
-        {params.element}
-      </button>
-    )
-  }
-
   return (
     <Menu as="div" className="relative">
       {({ open }) => (
         <>
-          <Menu.Button as={React.Fragment}>
+          <Menu.Button as={Fragment}>
             {trigger || (
               <button className="flex items-center text-sm font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none">
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -97,7 +60,7 @@ const Dropdown: FC<DropdownProps> = ({
               >
                 {items?.map((item, i) => (
                   <Menu.Item key={i}>
-                    {({ active }) => dropdownItemRenderer(item, active)}
+                    {({ active }) => <DropdownItem item={item} isActive={active} />}
                   </Menu.Item>
                 ))}
               </Menu.Items>
@@ -108,4 +71,5 @@ const Dropdown: FC<DropdownProps> = ({
     </Menu>
   )
 }
+
 export default Dropdown

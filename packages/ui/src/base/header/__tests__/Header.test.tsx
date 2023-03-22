@@ -17,7 +17,7 @@ describe('Header', () => {
           ]}
           logoutConfig={{ label: 'Logout' }}
           authBlock={<div>authBlock</div>}
-          unAuthBlock={<div>unAuthBlock</div>}
+          guestBlock={<div>guestBlock</div>}
         />
       )
       .toJSON()

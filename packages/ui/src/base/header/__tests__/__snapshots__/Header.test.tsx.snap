@@ -39,7 +39,7 @@ exports[`Header renders correctly with navigation and auth elements 1`] = `
       className="flex flex-1 items-center justify-end gap-x-6"
     >
       <div>
-        unAuthBlock
+        guestBlock
       </div>
     </div>
     <div

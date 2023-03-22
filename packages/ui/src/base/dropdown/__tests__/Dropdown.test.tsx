@@ -1,10 +1,11 @@
 import renderer from 'react-test-renderer'
-import Dropdown, { DropdownAlign, DropdownVariant } from '../Dropdown'
+import Dropdown, { DropdownAlign } from '../Dropdown'
+import { DropdownItemVariant } from '../DropdownItem'
 
 describe('Dropdown', () => {
   const variants = {
-    link: { variant: DropdownVariant.Link, element: 'Profile', props: { href: '/#Profile' } },
-    button: { variant: DropdownVariant.Button, element: 'Action' },
+    link: { variant: DropdownItemVariant.Link, element: 'Profile', props: { href: '/#Profile' } },
+    button: { variant: DropdownItemVariant.Button, element: 'Action' },
     custom: { element: <div className="block w-full bg-gray-800 text-right">Profile</div> },
   }
 

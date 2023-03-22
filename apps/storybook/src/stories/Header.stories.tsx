@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import type { HeaderProps } from '@wayofdev/ui/src'
-import { Button, Dropdown, DropdownVariant, Header } from '@wayofdev/ui/src'
+import { Button, Dropdown, DropdownItemVariant, Header } from '@wayofdev/ui/src'
 import Img from './assets/colors.svg'
 
 const triggerContent = (
@@ -20,9 +20,9 @@ const triggerContent = (
 )
 
 const dropdownItems = [
-  { variant: DropdownVariant.Button, element: 'Settings', props: { href: '/#Settings' } },
-  { variant: DropdownVariant.Button, element: 'My orders', props: { href: '/#MyOrders' } },
-  { variant: DropdownVariant.Button, element: 'Logout' },
+  { variant: DropdownItemVariant.Button, element: 'Settings', props: { href: '/#Settings' } },
+  { variant: DropdownItemVariant.Button, element: 'My orders', props: { href: '/#MyOrders' } },
+  { variant: DropdownItemVariant.Button, element: 'Logout' },
 ]
 
 const meta = {
@@ -35,7 +35,7 @@ const meta = {
     layout: 'fullscreen',
   },
   args: {
-    isAuth: false,
+    isAuthenticated: false,
     activePath: '/',
     navigation: [
       { title: 'Home', href: '/' },
@@ -47,7 +47,7 @@ const meta = {
     ],
     logoutConfig: { label: 'Logout' },
     logo: <img src={Img} alt="logo" />,
-    unAuthBlock: <Button label="Sign In" />,
+    guestBlock: <Button label="Sign In" />,
     triggerContent,
     authBlock: (
       <Dropdown
@@ -94,7 +94,7 @@ export const LoggedOut: Story = {}
 
 export const LoggedIn: Story = {
   args: {
-    isAuth: true,
+    isAuthenticated: true,
     triggerContent: undefined,
     authBlock: <Dropdown items={dropdownItems} />,
   },
@@ -102,7 +102,7 @@ export const LoggedIn: Story = {
 
 export const CustomTriggerMenu: Story = {
   args: {
-    isAuth: true,
+    isAuthenticated: true,
   },
 }
 
@@ -114,7 +114,7 @@ export const CustomHeaderClass: Story = {
 
 export const MobileMenuUserInfo: Story = {
   args: {
-    isAuth: true,
+    isAuthenticated: true,
   },
   parameters: {
     viewport: {

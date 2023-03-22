@@ -1,5 +1,5 @@
 import type { NavigationItemType, LogoutBtnType, DropdownItemType } from '@wayofdev/ui'
-import { Header, Button, Size, Mode, Dropdown, DropdownVariant } from '@wayofdev/ui'
+import { Header, Button, Size, Mode, Dropdown, DropdownItemVariant } from '@wayofdev/ui'
 import { useRouter } from 'next/compat/router'
 import Link from 'next/link'
 import { signIn, signOut, useSession } from 'next-auth/react'
@@ -9,7 +9,7 @@ import AppLogo from '@/components/app-logo/AppLogo'
 export const MainNav: FC = () => {
   const router = useRouter()
   const { data: session } = useSession()
-  const isAuth = !!session?.user
+  const isAuthenticated = !!session?.user
 
   const navigation: NavigationItemType[] = [
     { title: 'Home', href: '/' },
@@ -29,20 +29,20 @@ export const MainNav: FC = () => {
     </Link>
   )
 
-  const unAuthBlock = (
+  const guestBlock = (
     <Button size={Size.XSmall} mode={Mode.Primary} label="Sign In" onClick={() => signIn()} />
   )
 
   const dropdownItems: DropdownItemType[] = [
     ...userNavigation.map(n => ({
-      variant: DropdownVariant.Link,
+      variant: DropdownItemVariant.Link,
       element: n.title,
       props: { href: n.href },
     })),
-    { variant: DropdownVariant.Button, element: 'Logout', props: { onClick: () => signOut() } },
+    { variant: DropdownItemVariant.Button, element: 'Logout', props: { onClick: () => signOut() } },
   ]
 
-  const triggerContent = isAuth && (
+  const triggerContent = isAuthenticated && (
     <>
       <div>{session?.user?.email || session?.user?.name}</div>
 
@@ -73,7 +73,7 @@ export const MainNav: FC = () => {
     />
   )
 
-  const userBlock = isAuth && (
+  const userBlock = isAuthenticated && (
     <div className="flex items-center px-4">
       <div className="shrink-0">
         <svg
@@ -102,7 +102,7 @@ export const MainNav: FC = () => {
   return (
     <Header
       activePath={router?.pathname}
-      isAuth={isAuth}
+      isAuthenticated={isAuthenticated}
       navigation={navigation}
       userNavigation={userNavigation}
       logoutConfig={logoutConfig}
@@ -110,7 +110,7 @@ export const MainNav: FC = () => {
       userBlock={userBlock}
       triggerContent={triggerContent}
       authBlock={authBlock}
-      unAuthBlock={unAuthBlock}
+      guestBlock={guestBlock}
     />
   )
 }

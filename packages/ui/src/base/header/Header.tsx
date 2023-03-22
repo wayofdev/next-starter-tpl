@@ -26,7 +26,7 @@ export type LogoutBtnType = { label: string; onClick?: MouseEventHandler<HTMLBut
 export type HeaderProps = {
   className?: string
   activePath?: string
-  isAuth?: boolean
+  isAuthenticated?: boolean
   navigation?: NavigationItemType[]
   userNavigation?: NavigationItemType[]
   logoutConfig?: LogoutBtnType
@@ -34,7 +34,7 @@ export type HeaderProps = {
   userBlock?: ReactNode
   triggerContent?: ReactNode
   authBlock?: ReactNode
-  unAuthBlock?: ReactNode
+  guestBlock?: ReactNode
 }
 
 const Header: FC<HeaderProps> = props => {
@@ -45,11 +45,11 @@ const Header: FC<HeaderProps> = props => {
     navigation,
     userNavigation,
     logoutConfig,
-    isAuth,
+    isAuthenticated,
     userBlock,
     triggerContent,
     authBlock,
-    unAuthBlock,
+    guestBlock,
   } = props
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -83,12 +83,12 @@ const Header: FC<HeaderProps> = props => {
           </div>
         )}
 
-        {isAuth ? (
+        {isAuthenticated ? (
           <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:gap-x-6">
             {authBlock}
           </div>
         ) : (
-          <div className="flex flex-1 items-center justify-end gap-x-6">{unAuthBlock}</div>
+          <div className="flex flex-1 items-center justify-end gap-x-6">{guestBlock}</div>
         )}
 
         <div className="flex lg:hidden">
@@ -109,7 +109,7 @@ const Header: FC<HeaderProps> = props => {
             {!!logo && <>{logo}</>}
 
             <div className="flex flex-1 items-center justify-end gap-x-6">
-              {!isAuth && unAuthBlock}
+              {!isAuthenticated && guestBlock}
             </div>
 
             <button
@@ -130,7 +130,7 @@ const Header: FC<HeaderProps> = props => {
               )}
 
               <div className="py-6">
-                {isAuth && !!userNavigation && (
+                {isAuthenticated && !!userNavigation && (
                   <>
                     {userBlock}
                     <div className="space-y-2 py-6">

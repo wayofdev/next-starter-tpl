@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "@fontsource/inter": "4.5.15",
-    "@headlessui/react": "1.7.13",
     "@heroicons/react": "2.0.16",
     "@hookform/resolvers": "3.0.0",
     "@httpx/exception": "1.7.1",
