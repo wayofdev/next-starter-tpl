@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import type { ButtonHTMLAttributes, FC } from 'react'
 
 export enum Size {
@@ -32,7 +33,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string
 }
 
-export const Button: FC<ButtonProps> = ({
+const Button: FC<ButtonProps> = ({
   mode = Mode.Primary,
   size = Size.Base,
   backgroundColor,
@@ -42,8 +43,10 @@ export const Button: FC<ButtonProps> = ({
   const baseClasses = 'inline-flex items-center border focus:outline-none font-medium shadow-sm'
 
   return (
-    <button className={[size, mode, baseClasses].join(' ')} {...properties}>
+    <button className={clsx(size, mode, baseClasses)} {...properties}>
       {label}
     </button>
   )
 }
+
+export default Button

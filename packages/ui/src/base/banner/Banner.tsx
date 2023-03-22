@@ -7,7 +7,7 @@ export interface BannerProps {
   children?: never
 }
 
-export const Banner: FC<BannerProps> = ({ message }) => {
+const Banner: FC<BannerProps> = ({ message }) => {
   return (
     <div className="bg-indigo-600">
       <div className="mx-auto max-w-7xl p-3 sm:px-6 lg:px-8">
@@ -43,3 +43,5 @@ export const Banner: FC<BannerProps> = ({ message }) => {
     </div>
   )
 }
+
+export default Banner

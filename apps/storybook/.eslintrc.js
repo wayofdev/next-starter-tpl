@@ -36,7 +36,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['src/stories/*.ts'],
+      files: ['src/stories/*.{ts,tsx}'],
       rules: {
         '@typescript-eslint/naming-convention': 'off',
       },
