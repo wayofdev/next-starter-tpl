@@ -28,6 +28,7 @@ module.exports = {
   ],
   rules: {
     // optional overrides per project
+    'import/no-named-as-default': 0,
   },
   overrides: [
     // optional overrides per project file match
