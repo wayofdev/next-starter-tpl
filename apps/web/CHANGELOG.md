@@ -1,5 +1,16 @@
 # web
 
+## 1.3.0
+
+### Minor Changes
+
+- [#104](https://github.com/wayofdev/next-starter-tpl/pull/104) [`d3b333f`](https://github.com/wayofdev/next-starter-tpl/commit/d3b333f095b6df9a43769b5be23e13a9ec8fae9e) Thanks [@igomur](https://github.com/igomur)! - feat: header and dropdown refactor
+
+### Patch Changes
+
+- Updated dependencies [[`d3b333f`](https://github.com/wayofdev/next-starter-tpl/commit/d3b333f095b6df9a43769b5be23e13a9ec8fae9e)]:
+  - @wayofdev/ui@1.3.0
+
 ## 1.2.1
 
 ### Patch Changes
