@@ -236,7 +236,7 @@ importers:
       tailwindcss: 3.2.7
       ts-jest: 29.0.5
       tslib: 2.5.0
-      type-fest: 3.6.1
+      type-fest: 3.7.0
       typescript: 5.0.2
       zod: 3.21.4
     dependencies:
@@ -260,7 +260,7 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       react-hook-form: 7.43.7_react@18.2.0
       react-i18next: 12.2.0_2rh65uwnd6kial3dj4kteywnti
-      type-fest: 3.6.1
+      type-fest: 3.7.0
       zod: 3.21.4
     devDependencies:
       '@next/bundle-analyzer': 13.2.4
@@ -17368,8 +17368,8 @@ packages:
     engines: {node: '>=12.20'}
     dev: true
 
-  /type-fest/3.6.1:
-    resolution: {integrity: sha512-htXWckxlT6U4+ilVgweNliPqlsVSSucbxVexRYllyMVJDtf5rTjv6kF/s+qAd4QSL1BZcnJPEJavYBPQiWuZDA==}
+  /type-fest/3.7.0:
+    resolution: {integrity: sha512-A2qUJ/j8vkKIT+UorxayZjFJoEdNkIPZkjOJSWezoAbRQd7QEhnz2iJlfVy4Or0GuEnCXts5cNorQNUvdLkaSQ==}
     engines: {node: '>=14.16'}
     dev: false
 
