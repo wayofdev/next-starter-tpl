@@ -65,7 +65,7 @@ importers:
   apps/docs:
     specifiers:
       '@types/node': 18.15.7
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@vercel/analytics': 0.1.11
       '@wayofdev/eslint-config-bases': 2.0.7
@@ -89,7 +89,7 @@ importers:
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
       '@types/node': 18.15.7
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@wayofdev/eslint-config-bases': 2.0.7_asqwvpork7o3pmqzee7uiqpdse
       es-check: 7.1.0
@@ -111,7 +111,7 @@ importers:
       '@storybook/testing-library': 0.0.14-next.1
       '@tailwindcss/aspect-ratio': ^0.4.2
       '@tailwindcss/forms': ^0.5.3
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@vitejs/plugin-react-swc': 3.2.0
       '@wayofdev/eslint-config-bases': 2.0.7
@@ -149,7 +149,7 @@ importers:
       '@storybook/testing-library': 0.0.14-next.1
       '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.7
       '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.7
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.2.1
       '@wayofdev/eslint-config-bases': 2.0.7_asqwvpork7o3pmqzee7uiqpdse
@@ -189,7 +189,7 @@ importers:
       '@types/hoist-non-react-statics': 3.3.1
       '@types/jest': 29.5.0
       '@types/node': 18.15.7
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@types/react-test-renderer': 18.0.0
       '@types/testing-library__jest-dom': 5.14.5
@@ -278,7 +278,7 @@ importers:
       '@types/hoist-non-react-statics': 3.3.1
       '@types/jest': 29.5.0
       '@types/node': 18.15.7
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@types/react-test-renderer': 18.0.0
       '@types/testing-library__jest-dom': 5.14.5
@@ -332,7 +332,7 @@ importers:
   packages/facebook-pixel:
     specifiers:
       '@types/facebook-pixel': 0.0.24
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@wayofdev/eslint-config-bases': 2.0.7
       next: 13.2.4
@@ -344,14 +344,14 @@ importers:
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
       '@types/facebook-pixel': 0.0.24
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@wayofdev/eslint-config-bases': 2.0.7_asqwvpork7o3pmqzee7uiqpdse
 
   packages/google-tag-manager:
     specifiers:
       '@types/gapi.client.tagmanager': 2.0.4
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@wayofdev/eslint-config-bases': 2.0.7
       next: 13.2.4
@@ -363,7 +363,7 @@ importers:
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
       '@types/gapi.client.tagmanager': 2.0.4
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@wayofdev/eslint-config-bases': 2.0.7_asqwvpork7o3pmqzee7uiqpdse
 
@@ -380,7 +380,7 @@ importers:
       '@testing-library/react': 14.0.0
       '@types/jest': 29.5.0
       '@types/node': 18.15.7
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@types/react-test-renderer': 18.0.0
       '@wayofdev/eslint-config-bases': 2.0.7
@@ -420,7 +420,7 @@ importers:
       '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
       '@types/jest': 29.5.0
       '@types/node': 18.15.7
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       '@types/react-dom': 18.0.11
       '@types/react-test-renderer': 18.0.0
       '@wayofdev/eslint-config-bases': 2.0.7_kwnkwq3hj35xw73h7lowkoztui
@@ -3306,7 +3306,7 @@ packages:
       react: '>=16'
     dependencies:
       '@types/mdx': 2.0.3
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       react: 18.2.0
 
   /@napi-rs/simple-git-android-arm-eabi/0.1.8:
@@ -5874,7 +5874,7 @@ packages:
   /@types/hoist-non-react-statics/3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
       hoist-non-react-statics: 3.3.2
 
   /@types/is-ci/3.0.0:
@@ -6018,17 +6018,17 @@ packages:
   /@types/react-dom/18.0.11:
     resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
     dependencies:
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
     dev: true
 
   /@types/react-test-renderer/18.0.0:
     resolution: {integrity: sha512-C7/5FBJ3g3sqUahguGi03O79b8afNeSD6T8/GU50oQrJCU0bVCCGQHaGKUbg2Ce8VQEEqTw8/HiS6lXHHdgkdQ==}
     dependencies:
-      '@types/react': 18.0.28
+      '@types/react': 18.0.29
     dev: true
 
-  /@types/react/18.0.28:
-    resolution: {integrity: sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==}
+  /@types/react/18.0.29:
+    resolution: {integrity: sha512-wXHktgUABxplw1+UnljseDq4+uztQyp2tlWZRIxHlpchsCFqiYkvaDS8JR7eKOQm8wziTH/el5qL7D6gYNkYcw==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
