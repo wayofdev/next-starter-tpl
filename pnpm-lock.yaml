@@ -22,7 +22,7 @@ importers:
       husky: ^8.0.3
       is-ci: ^3.0.1
       lint-staged: ^13.2.0
-      markdownlint: ^0.27.0
+      markdownlint: ^0.28.0
       markdownlint-cli: ^0.33.0
       npm-run-all: ^4.1.5
       prettier: ^2.8.6
@@ -43,7 +43,7 @@ importers:
       '@wayofdev/commitlint-config': 2.0.4_d5fmutuz4w7v7thliix4zkprka
       '@wayofdev/eslint-config-bases': 2.0.7_asqwvpork7o3pmqzee7uiqpdse
       '@wayofdev/lint-staged-config': 2.0.4_lint-staged@13.2.0
-      '@wayofdev/markdownlint-config': 2.0.3_7wipso3bnykczko4fbuu3oryki
+      '@wayofdev/markdownlint-config': 2.0.3_pdv34to6aypb7hgfzlnfjwolcu
       '@wayofdev/secretlint-config': 2.0.5_v2mofv3ctsnv24btlsgrq57otm
       '@wayofdev/tsconfig-config': 2.0.4_oez4l7g5bqgtb46uqp2kbwras4
       browserslist: 4.21.5
@@ -51,7 +51,7 @@ importers:
       husky: 8.0.3
       is-ci: 3.0.1
       lint-staged: 13.2.0
-      markdownlint: 0.27.0
+      markdownlint: 0.28.0
       markdownlint-cli: 0.33.0
       npm-run-all: 4.1.5
       prettier: 2.8.6
@@ -6501,14 +6501,14 @@ packages:
     dependencies:
       lint-staged: 13.2.0
 
-  /@wayofdev/markdownlint-config/2.0.3_7wipso3bnykczko4fbuu3oryki:
+  /@wayofdev/markdownlint-config/2.0.3_pdv34to6aypb7hgfzlnfjwolcu:
     resolution: {integrity: sha512-9qASKcmu0KnDJHZFnP6SQRLY11g47E089800Th/1z7Wn8U6VBk1BbVsKMWl9pWn5wbtMj9kYoGBFUm1x+ZPrZQ==}
     peerDependencies:
       '@wayofdev/lint-staged-config': ^2.0.4
       markdownlint: '>= 0'
     dependencies:
       '@wayofdev/lint-staged-config': 2.0.4_lint-staged@13.2.0
-      markdownlint: 0.27.0
+      markdownlint: 0.28.0
       markdownlint-cli: 0.33.0
     dev: true
 
@@ -12254,11 +12254,24 @@ packages:
       run-con: 1.2.11
     dev: true
 
+  /markdownlint-micromark/0.1.2:
+    resolution: {integrity: sha512-jRxlQg8KpOfM2IbCL9RXM8ZiYWz2rv6DlZAnGv8ASJQpUh6byTBnEsbuMZ6T2/uIgntyf7SKg/mEaEBo1164fQ==}
+    engines: {node: '>=14.18.0'}
+    dev: true
+
   /markdownlint/0.27.0:
     resolution: {integrity: sha512-HtfVr/hzJJmE0C198F99JLaeada+646B5SaG2pVoEakLFI6iRGsvMqrnnrflq8hm1zQgwskEgqSnhDW11JBp0w==}
     engines: {node: '>=14.18.0'}
     dependencies:
       markdown-it: 13.0.1
+    dev: true
+
+  /markdownlint/0.28.0:
+    resolution: {integrity: sha512-7Gt/SzjE5420Dr93wZgTLlgfcWj5vxAWJtvN7bBfN35ytQwsVDEW46L+NswzeCVhZSFdWRgLdEwQo3lMavUjvQ==}
+    engines: {node: '>=14.18.0'}
+    dependencies:
+      markdown-it: 13.0.1
+      markdownlint-micromark: 0.1.2
     dev: true
 
   /match-sorter/6.3.1:
