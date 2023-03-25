@@ -176,7 +176,7 @@ importers:
       '@httpx/exception': 1.7.1
       '@next/bundle-analyzer': 13.2.4
       '@next/env': 13.2.4
-      '@playwright/test': 1.32.0
+      '@playwright/test': 1.32.1
       '@sentry/nextjs': 7.45.0
       '@size-limit/file': 8.2.4
       '@tailwindcss/aspect-ratio': 0.4.2
@@ -265,7 +265,7 @@ importers:
     devDependencies:
       '@next/bundle-analyzer': 13.2.4
       '@next/env': 13.2.4
-      '@playwright/test': 1.32.0
+      '@playwright/test': 1.32.1
       '@sentry/nextjs': 7.45.0_oi4yo7lpuxjcam3fz4gr3cbiju
       '@size-limit/file': 8.2.4_size-limit@8.2.4
       '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.7
@@ -3713,13 +3713,13 @@ packages:
       tslib: 2.5.0
     dev: true
 
-  /@playwright/test/1.32.0:
-    resolution: {integrity: sha512-zOdGloaF0jeec7hqoLqM5S3L2rR4WxMJs6lgiAeR70JlH7Ml54ZPoIIf3X7cvnKde3Q9jJ/gaxkFh8fYI9s1rg==}
+  /@playwright/test/1.32.1:
+    resolution: {integrity: sha512-FTwjCuhlm1qHUGf4hWjfr64UMJD/z0hXYbk+O387Ioe6WdyZQ+0TBDAc6P+pHjx2xCv1VYNgrKbYrNixFWy4Dg==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
       '@types/node': 18.15.8
-      playwright-core: 1.32.0
+      playwright-core: 1.32.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -14013,8 +14013,8 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /playwright-core/1.32.0:
-    resolution: {integrity: sha512-Z9Ij17X5Z3bjpp6XKujGBp9Gv4eViESac9aDmwgQFUEJBW0K80T21m/Z+XJQlu4cNsvPygw33b6V1Va6Bda5zQ==}
+  /playwright-core/1.32.1:
+    resolution: {integrity: sha512-KZYUQC10mXD2Am1rGlidaalNGYk3LU1vZqqNk0gT4XPty1jOqgup8KDP8l2CUlqoNKhXM5IfGjWgW37xvGllBA==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
