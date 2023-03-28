@@ -25,7 +25,7 @@
     "@vercel/analytics": "0.1.11",
     "@wayofdev/facebook-pixel": "workspace:*",
     "@wayofdev/google-tag-manager": "workspace:*",
-    "@wayofdev/lint-staged-config": "2.0.4",
+    "@wayofdev/lint-staged-config": "2.0.6",
     "@wayofdev/ui": "workspace:*",
     "clsx": "1.2.1",
     "i18next": "22.4.13",
