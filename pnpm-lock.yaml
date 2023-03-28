@@ -30,7 +30,7 @@ importers:
         version: 2.0.4(@commitlint/cli@17.5.0)(@wayofdev/lint-staged-config@2.0.4)
       '@wayofdev/eslint-config-bases':
         specifier: ^2.0.7
-        version: 2.0.7(@wayofdev/lint-staged-config@2.0.4)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
+        version: 2.0.7(@wayofdev/lint-staged-config@2.0.6)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
       '@wayofdev/lint-staged-config':
         specifier: ^2.0.4
         version: 2.0.4(lint-staged@13.2.0)
@@ -124,7 +124,7 @@ importers:
         version: 18.0.11
       '@wayofdev/eslint-config-bases':
         specifier: 2.0.7
-        version: 2.0.7(@wayofdev/lint-staged-config@2.0.4)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
+        version: 2.0.7(@wayofdev/lint-staged-config@2.0.6)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
       es-check:
         specifier: 7.1.0
         version: 7.1.0
@@ -197,10 +197,10 @@ importers:
         version: 3.2.0(vite@4.2.1)
       '@wayofdev/eslint-config-bases':
         specifier: 2.0.7
-        version: 2.0.7(@wayofdev/lint-staged-config@2.0.4)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
+        version: 2.0.7(@wayofdev/lint-staged-config@2.0.6)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
       '@wayofdev/postcss-config':
         specifier: 2.0.5
-        version: 2.0.5(@wayofdev/lint-staged-config@2.0.4)(browserslist@4.21.5)(postcss@8.4.21)(sanitize.css@13.0.0)(tailwindcss@3.2.7)(ts-node@10.9.1)
+        version: 2.0.5(@wayofdev/lint-staged-config@2.0.6)(browserslist@4.21.5)(postcss@8.4.21)(sanitize.css@13.0.0)(tailwindcss@3.2.7)(ts-node@10.9.1)
       autoprefixer:
         specifier: ^10.4.14
         version: 10.4.14(postcss@8.4.21)
@@ -265,8 +265,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/google-tag-manager
       '@wayofdev/lint-staged-config':
-        specifier: 2.0.4
-        version: 2.0.4(lint-staged@13.2.0)
+        specifier: 2.0.6
+        version: 2.0.6(lint-staged@13.2.0)
       '@wayofdev/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -372,10 +372,10 @@ importers:
         version: link:../../packages/common-i18n
       '@wayofdev/eslint-config-bases':
         specifier: 2.0.7
-        version: 2.0.7(@wayofdev/lint-staged-config@2.0.4)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
+        version: 2.0.7(@wayofdev/lint-staged-config@2.0.6)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
       '@wayofdev/postcss-config':
         specifier: 2.0.5
-        version: 2.0.5(@wayofdev/lint-staged-config@2.0.4)(browserslist@4.21.5)(postcss@8.4.21)(sanitize.css@13.0.0)(tailwindcss@3.2.7)(ts-node@10.9.1)
+        version: 2.0.5(@wayofdev/lint-staged-config@2.0.6)(browserslist@4.21.5)(postcss@8.4.21)(sanitize.css@13.0.0)(tailwindcss@3.2.7)(ts-node@10.9.1)
       autoprefixer:
         specifier: 10.4.14
         version: 10.4.14(postcss@8.4.21)
@@ -462,7 +462,7 @@ importers:
         version: 18.15.10
       '@wayofdev/eslint-config-bases':
         specifier: 2.0.7
-        version: 2.0.7(@wayofdev/lint-staged-config@2.0.4)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
+        version: 2.0.7(@wayofdev/lint-staged-config@2.0.6)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
       eslint:
         specifier: 8.36.0
         version: 8.36.0
@@ -499,7 +499,7 @@ importers:
         version: 18.0.11
       '@wayofdev/eslint-config-bases':
         specifier: 2.0.7
-        version: 2.0.7(@wayofdev/lint-staged-config@2.0.4)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
+        version: 2.0.7(@wayofdev/lint-staged-config@2.0.6)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
 
   packages/google-tag-manager:
     dependencies:
@@ -524,7 +524,7 @@ importers:
         version: 18.0.11
       '@wayofdev/eslint-config-bases':
         specifier: 2.0.7
-        version: 2.0.7(@wayofdev/lint-staged-config@2.0.4)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
+        version: 2.0.7(@wayofdev/lint-staged-config@2.0.6)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
 
   packages/ui:
     dependencies:
@@ -579,13 +579,13 @@ importers:
         version: 18.0.0
       '@wayofdev/eslint-config-bases':
         specifier: 2.0.7
-        version: 2.0.7(@wayofdev/lint-staged-config@2.0.4)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
+        version: 2.0.7(@wayofdev/lint-staged-config@2.0.6)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2)
       '@wayofdev/lint-staged-config':
-        specifier: 2.0.4
-        version: 2.0.4(lint-staged@13.2.0)
+        specifier: 2.0.6
+        version: 2.0.6(lint-staged@13.2.0)
       '@wayofdev/postcss-config':
         specifier: 2.0.5
-        version: 2.0.5(@wayofdev/lint-staged-config@2.0.4)(browserslist@4.21.5)(postcss@8.4.21)(sanitize.css@13.0.0)(tailwindcss@3.2.7)(ts-node@10.9.1)
+        version: 2.0.5(@wayofdev/lint-staged-config@2.0.6)(browserslist@4.21.5)(postcss@8.4.21)(sanitize.css@13.0.0)(tailwindcss@3.2.7)(ts-node@10.9.1)
       eslint:
         specifier: 8.36.0
         version: 8.36.0
@@ -5840,7 +5840,7 @@ packages:
       '@wayofdev/lint-staged-config': 2.0.4(lint-staged@13.2.0)
     dev: true
 
-  /@wayofdev/eslint-config-bases@2.0.7(@wayofdev/lint-staged-config@2.0.4)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2):
+  /@wayofdev/eslint-config-bases@2.0.7(@wayofdev/lint-staged-config@2.0.6)(eslint@8.36.0)(jest@29.5.0)(prettier@2.8.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)(typescript@5.0.2):
     resolution: {integrity: sha512-zTDgfLkIohEHrYCfUnDNELJXdLBtG7bCLcdfqjI6oi7gpywFNuObBhChbswK/hN9s7xsDtdXgjL+ISMY1Oz3UA==}
     peerDependencies:
       '@graphql-eslint/eslint-plugin': 3.16.1
@@ -5876,7 +5876,7 @@ packages:
       '@testing-library/react': 14.0.0(react-dom@18.2.0)(react@18.2.0)
       '@typescript-eslint/eslint-plugin': 5.56.0(@typescript-eslint/parser@5.56.0)(eslint@8.36.0)(typescript@5.0.2)
       '@typescript-eslint/parser': 5.56.0(eslint@8.36.0)(typescript@5.0.2)
-      '@wayofdev/lint-staged-config': 2.0.4(lint-staged@13.2.0)
+      '@wayofdev/lint-staged-config': 2.0.6(lint-staged@13.2.0)
       eslint: 8.36.0
       eslint-config-prettier: 8.8.0(eslint@8.36.0)
       eslint-import-resolver-typescript: 3.5.3(eslint-plugin-import@2.27.5)(eslint@8.36.0)
@@ -5914,6 +5914,14 @@ packages:
       lint-staged: '>= 13'
     dependencies:
       lint-staged: 13.2.0
+    dev: true
+
+  /@wayofdev/lint-staged-config@2.0.6(lint-staged@13.2.0):
+    resolution: {integrity: sha512-mWFRmHuZU5Eit515YaDJbU06LQy3DlktFRxCotGM0CaUmWEqaKN0it/+pVrt/KliaSpVfMUe5/0Ne2rRS7Ciug==}
+    peerDependencies:
+      lint-staged: '>= 13'
+    dependencies:
+      lint-staged: 13.2.0
 
   /@wayofdev/markdownlint-config@2.0.3(@wayofdev/lint-staged-config@2.0.4)(markdownlint@0.28.0):
     resolution: {integrity: sha512-9qASKcmu0KnDJHZFnP6SQRLY11g47E089800Th/1z7Wn8U6VBk1BbVsKMWl9pWn5wbtMj9kYoGBFUm1x+ZPrZQ==}
@@ -5926,7 +5934,7 @@ packages:
       markdownlint-cli: 0.33.0
     dev: true
 
-  /@wayofdev/postcss-config@2.0.5(@wayofdev/lint-staged-config@2.0.4)(browserslist@4.21.5)(postcss@8.4.21)(sanitize.css@13.0.0)(tailwindcss@3.2.7)(ts-node@10.9.1):
+  /@wayofdev/postcss-config@2.0.5(@wayofdev/lint-staged-config@2.0.6)(browserslist@4.21.5)(postcss@8.4.21)(sanitize.css@13.0.0)(tailwindcss@3.2.7)(ts-node@10.9.1):
     resolution: {integrity: sha512-aJ9SrrOsY8m70cgxsj6J/J4WKc+19Z9MZrcDt0z/+w9xe6Az2wIMtwqzKKa/5HREUP1VfaSmbB7dCpzUrbf/9g==}
     peerDependencies:
       '@wayofdev/lint-staged-config': ^2.0.4
@@ -5934,7 +5942,7 @@ packages:
       sanitize.css: '>= 13'
       tailwindcss: '>= 3'
     dependencies:
-      '@wayofdev/lint-staged-config': 2.0.4(lint-staged@13.2.0)
+      '@wayofdev/lint-staged-config': 2.0.6(lint-staged@13.2.0)
       autoprefixer: 10.4.14(postcss@8.4.21)
       postcss: 8.4.21
       postcss-100vh-fix: 1.0.2(postcss@8.4.21)
