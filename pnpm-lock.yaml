@@ -251,7 +251,7 @@ importers:
         version: 2.0.16(react@18.2.0)
       '@hookform/resolvers':
         specifier: 3.0.0
-        version: 3.0.0(react-hook-form@7.43.8)
+        version: 3.0.0(react-hook-form@7.43.9)
       '@httpx/exception':
         specifier: 1.7.1
         version: 1.7.1
@@ -298,8 +298,8 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       react-hook-form:
-        specifier: 7.43.8
-        version: 7.43.8(react@18.2.0)
+        specifier: 7.43.9
+        version: 7.43.9(react@18.2.0)
       react-i18next:
         specifier: 12.2.0
         version: 12.2.0(i18next@22.4.13)(react-dom@18.2.0)(react@18.2.0)
@@ -2947,12 +2947,12 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@hookform/resolvers@3.0.0(react-hook-form@7.43.8):
+  /@hookform/resolvers@3.0.0(react-hook-form@7.43.9):
     resolution: {integrity: sha512-SQPefakODpyq25b/phHXDKCdRrEfPcCXV7B4nAa139wE1DxufYbbNAjeo0T04ZXBokRxZ+wD8iA1kkVMa3QwjQ==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
-      react-hook-form: 7.43.8(react@18.2.0)
+      react-hook-form: 7.43.9(react@18.2.0)
     dev: false
 
   /@html-eslint/eslint-plugin@0.17.1:
@@ -3326,8 +3326,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230327:
-    resolution: {integrity: sha512-r1wRhfRnMs4XmjuLDkdfj3+5mdyXdGa0/Hcv0g21Qf1Xuk3jchaZYG2PsRtAwKxGuAwwY7DV69jupMmh0T6aXw==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230329:
+    resolution: {integrity: sha512-oiL7mZpc4x+/v4yd1Dvsoh9PAbNMxh6aBKK/ybvsq3fc6QWLglhP3LiMChhnSm7t8W+LfKklbS5ySU7Gg1vFiw==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.9
@@ -5772,7 +5772,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230327
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230329
     dev: true
 
   /@types/gapi.client@1.0.5:
@@ -14874,8 +14874,8 @@ packages:
       react-is: 18.1.0
     dev: true
 
-  /react-hook-form@7.43.8(react@18.2.0):
-    resolution: {integrity: sha512-BQm+Ge5KjTk1EchDBRhdP8Pkb7MArO2jFF+UWYr3rtvh6197khi22uloLqlWeuY02ItlCzPunPsFt1/q9wQKnw==}
+  /react-hook-form@7.43.9(react@18.2.0):
+    resolution: {integrity: sha512-AUDN3Pz2NSeoxQ7Hs6OhQhDr6gtF9YRuutGDwPQqhSUAHJSgGl2VeY3qN19MG0SucpjgDiuMJ4iC5T5uB+eaNQ==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
