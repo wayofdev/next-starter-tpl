@@ -28,7 +28,7 @@
     "@wayofdev/lint-staged-config": "2.0.6",
     "@wayofdev/ui": "workspace:*",
     "clsx": "1.2.1",
-    "i18next": "22.4.13",
+    "i18next": "22.4.14",
     "next": "13.2.4",
     "next-auth": "4.21.0",
     "next-i18next": "13.2.2",
