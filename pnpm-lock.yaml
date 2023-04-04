@@ -117,8 +117,8 @@ importers:
         specifier: 18.15.11
         version: 18.15.11
       '@types/react':
-        specifier: 18.0.32
-        version: 18.0.32
+        specifier: 18.0.33
+        version: 18.0.33
       '@types/react-dom':
         specifier: 18.0.11
         version: 18.0.11
@@ -187,8 +187,8 @@ importers:
         specifier: ^0.5.3
         version: 0.5.3(tailwindcss@3.2.7)
       '@types/react':
-        specifier: 18.0.32
-        version: 18.0.32
+        specifier: 18.0.33
+        version: 18.0.33
       '@types/react-dom':
         specifier: 18.0.11
         version: 18.0.11
@@ -356,8 +356,8 @@ importers:
         specifier: 18.15.11
         version: 18.15.11
       '@types/react':
-        specifier: 18.0.32
-        version: 18.0.32
+        specifier: 18.0.33
+        version: 18.0.33
       '@types/react-dom':
         specifier: 18.0.11
         version: 18.0.11
@@ -492,8 +492,8 @@ importers:
         specifier: 0.0.24
         version: 0.0.24
       '@types/react':
-        specifier: 18.0.32
-        version: 18.0.32
+        specifier: 18.0.33
+        version: 18.0.33
       '@types/react-dom':
         specifier: 18.0.11
         version: 18.0.11
@@ -517,8 +517,8 @@ importers:
         specifier: 2.0.4
         version: 2.0.4
       '@types/react':
-        specifier: 18.0.32
-        version: 18.0.32
+        specifier: 18.0.33
+        version: 18.0.33
       '@types/react-dom':
         specifier: 18.0.11
         version: 18.0.11
@@ -569,8 +569,8 @@ importers:
         specifier: 18.15.11
         version: 18.15.11
       '@types/react':
-        specifier: 18.0.32
-        version: 18.0.32
+        specifier: 18.0.33
+        version: 18.0.33
       '@types/react-dom':
         specifier: 18.0.11
         version: 18.0.11
@@ -3649,7 +3649,7 @@ packages:
       react: '>=16'
     dependencies:
       '@types/mdx': 2.0.4
-      '@types/react': 18.0.32
+      '@types/react': 18.0.33
       react: 18.2.0
 
   /@napi-rs/simple-git-android-arm-eabi@0.1.8:
@@ -6167,7 +6167,7 @@ packages:
   /@types/hoist-non-react-statics@3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
-      '@types/react': 18.0.32
+      '@types/react': 18.0.33
       hoist-non-react-statics: 3.3.2
 
   /@types/is-ci@3.0.0:
@@ -6311,17 +6311,17 @@ packages:
   /@types/react-dom@18.0.11:
     resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
     dependencies:
-      '@types/react': 18.0.32
+      '@types/react': 18.0.33
     dev: true
 
   /@types/react-test-renderer@18.0.0:
     resolution: {integrity: sha512-C7/5FBJ3g3sqUahguGi03O79b8afNeSD6T8/GU50oQrJCU0bVCCGQHaGKUbg2Ce8VQEEqTw8/HiS6lXHHdgkdQ==}
     dependencies:
-      '@types/react': 18.0.32
+      '@types/react': 18.0.33
     dev: true
 
-  /@types/react@18.0.32:
-    resolution: {integrity: sha512-gYGXdtPQ9Cj0w2Fwqg5/ak6BcK3Z15YgjSqtyDizWUfx7mQ8drs0NBUzRRsAdoFVTO8kJ8L2TL8Skm7OFPnLUw==}
+  /@types/react@18.0.33:
+    resolution: {integrity: sha512-sHxzVxeanvQyQ1lr8NSHaj0kDzcNiGpILEVt69g9S31/7PfMvNCKLKcsHw4lYKjs3cGNJjXSP4mYzX43QlnjNA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
