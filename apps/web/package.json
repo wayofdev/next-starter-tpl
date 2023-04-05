@@ -20,7 +20,7 @@
   "dependencies": {
     "@fontsource/inter": "4.5.15",
     "@heroicons/react": "2.0.17",
-    "@hookform/resolvers": "3.0.0",
+    "@hookform/resolvers": "3.0.1",
     "@httpx/exception": "1.7.1",
     "@vercel/analytics": "0.1.11",
     "@wayofdev/facebook-pixel": "workspace:*",

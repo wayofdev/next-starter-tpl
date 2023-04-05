@@ -250,8 +250,8 @@ importers:
         specifier: 2.0.17
         version: 2.0.17(react@18.2.0)
       '@hookform/resolvers':
-        specifier: 3.0.0
-        version: 3.0.0(react-hook-form@7.43.9)
+        specifier: 3.0.1
+        version: 3.0.1(react-hook-form@7.43.9)
       '@httpx/exception':
         specifier: 1.7.1
         version: 1.7.1
@@ -3233,8 +3233,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@hookform/resolvers@3.0.0(react-hook-form@7.43.9):
-    resolution: {integrity: sha512-SQPefakODpyq25b/phHXDKCdRrEfPcCXV7B4nAa139wE1DxufYbbNAjeo0T04ZXBokRxZ+wD8iA1kkVMa3QwjQ==}
+  /@hookform/resolvers@3.0.1(react-hook-form@7.43.9):
+    resolution: {integrity: sha512-n5oOt0cLw9mQNW3/k9zWaPsNWQcc0k6Jpc7XUrg2Q/AqqsHp3IVa1juqHCxczXI6uXHBa69ILc4pdtsRGyuzsw==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
@@ -3612,8 +3612,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230329:
-    resolution: {integrity: sha512-oiL7mZpc4x+/v4yd1Dvsoh9PAbNMxh6aBKK/ybvsq3fc6QWLglhP3LiMChhnSm7t8W+LfKklbS5ySU7Gg1vFiw==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230403:
+    resolution: {integrity: sha512-bHNYysY3zVvTRBfirWLm34lbQWrfPwWm8gJSFuxScSq/BgKQMuDpB/DX4x3oeC0hQpuV6HtNOGmYj57arEuGzg==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.9
@@ -6138,7 +6138,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230329
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230403
     dev: true
 
   /@types/gapi.client@1.0.5:
