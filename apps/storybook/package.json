@@ -25,7 +25,7 @@
     "@storybook/blocks": "7.0.5",
     "@storybook/cli": "^7.0.0-rc.5",
     "@storybook/react": "7.0.5",
-    "@storybook/react-vite": "7.0.4",
+    "@storybook/react-vite": "7.0.5",
     "@storybook/testing-library": "0.1.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
