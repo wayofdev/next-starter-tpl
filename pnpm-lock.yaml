@@ -280,8 +280,8 @@ importers:
         specifier: 13.3.0
         version: 13.3.0(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)
       next-auth:
-        specifier: 4.22.0
-        version: 4.22.0(next@13.3.0)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 4.22.1
+        version: 4.22.1(next@13.3.0)(react-dom@18.2.0)(react@18.2.0)
       next-i18next:
         specifier: 13.2.2
         version: 13.2.2(i18next@22.4.14)(next@13.3.0)(react-i18next@12.2.0)(react@18.2.0)
@@ -13328,8 +13328,8 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next-auth@4.22.0(next@13.3.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-08+kjnDoE7aQ52O996x6cwA3ffc2CbHIkrCgLYhbE+aDIJBKI0oA9UbIEIe19/+ODYJgpAHHOtJx4izmsgaVag==}
+  /next-auth@4.22.1(next@13.3.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-NTR3f6W7/AWXKw8GSsgSyQcDW6jkslZLH8AiZa5PQ09w1kR8uHtR9rez/E9gAq/o17+p0JYHE8QjF3RoniiObA==}
     peerDependencies:
       next: ^12.2.5 || ^13
       nodemailer: ^6.6.5
