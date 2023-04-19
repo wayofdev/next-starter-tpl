@@ -350,8 +350,8 @@ importers:
         specifier: 3.3.1
         version: 3.3.1
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.15.11
         version: 18.15.11
@@ -455,8 +455,8 @@ importers:
   packages/common-i18n:
     devDependencies:
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.15.11
         version: 18.15.11
@@ -563,8 +563,8 @@ importers:
         specifier: 14.0.0
         version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.15.11
         version: 18.15.11
@@ -3608,8 +3608,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230412:
-    resolution: {integrity: sha512-Bs/zzrSAL/uWaPMfqj6GirHglEWS+luSGvvc51H4kDFAMDdz+qYziGz5l0ENhnyvAtQQYLjRMxP45JbaR8Xjkg==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230417:
+    resolution: {integrity: sha512-nhlBRzprEvL+lOJ/HU6aT1bl56DxjonqAyDPYredVfjTT1G/bxHEJOt1NGKTns1Y5wip+xxRma9tP3wI6Yz74A==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.9
@@ -6098,7 +6098,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230412
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230417
     dev: true
 
   /@types/gapi.client@1.0.5:
@@ -6158,8 +6158,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest@29.5.0:
-    resolution: {integrity: sha512-3Emr5VOl/aoBwnWcH/EFQvlSAmjV+XtV9GGu5mwdYew5vhQh0IUZx/60x0TzHDu09Bi7HMx10t/namdJw5QIcg==}
+  /@types/jest@29.5.1:
+    resolution: {integrity: sha512-tEuVcHrpaixS36w7hpsfLBLpjtMRJUE09/MHXn923LOVojDwyC14cWcfc0rDs0VEfUyYmt/+iX1kxxp+gZMcaQ==}
     dependencies:
       expect: 29.5.0
       pretty-format: 29.5.0
@@ -6322,7 +6322,7 @@ packages:
   /@types/testing-library__jest-dom@5.14.5:
     resolution: {integrity: sha512-SBwbxYoyPIvxHbeHxTZX2Pe/74F/tX2/D3mMvzabdeJ25bBojfW0TyB8BHrbq/9zaaKICJZjLP+8r6AeZMFCuQ==}
     dependencies:
-      '@types/jest': 29.5.0
+      '@types/jest': 29.5.1
     dev: true
 
   /@types/tough-cookie@4.0.2:
