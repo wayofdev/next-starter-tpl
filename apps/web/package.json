@@ -56,7 +56,7 @@
     "@types/facebook-pixel": "0.0.24",
     "@types/hoist-non-react-statics": "3.3.1",
     "@types/jest": "29.5.1",
-    "@types/node": "18.16.1",
+    "@types/node": "18.16.2",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
     "@types/react-test-renderer": "18.0.0",
