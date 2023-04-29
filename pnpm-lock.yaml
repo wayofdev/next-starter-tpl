@@ -253,8 +253,8 @@ importers:
         specifier: 3.1.0
         version: 3.1.0(react-hook-form@7.43.9)
       '@httpx/exception':
-        specifier: 1.7.1
-        version: 1.7.1
+        specifier: 1.7.2
+        version: 1.7.2
       '@vercel/analytics':
         specifier: 1.0.0
         version: 1.0.0(react@18.2.0)
@@ -3248,8 +3248,8 @@ packages:
       es-html-parser: 0.0.8
     dev: true
 
-  /@httpx/exception@1.7.1:
-    resolution: {integrity: sha512-ZcNhWMTlUcl7q7Lpt/1LIJgvXzL9ve2OCp+B7+ZFm27aVJycygKUElL8dQ3Lz5uxxSvicBhassFt6DPbN3eaOA==}
+  /@httpx/exception@1.7.2:
+    resolution: {integrity: sha512-2KXuXQCA9c4x6ZkErbwhO+2ou7Iggc26eTqS/gwfibLynorUYCnRXBqKBAIGchfO53i4dligv5qkP340q9qVxQ==}
     engines: {node: '>=14.16'}
     dev: false
 
@@ -3608,8 +3608,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230424:
-    resolution: {integrity: sha512-ru3lCxEeUlRwGcyeNePcmWK5GRPjk8aQa4967k2cqYpkhXZL7A+fL3brdPWnI1FVJG8TAiqZs/IodLhyIUFfjw==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230426:
+    resolution: {integrity: sha512-TqL59YWffuAiqdmax7L+kbisZmEuVOeBFD9rYSOoQABoJ7p/EStbz4ma3twfPkblGg5gHaYWkYuAu2PHXyQfPw==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.9
@@ -6196,7 +6196,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230424
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230426
     dev: true
 
   /@types/gapi.client@1.0.5:
