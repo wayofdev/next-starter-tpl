@@ -21,7 +21,7 @@
     "@fontsource/inter": "4.5.15",
     "@heroicons/react": "2.0.17",
     "@hookform/resolvers": "3.1.0",
-    "@httpx/exception": "1.7.1",
+    "@httpx/exception": "1.7.2",
     "@vercel/analytics": "1.0.0",
     "@wayofdev/facebook-pixel": "workspace:*",
     "@wayofdev/google-tag-manager": "workspace:*",
