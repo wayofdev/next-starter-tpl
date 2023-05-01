@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "13.3.3",
-    "@next/env": "13.3.3",
+    "@next/env": "13.3.4",
     "@playwright/test": "1.33.0",
     "@sentry/nextjs": "7.45.0",
     "@size-limit/file": "8.2.4",

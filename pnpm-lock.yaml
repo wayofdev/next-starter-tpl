@@ -290,7 +290,7 @@ importers:
         version: 6.0.0(next@13.3.3)(react-dom@18.2.0)(react@18.2.0)
       next-sitemap:
         specifier: 4.0.8
-        version: 4.0.8(@next/env@13.3.3)(next@13.3.3)
+        version: 4.0.8(@next/env@13.3.4)(next@13.3.3)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -314,8 +314,8 @@ importers:
         specifier: 13.3.3
         version: 13.3.3
       '@next/env':
-        specifier: 13.3.3
-        version: 13.3.3
+        specifier: 13.3.4
+        version: 13.3.4
       '@playwright/test':
         specifier: 1.33.0
         version: 1.33.0
@@ -3782,6 +3782,9 @@ packages:
 
   /@next/env@13.3.3:
     resolution: {integrity: sha512-c6HS6kzp8pGd+GX9EgECA/GGSO2ZO+4+RNkrWz+T+I15Ia6f013glAJJuQ/wNYAua63PlB1yjdAe7PuYqMw4Ag==}
+
+  /@next/env@13.3.4:
+    resolution: {integrity: sha512-oTK/wRV2qga86m/4VdrR1+/56UA6U1Qv3sIgowB+bZjahniZLEG5BmmQjfoGv7ZuLXBZ8Eec6hkL9BqJcrEL2g==}
 
   /@next/eslint-plugin-next@13.3.3:
     resolution: {integrity: sha512-V6owykM046RvW3eTt0XDpBQTwjDuW4dhqNePAVOKZDUWCVVZYRzD/9i07vqvDkPVjsiAgiiJyxb5Zyd425KpFw==}
@@ -13492,7 +13495,7 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /next-sitemap@4.0.8(@next/env@13.3.3)(next@13.3.3):
+  /next-sitemap@4.0.8(@next/env@13.3.4)(next@13.3.3):
     resolution: {integrity: sha512-2wbTQr71zMjWjfVbSvStfR9MunixzMLhYtVinVpf7j5uozcXFoMw3rvGVRMRVbzhStd3Mm43FbuV4o2gbFx66Q==}
     engines: {node: '>=14.18'}
     hasBin: true
@@ -13501,7 +13504,7 @@ packages:
       next: '*'
     dependencies:
       '@corex/deepmerge': 4.0.43
-      '@next/env': 13.3.3
+      '@next/env': 13.3.4
       minimist: 1.2.8
       next: 13.3.3(@babel/core@7.21.5)(react-dom@18.2.0)(react@18.2.0)
     dev: false
