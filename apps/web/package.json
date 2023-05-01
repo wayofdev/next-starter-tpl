@@ -29,7 +29,7 @@
     "@wayofdev/ui": "workspace:*",
     "clsx": "1.2.1",
     "i18next": "22.4.15",
-    "next": "13.3.3",
+    "next": "13.3.4",
     "next-auth": "4.22.1",
     "next-i18next": "13.2.2",
     "next-seo": "6.0.0",
@@ -42,7 +42,7 @@
     "zod": "3.21.4"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "13.3.3",
+    "@next/bundle-analyzer": "13.3.4",
     "@next/env": "13.3.4",
     "@playwright/test": "1.33.0",
     "@sentry/nextjs": "7.45.0",
