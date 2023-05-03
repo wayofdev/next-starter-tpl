@@ -12,7 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@vercel/analytics": "1.0.0",
+    "@vercel/analytics": "1.0.1",
     "@wayofdev/ui": "workspace:*",
     "next": "13.3.4",
     "nextra": "2.4.2",
