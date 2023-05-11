@@ -101,11 +101,11 @@ importers:
         specifier: 13.4.1
         version: 13.4.1(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
       nextra:
-        specifier: 2.5.1
-        version: 2.5.1(next@13.4.1)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 2.5.2
+        version: 2.5.2(next@13.4.1)(react-dom@18.2.0)(react@18.2.0)
       nextra-theme-docs:
-        specifier: 2.5.1
-        version: 2.5.1(next@13.4.1)(nextra@2.5.1)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 2.5.2
+        version: 2.5.2(next@13.4.1)(nextra@2.5.2)(react-dom@18.2.0)(react@18.2.0)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -3615,8 +3615,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230508:
-    resolution: {integrity: sha512-v6NcO+DYi8LBuEqfm/niunJxGvtH0k05WWzjLpknNOCGmpHxOZ6RXtUwYkOubTj2XMfqd32hK3uYCex3eadTrQ==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230510:
+    resolution: {integrity: sha512-hb4OG1AU9+ayLPtDMdqDvRouOChxoTYk01FPctl+fKKs4JJVJXPvfLAiLcF5grqbAxNjwUac2t/gygPkaG9LCA==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.9
@@ -6141,7 +6141,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230508
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230510
     dev: true
 
   /@types/gapi.client@1.0.5:
@@ -13674,11 +13674,11 @@ packages:
       - '@babel/core'
       - babel-plugin-macros
 
-  /nextra-theme-docs@2.5.1(next@13.4.1)(nextra@2.5.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-GtDHlvMFtsnxm6Wm2yvmeRGw+sFf2stcDzwAX8+HT+54TUrKUtnZu17I8OPdtcVBOpUxfpAaEHPKbDsPc9Pcaw==}
+  /nextra-theme-docs@2.5.2(next@13.4.1)(nextra@2.5.2)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-DLrAtMtlUx3y3QsHcnIHhkb8b/VUFSvU5Cgb0Tzm7VlngKJW8ftPg9IxgoRZouqgQvkvvxbMLTPgBw+8n0VZTw==}
     peerDependencies:
       next: '>=9.5.3'
-      nextra: 2.5.1
+      nextra: 2.5.2
       react: '>=16.13.1'
       react-dom: '>=16.13.1'
     dependencies:
@@ -13693,15 +13693,15 @@ packages:
       next: 13.4.1(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
       next-seo: 6.0.0(next@13.4.1)(react-dom@18.2.0)(react@18.2.0)
       next-themes: 0.2.1(next@13.4.1)(react-dom@18.2.0)(react@18.2.0)
-      nextra: 2.5.1(next@13.4.1)(react-dom@18.2.0)(react@18.2.0)
+      nextra: 2.5.2(next@13.4.1)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       scroll-into-view-if-needed: 3.0.10
       zod: 3.21.4
     dev: false
 
-  /nextra@2.5.1(next@13.4.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-/UO65BvXpyMcLdKGfzxzMPxUr5yuZ8qrrJGA3/lW6nNIxtlHsO3NdhA9Nkis0ia5GUZB2JXl0AhEmZ67oT9MVQ==}
+  /nextra@2.5.2(next@13.4.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-22kw8s2OShvA625cKi3P9JioUybL5hEcCn1txXyQh+Mn3jmQXlXdbzmuT4BdYRNWo5lGqmYwm2h73igXjbssRQ==}
     engines: {node: '>=16'}
     peerDependencies:
       next: '>=9.5.3'
