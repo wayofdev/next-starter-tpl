@@ -332,8 +332,8 @@ importers:
         specifier: 0.5.3
         version: 0.5.3(tailwindcss@3.2.7)
       '@testing-library/dom':
-        specifier: 9.2.0
-        version: 9.2.0
+        specifier: 9.3.0
+        version: 9.3.0
       '@testing-library/jest-dom':
         specifier: 5.16.5
         version: 5.16.5
@@ -342,7 +342,7 @@ importers:
         version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
       '@testing-library/user-event':
         specifier: 14.4.3
-        version: 14.4.3(@testing-library/dom@9.2.0)
+        version: 14.4.3(@testing-library/dom@9.3.0)
       '@types/facebook-pixel':
         specifier: 0.0.24
         version: 0.0.24
@@ -6214,8 +6214,8 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
-  /@testing-library/dom@9.2.0:
-    resolution: {integrity: sha512-xTEnpUKiV/bMyEsE5bT4oYA0x0Z/colMtxzUY8bKyPXBNLn/e0V4ZjBZkEhms0xE4pv9QsPfSRu9AWS4y5wGvA==}
+  /@testing-library/dom@9.3.0:
+    resolution: {integrity: sha512-Dffe68pGwI6WlLRYR2I0piIkyole9cSBH5jGQKCGMRpHW5RHCqAUaqc2Kv0tUyd4dU4DLPKhJIjyKOnjv4tuUw==}
     engines: {node: '>=14'}
     dependencies:
       '@babel/code-frame': 7.21.4
@@ -6251,7 +6251,7 @@ packages:
       react-dom: ^18.0.0
     dependencies:
       '@babel/runtime': 7.21.5
-      '@testing-library/dom': 9.2.0
+      '@testing-library/dom': 9.3.0
       '@types/react-dom': 18.2.4
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -6267,13 +6267,13 @@ packages:
       '@testing-library/dom': 8.20.0
     dev: true
 
-  /@testing-library/user-event@14.4.3(@testing-library/dom@9.2.0):
+  /@testing-library/user-event@14.4.3(@testing-library/dom@9.3.0):
     resolution: {integrity: sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
     dependencies:
-      '@testing-library/dom': 9.2.0
+      '@testing-library/dom': 9.3.0
     dev: true
 
   /@textlint/ast-node-types@12.6.1:
