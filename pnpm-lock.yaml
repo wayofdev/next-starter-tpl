@@ -223,8 +223,8 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(browserslist@4.21.5)(postcss@8.4.23)
       postcss-preset-env:
-        specifier: 8.3.2
-        version: 8.3.2(postcss@8.4.23)
+        specifier: 8.3.3
+        version: 8.3.3(postcss@8.4.23)
       postcss-reporter:
         specifier: 7.0.5
         version: 7.0.5(postcss@8.4.23)
@@ -422,8 +422,8 @@ importers:
         specifier: 15.1.0
         version: 15.1.0(postcss@8.4.23)
       postcss-preset-env:
-        specifier: 8.3.2
-        version: 8.3.2(postcss@8.4.23)
+        specifier: 8.3.3
+        version: 8.3.3(postcss@8.4.23)
       postcss-reporter:
         specifier: 7.0.5
         version: 7.0.5(postcss@8.4.23)
@@ -608,8 +608,8 @@ importers:
         specifier: 15.1.0
         version: 15.1.0(postcss@8.4.23)
       postcss-preset-env:
-        specifier: 8.3.2
-        version: 8.3.2(postcss@8.4.23)
+        specifier: 8.3.3
+        version: 8.3.3(postcss@8.4.23)
       postcss-reporter:
         specifier: 7.0.5
         version: 7.0.5(postcss@8.4.23)
@@ -2570,8 +2570,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /@csstools/postcss-is-pseudo-class@3.2.0(postcss@8.4.23):
-    resolution: {integrity: sha512-uooelBL99jMg8ZD6xy0Pj1hSalchWmplcin00eI+JHpv1jW2iwbi1cn2UnVsToM4JLwJSZFzTSWCgSpmlyhe3A==}
+  /@csstools/postcss-is-pseudo-class@3.2.1(postcss@8.4.23):
+    resolution: {integrity: sha512-AtANdV34kJl04Al62is3eQRk/BfOfyAvEmRJvbt+nx5REqImLC+2XhuE6skgkcPli1l8ONS67wS+l1sBzySc3Q==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
@@ -6864,7 +6864,7 @@ packages:
       postcss-cli: 10.1.0(postcss@8.4.23)(ts-node@10.9.1)
       postcss-flexbugs-fixes: 5.0.2(postcss@8.4.23)
       postcss-normalize: 10.0.1(browserslist@4.21.5)(postcss@8.4.23)
-      postcss-preset-env: 8.3.2(postcss@8.4.23)
+      postcss-preset-env: 8.3.3(postcss@8.4.23)
       postcss-reporter: 7.0.5(postcss@8.4.23)
       sanitize.css: 13.0.0
       tailwindcss: 3.2.7(postcss@8.4.23)(ts-node@10.9.1)
@@ -14913,8 +14913,8 @@ packages:
       webpack: 5.82.1(esbuild@0.17.19)
     dev: true
 
-  /postcss-logical@6.1.0(postcss@8.4.23):
-    resolution: {integrity: sha512-qb1+LpClhYjxac8SfOcWotnY3unKZesDqIOm+jnGt8rTl7xaIWpE2bPGZHxflOip1E/4ETo79qlJyRL3yrHn1g==}
+  /postcss-logical@6.2.0(postcss@8.4.23):
+    resolution: {integrity: sha512-aqlfKGaY0nnbgI9jwUikp4gJKBqcH5noU/EdnIVceghaaDPYhZuyJVxlvWNy55tlTG5tunRKCTAX9yljLiFgmw==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
@@ -15247,8 +15247,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /postcss-preset-env@8.3.2(postcss@8.4.23):
-    resolution: {integrity: sha512-VSAOsfxTXzO/gX5QljC8x8hN3ABbD9iqqLgqHqohBdNI5FhJptwpl96kpu+kYvvzK7BWwaHYou0IeYrp+NqmcQ==}
+  /postcss-preset-env@8.3.3(postcss@8.4.23):
+    resolution: {integrity: sha512-/4X0ulIPIafn+2jCkwgnY1vmjTgzdXgvOnKw1ZWVF8H8fEplwattJxg28fGvL73poTOKo2wF/sHEM3SwyTz2kw==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
@@ -15260,7 +15260,7 @@ packages:
       '@csstools/postcss-gradients-interpolation-method': 3.0.4(postcss@8.4.23)
       '@csstools/postcss-hwb-function': 2.2.1(postcss@8.4.23)
       '@csstools/postcss-ic-unit': 2.0.2(postcss@8.4.23)
-      '@csstools/postcss-is-pseudo-class': 3.2.0(postcss@8.4.23)
+      '@csstools/postcss-is-pseudo-class': 3.2.1(postcss@8.4.23)
       '@csstools/postcss-logical-float-and-clear': 1.0.1(postcss@8.4.23)
       '@csstools/postcss-logical-resize': 1.0.1(postcss@8.4.23)
       '@csstools/postcss-logical-viewport-units': 1.0.3(postcss@8.4.23)
@@ -15299,7 +15299,7 @@ packages:
       postcss-image-set-function: 5.0.2(postcss@8.4.23)
       postcss-initial: 4.0.1(postcss@8.4.23)
       postcss-lab-function: 5.2.1(postcss@8.4.23)
-      postcss-logical: 6.1.0(postcss@8.4.23)
+      postcss-logical: 6.2.0(postcss@8.4.23)
       postcss-nesting: 11.2.2(postcss@8.4.23)
       postcss-opacity-percentage: 2.0.0(postcss@8.4.23)
       postcss-overflow-shorthand: 4.0.1(postcss@8.4.23)
