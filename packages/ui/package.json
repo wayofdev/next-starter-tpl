@@ -45,7 +45,7 @@
     "postcss-100vh-fix": "1.0.2",
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-import": "15.1.0",
-    "postcss-preset-env": "8.4.0",
+    "postcss-preset-env": "8.4.1",
     "postcss-reporter": "7.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
