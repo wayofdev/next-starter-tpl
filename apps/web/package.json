@@ -60,7 +60,7 @@
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "@types/react-test-renderer": "18.0.0",
-    "@types/testing-library__jest-dom": "5.14.5",
+    "@types/testing-library__jest-dom": "5.14.6",
     "@wayofdev/common-i18n": "workspace:*",
     "@wayofdev/eslint-config-bases": "2.0.7",
     "@wayofdev/postcss-config": "2.0.8",
