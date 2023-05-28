@@ -380,8 +380,8 @@ importers:
         specifier: 10.4.14
         version: 10.4.14(postcss@8.4.23)
       css-loader:
-        specifier: 6.7.4
-        version: 6.7.4(webpack@5.83.1)
+        specifier: 6.8.0
+        version: 6.8.0(webpack@5.83.1)
       cssnano:
         specifier: 6.0.1
         version: 6.0.1(postcss@8.4.23)
@@ -8446,8 +8446,8 @@ packages:
       webpack: 5.83.1(esbuild@0.17.19)
     dev: true
 
-  /css-loader@6.7.4(webpack@5.83.1):
-    resolution: {integrity: sha512-0Y5uHtK5BswfaGJ+jrO+4pPg1msFBc0pwPIE1VqfpmVn6YbDfYfXMj8rfd7nt+4goAhJueO+H/I40VWJfcP1mQ==}
+  /css-loader@6.8.0(webpack@5.83.1):
+    resolution: {integrity: sha512-oBmqObfEW1tAmLoKjxz8wlUxwvnea21GyplYqZUuMpeNC5I1EW0S0y3/pk0adzUW8oxMlhbA1X2fgOpRxDNDqA==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
       webpack: ^5.0.0
@@ -8455,7 +8455,7 @@ packages:
       icss-utils: 5.1.0(postcss@8.4.23)
       postcss: 8.4.23
       postcss-modules-extract-imports: 3.0.0(postcss@8.4.23)
-      postcss-modules-local-by-default: 4.0.1(postcss@8.4.23)
+      postcss-modules-local-by-default: 4.0.3(postcss@8.4.23)
       postcss-modules-scope: 3.0.0(postcss@8.4.23)
       postcss-modules-values: 4.0.0(postcss@8.4.23)
       postcss-value-parser: 4.2.0
@@ -15060,8 +15060,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /postcss-modules-local-by-default@4.0.1(postcss@8.4.23):
-    resolution: {integrity: sha512-Zr/dB+IlXaEqdoslLHhhqecwj73vc3rDmOpsBNBEVk7P2aqAlz+Ijy0fFbU5Ie9PtreDOIgGa9MsLWakVGl+fA==}
+  /postcss-modules-local-by-default@4.0.3(postcss@8.4.23):
+    resolution: {integrity: sha512-2/u2zraspoACtrbFRnTijMiQtb4GW4BvatjaG/bCjYQo8kLTdevCUlwuBHx2sCnSyrI3x3qj4ZK1j5LQBgzmwA==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
       postcss: ^8.1.0
