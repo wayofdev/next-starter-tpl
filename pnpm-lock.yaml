@@ -380,8 +380,8 @@ importers:
         specifier: 10.4.14
         version: 10.4.14(postcss@8.4.23)
       css-loader:
-        specifier: 6.8.0
-        version: 6.8.0(webpack@5.83.1)
+        specifier: 6.8.1
+        version: 6.8.1(webpack@5.83.1)
       cssnano:
         specifier: 6.0.1
         version: 6.0.1(postcss@8.4.23)
@@ -8446,8 +8446,8 @@ packages:
       webpack: 5.83.1(esbuild@0.17.19)
     dev: true
 
-  /css-loader@6.8.0(webpack@5.83.1):
-    resolution: {integrity: sha512-oBmqObfEW1tAmLoKjxz8wlUxwvnea21GyplYqZUuMpeNC5I1EW0S0y3/pk0adzUW8oxMlhbA1X2fgOpRxDNDqA==}
+  /css-loader@6.8.1(webpack@5.83.1):
+    resolution: {integrity: sha512-xDAXtEVGlD0gJ07iclwWVkLoZOpEvAWaSyf6W18S2pOC//K8+qUDIx8IIT3D+HjnmkJPQeesOPv5aiUaJsCM2g==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
       webpack: ^5.0.0
