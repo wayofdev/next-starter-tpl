@@ -255,7 +255,7 @@ importers:
         version: 2.0.18(react@18.2.0)
       '@hookform/resolvers':
         specifier: 3.1.0
-        version: 3.1.0(react-hook-form@7.44.1)
+        version: 3.1.0(react-hook-form@7.44.2)
       '@httpx/exception':
         specifier: 1.7.2
         version: 1.7.2
@@ -302,8 +302,8 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       react-hook-form:
-        specifier: 7.44.1
-        version: 7.44.1(react@18.2.0)
+        specifier: 7.44.2
+        version: 7.44.2(react@18.2.0)
       react-i18next:
         specifier: 12.3.1
         version: 12.3.1(i18next@22.5.0)(react-dom@18.2.0)(react@18.2.0)
@@ -3240,12 +3240,12 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@hookform/resolvers@3.1.0(react-hook-form@7.44.1):
+  /@hookform/resolvers@3.1.0(react-hook-form@7.44.2):
     resolution: {integrity: sha512-z0A8K+Nxq+f83Whm/ajlwE6VtQlp/yPHZnXw7XWVPIGm1Vx0QV8KThU3BpbBRfAZ7/dYqCKKBNnQh85BkmBKkA==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
-      react-hook-form: 7.44.1(react@18.2.0)
+      react-hook-form: 7.44.2(react@18.2.0)
     dev: false
 
   /@html-eslint/eslint-plugin@0.17.1:
@@ -15831,8 +15831,8 @@ packages:
       react-is: 18.1.0
     dev: true
 
-  /react-hook-form@7.44.1(react@18.2.0):
-    resolution: {integrity: sha512-ZVmDuQQCq6agpVE2eoGjH3ZMDgo/aFV4JVobUQGOQ0/tgfcY/WY30mBSVnxmFOpzS+iSqD2ax7hw9Thg5F931A==}
+  /react-hook-form@7.44.2(react@18.2.0):
+    resolution: {integrity: sha512-IyihmIbCwzDI/iqlecTRa7+4BCnzNx40upSlGvIU7qwENhTf6APatm4bmL9ANtWKPYlD67SIlxfls7GwCUe+Lg==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
