@@ -40,7 +40,7 @@ importers:
         version: 2.0.7(lint-staged@13.2.0)
       '@wayofdev/markdownlint-config':
         specifier: ^2.0.3
-        version: 2.0.3(@wayofdev/lint-staged-config@2.0.7)(markdownlint@0.28.0)
+        version: 2.0.3(@wayofdev/lint-staged-config@2.0.7)(markdownlint@0.29.0)
       '@wayofdev/secretlint-config':
         specifier: ^2.0.5
         version: 2.0.5(@wayofdev/lint-staged-config@2.0.7)(secretlint@6.2.3)
@@ -63,8 +63,8 @@ importers:
         specifier: ^13.2.0
         version: 13.2.0
       markdownlint:
-        specifier: ^0.28.0
-        version: 0.28.0
+        specifier: ^0.29.0
+        version: 0.29.0
       markdownlint-cli:
         specifier: ^0.34.0
         version: 0.34.0
@@ -7777,14 +7777,14 @@ packages:
     dependencies:
       lint-staged: 13.2.0
 
-  /@wayofdev/markdownlint-config@2.0.3(@wayofdev/lint-staged-config@2.0.7)(markdownlint@0.28.0):
+  /@wayofdev/markdownlint-config@2.0.3(@wayofdev/lint-staged-config@2.0.7)(markdownlint@0.29.0):
     resolution: {integrity: sha512-9qASKcmu0KnDJHZFnP6SQRLY11g47E089800Th/1z7Wn8U6VBk1BbVsKMWl9pWn5wbtMj9kYoGBFUm1x+ZPrZQ==}
     peerDependencies:
       '@wayofdev/lint-staged-config': ^2.0.4
       markdownlint: '>= 0'
     dependencies:
       '@wayofdev/lint-staged-config': 2.0.7(lint-staged@13.2.0)
-      markdownlint: 0.28.0
+      markdownlint: 0.29.0
       markdownlint-cli: 0.33.0
     dev: true
 
@@ -13783,19 +13783,16 @@ packages:
     engines: {node: '>=14.18.0'}
     dev: true
 
+  /markdownlint-micromark@0.1.5:
+    resolution: {integrity: sha512-HvofNU4QCvfUCWnocQP1IAWaqop5wpWrB0mKB6SSh0fcpV0PdmQNS6tdUuFew1utpYlUvYYzz84oDkrD76GB9A==}
+    engines: {node: '>=16'}
+    dev: true
+
   /markdownlint@0.27.0:
     resolution: {integrity: sha512-HtfVr/hzJJmE0C198F99JLaeada+646B5SaG2pVoEakLFI6iRGsvMqrnnrflq8hm1zQgwskEgqSnhDW11JBp0w==}
     engines: {node: '>=14.18.0'}
     dependencies:
       markdown-it: 13.0.1
-    dev: true
-
-  /markdownlint@0.28.0:
-    resolution: {integrity: sha512-7Gt/SzjE5420Dr93wZgTLlgfcWj5vxAWJtvN7bBfN35ytQwsVDEW46L+NswzeCVhZSFdWRgLdEwQo3lMavUjvQ==}
-    engines: {node: '>=14.18.0'}
-    dependencies:
-      markdown-it: 13.0.1
-      markdownlint-micromark: 0.1.2
     dev: true
 
   /markdownlint@0.28.2:
@@ -13804,6 +13801,14 @@ packages:
     dependencies:
       markdown-it: 13.0.1
       markdownlint-micromark: 0.1.2
+    dev: true
+
+  /markdownlint@0.29.0:
+    resolution: {integrity: sha512-ASAzqpODstu/Qsk0xW5BPgWnK/qjpBQ4e7IpsSvvFXcfYIjanLTdwFRJK1SIEEh0fGSMKXcJf/qhaZYHyME0wA==}
+    engines: {node: '>=16'}
+    dependencies:
+      markdown-it: 13.0.1
+      markdownlint-micromark: 0.1.5
     dev: true
 
   /match-sorter@6.3.1:
