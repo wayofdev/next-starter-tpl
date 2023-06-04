@@ -287,8 +287,8 @@ importers:
         specifier: 4.22.1
         version: 4.22.1(next@13.4.4)(react-dom@18.2.0)(react@18.2.0)
       next-i18next:
-        specifier: 13.2.2
-        version: 13.2.2(i18next@22.5.0)(next@13.4.4)(react-i18next@12.3.1)(react@18.2.0)
+        specifier: 13.3.0
+        version: 13.3.0(i18next@22.5.0)(next@13.4.4)(react-i18next@12.3.1)(react@18.2.0)
       next-seo:
         specifier: 6.0.0
         version: 6.0.0(next@13.4.4)(react-dom@18.2.0)(react@18.2.0)
@@ -15046,8 +15046,8 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /next-i18next@13.2.2(i18next@22.5.0)(next@13.4.4)(react-i18next@12.3.1)(react@18.2.0):
-    resolution: {integrity: sha512-t0WU6K+HJoq2nVQ0n6OiiEZja9GyMqtDSU74FmOafgk4ljns+iZ18bsNJiI8rOUXfFfkW96ea1N7D5kbMyT+PA==}
+  /next-i18next@13.3.0(i18next@22.5.0)(next@13.4.4)(react-i18next@12.3.1)(react@18.2.0):
+    resolution: {integrity: sha512-X4kgi51BCOoGdKbv87eZ8OU7ICQDg5IP+T5fNjqDY3os9ea0OKTY4YpAiVFiwcI9XimcUmSPbKO4a9jFUyYSgg==}
     engines: {node: '>=14'}
     peerDependencies:
       i18next: ^22.0.6
