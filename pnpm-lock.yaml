@@ -321,8 +321,8 @@ importers:
         specifier: 13.4.4
         version: 13.4.4
       '@playwright/test':
-        specifier: 1.34.3
-        version: 1.34.3
+        specifier: 1.35.0
+        version: 1.35.0
       '@sentry/nextjs':
         specifier: 7.45.0
         version: 7.45.0(next@13.4.4)(react@18.2.0)(webpack@5.85.0)
@@ -4706,8 +4706,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230605:
-    resolution: {integrity: sha512-nZ2U1nnmWmsaowt23AKE4PuO6KOkmTumAHFufF+gd1Du9UFFe2Oz1NZ3LcPdwc8zkGxnO9OPXaBMZyDv3MvU5A==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230607:
+    resolution: {integrity: sha512-V0fsgOfuTuri8UVycyXSX7vWJ9YP0rYNdmrHkHrVCBqXukkkcBmp808qtdfrqf8zYChzRHljfiOvCdewo066xg==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.9
@@ -5029,13 +5029,13 @@ packages:
       tslib: 2.5.3
     dev: true
 
-  /@playwright/test@1.34.3:
-    resolution: {integrity: sha512-zPLef6w9P6T/iT6XDYG3mvGOqOyb6eHaV9XtkunYs0+OzxBtrPAAaHotc0X+PJ00WPPnLfFBTl7mf45Mn8DBmw==}
-    engines: {node: '>=14'}
+  /@playwright/test@1.35.0:
+    resolution: {integrity: sha512-6qXdd5edCBynOwsz1YcNfgX8tNWeuS9fxy5o59D0rvHXxRtjXRebB4gE4vFVfEMXl/z8zTnAzfOs7aQDEs8G4Q==}
+    engines: {node: '>=16'}
     hasBin: true
     dependencies:
       '@types/node': 18.16.16
-      playwright-core: 1.34.3
+      playwright-core: 1.35.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -7246,7 +7246,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230605
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230607
     dev: true
 
   /@types/gapi.client@1.0.5:
@@ -15941,9 +15941,9 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /playwright-core@1.34.3:
-    resolution: {integrity: sha512-2pWd6G7OHKemc5x1r1rp8aQcpvDh7goMBZlJv6Co5vCNLVcQJdhxRL09SGaY6HcyHH9aT4tiynZabMofVasBYw==}
-    engines: {node: '>=14'}
+  /playwright-core@1.35.0:
+    resolution: {integrity: sha512-muMXyPmIx/2DPrCHOD1H1ePT01o7OdKxKj2ebmCAYvqhUy+Y1bpal7B0rdoxros7YrXI294JT/DWw2LqyiqTPA==}
+    engines: {node: '>=16'}
     hasBin: true
     dev: true
 
