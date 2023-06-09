@@ -16,7 +16,7 @@
     "lint:types": "tsc --project tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@types/facebook-pixel": "0.0.24",
+    "@types/facebook-pixel": "0.0.25",
     "@types/react": "18.2.9",
     "@types/react-dom": "18.2.4",
     "@wayofdev/eslint-config-bases": "2.0.7"
