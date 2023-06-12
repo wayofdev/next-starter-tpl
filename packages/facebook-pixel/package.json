@@ -17,8 +17,8 @@
   },
   "devDependencies": {
     "@types/facebook-pixel": "0.0.25",
-    "@types/react": "18.2.11",
-    "@types/react-dom": "18.2.4",
+    "@types/react": "18.2.12",
+    "@types/react-dom": "18.2.5",
     "@wayofdev/eslint-config-bases": "2.0.7"
   },
   "peerDependencies": {
