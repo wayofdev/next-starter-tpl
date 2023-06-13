@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/jest": "29.5.2",
-    "@types/node": "18.16.17",
+    "@types/node": "18.16.18",
     "@wayofdev/eslint-config-bases": "2.0.7",
     "eslint": "8.36.0",
     "prettier": "2.8.6",
