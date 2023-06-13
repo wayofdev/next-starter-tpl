@@ -18,7 +18,7 @@
     "test:watch": "jest --config ./jest.config.js --watch"
   },
   "dependencies": {
-    "@fontsource/inter": "4.5.15",
+    "@fontsource/inter": "5.0.3",
     "@heroicons/react": "2.0.18",
     "@hookform/resolvers": "3.1.1",
     "@httpx/exception": "1.7.2",
