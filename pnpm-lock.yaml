@@ -227,8 +227,8 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(browserslist@4.21.5)(postcss@8.4.24)
       postcss-preset-env:
-        specifier: 8.4.2
-        version: 8.4.2(postcss@8.4.24)
+        specifier: 8.5.0
+        version: 8.5.0(postcss@8.4.24)
       postcss-reporter:
         specifier: 7.0.5
         version: 7.0.5(postcss@8.4.24)
@@ -426,8 +426,8 @@ importers:
         specifier: 15.1.0
         version: 15.1.0(postcss@8.4.24)
       postcss-preset-env:
-        specifier: 8.4.2
-        version: 8.4.2(postcss@8.4.24)
+        specifier: 8.5.0
+        version: 8.5.0(postcss@8.4.24)
       postcss-reporter:
         specifier: 7.0.5
         version: 7.0.5(postcss@8.4.24)
@@ -612,8 +612,8 @@ importers:
         specifier: 15.1.0
         version: 15.1.0(postcss@8.4.24)
       postcss-preset-env:
-        specifier: 8.4.2
-        version: 8.4.2(postcss@8.4.24)
+        specifier: 8.5.0
+        version: 8.5.0(postcss@8.4.24)
       postcss-reporter:
         specifier: 7.0.5
         version: 7.0.5(postcss@8.4.24)
@@ -3750,8 +3750,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /@csstools/postcss-relative-color-syntax@1.0.1(postcss@8.4.24):
-    resolution: {integrity: sha512-IskxdQqAkx/pyyOEW3Lhn3nvOu5zlaZ8wQljFl5zc3ABl+gEFf2G42yWK3+wX+J0F4jm7OikOigXo9fAISFEmg==}
+  /@csstools/postcss-relative-color-syntax@1.0.2(postcss@8.4.24):
+    resolution: {integrity: sha512-juCoVInkgH2TZPfOhyx6tIal7jW37L/0Tt+Vcl1LoxqQA9sxcg3JWYZ98pl1BonDnki6s/M7nXzFQHWsWMeHgw==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
@@ -4700,8 +4700,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230607:
-    resolution: {integrity: sha512-V0fsgOfuTuri8UVycyXSX7vWJ9YP0rYNdmrHkHrVCBqXukkkcBmp808qtdfrqf8zYChzRHljfiOvCdewo066xg==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230612:
+    resolution: {integrity: sha512-iJvSzdiivISdBGamJti4sNItXVKPB2IVNnRu06qs4hCOyhmUxSe+skscceEAYM+jk8M9epO4rpfSyDQ1xxi/PA==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.9
@@ -7176,7 +7176,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230607
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230612
     dev: true
 
   /@types/gapi.client@1.0.5:
@@ -7817,7 +7817,7 @@ packages:
       postcss-cli: 10.1.0(postcss@8.4.24)(ts-node@10.9.1)
       postcss-flexbugs-fixes: 5.0.2(postcss@8.4.24)
       postcss-normalize: 10.0.1(browserslist@4.21.5)(postcss@8.4.24)
-      postcss-preset-env: 8.4.2(postcss@8.4.24)
+      postcss-preset-env: 8.5.0(postcss@8.4.24)
       postcss-reporter: 7.0.5(postcss@8.4.24)
       sanitize.css: 13.0.0
       tailwindcss: 3.2.7(postcss@8.4.24)(ts-node@10.9.1)
@@ -16456,8 +16456,8 @@ packages:
       postcss-selector-parser: 6.0.13
     dev: true
 
-  /postcss-nesting@11.2.2(postcss@8.4.24):
-    resolution: {integrity: sha512-aOTiUniAB1bcPE6GGiynWRa6PZFPhOTAm5q3q5cem6QeSijIHHkWr6gs65ukCZMXeak8yXeZVbBJET3VM+HlhA==}
+  /postcss-nesting@11.3.0(postcss@8.4.24):
+    resolution: {integrity: sha512-JlS10AQm/RzyrUGgl5irVkAlZYTJ99mNueUl+Qab+TcHhVedLiylWVkKBhRale+rS9yWIJK48JVzQlq3LcSdeA==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
@@ -16619,8 +16619,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /postcss-preset-env@8.4.2(postcss@8.4.24):
-    resolution: {integrity: sha512-Bihxo+FsyVNjsRADiYYnj9Ez0WBSWSSHAe8WvxoMlqrw8H8m6gK9E0MkDd7P6ForoikRIF3I8grGg/pFM6ECRQ==}
+  /postcss-preset-env@8.5.0(postcss@8.4.24):
+    resolution: {integrity: sha512-aqAbT5dXqYX5ZvicGKQpaW/eDEZFRfnhV6Hn1Jn2bCKEB9L2MgsTdnIsXsZyFUQflIV2wIs9HTEQgkH5duMCNg==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
@@ -16642,7 +16642,7 @@ packages:
       '@csstools/postcss-normalize-display-values': 2.0.1(postcss@8.4.24)
       '@csstools/postcss-oklab-function': 2.2.3(postcss@8.4.24)
       '@csstools/postcss-progressive-custom-properties': 2.3.0(postcss@8.4.24)
-      '@csstools/postcss-relative-color-syntax': 1.0.1(postcss@8.4.24)
+      '@csstools/postcss-relative-color-syntax': 1.0.2(postcss@8.4.24)
       '@csstools/postcss-scope-pseudo-class': 2.0.2(postcss@8.4.24)
       '@csstools/postcss-stepped-value-functions': 2.1.1(postcss@8.4.24)
       '@csstools/postcss-text-decoration-shorthand': 2.2.4(postcss@8.4.24)
@@ -16673,7 +16673,7 @@ packages:
       postcss-initial: 4.0.1(postcss@8.4.24)
       postcss-lab-function: 5.2.3(postcss@8.4.24)
       postcss-logical: 6.2.0(postcss@8.4.24)
-      postcss-nesting: 11.2.2(postcss@8.4.24)
+      postcss-nesting: 11.3.0(postcss@8.4.24)
       postcss-opacity-percentage: 2.0.0(postcss@8.4.24)
       postcss-overflow-shorthand: 4.0.1(postcss@8.4.24)
       postcss-page-break: 3.0.4(postcss@8.4.24)
