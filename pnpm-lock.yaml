@@ -257,8 +257,8 @@ importers:
         specifier: 3.1.1
         version: 3.1.1(react-hook-form@7.44.3)
       '@httpx/exception':
-        specifier: 1.7.2
-        version: 1.7.2
+        specifier: 1.8.1
+        version: 1.8.1
       '@vercel/analytics':
         specifier: 1.0.1
         version: 1.0.1
@@ -4328,8 +4328,8 @@ packages:
       es-html-parser: 0.0.8
     dev: true
 
-  /@httpx/exception@1.7.2:
-    resolution: {integrity: sha512-2KXuXQCA9c4x6ZkErbwhO+2ou7Iggc26eTqS/gwfibLynorUYCnRXBqKBAIGchfO53i4dligv5qkP340q9qVxQ==}
+  /@httpx/exception@1.8.1:
+    resolution: {integrity: sha512-fHl9CiGXZaGQNWpzGovbLFItkWGbawdvRGlKcRxU1slLzEn00d6PH+FOAvGJxc1/CXjB4QNMtB4BhTZoyKTkuw==}
     engines: {node: '>=14.16'}
     dev: false
 
