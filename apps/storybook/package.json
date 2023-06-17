@@ -32,7 +32,7 @@
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
     "@vitejs/plugin-react-swc": "3.3.2",
-    "@wayofdev/eslint-config-bases": "2.0.7",
+    "@wayofdev/eslint-config-bases": "2.0.10",
     "@wayofdev/postcss-config": "2.0.8",
     "autoprefixer": "^10.4.14",
     "eslint": "8.36.0",
