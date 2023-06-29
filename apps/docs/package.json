@@ -28,6 +28,6 @@
     "es-check": "7.1.1",
     "eslint": "8.36.0",
     "sharp": "0.32.1",
-    "typescript": "5.0.2"
+    "typescript": "5.1.6"
   }
 }
