@@ -248,8 +248,8 @@ importers:
   apps/web:
     dependencies:
       '@fontsource/inter':
-        specifier: 4.5.15
-        version: 4.5.15
+        specifier: 5.0.5
+        version: 5.0.5
       '@heroicons/react':
         specifier: 2.0.18
         version: 2.0.18(react@18.2.0)
@@ -4482,8 +4482,8 @@ packages:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
     dev: true
 
-  /@fontsource/inter@4.5.15:
-    resolution: {integrity: sha512-FzleM9AxZQK2nqsTDtBiY0PMEVWvnKnuu2i09+p6DHvrHsuucoV2j0tmw+kAT3L4hvsLdAIDv6MdGehsPIdT+Q==}
+  /@fontsource/inter@5.0.5:
+    resolution: {integrity: sha512-RE1JmWRB6Kxo+1nXUnORSSH5uKgUZ2QEQE+h/nsNt758C+17G9y26E9QiAsIqsG13NpKhwn22EeECfyC+da5ew==}
     dev: false
 
   /@headlessui/react@1.7.12(react-dom@18.2.0)(react@18.2.0):
@@ -4898,8 +4898,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230614:
-    resolution: {integrity: sha512-le0mu/aviUmYyf1fgUCCpw+6r29UXDrCsE7Edefh8KivkB9F1KBYxIRwddVfipE49BTO5pOdPtxkj4sGns1wOA==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230705:
+    resolution: {integrity: sha512-OotUl4KflirR2cCBpPaN+EETcVebFg+HVAEMFSDTX+z0mpUPWLzMkRsal4CNTk2n8rVihozIHxRK3B9qFCz/Og==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.9
@@ -7523,7 +7523,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230614
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230705
     dev: true
 
   /@types/gapi.client@1.0.5:
