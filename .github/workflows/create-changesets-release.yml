@@ -1,0 +1,18 @@
+---
+on: # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - master
+
+name: 🦋 Create release or publish to pnpm
+
+jobs:
+  release:
+    uses: wayofdev/gh-actions/.github/workflows/create-changesets-release.yml@master
+    with:
+      node: 18
+      repository: wayofdev/next-starter-tpl
+    secrets:
+      # to trigger other workflows, pass PAT token instead of GITHUB_TOKEN
+      token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+      npm_token: ${{ secrets.NPM_TOKEN }}

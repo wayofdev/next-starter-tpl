@@ -4,7 +4,7 @@ version: '3.9'
 services:
   app:
     image: wayofdev/node:lts-alpine-latest
-    container_name: ${APP_NAME}_app
+    container_name: ${APP_NAME}-app
     restart: on-failure
     networks:
       - default
@@ -27,7 +27,7 @@ services:
 
   docs:
     image: wayofdev/node:lts-alpine-latest
-    container_name: ${APP_NAME}_docs
+    container_name: ${APP_NAME}-docs
     restart: on-failure
     networks:
       - default
@@ -42,7 +42,7 @@ services:
     tty: true
     labels:
       - traefik.enable=true
-      - traefik.http.routers.${APP_NAME}_docs.rule=Host(`${APP_NAME}-docs.${PROJECT_SERVICES_NAMESPACE}.docker`)
+      - traefik.http.routers.${APP_NAME}_docs.rule=Host(`docs.${PROJECT_SERVICES_NAMESPACE}.docker`)
       - traefik.http.routers.${APP_NAME}_docs.entrypoints=websecure
       - traefik.http.routers.${APP_NAME}_docs.tls=true
       - traefik.http.routers.${APP_NAME}_docs.service=${APP_NAME}_docs
@@ -50,7 +50,7 @@ services:
 
   storybook:
     image: wayofdev/node:lts-alpine-latest
-    container_name: ${APP_NAME}_storybook
+    container_name: ${APP_NAME}-storybook
     restart: on-failure
     networks:
       - default
@@ -66,7 +66,7 @@ services:
     tty: true
     labels:
       - traefik.enable=true
-      - traefik.http.routers.${APP_NAME}_storybook.rule=Host(`${APP_NAME}-storybook.${PROJECT_SERVICES_NAMESPACE}.docker`)
+      - traefik.http.routers.${APP_NAME}_storybook.rule=Host(`storybook.${PROJECT_SERVICES_NAMESPACE}.docker`)
       - traefik.http.routers.${APP_NAME}_storybook.entrypoints=websecure
       - traefik.http.routers.${APP_NAME}_storybook.tls=true
       - traefik.http.routers.${APP_NAME}_storybook.service=${APP_NAME}_storybook
@@ -75,4 +75,4 @@ services:
 networks:
   shared:
     external: true
-    name: ${SHARED_SERVICES_NETWORK}
+    name: network.${SHARED_SERVICES_NAMESPACE}
