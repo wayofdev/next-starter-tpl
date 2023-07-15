@@ -31,6 +31,9 @@ jobs:
     steps:
       - name: 📦 Check out the codebase
         uses: actions/checkout@v3
+        with:
+          # We need to fetch all the history for the "changed files" feature to work
+          fetch-depth: 0
 
       - name: ⚙️ Setup node ${{ matrix.node }}
         uses: actions/setup-node@v3

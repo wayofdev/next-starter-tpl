@@ -95,7 +95,7 @@ jobs:
         with:
           cwd: apps/web
           command: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm --filter=web test:e2e
-          start: pnpm dev:web
+          start: pnpm dev
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 30
         env:
