@@ -26,7 +26,7 @@
     "@storybook/cli": "^7.0.0-rc.5",
     "@storybook/react": "7.0.21",
     "@storybook/react-vite": "7.0.21",
-    "@storybook/testing-library": "0.1.0",
+    "@storybook/testing-library": "0.2.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.4",
     "@types/react": "18.2.15",
