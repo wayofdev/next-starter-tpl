@@ -24,8 +24,8 @@ env:
   SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
   SENTRY_URL: ${{ secrets.SENTRY_URL }}
   SENTRY_UPLOAD_DRY_RUN: true
-  NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
-  NEXTAUTH_URL: 'http://localhost:3000'
+  NEXTAUTH_URL: http://localhost:3000
+  NEXTAUTH_SECRET: secret-string-only-for-ci
 
 jobs:
   e2e:
@@ -82,6 +82,7 @@ jobs:
         run: |
           pnpm --filter=web build
         env:
+          APP_CACHE_DSN: ''
           NEXT_IGNORE_ESLINT: true
           NEXT_IGNORE_TYPE_CHECK: true
           NEXT_DISABLE_SOURCEMAPS: true
