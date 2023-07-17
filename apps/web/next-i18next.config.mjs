@@ -1,12 +1,15 @@
-const defaultLocale = 'en'
+import path from 'path'
+
 const debugI18n = ['true', 1].includes(process?.env?.NEXT_DEBUG_I18N ?? 'false')
 
 const localePublicFolder = undefined
 
+export const defaultLocale = 'en'
+
 /**
  * @type {import('next-i18next').UserConfig}
  */
-module.exports = {
+export default {
   i18n: {
     defaultLocale,
     locales: ['en', 'fr'],
@@ -26,6 +29,6 @@ module.exports = {
   */
   localePath:
     typeof window === 'undefined'
-      ? require('path').resolve('../../packages/common-i18n/src/locales')
+      ? path.resolve('../../packages/common-i18n/src/locales')
       : localePublicFolder,
 }

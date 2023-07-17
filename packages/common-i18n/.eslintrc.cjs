@@ -1,7 +1,11 @@
 /**
  * Specific eslint rules for this app/package, extends the base rules
+ * @see https://github.com/belgattitude/nextjs-monorepo-example/blob/main/docs/about-linters.md
  * @see https://github.com/wayofdev/next-starter-tpl/blob/master/docs/about-linters.md
  */
+
+// Workaround for https://github.com/eslint/eslint/issues/3458 (re-export of @rushstack/eslint-patch)
+require('@wayofdev/eslint-config-bases/patch/modern-module-resolution')
 
 const { getDefaultIgnorePatterns } = require('@wayofdev/eslint-config-bases/helpers')
 

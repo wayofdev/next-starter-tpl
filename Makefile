@@ -213,6 +213,10 @@ lint: ## Run lint task to fix issues
 	$(NPM_RUNNER) lint:fix
 .PHONY: lint
 
+lint-types: ## Run typescript type checking
+	$(NPM_RUNNER) lint:types
+.PHONY: lint-types
+
 lint-staged: ## Lint staged files
 	$(NPM_RUNNER) lint:staged
 .PHONY: lint-staged

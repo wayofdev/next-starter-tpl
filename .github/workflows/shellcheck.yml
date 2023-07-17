@@ -9,30 +9,9 @@ permissions:
 
 jobs:
   shellcheck:
-    runs-on: ubuntu-latest
-    permissions:
-      # required for all workflows
-      security-events: write
-      # only required for workflows in private repositories
-      actions: read
-      contents: read
-
-    steps:
-      - name: 📦 Check out the codebase
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: 🐞 Differential shell-check
-        id: shellcheck
-        uses: redhat-plumbers-in-action/differential-shellcheck@v4
-        with:
-          severity: warning
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - if: ${{ always() }}
-        name: 📤 Upload artifact with shell-check defects in SARIF format
-        uses: actions/upload-artifact@v3
-        with:
-          name: Differential shell-check SARIF
-          path: ${{ steps.shellcheck.outputs.sarif }}
+    uses: wayofdev/gh-actions/.github/workflows/shellcheck.yml@master
+    with:
+      os: ubuntu-latest
+      severity: warning
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}

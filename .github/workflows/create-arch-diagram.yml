@@ -5,7 +5,6 @@
 on: # yamllint disable-line rule:truthy
   push:
     branches:
-      - master
       - develop
   pull_request_target:
     types:
@@ -19,10 +18,9 @@ permissions: read-all
 
 jobs:
   codesee:
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    steps:
-      - name: 💻 Analyze the repo with CodeSee
-        uses: Codesee-io/codesee-action@v2
-        with:
-          codesee-token: ${{ secrets.CODESEE_ARCH_DIAG_API_TOKEN }}
+    uses: wayofdev/gh-actions/.github/workflows/create-arch-diagram.yml@master
+    with:
+      os: ubuntu-latest
+      continue-on-error: true
+    secrets:
+      codesee-token: ${{ secrets.CODESEE_ARCH_DIAG_API_TOKEN }}

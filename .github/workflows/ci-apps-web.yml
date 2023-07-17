@@ -1,19 +1,5 @@
 ---
 on: # yamllint disable-line rule:truthy
-  merge_group:
-  push:
-    branches:
-      - master
-      - develop
-    # Only consider those paths to trigger the action
-    paths:
-      - 'apps/web/**'
-      - 'packages/**'
-      - 'package.json'
-      - 'pnpm*'
-      - '.github/**'
-      - 'tsconfig.base.json'
-
   pull_request:
     types:
       - opened
@@ -36,14 +22,16 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: ['ubuntu-22.04']
+        os: ['ubuntu-latest']
         node: ['18']
+    env:
+      TURBO_API: 'http://127.0.0.1:9080'
+      TURBO_TEAM: 'next-starter-tpl'
+      TURBO_TOKEN: 'local_server_turbo_relaxed_token'
 
     steps:
       - name: 📦 Check out the codebase
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - name: ⚙️ Setup node ${{ matrix.node }}
         uses: actions/setup-node@v3
@@ -51,8 +39,17 @@ jobs:
           node-version: ${{ matrix.node }}
           registry-url: 'https://registry.npmjs.org/'
 
+      - name: 🚀 Setup TurboRepo local server
+        uses: felixmosh/turborepo-gh-artifacts@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          server-token: ${{ env.TURBO_TOKEN }}
+
       - name: 📥 Monorepo install
-        uses: ./.github/actions/pnpm-install
+        uses: wayofdev/gh-actions/actions/pnpm-install@master
+        with:
+          enable-corepack: true
+          cache-node-modules: true
 
       # see https://github.com/vercel/next.js/pull/27362
       - name: ♻️ Restore "web" app build from cache
@@ -62,9 +59,7 @@ jobs:
             ${{ github.workspace }}/apps/web/.next/cache
             ${{ github.workspace }}/.cache
             ${{ github.workspace }}/**/tsconfig.tsbuildinfo
-          key: ${{ runner.os }}-web-${{ hashFiles('pnpm*.yaml') }}-${{ hashFiles('apps/web/src/**.[jt]sx?', 'apps/web/src/**.json') }}
-          restore-keys: |
-            ${{ runner.os }}-web-${{ hashFiles('pnpm*.yaml') }}-
+          key: web-cache-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
 
       - name: 📝 Typecheck
         working-directory: apps/web
@@ -86,6 +81,9 @@ jobs:
         run: |
           pnpm --filter=web build
         env:
+          NEXTAUTH_URL: http://localhost:3000
+          NEXTAUTH_SECRET: secret-string-only-for-ci
+          APP_CACHE_DSN: ''
           # Speed up build: they are linted in a previous step
           NEXT_IGNORE_ESLINT: true
           # Speed up build: they are type-checked in a previous step

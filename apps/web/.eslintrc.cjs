@@ -32,6 +32,8 @@ module.exports = {
     '@wayofdev/eslint-config-bases/prettier-plugin',
   ],
   rules: {
+    // https://medium.com/@steven-lemon182/are-typescript-barrel-files-an-anti-pattern-72a713004250
+    'import/no-cycle': 2,
     // https://github.com/vercel/next.js/discussions/16832
     '@next/next/no-img-element': 'off',
     // For the sake of example
@@ -41,15 +43,22 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['src/pages/\\_*.{ts,tsx}'],
+      files: ['next.config.mjs'],
       rules: {
-        'react/display-name': 'off',
+        'import/order': 'off',
+        '@typescript-eslint/ban-ts-comment': 'off',
       },
     },
     {
-      files: ['src/stories/*.ts'],
+      files: ['tailwind.config.ts'],
       rules: {
         '@typescript-eslint/naming-convention': 'off',
+      },
+    },
+    {
+      files: ['src/pages/\\_*.{ts,tsx}'],
+      rules: {
+        'react/display-name': 'off',
       },
     },
   ],

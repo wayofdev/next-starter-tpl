@@ -14,20 +14,20 @@
   "dependencies": {
     "@vercel/analytics": "1.0.1",
     "@wayofdev/ui": "workspace:*",
-    "next": "13.4.6",
-    "nextra": "2.7.1",
-    "nextra-theme-docs": "2.7.1",
+    "next": "13.4.10",
+    "nextra": "2.10.0",
+    "nextra-theme-docs": "2.10.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/node": "18.16.18",
-    "@types/react": "18.2.12",
-    "@types/react-dom": "18.2.5",
-    "@wayofdev/eslint-config-bases": "2.0.7",
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.15",
+    "@types/react-dom": "18.2.7",
+    "@wayofdev/eslint-config-bases": "3.0.1",
     "es-check": "7.1.1",
-    "eslint": "8.36.0",
-    "sharp": "0.32.1",
-    "typescript": "5.0.2"
+    "eslint": "8.45.0",
+    "sharp": "0.32.3",
+    "typescript": "5.1.6"
   }
 }

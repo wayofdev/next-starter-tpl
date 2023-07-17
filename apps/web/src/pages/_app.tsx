@@ -3,7 +3,7 @@ import { GoogleTagManagerScript } from '@wayofdev/google-tag-manager/src'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { appWithTranslation } from 'next-i18next'
-import nextI18nextConfig from '../../next-i18next.config'
+import nextI18nextConfig from '../../next-i18next.config.mjs'
 import { AppProviders } from '../AppProviders'
 
 /**
@@ -22,10 +22,7 @@ import '../styles/global.css'
  * Local fonts
  * @link https://fontsource.org/docs/guides/nextjs
  */
-import '@fontsource/inter/400.css'
-import '@fontsource/inter/700.css'
-// @link https://fontsource.org/docs/variable-fonts
-import '@fontsource/inter/variable.css'
+import '@fontsource-variable/inter'
 
 // Workaround for https://github.com/zeit/next.js/issues/8592
 export type MyAppProps = AppProps & {
