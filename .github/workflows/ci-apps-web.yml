@@ -81,6 +81,9 @@ jobs:
         run: |
           pnpm --filter=web build
         env:
+          NEXTAUTH_URL: https://localhost:3000
+          NEXTAUTH_SECRET: secret
+          APP_CACHE_DSN: ''
           # Speed up build: they are linted in a previous step
           NEXT_IGNORE_ESLINT: true
           # Speed up build: they are type-checked in a previous step
