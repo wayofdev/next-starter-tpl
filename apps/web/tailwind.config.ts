@@ -4,10 +4,7 @@ import { tailwindV3Colors } from './src/themes/shared/colors'
 import { tailwindTheme } from './src/themes/tailwind/tailwind.theme'
 
 const tailwindConfig: Config = {
-  content: [
-    './src/**/*.(js|jsx|ts|tsx)',
-    './node_modules/@wayofdev/ui/src/**/*.(js|jsx|ts|tsx)',
-  ],
+  content: ['./src/**/*.(js|jsx|ts|tsx)', './node_modules/@wayofdev/ui/src/**/*.(js|jsx|ts|tsx)'],
   theme: {
     screens: {
       ...defaultTheme.screens,

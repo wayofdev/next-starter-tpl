@@ -7,9 +7,7 @@
 // Workaround for https://github.com/eslint/eslint/issues/3458 (re-export of @rushstack/eslint-patch)
 require('@wayofdev/eslint-config-bases/patch/modern-module-resolution')
 
-const {
-  getDefaultIgnorePatterns,
-} = require('@wayofdev/eslint-config-bases/helpers')
+const { getDefaultIgnorePatterns } = require('@wayofdev/eslint-config-bases/helpers')
 
 module.exports = {
   root: true,

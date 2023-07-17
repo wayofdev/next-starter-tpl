@@ -13,9 +13,7 @@ sentryInit({
   // @see https://develop.sentry.dev/sdk/performance/
   // To turn it off, remove the line
   // @see https://github.com/getsentry/sentry-javascript/discussions/4503#discussioncomment-2143116
-  tracesSampleRate: ['false', '0'].includes(process.env.SENTRY_TRACING ?? '')
-    ? undefined
-    : 1,
+  tracesSampleRate: ['false', '0'].includes(process.env.SENTRY_TRACING ?? '') ? undefined : 1,
 
   // Note: The Replay integration only needs to be added to your sentry.client.config.js file.
   // It will not run if it is added into sentry.server.config.js.

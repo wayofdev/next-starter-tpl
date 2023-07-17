@@ -21,11 +21,7 @@ import { getValidatedServerEnv } from './src/config/validated-server-env.mjs'
 // validate server env
 getValidatedServerEnv()
 
-const workspaceRoot = path.resolve(
-  path.dirname(url.fileURLToPath(import.meta.url)),
-  '..',
-  '..'
-)
+const workspaceRoot = path.resolve(path.dirname(url.fileURLToPath(import.meta.url)), '..', '..')
 
 /**
  * Once supported replace by node / eslint / ts and out of experimental, replace by
@@ -41,18 +37,10 @@ const isProd = process.env.NODE_ENV === 'production'
 const isCI = trueEnv.includes(process.env?.CI ?? 'false')
 const enableCSP = true
 
-const NEXT_STANDALONE_BUILD = trueEnv.includes(
-  process.env?.NEXT_STANDALONE_BUILD ?? 'false'
-)
-const NEXT_IGNORE_TYPE_CHECK = trueEnv.includes(
-  process.env?.NEXT_IGNORE_TYPE_CHECK ?? 'false'
-)
-const NEXT_IGNORE_ESLINT = trueEnv.includes(
-  process.env?.NEXT_IGNORE_ESLINT ?? 'false'
-)
-const SENTRY_UPLOAD_DRY_RUN = trueEnv.includes(
-  process.env?.SENTRY_UPLOAD_DRY_RUN ?? 'false'
-)
+const NEXT_STANDALONE_BUILD = trueEnv.includes(process.env?.NEXT_STANDALONE_BUILD ?? 'false')
+const NEXT_IGNORE_TYPE_CHECK = trueEnv.includes(process.env?.NEXT_IGNORE_TYPE_CHECK ?? 'false')
+const NEXT_IGNORE_ESLINT = trueEnv.includes(process.env?.NEXT_IGNORE_ESLINT ?? 'false')
+const SENTRY_UPLOAD_DRY_RUN = trueEnv.includes(process.env?.SENTRY_UPLOAD_DRY_RUN ?? 'false')
 const DISABLE_SENTRY = trueEnv.includes(process.env?.DISABLE_SENTRY ?? 'false')
 const SENTRY_DEBUG = trueEnv.includes(process.env?.SENTRY_DEBUG ?? 'false')
 const SENTRY_TRACING = trueEnv.includes(process.env?.SENTRY_TRACING ?? 'false')
@@ -62,9 +50,7 @@ const SENTRY_TRACING = trueEnv.includes(process.env?.SENTRY_TRACING ?? 'false')
  * to deliver an image or deploy the files.
  * @link https://nextjs.org/docs/advanced-features/source-maps
  */
-const disableSourceMaps = trueEnv.includes(
-  process.env?.NEXT_DISABLE_SOURCEMAPS ?? 'false'
-)
+const disableSourceMaps = trueEnv.includes(process.env?.NEXT_DISABLE_SOURCEMAPS ?? 'false')
 
 if (disableSourceMaps) {
   console.log(
@@ -116,10 +102,7 @@ const secureHeaders = createSecureHeaders({
   },
   ...(enableCSP && process.env.NODE_ENV === 'production'
     ? {
-        forceHTTPSRedirect: [
-          true,
-          { maxAge: 60 * 60 * 24 * 4, includeSubDomains: true },
-        ],
+        forceHTTPSRedirect: [true, { maxAge: 60 * 60 * 24 * 4, includeSubDomains: true }],
       }
     : {}),
   referrerPolicy: 'same-origin',
@@ -185,9 +168,7 @@ const nextConfig = {
 
   // Standalone build
   // @link https://nextjs.org/docs/advanced-features/output-file-tracing#automatically-copying-traced-files-experimental
-  ...(NEXT_STANDALONE_BUILD
-    ? { output: 'standalone', outputFileTracing: true }
-    : {}),
+  ...(NEXT_STANDALONE_BUILD ? { output: 'standalone', outputFileTracing: true } : {}),
 
   experimental: {
     // @link https://nextjs.org/docs/advanced-features/output-file-tracing#caveats

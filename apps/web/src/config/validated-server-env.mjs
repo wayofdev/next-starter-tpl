@@ -24,11 +24,7 @@ export const getValidatedServerEnv = () => {
       process.exit(1)
     } else {
       throw new Error(
-        `Invalid server env(s): ${JSON.stringify(
-          parsedEnv.error.format(),
-          null,
-          2
-        )}}`
+        `Invalid server env(s): ${JSON.stringify(parsedEnv.error.format(), null, 2)}}`
       )
     }
   }
