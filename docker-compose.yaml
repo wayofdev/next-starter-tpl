@@ -24,6 +24,8 @@ services:
       - traefik.http.routers.${APP_NAME}_web.tls=true
       - traefik.http.routers.${APP_NAME}_web.service=${APP_NAME}_web
       - traefik.http.services.${APP_NAME}_web.loadbalancer.server.port=3000
+    expose:
+      - 3000
 
   docs:
     image: wayofdev/node:lts-alpine-latest
