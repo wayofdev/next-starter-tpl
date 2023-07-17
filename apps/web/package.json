@@ -42,7 +42,7 @@
     "next-sitemap": "4.1.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.45.1",
+    "react-hook-form": "7.45.2",
     "react-i18next": "13.0.2",
     "type-fest": "3.13.1",
     "zod": "3.21.4"
