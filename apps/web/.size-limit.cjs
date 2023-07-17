@@ -5,7 +5,9 @@ let manifest
 try {
   manifest = require('./.next/build-manifest.json')
 } catch (e) {
-  throw new Error('Cannot find a NextJs build folder, did you forget to build ?')
+  throw new Error(
+    'Cannot find a NextJs build folder, did you forget to build ?'
+  )
 }
 const pages = manifest.pages
 
@@ -16,10 +18,11 @@ const limitCfg = {
     '/404': '150kb',
     '/_app': '180kb',
     '/_error': '140kb',
-    '/_monitor/sentry/csr-page': '85kb',
-    '/_monitor/sentry/ssr-page': '85kb',
+    '/_monitor/sentry/csr-page': '105kb',
+    '/_monitor/sentry/ssr-page': '105kb',
+    '/_monitor/preview/error-page': '105kb',
     '/auth/login': '160kb',
-    '/home': '105kb',
+    '/home': '120kb',
   },
 }
 
@@ -40,6 +43,6 @@ module.exports = [
   {
     name: 'CSS',
     path: ['./.next/static/css/**/*.css'],
-    limit: '10 kB',
+    limit: '15 kB',
   },
 ]

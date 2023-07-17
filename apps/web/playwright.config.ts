@@ -4,7 +4,6 @@ import type { PlaywrightTestConfig } from '@playwright/test'
 import { devices } from '@playwright/test'
 
 const isCI = ['true', '1'].includes(process.env?.CI ?? '')
-
 const outputDir = new URL('./e2e/.out', import.meta.url).pathname
 const testDir = new URL('e2e', import.meta.url).pathname
 

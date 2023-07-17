@@ -1,10 +1,13 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const sharedTheme = require('./src/themes/tailwind/tailwind.theme')
-const { tailwindV3Colors } = require('./src/themes/shared/colors')
+import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
+import { tailwindV3Colors } from './src/themes/shared/colors'
+import { tailwindTheme } from './src/themes/tailwind/tailwind.theme'
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.(js|jsx|ts|tsx)', './node_modules/@wayofdev/ui/src/**/*.(js|jsx|ts|tsx)'],
+const tailwindConfig: Config = {
+  content: [
+    './src/**/*.(js|jsx|ts|tsx)',
+    './node_modules/@wayofdev/ui/src/**/*.(js|jsx|ts|tsx)',
+  ],
   theme: {
     screens: {
       ...defaultTheme.screens,
@@ -25,7 +28,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: sharedTheme.fontFamily.sans,
+      sans: tailwindTheme.fontFamily.sans,
       serif: [...defaultTheme.fontFamily.serif],
       mono: [...defaultTheme.fontFamily.mono],
     },
@@ -41,6 +44,8 @@ module.exports = {
     // require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
-    // require('@tailwindcss/typography'),
+    require('@tailwindcss/typography'),
   ],
 }
+
+export default tailwindConfig

@@ -3,15 +3,17 @@ import { FacebookPixelNoScript } from '@wayofdev/facebook-pixel/src'
 import { GoogleTagManagerNoScript } from '@wayofdev/google-tag-manager/src'
 import type { DocumentContext, DocumentInitialProps } from 'next/document'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { i18n } from '../../next-i18next.config'
+import { defaultLocale } from '../../next-i18next.config.mjs'
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
     return await Document.getInitialProps(ctx)
   }
 
   render() {
-    const locale = this.props.locale ?? i18n.defaultLocale
+    const locale = this.props.locale ?? defaultLocale
 
     return (
       <Html lang={locale}>
@@ -36,10 +38,17 @@ class MyDocument extends Document {
             href="/images/favicon/favicon-16x16.png"
           />
           <link rel="manifest" href="/images/favicon/site.webmanifest" />
-          <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+          <link
+            rel="mask-icon"
+            href="/images/favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+          />
           <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
           <meta name="msapplication-TileColor" content="#ffffff" />
-          <meta name="msapplication-config" content="/images/favicon/browserconfig.xml" />
+          <meta
+            name="msapplication-config"
+            content="/images/favicon/browserconfig.xml"
+          />
           <meta name="theme-color" content="#ffffff" />
         </Head>
         <body>

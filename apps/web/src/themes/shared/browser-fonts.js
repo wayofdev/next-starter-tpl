@@ -4,7 +4,7 @@
 /**
  * @type {{mono: string[], sans: string[], serif: string[]}}
  */
-const browserFonts = {
+export const browserFonts = {
   sans: [
     'ui-sans-serif',
     'system-ui',
@@ -21,7 +21,14 @@ const browserFonts = {
     'Segoe UI Symbol',
     'Noto Color Emoji',
   ],
-  serif: ['ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+  serif: [
+    'ui-serif',
+    'Georgia',
+    'Cambria',
+    'Times New Roman',
+    'Times',
+    'serif',
+  ],
   mono: [
     'ui-monospace',
     'SFMono-Regular',
@@ -32,8 +39,4 @@ const browserFonts = {
     'Courier New',
     'monospace',
   ],
-}
-
-module.exports = {
-  browserFonts: browserFonts,
 }
