@@ -5,10 +5,11 @@
   "include": ["./src/**/*"],
   "compilerOptions": {
     "baseUrl": "./src",
-    "target": "esnext",
+    "module": "commonjs",
     "outDir": "dist",
     "allowJs": true,
     "jsx": "react-jsx",
-    "noEmit": false
+    "noEmit": false,
+    "verbatimModuleSyntax": false
   }
 }
