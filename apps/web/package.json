@@ -35,7 +35,7 @@
     "clsx": "2.0.0",
     "i18next": "23.2.11",
     "next": "13.4.10",
-    "next-auth": "4.22.1",
+    "next-auth": "4.22.3",
     "next-i18next": "14.0.0",
     "next-secure-headers": "^2.2.0",
     "next-seo": "6.1.0",
