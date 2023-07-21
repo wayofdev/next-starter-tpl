@@ -14,7 +14,7 @@
   "dependencies": {
     "@vercel/analytics": "1.0.1",
     "@wayofdev/ui": "workspace:*",
-    "next": "13.4.11",
+    "next": "13.4.12",
     "nextra": "2.10.0",
     "nextra-theme-docs": "2.10.0",
     "react": "18.2.0",
