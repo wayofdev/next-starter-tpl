@@ -121,8 +121,8 @@ importers:
         specifier: 20.4.4
         version: 20.4.4
       '@types/react':
-        specifier: 18.2.16
-        version: 18.2.16
+        specifier: 18.2.18
+        version: 18.2.18
       '@types/react-dom':
         specifier: 18.2.7
         version: 18.2.7
@@ -191,8 +191,8 @@ importers:
         specifier: ^0.5.4
         version: 0.5.4(tailwindcss@3.3.3)
       '@types/react':
-        specifier: 18.2.16
-        version: 18.2.16
+        specifier: 18.2.18
+        version: 18.2.18
       '@types/react-dom':
         specifier: 18.2.7
         version: 18.2.7
@@ -375,8 +375,8 @@ importers:
         specifier: 20.4.4
         version: 20.4.4
       '@types/react':
-        specifier: 18.2.16
-        version: 18.2.16
+        specifier: 18.2.18
+        version: 18.2.18
       '@types/react-dom':
         specifier: 18.2.7
         version: 18.2.7
@@ -511,8 +511,8 @@ importers:
         specifier: 0.0.25
         version: 0.0.25
       '@types/react':
-        specifier: 18.2.16
-        version: 18.2.16
+        specifier: 18.2.18
+        version: 18.2.18
       '@types/react-dom':
         specifier: 18.2.7
         version: 18.2.7
@@ -536,8 +536,8 @@ importers:
         specifier: 2.0.4
         version: 2.0.4
       '@types/react':
-        specifier: 18.2.16
-        version: 18.2.16
+        specifier: 18.2.18
+        version: 18.2.18
       '@types/react-dom':
         specifier: 18.2.7
         version: 18.2.7
@@ -588,8 +588,8 @@ importers:
         specifier: 20.4.4
         version: 20.4.4
       '@types/react':
-        specifier: 18.2.16
-        version: 18.2.16
+        specifier: 18.2.18
+        version: 18.2.18
       '@types/react-dom':
         specifier: 18.2.7
         version: 18.2.7
@@ -4663,8 +4663,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230724:
-    resolution: {integrity: sha512-g0Vqhv/ceShecGOyXJrdVdnTzz/LBsiLz+y9OZdNGWIYXqeLX7hMHNrk5O8W+s/6SPsYVjSUfvHxxU1/Y8T2AA==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230802:
+    resolution: {integrity: sha512-lOortB59qmXIWDd7s8FNB2jgJU+WPP0VxMXbfaQZoGhAuyXeQUzUjNLxdG/Ply0C3iwNc+r/r4rVVa/ZifoB3w==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.9
@@ -4700,7 +4700,7 @@ packages:
       react: '>=16'
     dependencies:
       '@types/mdx': 2.0.5
-      '@types/react': 18.2.16
+      '@types/react': 18.2.18
       react: 18.2.0
 
   /@napi-rs/simple-git-android-arm-eabi@0.1.8:
@@ -7058,7 +7058,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230724
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230802
     dev: true
 
   /@types/gapi.client@1.0.5:
@@ -7093,7 +7093,7 @@ packages:
   /@types/hoist-non-react-statics@3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
-      '@types/react': 18.2.16
+      '@types/react': 18.2.18
       hoist-non-react-statics: 3.3.2
 
   /@types/http-errors@2.0.1:
@@ -7259,17 +7259,17 @@ packages:
   /@types/react-dom@18.2.7:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
     dependencies:
-      '@types/react': 18.2.16
+      '@types/react': 18.2.18
     dev: true
 
   /@types/react-test-renderer@18.0.0:
     resolution: {integrity: sha512-C7/5FBJ3g3sqUahguGi03O79b8afNeSD6T8/GU50oQrJCU0bVCCGQHaGKUbg2Ce8VQEEqTw8/HiS6lXHHdgkdQ==}
     dependencies:
-      '@types/react': 18.2.16
+      '@types/react': 18.2.18
     dev: true
 
-  /@types/react@18.2.16:
-    resolution: {integrity: sha512-LLFWr12ZhBJ4YVw7neWLe6Pk7Ey5R9OCydfuMsz1L8bZxzaawJj2p06Q8/EFEHDeTBQNFLF62X+CG7B2zIyu0Q==}
+  /@types/react@18.2.18:
+    resolution: {integrity: sha512-da4NTSeBv/P34xoZPhtcLkmZuJ+oYaCxHmyHzwaDQo9RQPBeXV+06gEk2FpqEcsX9XrnNLvRpVh6bdavDSjtiQ==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
