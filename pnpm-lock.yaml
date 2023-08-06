@@ -323,8 +323,8 @@ importers:
         specifier: 13.0.2
         version: 13.0.2(i18next@23.2.11)(react-dom@18.2.0)(react@18.2.0)
       type-fest:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.1.0
+        version: 4.1.0
       zod:
         specifier: 3.21.4
         version: 3.21.4
@@ -4663,8 +4663,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230724:
-    resolution: {integrity: sha512-g0Vqhv/ceShecGOyXJrdVdnTzz/LBsiLz+y9OZdNGWIYXqeLX7hMHNrk5O8W+s/6SPsYVjSUfvHxxU1/Y8T2AA==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230802:
+    resolution: {integrity: sha512-lOortB59qmXIWDd7s8FNB2jgJU+WPP0VxMXbfaQZoGhAuyXeQUzUjNLxdG/Ply0C3iwNc+r/r4rVVa/ZifoB3w==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery': 1.0.9
@@ -7058,7 +7058,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230724
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230802
     dev: true
 
   /@types/gapi.client@1.0.5:
@@ -19502,8 +19502,8 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  /type-fest@4.0.0:
-    resolution: {integrity: sha512-d/oYtUnPM9zar2fqqGLYPzgcY0qUlYK0evgNVti93xpzfjGkMgZHu9Lvgrkn0rqGXTgsFRxFamzjGoD9Uo+dgw==}
+  /type-fest@4.1.0:
+    resolution: {integrity: sha512-VJGJVepayd8OWavP+rgXt4i3bfLk+tSomTV7r4mca2XD/oTCWnkJlNkpXavkxdmtU2aKdAmFGeHvoQutOVHCZg==}
     engines: {node: '>=16'}
     dev: false
 
