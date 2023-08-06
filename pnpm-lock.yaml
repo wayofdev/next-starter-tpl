@@ -323,8 +323,8 @@ importers:
         specifier: 13.0.2
         version: 13.0.2(i18next@23.2.11)(react-dom@18.2.0)(react@18.2.0)
       type-fest:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.1.0
+        version: 4.1.0
       zod:
         specifier: 3.21.4
         version: 3.21.4
@@ -19510,8 +19510,8 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  /type-fest@4.0.0:
-    resolution: {integrity: sha512-d/oYtUnPM9zar2fqqGLYPzgcY0qUlYK0evgNVti93xpzfjGkMgZHu9Lvgrkn0rqGXTgsFRxFamzjGoD9Uo+dgw==}
+  /type-fest@4.1.0:
+    resolution: {integrity: sha512-VJGJVepayd8OWavP+rgXt4i3bfLk+tSomTV7r4mca2XD/oTCWnkJlNkpXavkxdmtU2aKdAmFGeHvoQutOVHCZg==}
     engines: {node: '>=16'}
     dev: false
 
