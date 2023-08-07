@@ -50,7 +50,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "13.4.13",
     "@next/env": "13.4.13",
-    "@playwright/test": "1.36.1",
+    "@playwright/test": "1.36.2",
     "@sentry/nextjs": "7.61.1",
     "@size-limit/file": "8.2.6",
     "@tailwindcss/aspect-ratio": "0.4.2",
