@@ -41,7 +41,7 @@
     "postcss-cli": "10.1.0",
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-normalize": "10.0.1",
-    "postcss-preset-env": "9.1.0",
+    "postcss-preset-env": "9.1.1",
     "postcss-reporter": "7.0.5",
     "storybook": "7.1.1",
     "tailwindcss": "3.3.3",
