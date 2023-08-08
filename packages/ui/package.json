@@ -32,7 +32,7 @@
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.5.3",
     "@types/node": "20.4.8",
-    "@types/react": "18.2.18",
+    "@types/react": "18.2.19",
     "@types/react-dom": "18.2.7",
     "@types/react-test-renderer": "18.0.0",
     "@wayofdev/eslint-config-bases": "3.0.1",
@@ -58,7 +58,7 @@
   },
   "peerDependencies": {
     "@heroicons/react": "2.0.18",
-    "@types/react": "18.2.18",
+    "@types/react": "18.2.19",
     "@types/react-dom": "18.2.7",
     "next": "*",
     "react": "18.2",
