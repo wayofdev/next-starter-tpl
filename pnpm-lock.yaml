@@ -296,8 +296,8 @@ importers:
         specifier: 13.4.13
         version: 13.4.13(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
       next-auth:
-        specifier: 4.22.4
-        version: 4.22.4(next@13.4.13)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 4.22.5
+        version: 4.22.5(next@13.4.13)(react-dom@18.2.0)(react@18.2.0)
       next-i18next:
         specifier: 14.0.0
         version: 14.0.0(i18next@23.4.3)(next@13.4.13)(react-i18next@13.0.3)(react@18.2.0)
@@ -4680,11 +4680,11 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230802:
-    resolution: {integrity: sha512-lOortB59qmXIWDd7s8FNB2jgJU+WPP0VxMXbfaQZoGhAuyXeQUzUjNLxdG/Ply0C3iwNc+r/r4rVVa/ZifoB3w==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230807:
+    resolution: {integrity: sha512-agYMldCTDDxosOGeCNRv9v2nFIGxn96kgMDmKVxY7xIoIHWzoICrVHox8wNMGmJcZ8rTjB8kZOsqktWSzbA9qQ==}
     dependencies:
       '@types/gapi.client': 1.0.5
-      '@types/gapi.client.discovery': 1.0.9
+      '@types/gapi.client.discovery-v1': 0.0.1
     dev: true
 
   /@mdx-js/mdx@2.3.0:
@@ -7620,6 +7620,12 @@ packages:
     resolution: {integrity: sha512-frsJrz2t/CeGifcu/6uRo4b+SzAwT4NYCVPu1GN8IB9XTzrpPkGuV0tmh9mN+/L0PklAlsC3u5Fxt0ju00LXIw==}
     dev: true
 
+  /@types/gapi.client.discovery-v1@0.0.1:
+    resolution: {integrity: sha512-xHW6FW+ERNxqFYNhC6yo1yZjBMmigqQIkX11VY8S6NFteZAX8eWpzvSrmmwFEUm4OOLTJhz8dxEyUAs4ltIMnw==}
+    dependencies:
+      '@maxim_mazurok/gapi.client.discovery-v1': 0.0.20200806
+    dev: true
+
   /@types/gapi.client.discovery@1.0.9:
     resolution: {integrity: sha512-51fXpt7DM7+zPG5pgwnNr3KaRXmyszznu66VPpV7+FAu0LGtpTohvdfvkRCnCn2Z6EgNTq/baFAtCa/9ylHOug==}
     deprecated: use @types/gapi.client.discovery-v1 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
@@ -7631,7 +7637,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230802
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230807
     dev: true
 
   /@types/gapi.client@1.0.5:
@@ -16230,8 +16236,8 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next-auth@4.22.4(next@13.4.13)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-VMI6pq3z4BfvFeCZHBkYtRYa0qqGTYAi2yy3hWCB78KkN1YsSAsOLSssd4oGrQBj0z/0zg2VLzn9tSJ14AtmWw==}
+  /next-auth@4.22.5(next@13.4.13)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-zPVEpqDp4cx1y0HbonCSrz2sA4qw0grTMd/S0PezUKXvDzmVemtsJnfNK/xo5pO2sz5ilM541+EVCTp9QoRLbA==}
     peerDependencies:
       next: ^12.2.5 || ^13
       nodemailer: ^6.6.5
