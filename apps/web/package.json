@@ -27,7 +27,7 @@
     "@soluble/cache-interop": "^0.12.8",
     "@soluble/cache-ioredis": "^0.13.11",
     "@soluble/dsn-parser": "^1.9.2",
-    "@vercel/analytics": "1.0.1",
+    "@vercel/analytics": "1.0.2",
     "@wayofdev/facebook-pixel": "workspace:*",
     "@wayofdev/google-tag-manager": "workspace:*",
     "@wayofdev/lint-staged-config": "2.1.2",
