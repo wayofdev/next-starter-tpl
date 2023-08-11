@@ -26,7 +26,7 @@
     "@types/react-dom": "18.2.7",
     "@wayofdev/eslint-config-bases": "3.0.1",
     "es-check": "7.1.1",
-    "eslint": "8.46.0",
+    "eslint": "8.47.0",
     "sharp": "0.32.4",
     "typescript": "5.1.6"
   }
