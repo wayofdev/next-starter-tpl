@@ -70,7 +70,7 @@
     "@wayofdev/common-i18n": "workspace:*",
     "@wayofdev/eslint-config-bases": "3.0.1",
     "@wayofdev/postcss-config": "3.0.2",
-    "autoprefixer": "10.4.14",
+    "autoprefixer": "10.4.15",
     "css-loader": "6.8.1",
     "cssnano": "6.0.1",
     "es-check": "7.1.1",
