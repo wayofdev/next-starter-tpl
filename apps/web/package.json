@@ -45,7 +45,7 @@
     "react-hook-form": "7.45.4",
     "react-i18next": "13.1.2",
     "type-fest": "4.2.0",
-    "zod": "3.21.4"
+    "zod": "3.22.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "13.4.15",
