@@ -34,7 +34,7 @@
     "@wayofdev/ui": "workspace:*",
     "clsx": "2.0.0",
     "i18next": "23.4.4",
-    "next": "13.4.15",
+    "next": "13.4.16",
     "next-auth": "4.22.5",
     "next-i18next": "14.0.0",
     "next-secure-headers": "^2.2.0",
@@ -48,8 +48,8 @@
     "zod": "3.22.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "13.4.15",
-    "@next/env": "13.4.15",
+    "@next/bundle-analyzer": "13.4.16",
+    "@next/env": "13.4.16",
     "@playwright/test": "1.37.0",
     "@sentry/nextjs": "7.64.0",
     "@size-limit/file": "8.2.6",
@@ -75,7 +75,7 @@
     "cssnano": "6.0.1",
     "es-check": "7.1.1",
     "eslint": "8.47.0",
-    "eslint-config-next": "13.4.15",
+    "eslint-config-next": "13.4.16",
     "get-tsconfig": "4.7.0",
     "jest": "29.6.2",
     "jest-css-modules-transform": "4.4.2",
