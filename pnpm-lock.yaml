@@ -296,8 +296,8 @@ importers:
         specifier: 13.4.16
         version: 13.4.16(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
       next-auth:
-        specifier: 4.22.5
-        version: 4.22.5(next@13.4.16)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 4.23.1
+        version: 4.23.1(next@13.4.16)(react-dom@18.2.0)(react@18.2.0)
       next-i18next:
         specifier: 14.0.0
         version: 14.0.0(i18next@23.4.4)(next@13.4.16)(react-i18next@13.1.2)(react@18.2.0)
@@ -4680,8 +4680,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230809:
-    resolution: {integrity: sha512-Qaz3PNuAPBACJs1X+oCwWSzFJbtZF1XN9zstzKc3i8s2DGPAcjn2SM6rOiPbG9PIRwGlmSV/gqy3BxS8ZT3zZg==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230814:
+    resolution: {integrity: sha512-zjyJXQUim13TZZNP3Omd1WwFuR/o2GYJ9iOPr5Npq/+DZ4VkBw1D4vCCNJN9V8DSEdm9jSnL66yeCwo3StzMsg==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery-v1': 0.0.1
@@ -7764,7 +7764,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230809
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230814
     dev: true
 
   /@types/gapi.client@1.0.5:
@@ -16401,8 +16401,8 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next-auth@4.22.5(next@13.4.16)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-zPVEpqDp4cx1y0HbonCSrz2sA4qw0grTMd/S0PezUKXvDzmVemtsJnfNK/xo5pO2sz5ilM541+EVCTp9QoRLbA==}
+  /next-auth@4.23.1(next@13.4.16)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-mL083z8KgRtlrIV6CDca2H1kduWJuK/3pTS0Fe2og15KOm4v2kkLGdSDfc2g+019aEBrJUT0pPW2Xx42ImN1WA==}
     peerDependencies:
       next: ^12.2.5 || ^13
       nodemailer: ^6.6.5
