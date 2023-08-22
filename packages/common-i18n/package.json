@@ -29,7 +29,7 @@
     "lint:types": "tsc --project ./tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@types/jest": "29.5.3",
+    "@types/jest": "29.5.4",
     "@types/node": "20.5.3",
     "@wayofdev/eslint-config-bases": "3.0.1",
     "eslint": "8.47.0",
