@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/node": "20.5.3",
-    "@types/react": "18.2.20",
+    "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@wayofdev/eslint-config-bases": "3.0.1",
     "es-check": "7.1.1",
