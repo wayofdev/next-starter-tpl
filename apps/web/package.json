@@ -44,7 +44,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "7.45.4",
     "react-i18next": "13.2.0",
-    "type-fest": "4.2.0",
+    "type-fest": "4.3.0",
     "zod": "3.22.2"
   },
   "devDependencies": {
