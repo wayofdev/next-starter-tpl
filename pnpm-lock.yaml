@@ -363,8 +363,8 @@ importers:
         specifier: 14.4.3
         version: 14.4.3(@testing-library/dom@9.3.1)
       '@types/facebook-pixel':
-        specifier: 0.0.25
-        version: 0.0.25
+        specifier: 0.0.26
+        version: 0.0.26
       '@types/hoist-non-react-statics':
         specifier: 3.3.1
         version: 3.3.1
@@ -508,8 +508,8 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@types/facebook-pixel':
-        specifier: 0.0.25
-        version: 0.0.25
+        specifier: 0.0.26
+        version: 0.0.26
       '@types/react':
         specifier: 18.2.21
         version: 18.2.21
@@ -4696,8 +4696,8 @@ packages:
       '@types/gapi.client.discovery': 1.0.9
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230816:
-    resolution: {integrity: sha512-PFK7pKTSx/AmfupJbrEHsjTBcCMmdeGLugiDiPJq/8LnGaak82Idu0JVYiz3qMAKU6FonmOzzg+AzXTHwBRg3A==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20230823:
+    resolution: {integrity: sha512-DnDTT3x4E1Wbu3nCqzmaImsg3t2APb7kzR2hMLTW1dytTDqlJg5JCdSZ1twS5ZRDtwmNzawjVHUUah/WkGzsqw==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery-v1': 0.0.1
@@ -7764,8 +7764,8 @@ packages:
       '@types/serve-static': 1.15.2
     dev: true
 
-  /@types/facebook-pixel@0.0.25:
-    resolution: {integrity: sha512-FKWdvu+BvSCOD4EZpzJXXQJ0GyalGDhBL33I20hqbtkFRQ3yGUTTob/FrPXhYSAh0Cjg9UwoMS4jCszKYLP+aw==}
+  /@types/facebook-pixel@0.0.26:
+    resolution: {integrity: sha512-wVAw5v+feD5oA5sp4X7tTtqwkCPWsDB+MQ6KTsMEZbXjRY13TWkVt2RvDqZpyszP0oLMkS4tKaN1hgpE2SSr7g==}
     dev: true
 
   /@types/find-cache-dir@3.2.1:
@@ -7789,7 +7789,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230816
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20230823
     dev: true
 
   /@types/gapi.client@1.0.5:
