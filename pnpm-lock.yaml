@@ -66,8 +66,8 @@ importers:
         specifier: ^0.30.0
         version: 0.30.0
       markdownlint-cli:
-        specifier: ^0.35.0
-        version: 0.35.0
+        specifier: ^0.36.0
+        version: 0.36.0
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -13265,6 +13265,18 @@ packages:
       path-scurry: 1.10.1
     dev: true
 
+  /glob@10.3.4:
+    resolution: {integrity: sha512-6LFElP3A+i/Q8XQKEvZjkEWEOTgAIALR9AO2rwT8bgPhDd1anmqDJDZ6lLddI4ehxxxR1S5RIqKe1uapMQfYaQ==}
+    engines: {node: '>=16 || 14 >=14.17'}
+    hasBin: true
+    dependencies:
+      foreground-child: 3.1.1
+      jackspeak: 2.2.1
+      minimatch: 9.0.3
+      minipass: 7.0.2
+      path-scurry: 1.10.1
+    dev: true
+
   /glob@7.1.6:
     resolution: {integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==}
     dependencies:
@@ -15616,6 +15628,22 @@ packages:
       markdownlint: 0.29.0
       minimatch: 9.0.3
       run-con: 1.2.12
+    dev: true
+
+  /markdownlint-cli@0.36.0:
+    resolution: {integrity: sha512-h4WdqOam3+QOVOcJSOQuG8KvvN8dlS0OiJhbPwYWBk7VMZR40UtSSMIOpSP5B4EHPHg3W3ILSQUvqg1HNpTCxA==}
+    engines: {node: '>=16'}
+    hasBin: true
+    dependencies:
+      commander: 11.0.0
+      get-stdin: 9.0.0
+      glob: 10.3.4
+      ignore: 5.2.4
+      js-yaml: 4.1.0
+      jsonc-parser: 3.2.0
+      markdownlint: 0.30.0
+      minimatch: 9.0.3
+      run-con: 1.3.2
     dev: true
 
   /markdownlint-micromark@0.1.5:
@@ -19414,6 +19442,16 @@ packages:
     dependencies:
       deep-extend: 0.6.0
       ini: 3.0.1
+      minimist: 1.2.8
+      strip-json-comments: 3.1.1
+    dev: true
+
+  /run-con@1.3.2:
+    resolution: {integrity: sha512-CcfE+mYiTcKEzg0IqS08+efdnH0oJ3zV0wSUFBNrMHMuxCtXvBCLzCJHatwuXDcu/RlhjTziTo/a1ruQik6/Yg==}
+    hasBin: true
+    dependencies:
+      deep-extend: 0.6.0
+      ini: 4.1.1
       minimist: 1.2.8
       strip-json-comments: 3.1.1
     dev: true
