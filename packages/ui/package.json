@@ -34,7 +34,7 @@
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
-    "@types/react-test-renderer": "18.0.0",
+    "@types/react-test-renderer": "18.0.1",
     "@wayofdev/eslint-config-bases": "3.0.1",
     "@wayofdev/lint-staged-config": "2.1.2",
     "@wayofdev/postcss-config": "3.0.2",
