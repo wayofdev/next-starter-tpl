@@ -299,8 +299,8 @@ importers:
         specifier: 4.23.1
         version: 4.23.1(next@13.4.19)(react-dom@18.2.0)(react@18.2.0)
       next-i18next:
-        specifier: 14.0.2
-        version: 14.0.2(i18next@23.4.6)(next@13.4.19)(react-i18next@13.2.2)(react@18.2.0)
+        specifier: 14.0.3
+        version: 14.0.3(i18next@23.4.6)(next@13.4.19)(react-i18next@13.2.2)(react@18.2.0)
       next-secure-headers:
         specifier: ^2.2.0
         version: 2.2.0
@@ -16605,8 +16605,8 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /next-i18next@14.0.2(i18next@23.4.6)(next@13.4.19)(react-i18next@13.2.2)(react@18.2.0):
-    resolution: {integrity: sha512-IK4IPQU7GvWMjJ400HBxmGEKiyPBRR4wn2fUdhP1va58bJH0pFxD0iMDFRYYZ/clQmHYBFo594+HAZFfH/fmTg==}
+  /next-i18next@14.0.3(i18next@23.4.6)(next@13.4.19)(react-i18next@13.2.2)(react@18.2.0):
+    resolution: {integrity: sha512-FtnjRMfhlamk8YyeyWqd+pndNL+3er83iMZnH4M4mhiGA93l0+vtBUvuObgOAMHDJGLLB2SS2xOOZq69oiJh7A==}
     engines: {node: '>=14'}
     peerDependencies:
       i18next: ^23.4.6
