@@ -363,8 +363,8 @@ importers:
         specifier: 14.4.3
         version: 14.4.3(@testing-library/dom@9.3.1)
       '@types/facebook-pixel':
-        specifier: 0.0.26
-        version: 0.0.26
+        specifier: 0.0.27
+        version: 0.0.27
       '@types/hoist-non-react-statics':
         specifier: 3.3.1
         version: 3.3.1
@@ -508,8 +508,8 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@types/facebook-pixel':
-        specifier: 0.0.26
-        version: 0.0.26
+        specifier: 0.0.27
+        version: 0.0.27
       '@types/react':
         specifier: 18.2.21
         version: 18.2.21
@@ -7766,8 +7766,8 @@ packages:
       '@types/serve-static': 1.15.2
     dev: true
 
-  /@types/facebook-pixel@0.0.26:
-    resolution: {integrity: sha512-wVAw5v+feD5oA5sp4X7tTtqwkCPWsDB+MQ6KTsMEZbXjRY13TWkVt2RvDqZpyszP0oLMkS4tKaN1hgpE2SSr7g==}
+  /@types/facebook-pixel@0.0.27:
+    resolution: {integrity: sha512-Jqj1JcvsRU1gTUMx2zOYMP3y1nM+osejiGGWFZ4qH6LLb7bZp3us1itj7015piXZ+UVrm+cJS6Hcxftto+AYhA==}
     dev: true
 
   /@types/find-cache-dir@3.2.1:
