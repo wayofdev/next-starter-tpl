@@ -366,8 +366,8 @@ importers:
         specifier: 0.0.27
         version: 0.0.27
       '@types/hoist-non-react-statics':
-        specifier: 3.3.1
-        version: 3.3.1
+        specifier: 3.3.5
+        version: 3.3.5
       '@types/jest':
         specifier: 29.5.11
         version: 29.5.11
@@ -7815,8 +7815,8 @@ packages:
       '@types/unist': 3.0.0
     dev: false
 
-  /@types/hoist-non-react-statics@3.3.1:
-    resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
+  /@types/hoist-non-react-statics@3.3.5:
+    resolution: {integrity: sha512-SbcrWzkKBw2cdwRTwQAswfpB9g9LJWfjtUeW/jvNwbhC8cpmmNYVePa+ncbUe0rGTQ7G3Ff6mYUN2VMfLVr+Sg==}
     dependencies:
       '@types/react': 18.2.21
       hoist-non-react-statics: 3.3.2
@@ -16632,7 +16632,7 @@ packages:
       react-i18next: ^13.2.1
     dependencies:
       '@babel/runtime': 7.22.6
-      '@types/hoist-non-react-statics': 3.3.1
+      '@types/hoist-non-react-statics': 3.3.5
       core-js: 3.31.1
       hoist-non-react-statics: 3.3.2
       i18next: 23.5.1
