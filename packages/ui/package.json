@@ -32,8 +32,8 @@
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.5.11",
     "@types/node": "20.11.15",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
+    "@types/react": "18.2.51",
+    "@types/react-dom": "18.2.18",
     "@types/react-test-renderer": "18.0.7",
     "@wayofdev/eslint-config-bases": "3.0.1",
     "@wayofdev/lint-staged-config": "2.1.2",
@@ -58,8 +58,8 @@
   },
   "peerDependencies": {
     "@heroicons/react": "2.0.18",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
+    "@types/react": "18.2.51",
+    "@types/react-dom": "18.2.18",
     "next": "*",
     "react": "18.2",
     "react-dom": "18.2"
