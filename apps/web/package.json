@@ -72,7 +72,7 @@
     "@wayofdev/postcss-config": "3.0.2",
     "autoprefixer": "10.4.17",
     "css-loader": "6.8.1",
-    "cssnano": "6.0.1",
+    "cssnano": "6.0.3",
     "es-check": "7.1.1",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
