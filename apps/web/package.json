@@ -59,7 +59,7 @@
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.5.2",
-    "@types/facebook-pixel": "0.0.27",
+    "@types/facebook-pixel": "0.0.30",
     "@types/hoist-non-react-statics": "3.3.5",
     "@types/jest": "29.5.11",
     "@types/node": "20.11.15",
