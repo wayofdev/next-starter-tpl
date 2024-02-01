@@ -554,8 +554,8 @@ importers:
         specifier: 2.0.18
         version: 2.0.18(react@18.2.0)
       '@swc/helpers':
-        specifier: 0.5.2
-        version: 0.5.2
+        specifier: 0.5.3
+        version: 0.5.3
       clsx:
         specifier: 2.0.0
         version: 2.0.0
@@ -8399,8 +8399,8 @@ packages:
     dependencies:
       tslib: 2.6.2
 
-  /@swc/helpers@0.5.2:
-    resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
+  /@swc/helpers@0.5.3:
+    resolution: {integrity: sha512-FaruWX6KdudYloq1AHD/4nU+UsMTdNE8CKyrseXWEcgjDAbvkwJg2QGPAnfIJLIWsjZOSPLOAykK6fuYp4vp4A==}
     dependencies:
       tslib: 2.6.2
     dev: false
