@@ -326,8 +326,8 @@ importers:
         specifier: 4.3.1
         version: 4.3.1
       zod:
-        specifier: 3.22.2
-        version: 3.22.2
+        specifier: 3.22.4
+        version: 3.22.4
     devDependencies:
       '@next/bundle-analyzer':
         specifier: 13.4.19
@@ -23222,6 +23222,10 @@ packages:
 
   /zod@3.22.2:
     resolution: {integrity: sha512-wvWkphh5WQsJbVk1tbx1l1Ly4yg+XecD+Mq280uBGt9wa5BKSWf4Mhp6GmrkPixhMxmabYY7RbzlwVP32pbGCg==}
+    dev: false
+
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
     dev: false
 
   /zwitch@2.0.4:
