@@ -35,7 +35,7 @@
     "@wayofdev/eslint-config-bases": "3.0.1",
     "@wayofdev/postcss-config": "3.0.2",
     "autoprefixer": "^10.4.14",
-    "eslint": "8.49.0",
+    "eslint": "8.56.0",
     "postcss": "8.4.33",
     "postcss-100vh-fix": "1.0.2",
     "postcss-cli": "10.1.0",
