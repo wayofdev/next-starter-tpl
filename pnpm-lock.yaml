@@ -40,7 +40,7 @@ importers:
         version: 2.1.1(lint-staged@14.0.0)
       '@wayofdev/markdownlint-config':
         specifier: ^3.0.1
-        version: 3.0.1(@wayofdev/lint-staged-config@2.1.1)(markdownlint@0.31.0)
+        version: 3.0.1(@wayofdev/lint-staged-config@2.1.1)(markdownlint@0.33.0)
       '@wayofdev/secretlint-config':
         specifier: ^3.0.1
         version: 3.0.1(@wayofdev/lint-staged-config@2.1.1)(secretlint@7.0.3)
@@ -63,8 +63,8 @@ importers:
         specifier: ^14.0.0
         version: 14.0.0
       markdownlint:
-        specifier: ^0.31.0
-        version: 0.31.0
+        specifier: ^0.33.0
+        version: 0.33.0
       markdownlint-cli:
         specifier: ^0.39.0
         version: 0.39.0
@@ -9727,14 +9727,14 @@ packages:
     dependencies:
       lint-staged: 14.0.0
 
-  /@wayofdev/markdownlint-config@3.0.1(@wayofdev/lint-staged-config@2.1.1)(markdownlint@0.31.0):
+  /@wayofdev/markdownlint-config@3.0.1(@wayofdev/lint-staged-config@2.1.1)(markdownlint@0.33.0):
     resolution: {integrity: sha512-ZpjeOMR7T90cTF6kHBys326dxvOPxkawQeDJpwlISKcvdsV7x6SjlW8+QNrZe5QxZVbOvRoWPzFGRF0FTep4og==}
     peerDependencies:
       '@wayofdev/lint-staged-config': ^2.1.1
       markdownlint: '>= 0'
     dependencies:
       '@wayofdev/lint-staged-config': 2.1.1(lint-staged@14.0.0)
-      markdownlint: 0.31.0
+      markdownlint: 0.33.0
       markdownlint-cli: 0.35.0
     dev: true
 
@@ -16833,11 +16833,6 @@ packages:
     engines: {node: '>=16'}
     dev: true
 
-  /markdownlint-micromark@0.1.7:
-    resolution: {integrity: sha512-BbRPTC72fl5vlSKv37v/xIENSRDYL/7X/XoFzZ740FGEbs9vZerLrIkFRY0rv7slQKxDczToYuMmqQFN61fi4Q==}
-    engines: {node: '>=16'}
-    dev: true
-
   /markdownlint-micromark@0.1.8:
     resolution: {integrity: sha512-1ouYkMRo9/6gou9gObuMDnvZM8jC/ly3QCFQyoSPCS2XV1ZClU0xpKbL1Ar3bWWRT1RnBZkWUEiNKrI2CwiBQA==}
     engines: {node: '>=16'}
@@ -16849,14 +16844,6 @@ packages:
     dependencies:
       markdown-it: 13.0.1
       markdownlint-micromark: 0.1.5
-    dev: true
-
-  /markdownlint@0.31.0:
-    resolution: {integrity: sha512-e+jZGRGZrz1s0T4wiPDFtyQafq7sKgdbf2sdL46gRT8zLEvDDihQmGeSCV6VXp9BsfkuZ0dPTAg9hf4j6NFgjg==}
-    engines: {node: '>=16'}
-    dependencies:
-      markdown-it: 13.0.1
-      markdownlint-micromark: 0.1.7
     dev: true
 
   /markdownlint@0.33.0:
