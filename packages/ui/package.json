@@ -38,7 +38,7 @@
     "@wayofdev/eslint-config-bases": "3.0.1",
     "@wayofdev/lint-staged-config": "2.1.2",
     "@wayofdev/postcss-config": "3.0.2",
-    "eslint": "8.49.0",
+    "eslint": "8.56.0",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "postcss": "8.4.33",
