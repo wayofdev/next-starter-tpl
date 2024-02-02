@@ -260,8 +260,8 @@ importers:
         specifier: 3.3.4
         version: 3.3.4(react-hook-form@7.46.1)
       '@httpx/exception':
-        specifier: 2.1.0
-        version: 2.1.0
+        specifier: 2.6.4
+        version: 2.6.4
       '@soluble/cache-interop':
         specifier: ^0.12.8
         version: 0.12.8
@@ -5519,9 +5519,9 @@ packages:
       es-html-parser: 0.0.9
     dev: true
 
-  /@httpx/exception@2.1.0:
-    resolution: {integrity: sha512-CxgnOO3yUmT/2lnsDmW49Cmvo9/O7Zg0D8t6R7JkcSP65kXdYJpKx/IbcxSk9oJvNcQIkyG8ETaPFfNmePgivQ==}
-    engines: {node: '>=16.12'}
+  /@httpx/exception@2.6.4:
+    resolution: {integrity: sha512-GlKtObObVKHU9ZPw/mWeCaoN1ej5+X195D/+ShvaUR8JjFmXSMI6UZ7EDRXrKpEXR4hllx8KrojrGyFZbHfVsg==}
+    engines: {node: '>=18'}
     dev: false
 
   /@humanwhocodes/config-array@0.11.10:

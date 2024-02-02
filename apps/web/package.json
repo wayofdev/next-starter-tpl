@@ -23,7 +23,7 @@
     "@fontsource/inter": "5.0.16",
     "@heroicons/react": "2.1.1",
     "@hookform/resolvers": "3.3.4",
-    "@httpx/exception": "2.1.0",
+    "@httpx/exception": "2.6.4",
     "@soluble/cache-interop": "^0.12.8",
     "@soluble/cache-ioredis": "^0.13.11",
     "@soluble/dsn-parser": "^1.9.2",
