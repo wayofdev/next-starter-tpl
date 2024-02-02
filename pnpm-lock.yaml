@@ -305,8 +305,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       next-seo:
-        specifier: 6.1.0
-        version: 6.1.0(next@13.4.19)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 6.4.0
+        version: 6.4.0(next@13.4.19)(react-dom@18.2.0)(react@18.2.0)
       next-sitemap:
         specifier: 4.2.3
         version: 4.2.3(next@13.4.19)
@@ -6099,8 +6099,8 @@ packages:
       '@types/gapi.client.discovery-v1': 0.0.1
     dev: true
 
-  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20240131:
-    resolution: {integrity: sha512-J4P10j/fJMXpVoWOPBza/Ro+9rPdGJkXh1dEINXDbfpJ26ml9ITbyVmWqgUHU9A9e9+EgwNxZsE657wWjbF7hw==}
+  /@maxim_mazurok/gapi.client.tagmanager-v2@0.0.20240202:
+    resolution: {integrity: sha512-Ws0/lqS84ycNbhL441dMn6MqPqUr+RgZzvpGDg/KWC/EmlcIQ+z+6+VSQ7JgiBnTTLE0W0xNs10pBM4/xFjRuA==}
     dependencies:
       '@types/gapi.client': 1.0.5
       '@types/gapi.client.discovery-v1': 0.0.1
@@ -9035,7 +9035,7 @@ packages:
     resolution: {integrity: sha512-OEB3jLL3/RkMfxpHaasabPixLezODrUTyYOpOTH1zzJPHvyc8McHRxpYHAHAurJpVUe93yFoiKkXr5f3DJKrdg==}
     deprecated: use @types/gapi.client.tagmanager-v2 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
     dependencies:
-      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20240131
+      '@maxim_mazurok/gapi.client.tagmanager-v2': 0.0.20240202
     dev: true
 
   /@types/gapi.client@1.0.5:
@@ -17973,6 +17973,18 @@ packages:
 
   /next-seo@6.1.0(next@13.4.19)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-iMBpFoJsR5zWhguHJvsoBDxDSmdYTHtnVPB1ij+CD0NReQCP78ZxxbdL9qkKIf4oEuZEqZkrjAQLB0bkII7RYA==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      next: 13.4.19(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /next-seo@6.4.0(next@13.4.19)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-XQFxkOL2hw0YE+P100HbI3EAvcludlHPxuzMgaIjKb7kPK0CvjGvLFjd9hszZFEDc5oiQkGFA8+cuWcnip7eYA==}
     peerDependencies:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
