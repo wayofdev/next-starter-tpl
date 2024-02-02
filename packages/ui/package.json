@@ -21,7 +21,7 @@
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "2.1.1",
     "@swc/helpers": "0.5.3",
-    "clsx": "2.0.0"
+    "clsx": "2.1.0"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "0.4.2",
