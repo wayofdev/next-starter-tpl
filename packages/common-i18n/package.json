@@ -31,7 +31,7 @@
   "devDependencies": {
     "@types/jest": "29.5.12",
     "@types/node": "20.11.16",
-    "@wayofdev/eslint-config-bases": "3.0.1",
+    "@wayofdev/eslint-config-bases": "3.0.7",
     "eslint": "8.56.0",
     "prettier": "3.2.4",
     "rimraf": "5.0.5",

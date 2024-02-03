@@ -35,7 +35,7 @@
     "@types/react": "18.2.52",
     "@types/react-dom": "18.2.18",
     "@types/react-test-renderer": "18.0.7",
-    "@wayofdev/eslint-config-bases": "3.0.1",
+    "@wayofdev/eslint-config-bases": "3.0.7",
     "@wayofdev/lint-staged-config": "2.1.2",
     "@wayofdev/postcss-config": "3.0.2",
     "eslint": "8.56.0",
