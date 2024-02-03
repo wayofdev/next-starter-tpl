@@ -43,7 +43,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.50.0",
-    "react-i18next": "13.2.2",
+    "react-i18next": "13.5.0",
     "type-fest": "4.10.2",
     "zod": "3.22.4"
   },
