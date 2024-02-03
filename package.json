@@ -91,7 +91,7 @@
     "@types/prettier": "^2.7.3",
     "@types/shell-quote": "^1.7.1",
     "@wayofdev/browserslist-config": "^3.0.1",
-    "@wayofdev/commitlint-config": "^3.0.1",
+    "@wayofdev/commitlint-config": "^4.0.0",
     "@wayofdev/eslint-config-bases": "^3.0.2",
     "@wayofdev/lint-staged-config": "^2.1.1",
     "@wayofdev/markdownlint-config": "^3.0.1",
