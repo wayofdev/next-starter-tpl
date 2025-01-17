@@ -74,6 +74,7 @@ This repository has some additional tools already setup for you:
 ## 🤔 What's inside?
 
 [![Open in Gitpod](https://img.shields.io/badge/Open%20In-Gitpod.io-%231966D2?style=for-the-badge&logo=gitpod)](https://gitpod.io/#https://github.com/wayofdev/next-starter-tpl)
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/wayofdev/next-starter-tpl)
 
 This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
 
